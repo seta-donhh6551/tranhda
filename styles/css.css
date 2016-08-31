@@ -744,8 +744,12 @@ ul.kongjian li{float:left; padding:0 8px;background:url(../images/bg_bar_01.gif)
 	height:31px;
 	float:left;
 	width:190px;
-	background:url(../images/top_bgg.gif) 0 -1126px no-repeat;
 	overflow:hidden;
+}
+.zhuangs .zh_top .zhl h2{
+	font-size: 18px;
+	color: #ca0202;
+	margin-top: 7px
 }
 .zhuangs .zh_top .zhr {
 	width:750px;
@@ -1491,7 +1495,7 @@ h2.textcenter {
 	overflow:hidden;
 }
 .goodspackagewrap div, .goods-detail-tab div {
-	background:url(../images/"art_btn.gif") no-repeat scroll 0 -136px transparent;
+	background:url(../images/art_btn.gif) no-repeat scroll 0 -136px transparent;
 	float:left;
 	height:17px;
 	padding:4px 2px;
@@ -1504,7 +1508,7 @@ h2.textcenter {
 	padding-bottom:1px;
 }
 .goodspackagewrap, .goods-detail-tab {
-	background:url(../images/"tabsepbg.gif") repeat-x scroll 0 0 transparent;
+	background:url(../images/tabsepbg.gif) repeat-x scroll 0 0 transparent;
 	margin-top:15px;
 	padding-left:0;
 }
@@ -1665,7 +1669,6 @@ h4.spec-tip {
 	height:35px;
 	background:url(../images/zptubiao.gif) center 0 no-repeat;
 	margin-bottom:12px;
-mar
 }
 .scjz {
 	height:35px;
@@ -1753,7 +1756,7 @@ p {
 	line-height:18px;
 }
 .division input.submit_btn {
-	background:url(../images/"submit_btn.gif") no-repeat scroll 0 0 transparent;
+	background:url(../images/submit_btn.gif) no-repeat scroll 0 0 transparent;
 	border:medium none;
 	cursor:pointer;
 	height:38px;
@@ -1779,7 +1782,7 @@ p {
 	padding-bottom:5px;
 }
 .replay {
-	background:url(../images/"icon_replay.gif") no-repeat scroll left center transparent;
+	background:url(../images/icon_replay.gif) no-repeat scroll left center transparent;
 	padding-left:20px;
 }
 .replay2 {
@@ -1795,12 +1798,12 @@ p {
 	font-size:14px;
 }
 .division .textarea {
-	background:url(../images/"thanks.gif") no-repeat scroll 180px 90px transparent;
+	background:url(../images/thanks.gif) no-repeat scroll 180px 90px transparent;
 	border:1px solid #CCCCCC;
 	height:122px;
 }
 .message_img {
-	background:url(../images/"message_img.jpg") no-repeat scroll 0 0 transparent;
+	background:url(../images/message_img.jpg) no-repeat scroll 0 0 transparent;
 	height:164px;
 	width:730px;
 }
@@ -1809,7 +1812,7 @@ p {
 	padding:10px 10px 0;
 }
 .mebtn a {
-	background:url(../images/"feedback_btn.gif") no-repeat scroll 0 0 transparent;
+	background:url(../images/feedback_btn.gif) no-repeat scroll 0 0 transparent;
 	float:right;
 	height:34px;
 	width:139px;
@@ -1889,22 +1892,22 @@ ul.relatedarc li a {
 	margin-top:8px;
 	width:170px;
 }
- ..bot_s ul li a:hover {
+.bot_s ul li a:hover {
  text-decoration:none;
 }
 .bot_s .scn-01 a {
-	background:url(../images/"scn01.png") no-repeat scroll 0 -106px transparent;
+	background:url(../images/scn01.png) no-repeat scroll 0 -106px transparent;
 }
 .bot_s .scn-02 a {
-	background:url(../images/"scn01.png") no-repeat scroll 0 -156px transparent;
+	background:url(../images/scn01.png) no-repeat scroll 0 -156px transparent;
 		margin-right:10px;
 }
 .bot_s .scn-03 a {
-	background:url(../images/"scn01.png") no-repeat scroll 0 -205px transparent;
+	background:url(../images/scn01.png) no-repeat scroll 0 -205px transparent;
 
 }
 .bot_s .scn-04 a {
-	background:url(../images/"scn01.png") no-repeat scroll 0 -249px transparent;
+	background:url(../images/scn01.png) no-repeat scroll 0 -249px transparent;
 }
 .bot_s a:hover {
 	text-decoration:none;
@@ -2042,7 +2045,7 @@ table.menu th .newsfont {
 	color:#D75509;
 }
 .division input.submit_btn {
-	background:url(../images/"submit_btn.gif") no-repeat scroll 0 0 transparent;
+	background:url(../images/submit_btn.gif) no-repeat scroll 0 0 transparent;
 	border:medium none;
 	cursor:pointer;
 	height:38px;
@@ -2070,7 +2073,7 @@ table.menu th .newsfont {
 	width:100%;
 }
 .rank_list ul li {
-	PADDING-LEFT: 25px;
+	PADDING-LEFT: 20px;
 	PADDING-RIGHT: 0px;
 	BACKGROUND: url(iconrank.gif) no-repeat 5px -345px;
 	FONT-SIZE: 12px;
@@ -2128,7 +2131,7 @@ table.menu th .newsfont {
 .rank_list ul li a {
 	float: left;
 	display:block;
-	width:130px;
+	width:150px;
 	height:18px;
 	overflow:hidden
 }
@@ -2183,7 +2186,7 @@ DIV.rank_list li.cuurent SPAN.num {
 	DISPLAY: inline
 }
 .gotop {
-	background:url(../images/"scroll.png") no-repeat;
+	background:url(../images/scroll.png) no-repeat;
 	width:21px;
 	height:65px;
 	cursor:pointer;
@@ -2426,3 +2429,44 @@ DIV.rank_list li.cuurent SPAN.num {
 .kuandu{padding-top:5px;}
 .kuandu img{width:696px;}
 .kuandu p{ padding:2px 0;}
+
+#ex_slide_widgets_16648 {
+	width: 506px;
+	height: 298px;
+	overflow: hidden;
+	position: relative;
+}
+
+#ex_slide_widgets_16648 ol {}
+
+#ex_slide_widgets_16648 ol li {
+	height: 298px;
+	width: 506px;
+	list-style: none;
+	display: block;
+	overflow: hidden;
+	border: 0;
+	margin: 0;
+}
+
+#ex_slide_widgets_16648 ul {
+	position: absolute;
+	height: 18px;
+	bottom: 5px;
+	right: 5px;
+	z-index: 999;
+}
+
+#ex_slide_widgets_16648 ul li {
+	float: left;
+	height: 16px;
+	width: 16px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 14px;
+	line-height: 16px;
+	color: #DE7D4B;
+	background: #FFFFFF;
+	margin-right: 5px;
+	opacity: 0.7;
+}

@@ -1,0 +1,99 @@
+#Compare-foot {
+	position: fixed;
+	bottom: 0; left: 30%;
+	z-index: 999999; /*--Keeps the panel on top of all other elements--*/
+        border-left: none;
+        border-right: none;
+	border-bottom: none;
+	margin: 0 12px 0 0;
+}
+*html #Compare-foot { /*--IE6 Hack - Fixed Positioning to the Bottom--*/
+	margin-top: -1px; /*--Prevents IE6 from having an infinity scroll bar - due to 1px border on #Compare-foot--*/
+	position: absolute;
+	top:expression(eval(document.compatMode &&document.compatMode=='CSS1Compat') ?documentElement.scrollTop+(documentElement.clientHeight-this.clientHeight) : document.body.scrollTop +(document.body.clientHeight-this.clientHeight));
+}
+#Coppare_list table,
+#Coppare_list table td,
+#Coppare_list table a { color:#000 !important}
+#Coppare_list td{ border-right:solid 1px #343434; width:150px;}
+#Coppare_list td:last-child{ border:none}
+#Coppare_list td #div_close{width:150px;}
+#Coppare_list td #div_close a#close {background:url(../images/Close.png) no-repeat; width:11px; height:17px; display:inline-block; float:right}
+#Coppare_list td #div_close #close:hover { background-position:-11px 0; cursor:pointer}
+#Coppare_list td #compare_img {height:170px !important; margin-bottom:5px;}
+#Coppare_list td #compare_img img { max-width:150px; max-height:150px;}
+#Coppare_list td #compare_name a {  color:#D5D5D5;}
+#Coppare_list td #compare_name a:hover { color:#FF0000}
+
+.btn_sosanh { background:url(../images/BtnCompare.png) no-repeat; height:25px; width:86px; display:inline-block}
+.btn_sosanh_active { background:url(../images/BtnCompare.png) 0 -25px no-repeat; height:25px; width:86px; display:inline-block}
+.btn_sosanh_active:hover { background-position:0 -50px;}
+
+#Compare-foot .type_btnss{
+	background: url(../images/Btn.png) no-repeat bottom;
+	background-position:0 0;
+	width: 254px; height:31px; line-height:30px; display:block;
+	
+}
+#Compare-foot .type_btnss a.cart{
+	padding-left:64px; display:block; color:#fff;font-weight:bold !important;
+	text-indent: 0; /*--Reset text indent since there will be a combination of both text and image--*/
+}
+#Compare-foot .type_btnss:hover{
+	background: url(../images/Btn.png) no-repeat bottom;
+	background-position:-254px 0;
+	
+}
+#Compare-foot .type_btnss:hover a.cart{
+	color:#fff;
+}
+
+#Compare-foot div#cartpanel { height:33px;}
+#Compare-foot a small {
+	text-align: center;
+	width: 80px;
+	background: url(../images/pop_arrow.gif) no-repeat center bottom;
+	padding: 5px 5px 11px;
+	display: none; /*--Hide by default--*/
+	color: #fff;
+	font-size: 1em;
+	text-indent: 0;
+}
+#Compare-foot a:hover small{
+	display: block; /*--Show on hover--*/
+	position: absolute;
+	top: -35px; /*--Position tooltip 35px above the list item--*/
+	bottom:33px;
+	line-height:20px;
+	left: 45%;
+	margin-left: -40px; /*--Center the tooltip--*/
+	z-index: 9999;
+	
+}
+
+#Compare-foot .subpanel {
+	position: absolute;
+	left: 0; bottom: 33px;
+	display: none;	/*--Hide by default--*/
+	/*border: 2px solid #E9E9E9;*/
+	background: #202020;
+}
+#Compare-foot .subpanel table{
+	min-width:200px;
+}
+#Compare-foot h3 {
+	background: #313131;
+	padding: 5px 10px;
+	color: #777676;
+	font-size: 1.5em;
+	cursor: pointer;
+}
+#Compare-foot h3 span { /*--Right aligned "-" icon--*/
+	float: right !important;
+	font-weight: normal;
+	background:url(../images/delete.png) no-repeat; width:16px; height:16px; display: inline-block;
+}
+#Compare-foot h3 span:hover { /*--Right aligned "-" icon--*/
+	background-position:0 0; cursor:pointer
+}
+a.key_link {text-decoration: none;}
