@@ -2472,5 +2472,5 @@ DIV.rank_list li.cuurent SPAN.num {
 	opacity: 0.7;
 }
 
-.thumb-img{width:146px;height:146px;display:table-cell;vertical-align:middle;text-align:center;}
-.gname a{text-transform: uppercase}
+.thumb-img{width:146px;height:146px;display:table-cell;vertical-align:middle;text-align:center;margin:0px auto}
+.gname a{text-transform: uppercase;text-align: center}

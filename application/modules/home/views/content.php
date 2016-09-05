@@ -853,13 +853,13 @@
                         <tr valign="top">
 							<?php if(isset($listgems)) { ?>
 							<?php foreach($listgems as $gemItem){ ?>
-                            <td id="item-13541" width="16%;" class='item textcenter'>
+                            <td id="item-<?php echo $gemItem['pro_id']; ?>" width="16%;" class='item textcenter'>
                                 <a target="_blank" href='#' class="thumb-img" class='pic'>
 									<img src="<?php echo base_url().'uploads/products/thumb/'.$gemItem['pro_image'] ?>" alt="<?php echo $gemItem['pro_name']; ?>" style="max-width:146px;"/>
 								</a>
                                 <div class="info">
                                     <div class='gname' style='height:36px;line-height:18px;'>
-											<a href='#' title="<?php echo $gemItem['pro_name']; ?>"><?php echo $gemItem['pro_name']; ?></a>
+										<a href='#' title="<?php echo $gemItem['pro_name']; ?>"><?php echo $gemItem['pro_name']; ?></a>
 									</div>
                                     <div class='clearfix'>
                                         <div class='price textcenter'>Giá : <em class='price1'><?php echo $gemItem['pro_price']; ?></em></div>
@@ -867,26 +867,6 @@
                                 </div>
                             </td>
 							<?php } } ?>
-                            <td id="item-12947" width="16%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-12947.html' style='width:146px;height:146px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20160606/5797c7d966d55e8d.jpg" alt="安徽美协何华贤 三尺《红梅报春》" style='width:146px;height:146px;' /> </a>
-                                <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-12947.html' title="安徽美协何华贤 三尺《红梅报春》">安徽美协何华贤 三尺《红梅报春》</a> </div>
-                                    <div class='clearfix'>
-                                        <div class='price textcenter'>本站价:<em class='price1'>￥1280</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td id="item-12334" width="16%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-12334.html' style='width:146px;height:146px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20160308/36bf2fdf94c505c8.jpg" alt="吴东六尺聚宝盆山水画《依山伴水好家居》" style='width:146px;height:146px;' /> </a>
-                                <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-12334.html' title="吴东六尺聚宝盆山水画《依山伴水好家居》">吴东六尺聚宝盆山水画《依山伴水好家居》</a> </div>
-                                    <div class='clearfix'>
-                                        <div class='price textcenter'>本站价:<em class='price1'>￥980</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
                         </tr>
                     </tbody>
                 </table>
