@@ -45,23 +45,20 @@
 		<div id="main_menu">
 			<div class="inner">
 			<ul id="menu">
-				<li>
-					<a href="<?php echo base_url()."admin/index"; ?>"><span class="l"><span></span></span><span class="m"><em>Trang chủ</em><span></span></span><span class="r"><span></span></span></a></li>
+				<li><a href="<?php echo base_url()."admin/index"; ?>"><span class="l"><span></span></span><span class="m"><em>Trang chủ</em><span></span></span><span class="r"><span></span></span></a></li>
+				<li><a href="<?php echo base_url()."admin/user"; ?>"><span class="l"><span></span></span><span class="m"><em>Thành viên</em><span></span></span><span class="r"><span></span></span></a></li>
                 <li><a href="<?php echo base_url()."admin/content"; ?>"><span class="l"><span></span></span><span class="m"><em>Nghệ thuật</em><span></span></span><span class="r"><span></span></span></a></li>
 				<li>
-					<a href="<?php echo base_url()."admin/user"; ?>"><span class="l"><span></span></span><span class="m"><em>Thành viên</em><span></span></span><span class="r"><span></span></span></a>
-                   	<!--ul>
-						<li><a href="<?php echo base_url()."admin/user"; ?>" class="selected_lk"><span class="l"><span></span></span><span class="m"><em>Danh sách thành viên</em><span></span></span><span class="r"><span></span></span></a></li>
-						<li><a href="<?php echo base_url()."admin/user/add"; ?>"><span class="l"><span></span></span><span class="m"><em>Thêm mới</em><span></span></span><span class="r"><span></span></span></a></li>
-					</ul-->
+					<a href="<?php echo base_url()."admin/cate"; ?>"><span class="l"><span></span></span><span class="m"><em>Chuyên mục</em><span></span></span><span class="r"><span></span></span></a>
+					<ul>
+						<li><a href="<?php echo base_url()."admin/position"; ?>" class="selected_lk"><span class="l"><span></span></span><span class="m"><em>Position</em><span></span></span><span class="r"><span></span></span></a></li>
+						<li><a href="<?php echo base_url()."admin/categorie"; ?>" class="selected_lk"><span class="l"><span></span></span><span class="m"><em>Sub menu</em><span></span></span><span class="r"><span></span></span></a></li>
+					</ul>
 				</li>
-				<li><a href="<?php echo base_url()."admin/cate"; ?>"><span class="l"><span></span></span><span class="m"><em>Chuyên mục</em><span></span></span><span class="r"><span></span></span></a></li>
-                <li style="display:none"><a href="<?php echo base_url()."admin/cate/submn"; ?>"><span class="l"><span></span></span><span class="m"><em>Sub menu</em><span></span></span><span class="r"><span></span></span></a></li>
 				<li><a href="<?php echo base_url()."admin/news"; ?>"><span class="l"><span></span></span><span class="m"><em>Tin tức</em><span></span></span><span class="r"><span></span></span></a></li>
 				<li><a href="<?php echo base_url()."admin/products"; ?>"><span class="l"><span></span></span><span class="m"><em>Sản phẩm</em><span></span></span><span class="r"><span></span></span></a></li>
 				<li><a href="<?php echo base_url()."admin/posts"; ?>"><span class="l"><span></span></span><span class="m"><em>Bài viết</em><span></span></span><span class="r"><span></span></span></a></li>
 				<li><a href="<?php echo base_url()."admin/intro/index"; ?>"><span class="l"><span></span></span><span class="m"><em>Giới thiệu</em><span></span></span><span class="r"><span></span></span></a></li>
-				<li><a href="<?php echo base_url()."admin/categorie"; ?>"><span class="l"><span></span></span><span class="m"><em>Submenu</em><span></span></span><span class="r"><span></span></span></a></li>
                 <li><a href="<?php echo base_url()."admin/config"; ?>"><span class="l"><span></span></span><span class="m"><em>Cấu hình</em><span></span></span><span class="r"><span></span></span></a></li>
 			</ul>
 			</div>

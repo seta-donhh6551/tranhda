@@ -8,7 +8,9 @@
 			$this->load->library("form_validation");	
 			$this->load->library("string");					
 		}
-		public function index(){
+		
+		public function index()
+		{
 			$config['base_url'] = base_url().'admin/products/index/';
 			$config['total_rows'] = $this->mproducts->count_all();
 			$config['per_page'] = 10;
@@ -19,17 +21,19 @@
 			$this->pagination->initialize($config); 
 			$start = $this->uri->segment(4);
 			$data['title']="Quản lý sản phẩm";
-			$data['act'] = 6;
+			$data['act'] = 5;
 			$data['listcate'] = $this->mproducts->getcate();
 			$data['data']['info']= $this->mproducts->listall($config['per_page'],$start);
 			$data['template'] = "products/list_products";
 			$this->load->view("layout",$data);
 		}
-		public function add(){
+		
+		public function add()
+		{
 			$data['error'] = "";
 			$data['title'] = "Thêm mới sản phẩm";
 			$data['template'] = "products/add_products";
-			$data['act'] = 6;
+			$data['act'] = 5;
 			$data['data']['info'] = $this->mproducts->getcate();
 			$data['listcago'] = $this->mproducts->listcago();
 			if($this->input->post("ok") != ""){
@@ -41,15 +45,15 @@
 					  $db = array(
 							"pro_name" => $this->input->post("pro_name"),
 							"pro_rewrite" => $url,
-                                                        "pro_status" => $this->input->post("pro_status"),
+                            "pro_status" => $this->input->post("pro_status"),
 							"pro_code" => $this->input->post("pro_code"),
 							"pro_info" => $this->input->post("pro_info"),
 							"pro_full" => $this->input->post("pro_full"),
 							"pro_keys" => $this->input->post("pro_keys"),
 							"pro_des" => $this->input->post("pro_des"),
 							"pro_price" => $this->input->post("pro_price"),
-                                                        "pro_size" => $this->input->post("pro_size"),
-                                                        "pro_order" => $this->input->post("pro_order"),
+							"pro_size" => $this->input->post("pro_size"),
+							"pro_order" => $this->input->post("pro_order"),
 							"cago_id" => $this->input->post("cago_id"),
 							"cate_id" => $this->input->post("pro_cate")
 						);
@@ -64,7 +68,7 @@
 							$data = array('error' => $this->upload->display_errors());
 							$data['title'] = "Thêm mới sản phẩm";
 							$data['template'] = "products/add_products";
-							$data['act'] = 6;
+							$data['act'] = 5;
 							$data['listcago'] = $this->mproducts->listcago();
 							$data['data']['info'] = $this->mproducts->getcate();
 							$this->load->view("layout",$data);
@@ -81,7 +85,9 @@
 				$this->load->view("layout",$data);
 			}
 		}
-		public function check_pro($pro){
+		
+		public function check_pro($pro)
+		{
 			$id = $this->uri->segment(4);
 			if($this->mproducts->check_products($pro,$id) == FALSE){
 				$this->form_validation->set_message("check_pro","Sản phẩm này đã tồn tại!");
@@ -90,7 +96,9 @@
 				return TRUE;
 			}
 		}
-		public function ajax(){
+		
+		public function ajax()
+		{
 			$id = $this->uri->segment(4);
 			$data = $this->mproducts->get_cago($id);
 			echo "<select name='pro_cago'>";
@@ -100,7 +108,9 @@
 			}
 			echo "</select>";
 		}
-		public function show_pro(){
+		
+		public function show_pro()
+		{
 			$id = $this->uri->segment(4);
 			$data = $this->mproducts->show_prodata($id);
 			echo '<table  width="700" align="center">
@@ -128,12 +138,14 @@
 			}
 			echo '</table>';
 		}
-		public function update(){
+		
+		public function update()
+		{
 			$id = $this->uri->segment(4);
 			$this->load->helper("form");
 			$this->load->library("form_validation");
 			$data['error'] = "";
-			$data['act'] = 6;
+			$data['act'] = 5;
 			$data['title'] = "Sửa thông tin sản phẩm";
 			$data['template'] = "products/edit_products";
 			$data['data']['info'] = $this->mproducts->getcate();
@@ -148,15 +160,15 @@
 					  $db = array(
 							"pro_name" => $this->input->post("pro_name"),
 							"pro_rewrite" => $url,
-                                                        "pro_status" => $this->input->post("pro_status"),
+							"pro_status" => $this->input->post("pro_status"),
 							"pro_code" => $this->input->post("pro_code"),
 							"pro_info" => $this->input->post("pro_info"),
 							"pro_full" => $this->input->post("pro_full"),
 							"pro_keys" => $this->input->post("pro_keys"),
 							"pro_des" => $this->input->post("pro_des"),
 							"pro_price" => $this->input->post("pro_price"),
-                                                        "pro_size" => $this->input->post("pro_size"),
-                                                        "pro_order" => $this->input->post("pro_order"),
+							"pro_size" => $this->input->post("pro_size"),
+							"pro_order" => $this->input->post("pro_order"),
 							"cago_id" => $this->input->post("cago_id"),
 							"cate_id" => $this->input->post("pro_cate")
 						);
@@ -171,7 +183,7 @@
 							$data = array('error' => $this->upload->display_errors());
 							$data['title'] = "Sủa thông tin sản phẩm";
 							$data['template'] = "products/edit_products";
-							$data['act'] = 6;
+							$data['act'] = 5;
 							$data['listcago'] = $this->mproducts->listcago();
 							$data['data']['info'] = $this->mproducts->getcate();
 							$data['data']['get'] = $this->mproducts->get_prodata($id);
@@ -190,6 +202,7 @@
 				$this->load->view("layout",$data);
 			}
 		}
+		
 		public function del(){
 			$id = $this->uri->segment(4);
 			$data = $this->mproducts->get_prodata($id);
@@ -199,7 +212,8 @@
 			$this->mproducts->del_pro($id);
 			redirect(base_url()."admin/products");
 		}
-		public function delall(){
+		public function delall()
+		{
 			$id = $this->input->post("check");
 			if($id != NULL){
 				foreach($id as $item){
@@ -212,7 +226,9 @@
 				redirect(base_url()."admin/products");
 			}
 		}
-		public function createThumbnail($fileName){
+		
+		public function createThumbnail($fileName)
+		{
 			$this->load->library('image_lib');
 			//$this->load->helper('thumbnail_helper');
 			$config['image_library'] = 'gd2';
