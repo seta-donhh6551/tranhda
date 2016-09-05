@@ -32,7 +32,7 @@
 	<div class="left left_menu"></div>
 	<div class="tmenu">
 		<ul class="MenuList">
-			<li><a href="#">Trang chủ</a></li>
+			<li><a href="<?php echo base_url(); ?>">Trang chủ</a></li>
 			<li><a href="#">Khuyến mãi</a><span class="hot"></span></li>
 			<li><a href="#">Phong cảnh</a></li>
 			<li><a href="#">Động vật</a></li>

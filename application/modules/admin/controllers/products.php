@@ -231,8 +231,8 @@ class Products extends Student
 		$config['create_thumb'] = TRUE;
 		$config['maintain_ratio'] = TRUE;
 		$config['thumb_marker'] = FALSE;
-		$config['width'] = 220;
-		$config['height'] = 280;
+		$config['width'] = 160;
+		$config['height'] = 160;
 		$this->image_lib->initialize($config); 
 		$this->image_lib->resize();
 		$this->image_lib->clear();

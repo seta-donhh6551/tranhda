@@ -25,65 +25,10 @@
 			$this->db->where("cate_id",$id);
 			return $this->db->get($this->_category)->row_array();
 		}
-		public function count_all($id,$type=1){
-			if($type == 1){
-				$this->db->where("cate_id",$id);
-			}else{
-				$this->db->where("cago_id",$id);
-			}
-			return $this->db->count_all_results($this->_table);
-		}
 		public function listproduct($cagoid){
-			$this->db->where("cago_id",$cagoid);
+			$this->db->where('cago_id',$cagoid);
 			$this->db->limit(6);
 			return $this->db->get($this->_table)->result_array();
-		}
-                public function listavailable($limit){
-			$this->db->where("pro_status",1);
-			$this->db->limit($limit);
-			return $this->db->get($this->_table)->result_array();
-		}
-		public function listall($id,$off,$start,$type=1){
-			if($type == 1){
-				$this->db->where("cate_id",$id);
-			}else{
-				$this->db->where("cago_id",$id);
-			}
-			$this->db->limit($off,$start);
-                        $this->db->order_by("pro_order","desc");
-			return $this->db->get($this->_table)->result_array();
-		}
-		public function listcago($id){
-			$this->db->where("cate_id",$id);
-			return $this->db->get($this->_categorie)->result_array();
-		}
-		public function listnews($id){
-			$this->db->where("cate_id",$id);
-			return $this->db->get($this->_news)->result_array();
-		}
-		public function listnew(){
-			$this->db->order_by("pro_id","random");
-			$this->db->limit(15);
-			return $this->db->get($this->_table)->result_array();
-		}
-		public function getproduct($id,$limit){
-			$this->db->where("cate_id",$id);
-			$this->db->order_by("pro_order","desc");
-			$this->db->limit($limit);
-			return $this->db->get($this->_table)->result_array();
-		}
-		public function count_all_search($key){
-			$this->db->like('pro_name',$key); 
-			return $this->db->count_all_results($this->_table);
-		}
-		public function search($key,$off,$start){
-			$this->db->like('pro_name',$key); 
-			$this->db->limit($off,$start);
-			return $this->db->get($this->_table)->result_array();
-		}
-		public function category($id){
-			$this->db->where("cate_id",$id);
-			return $this->db->get($this->_category)->row_array();
 		}
 		public function related($id,$cateid){
 			$this->db->where("cate_id",$cateid);

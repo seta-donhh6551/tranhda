@@ -695,7 +695,7 @@
     <div class="zhuangs">
         <div class="zh_top">
             <div class="zhl">
-                <h2>Tranh Phong Cảnh</h2>
+                <h2>Tranh đá quý</h2>
             </div>
             <div class="zhr">
                 <a href="#">Phòng khách</a>
@@ -851,46 +851,22 @@
                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
                         <tr valign="top">
+							<?php if(isset($listgems)) { ?>
+							<?php foreach($listgems as $gemItem){ ?>
                             <td id="item-13541" width="16%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-13541.html' style='width:146px;height:146px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20160817/12cfd116c7d687a5.jpg" alt="张慧仁四尺山水画《桃花源里住人家》" style='width:146px;height:146px;' /> </a>
+                                <a target="_blank" href='#' class="thumb-img" class='pic'>
+									<img src="<?php echo base_url().'uploads/products/thumb/'.$gemItem['pro_image'] ?>" alt="<?php echo $gemItem['pro_name']; ?>" style="max-width:146px;"/>
+								</a>
                                 <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-13541.html' title="张慧仁四尺山水画《桃花源里住人家》">张慧仁四尺山水画《桃花源里住人家》</a> </div>
+                                    <div class='gname' style='height:36px;line-height:18px;'>
+											<a href='#' title="<?php echo $gemItem['pro_name']; ?>"><?php echo $gemItem['pro_name']; ?></a>
+									</div>
                                     <div class='clearfix'>
-                                        <div class='price textcenter'>本站价:<em class='price1'>￥1800</em>
-                                        </div>
+                                        <div class='price textcenter'>Giá : <em class='price1'><?php echo $gemItem['pro_price']; ?></em></div>
                                     </div>
                                 </div>
                             </td>
-                            <td id="item-13206" width="16%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-13206.html' style='width:146px;height:146px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20160718/7bb06d9602c92368.jpg" alt="辽宁工美教授苗雨 四尺三开《福禄双全》师从吴冠中" style='width:146px;height:146px;' /> </a>
-                                <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-13206.html' title="辽宁工美教授苗雨 四尺三开《福禄双全》师从吴冠中">辽宁工美教授苗雨 四尺三开《福禄双全》师从吴冠中</a> </div>
-                                    <div class='clearfix'>
-                                        <div class='price textcenter'>本站价:<em class='price1'>￥2500</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td id="item-12691" width="16%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-12691.html' style='width:146px;height:146px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20160422/957f0152b0646542.jpg" alt="河北美协郭廷四尺斗方《闲趣图》" style='width:146px;height:146px;' /> </a>
-                                <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-12691.html' title="河北美协郭廷四尺斗方《闲趣图》">河北美协郭廷四尺斗方《闲趣图》</a> </div>
-                                    <div class='clearfix'>
-                                        <div class='price textcenter'>本站价:<em class='price1'>￥3500</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td id="item-13171" width="16%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-13171.html' style='width:146px;height:146px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20160708/e03b80df96271a98.jpg" alt="北京美协凌雪四尺《富贵有余》" style='width:146px;height:146px;' /> </a>
-                                <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-13171.html' title="北京美协凌雪四尺《富贵有余》">北京美协凌雪四尺《富贵有余》</a> </div>
-                                    <div class='clearfix'>
-                                        <div class='price textcenter'>本站价:<em class='price1'>￥560</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
+							<?php } } ?>
                             <td id="item-12947" width="16%;" class='item textcenter'>
                                 <a target="_blank" href='http://www.99zihua.com/product-12947.html' style='width:146px;height:146px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20160606/5797c7d966d55e8d.jpg" alt="安徽美协何华贤 三尺《红梅报春》" style='width:146px;height:146px;' /> </a>
                                 <div class="info">

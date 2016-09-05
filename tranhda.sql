@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.14
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 05, 2016 at 06:44 AM
--- Server version: 5.6.26
--- PHP Version: 5.6.12
+-- Generation Time: Sep 05, 2016 at 12:39 PM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,8 +26,8 @@ SET time_zone = "+00:00";
 -- Table structure for table `tbl_articles`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_articles` (
-  `article_id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_articles` (
+  `article_id` int(10) UNSIGNED NOT NULL,
   `article_title` varchar(200) CHARACTER SET utf8 NOT NULL,
   `article_title_rewrite` varchar(200) CHARACTER SET utf8 NOT NULL,
   `article_info` text CHARACTER SET utf8 NOT NULL,
@@ -44,8 +44,8 @@ CREATE TABLE IF NOT EXISTS `tbl_articles` (
 -- Table structure for table `tbl_categorie`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_categorie` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_categorie` (
+  `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(100) NOT NULL,
   `title` varchar(255) NOT NULL,
   `rewrite` varchar(255) NOT NULL,
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `tbl_categorie` (
   `status` char(1) NOT NULL DEFAULT '1',
   `type` int(1) NOT NULL DEFAULT '1',
   `cate_id` int(10) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_categorie`
@@ -75,8 +75,8 @@ INSERT INTO `tbl_categorie` (`id`, `name`, `title`, `rewrite`, `shortinfo`, `key
 -- Table structure for table `tbl_category`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_category` (
-  `cate_id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_category` (
+  `cate_id` int(10) UNSIGNED NOT NULL,
   `cate_name` varchar(50) NOT NULL,
   `cate_title` varchar(255) NOT NULL,
   `cate_rewrite` varchar(255) NOT NULL,
@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `tbl_category` (
   `cate_des` text NOT NULL,
   `cate_status` int(1) NOT NULL DEFAULT '1',
   `cate_order` int(10) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=129 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_category`
@@ -107,21 +107,21 @@ INSERT INTO `tbl_category` (`cate_id`, `cate_name`, `cate_title`, `cate_rewrite`
 -- Table structure for table `tbl_config`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_config` (
-  `config_id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_config` (
+  `config_id` int(10) UNSIGNED NOT NULL,
   `config_title` varchar(200) NOT NULL,
   `config_key` text NOT NULL,
   `config_des` text NOT NULL,
   `config_logo` varchar(200) NOT NULL,
   `config_footer` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_config`
 --
 
 INSERT INTO `tbl_config` (`config_id`, `config_title`, `config_key`, `config_des`, `config_logo`, `config_footer`) VALUES
-(1, 'Tranh đá quý, Tranh gạo và tranh cát', 'Tranh Gao Viet, Tranh Gao O Ha Noi, Tranh Gao Thu Phap, Tranh Gao Phong Canh, Tranh Gao Bac Ho, Tranh Gao Dong Vat', 'Tranh gạo việt, chúng tôi cung cấp các loại tranh gạo phong cảnh, tranh phong thủy, tranh nghệ thuật và tranh treo tường tại hà nội và ship hàng trên toàn quốc.', 'new-ubuntu-logo2.png', '<h4>Copyright @ 2013 NorthStar.Vn - All rights reserved</h4>\r\n<p>Địa chỉ : Số 100 Kiều Mai - Từ Liêm - Hà Nội &#160; &#160; Hotline : 0974.136.509</p>');
+(1, 'Tranh đá quý, Tranh gạo và tranh cát', 'Tranh Gao Viet, Tranh Gao O Ha Noi, Tranh Gao Thu Phap, Tranh Gao Phong Canh, Tranh Gao Bac Ho, Tranh Gao Dong Vat', 'Tranh gạo việt, chúng tôi cung cấp các loại tranh gạo phong cảnh, tranh phong thủy, tranh nghệ thuật và tranh treo tường tại hà nội và ship hàng trên toàn quốc.', '', '<h4>Copyright @ 2013 NorthStar.Vn - All rights reserved</h4>\r\n<p>Địa chỉ : Số 100 Kiều Mai - Từ Liêm - Hà Nội &#160; &#160; Hotline : 0974.136.509</p>');
 
 -- --------------------------------------------------------
 
@@ -129,14 +129,14 @@ INSERT INTO `tbl_config` (`config_id`, `config_title`, `config_key`, `config_des
 -- Table structure for table `tbl_contact`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_contact` (
-  `con_id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_contact` (
+  `con_id` int(10) UNSIGNED NOT NULL,
   `con_name` varchar(150) CHARACTER SET utf8 NOT NULL,
   `con_email` varchar(100) CHARACTER SET utf8 NOT NULL,
   `con_phone` varchar(50) CHARACTER SET utf8 NOT NULL,
   `con_full` text CHARACTER SET utf8,
   `con_date` varchar(100) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_contact`
@@ -158,11 +158,11 @@ INSERT INTO `tbl_contact` (`con_id`, `con_name`, `con_email`, `con_phone`, `con_
 -- Table structure for table `tbl_contact_info`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_contact_info` (
-  `contact_id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_contact_info` (
+  `contact_id` int(10) UNSIGNED NOT NULL,
   `contact_value` text CHARACTER SET utf8 NOT NULL,
   `contact_status` int(1) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_contact_info`
@@ -177,8 +177,8 @@ INSERT INTO `tbl_contact_info` (`contact_id`, `contact_value`, `contact_status`)
 -- Table structure for table `tbl_content`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_content` (
-  `con_id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_content` (
+  `con_id` int(10) UNSIGNED NOT NULL,
   `con_title` varchar(255) NOT NULL,
   `con_rewrite` varchar(200) NOT NULL,
   `con_author` varchar(100) NOT NULL,
@@ -190,7 +190,7 @@ CREATE TABLE IF NOT EXISTS `tbl_content` (
   `con_image` varchar(255) NOT NULL,
   `con_status` int(10) NOT NULL DEFAULT '1',
   `con_date` varchar(100) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_content`
@@ -212,8 +212,8 @@ INSERT INTO `tbl_content` (`con_id`, `con_title`, `con_rewrite`, `con_author`, `
 -- Table structure for table `tbl_customer`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_customer` (
-  `customer_id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_customer` (
+  `customer_id` int(10) UNSIGNED NOT NULL,
   `customer_name` varchar(200) CHARACTER SET utf8 NOT NULL,
   `customer_user` varchar(200) CHARACTER SET utf8 NOT NULL,
   `customer_address` varchar(200) CHARACTER SET utf8 NOT NULL,
@@ -226,7 +226,7 @@ CREATE TABLE IF NOT EXISTS `tbl_customer` (
   `customer_status` int(1) NOT NULL DEFAULT '0',
   `customer_active` int(10) NOT NULL,
   `cate_id` int(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_customer`
@@ -250,12 +250,12 @@ INSERT INTO `tbl_customer` (`customer_id`, `customer_name`, `customer_user`, `cu
 -- Table structure for table `tbl_education`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_education` (
-  `edu_id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_education` (
+  `edu_id` int(10) UNSIGNED NOT NULL,
   `edu_info` text CHARACTER SET utf8 NOT NULL,
   `edu_full` longtext CHARACTER SET utf8 NOT NULL,
   `edu_status` int(1) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_education`
@@ -270,8 +270,8 @@ INSERT INTO `tbl_education` (`edu_id`, `edu_info`, `edu_full`, `edu_status`) VAL
 -- Table structure for table `tbl_intro`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_intro` (
-  `in_id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_intro` (
+  `in_id` int(10) UNSIGNED NOT NULL,
   `in_name` varchar(200) CHARACTER SET utf8 NOT NULL,
   `in_rewrite` varchar(200) CHARACTER SET utf8 NOT NULL,
   `in_value` longtext CHARACTER SET utf8 NOT NULL,
@@ -280,7 +280,7 @@ CREATE TABLE IF NOT EXISTS `tbl_intro` (
   `in_des` text CHARACTER SET utf8 NOT NULL,
   `in_order` int(1) NOT NULL,
   `in_status` int(1) NOT NULL DEFAULT '1'
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_intro`
@@ -299,11 +299,11 @@ INSERT INTO `tbl_intro` (`in_id`, `in_name`, `in_rewrite`, `in_value`, `in_image
 -- Table structure for table `tbl_intro_one`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_intro_one` (
-  `intro_id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_intro_one` (
+  `intro_id` int(10) UNSIGNED NOT NULL,
   `intro_full` longtext CHARACTER SET utf8 NOT NULL,
   `intro_status` int(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_intro_one`
@@ -318,13 +318,13 @@ INSERT INTO `tbl_intro_one` (`intro_id`, `intro_full`, `intro_status`) VALUES
 -- Table structure for table `tbl_menu`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_menu` (
-  `menu_id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_menu` (
+  `menu_id` int(10) UNSIGNED NOT NULL,
   `menu_name` varchar(200) CHARACTER SET utf8 NOT NULL,
   `menu_rewrite` varchar(200) CHARACTER SET utf8 NOT NULL,
   `menu_order` int(1) NOT NULL,
   `menu_status` int(1) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_menu`
@@ -341,8 +341,8 @@ INSERT INTO `tbl_menu` (`menu_id`, `menu_name`, `menu_rewrite`, `menu_order`, `m
 -- Table structure for table `tbl_news`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_news` (
-  `news_id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_news` (
+  `news_id` int(10) UNSIGNED NOT NULL,
   `news_title` varchar(255) NOT NULL,
   `news_rewrite` varchar(200) NOT NULL,
   `news_author` varchar(100) NOT NULL,
@@ -353,8 +353,8 @@ CREATE TABLE IF NOT EXISTS `tbl_news` (
   `news_tags` varchar(255) NOT NULL,
   `news_images` varchar(255) NOT NULL,
   `news_date` varchar(100) NOT NULL,
-  `cate_id` int(10) unsigned NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+  `cate_id` int(10) UNSIGNED NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_news`
@@ -384,20 +384,21 @@ INSERT INTO `tbl_news` (`news_id`, `news_title`, `news_rewrite`, `news_author`, 
 -- Table structure for table `tbl_online`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_online` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_online` (
+  `id` int(10) UNSIGNED NOT NULL,
   `time` varchar(100) CHARACTER SET utf8 NOT NULL,
   `user_ip` varchar(100) CHARACTER SET utf8 NOT NULL,
   `local` varchar(150) CHARACTER SET utf8 NOT NULL,
   `date` int(10) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=299999 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_online`
 --
 
 INSERT INTO `tbl_online` (`id`, `time`, `user_ip`, `local`, `date`) VALUES
-(299998, '1473048919', '::1', '/tranhda/index.php', 0);
+(300040, '1473069846', '::1', '/tranhda/index.php', 0),
+(300041, '1473070450', '::1', '/tranhda/index.php', 0);
 
 -- --------------------------------------------------------
 
@@ -405,8 +406,8 @@ INSERT INTO `tbl_online` (`id`, `time`, `user_ip`, `local`, `date`) VALUES
 -- Table structure for table `tbl_order`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_order` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_order` (
+  `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(200) CHARACTER SET utf8 NOT NULL,
   `local` varchar(255) CHARACTER SET utf8 NOT NULL,
   `phone` varchar(100) CHARACTER SET utf8 NOT NULL,
@@ -423,7 +424,7 @@ CREATE TABLE IF NOT EXISTS `tbl_order` (
   `date` datetime NOT NULL,
   `date_nhan` varchar(200) CHARACTER SET utf8 NOT NULL,
   `nhanhang` text CHARACTER SET utf8 NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -431,8 +432,8 @@ CREATE TABLE IF NOT EXISTS `tbl_order` (
 -- Table structure for table `tbl_position`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_position` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_position` (
+  `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(100) NOT NULL,
   `title` varchar(255) NOT NULL,
   `rewrite` varchar(255) NOT NULL,
@@ -443,7 +444,7 @@ CREATE TABLE IF NOT EXISTS `tbl_position` (
   `order` tinyint(4) NOT NULL,
   `image` varchar(150) NOT NULL,
   `status` tinyint(4) NOT NULL DEFAULT '1'
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_position`
@@ -465,8 +466,8 @@ INSERT INTO `tbl_position` (`id`, `name`, `title`, `rewrite`, `shortinfo`, `keyw
 -- Table structure for table `tbl_posts`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_posts` (
-  `post_id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_posts` (
+  `post_id` int(10) UNSIGNED NOT NULL,
   `post_title` varchar(200) CHARACTER SET utf8 NOT NULL,
   `post_title_rewrite` varchar(200) CHARACTER SET utf8 NOT NULL,
   `post_author` varchar(100) CHARACTER SET utf8 NOT NULL,
@@ -481,7 +482,7 @@ CREATE TABLE IF NOT EXISTS `tbl_posts` (
   `post_keys` text CHARACTER SET utf8 NOT NULL,
   `post_des` text CHARACTER SET utf8 NOT NULL,
   `cate_id` int(10) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=67 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_posts`
@@ -528,8 +529,8 @@ INSERT INTO `tbl_posts` (`post_id`, `post_title`, `post_title_rewrite`, `post_au
 -- Table structure for table `tbl_products`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_products` (
-  `pro_id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_products` (
+  `pro_id` int(10) UNSIGNED NOT NULL,
   `pro_code` varchar(100) DEFAULT NULL,
   `pro_name` varchar(100) NOT NULL,
   `pro_rewrite` varchar(200) NOT NULL,
@@ -543,175 +544,18 @@ CREATE TABLE IF NOT EXISTS `tbl_products` (
   `pro_image` varchar(100) NOT NULL,
   `pro_order` int(10) NOT NULL,
   `cago_id` int(10) NOT NULL,
-  `cate_id` int(10) unsigned NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=177 DEFAULT CHARSET=utf8;
+  `cate_id` int(10) UNSIGNED NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_products`
 --
 
 INSERT INTO `tbl_products` (`pro_id`, `pro_code`, `pro_name`, `pro_rewrite`, `pro_status`, `pro_info`, `pro_full`, `pro_keys`, `pro_des`, `pro_price`, `pro_size`, `pro_image`, `pro_order`, `cago_id`, `cate_id`) VALUES
-(1, 'TGTN01', 'Tranh gạo thiếu nữ', 'tranh-gao-thieu-nu', 0, 'Kích thước 60x60 cm', '&#160;Tranh gạo thiếu nữ', '', '', 'Liên hệ', '', 'tranh-gao-thieu-nu.jpg', 0, 0, 1),
-(2, 'TGPC-01', 'Tranh gạo làng quê Việt', 'tranh-gao-lang-que-viet', 0, '0', 'Tranh gạo làng quê Việt', 'Tranh gạo làng quê Việt', 'Tranh gạo làng quê Việt', 'Liên hệ', '', '188.jpg', 0, 1, 6),
-(3, 'TGPC-02', 'Tranh gạo làng quê Việt', 'tranh-gao-lang-que-viet', 0, '0', '0', 'Tranh gạo làng quê Việt', 'Tranh gạo làng quê Việt', 'Liên hệ', '25x35', 'lang-que-viet-nam1.jpg', 89, 1, 6),
-(4, 'TGPC-03', 'Tranh gạo mùa cấy', 'tranh-gao-mua-cay', 0, '0', '0', 'Tranh gạo làng quê Việt', 'Tranh gạo làng quê Việt', 'Liên hệ', '25x35', 'mua-cay.jpg', 90, 1, 6),
-(5, 'TGPC-04', 'Tranh gạo sông nước ', 'tranh-gao-song-nuoc-', 0, '0', 'Tranh gạo làng quê việt nam, cô lái đò bên làng quê yên bình', 'Tranh gạo làng quê việt nam', 'Tranh gạo làng quê việt nam, cô lái đò bên làng quê yên bình', 'Liên hệ', '', '145.jpg', 0, 5, 6),
-(6, 'TGTP-01', 'Tranh gạo thư pháp', 'tranh-gao-thu-phap', 0, '', '&#160;', '', '', 'Liên hệ', '', '155.jpg', 0, 0, 3),
-(7, 'TGTP-02', 'Tranh gạo thư pháp', 'tranh-gao-thu-phap', 0, '', '&#160;', '', '', 'Liên hệ', '', '63.jpg', 0, 0, 3),
-(8, 'TGTP-03', 'Tranh gạo thư pháp - Nhẫn', 'tranh-gao-thu-phap---nhan', 0, '', '&#160;', '', '', 'Liên hệ', '', '126.jpg', 0, 0, 3),
-(9, 'TGTP-04', 'Tranh gạo thư pháp', 'tranh-gao-thu-phap', 0, '', '&#160;', '', '', 'Liên hệ', '', '153.jpg', 0, 0, 3),
-(10, 'TGPC-05', 'Tranh gạo việt nam', 'tranh-gao-viet-nam', 1, '0', 'Tranh gạo làng quê việt nam, cậu bé chăn trâu bên dòng sông và con đò', 'Tranh gạo làng quê Việt', 'Tranh gạo làng quê việt nam, cậu bé chăn trâu bên dòng sông và con đò', 'Liên hệ', '30x30', 'tranh-gao-viet-nam2.jpg', 98, 1, 6),
-(11, 'TGPC-06', 'Tranh gạo làng quê Việt', 'tranh-gao-lang-que-viet', 0, '0', 'Tranh gạo làng quê Việt', 'Tranh gạo làng quê Việt', 'Tranh gạo làng quê Việt', 'Liên hệ', '', 'lang-que-viet-05.jpg', 70, 1, 6),
-(12, 'TGPC-07', 'Tranh gạo cất chũm', 'tranh-gao-cat-chum', 0, '0', 'Tranh gạo làng quê Việt', 'Tranh gạo làng quê Việt', 'Tranh gạo làng quê Việt', 'Liên hệ', '', '181.jpg', 0, 1, 6),
-(13, 'TGPC-08', 'Tranh gạo mùa gặt', 'tranh-gao-mua-gat', 0, '0', 'Tranh gạo làng quê Việt', 'Tranh gạo làng quê Việt', 'Tranh gạo làng quê Việt', 'Liên hệ', '', '180.jpg', 0, 1, 6),
-(14, 'TGPC-09', 'Tranh gạo làng quê Việt', 'tranh-gao-lang-que-viet', 0, '0', '0', 'Tranh gạo làng quê Việt', 'Tranh gạo làng quê Việt Nam', 'Liên hệ', '25x35', 'lang-que-viet-01.jpg', 88, 1, 6),
-(15, 'TGCD-01', 'Tranh gạo Bác Hồ', 'tranh-gao-bac-ho', 0, '', '&#160;', '', '', 'Liên hệ', '', '25.jpg', 0, 0, 5),
-(16, 'TGDV-01', 'Tranh gạo động vật', 'tranh-gao-dong-vat', 0, '0', '&#160;', 'Tranh gạo động vật', 'Tranh gạo động vật', 'Liên hệ', '', 'ho-xuong-nui.jpg', 0, 0, 4),
-(17, 'TGNT-02', 'Tranh gạo nghệ thuật', 'tranh-gao-nghe-thuat', 0, '', '&#160;', '', '', 'Liên hệ', '', '116.jpg', 0, 0, 1),
-(18, 'TGDV-02', 'Tranh mã đáo thành công', 'tranh-ma-dao-thanh-cong', 0, '0', 'Bức tranh mã đáo thành công được làm từ gạo, đơn giản nhưng không kém phần hấp dẫn', 'Tranh gạo mã đáo thành công', 'Bức tranh mã đáo thành công được làm từ gạo, đơn giản nhưng không kém phần hấp dẫn', 'Liên hệ', '', 'ma-dao-thanh-cong.jpg', 0, 0, 4),
-(19, 'TGDV-03', 'Tranh gạo động vật', 'tranh-gao-dong-vat', 0, '0', '&#160;', '', '', 'Liên hệ', '', 'manh-ho.jpg', 0, 0, 4),
-(20, 'TGDV-04', 'Tranh gạo con hổ', 'tranh-gao-con-ho', 0, '0', '&#160;', 'Tranh con hổ, Tranh gạo con hổ', 'Bức tranh gạo con hổ biểu tượng cho sức hạnh vĩ đại', 'Liên hệ', '', 'tranh-gao-con-ho.jpg', 0, 0, 4),
-(21, 'TGNT-03', 'Tranh gạo nghệ thuật', 'tranh-gao-nghe-thuat', 0, '', '&#160;', '', '', 'Liên hệ', '', '935755_662281320455857_958626368_n.jpg', 0, 0, 1),
-(22, 'TGNT-04', 'Tranh gạo nghệ thuật', 'tranh-gao-nghe-thuat', 0, '', '&#160;', '', '', 'Liên hệ', '', '148.jpg', 0, 0, 1),
-(23, 'TGCD-02', 'Tranh gạo chân dung', 'tranh-gao-chan-dung', 0, '0', '&#160;', 'Tranh gạo chân dung', 'Tranh gạo chân dung', 'Liên hệ', '', '4d1f6823-80c9-4563-80b8-5ae1fd32dbe01.jpg', 0, 0, 5),
-(24, 'TGCD-03', 'Thiếu nữ dân tộc', 'thieu-nu-dan-toc', 0, '0', '&#160;', 'Thiếu nữ dân tộc', 'Tranh gạo thiếu nữ dân tộc', 'Liên hệ', '', 'thu-nua-dan-toc.jpg', 0, 0, 5),
-(25, 'TGCD-04', 'Tranh gạo Bác Hồ', 'tranh-gao-bac-ho', 0, '', '&#160;', '', '', 'Liên hệ', '', '24.jpg', 0, 0, 5),
-(26, 'TGK-01', 'Tranh gạo logo', 'tranh-gao-logo', 0, '0', '&#160;', 'Tranh gạo logo', 'Tranh gạo logo', 'Liên hệ', '', '209.jpg', 0, 0, 1),
-(27, 'TGCD-05', 'Chân dung Bác', 'chan-dung-bac', 0, '0', '&#160;', 'Chân dung Bác Hồ', 'Chân dung Bác Hồ', 'Liên hệ', '', '351.jpg', 0, 0, 5),
-(28, 'TGCD-06', 'Tranh gạo chân dung', 'tranh-gao-chan-dung', 0, '', '&#160;', '', '', 'Liên hệ', '', '200.jpg', 0, 0, 5),
-(29, 'TGPC-10', 'Tranh gạo chùa một cột', 'tranh-gao-chua-mot-cot', 0, '0', 'Tranh phong cảnh, Bức tranh chùa một cột được làm từ những hạt gạo', 'Tranh gạo chùa một cột', 'Tranh phong cảnh, Bức tranh chùa một cột được làm từ những hạt gạo', 'Liên hệ', '', '82dec19b-0f31-4b05-bf5a-7d9b62543258.jpg', 0, 2, 6),
-(30, 'TGK-02', 'Tranh gạo lịch', 'tranh-gao-lich', 0, '0', '&#160;', 'Tranh gạo lịch treo tường', 'Tranh gạo lịch treo tường', 'Liên hệ', '', 'qla1349666896.jpg', 0, 0, 3),
-(31, 'TGPT-01', 'Tùng Hạc Niên Diên', 'tung-hac-nien-dien', 1, '0', '&#160;', 'Tùng Hạc Niên Diên', 'Tranh gạo phong thủy Tùng Hạc Niên Diên', 'Liên hệ', '35x50', 'tung-hac-nien-dien1.jpg', 0, 0, 2),
-(32, 'TGDV-06', 'Tranh gạo hai hổ', 'tranh-gao-hai-ho', 0, '', '&#160;', '', '', 'Liên hệ', '', 'tranh-gao-2ho.jpg', 0, 0, 4),
-(34, 'TGDV-07', 'Tranh gạo động vật', 'tranh-gao-dong-vat', 0, '', '&#160;', '', '', 'Liên hệ', '', 'tranh-dong-vat-5.jpg', 0, 0, 4),
-(39, 'TGDV-11', 'Tranh gạo động vật', 'tranh-gao-dong-vat', 0, '', '&#160;', '', '', 'Liên hệ', '', 'tranh-dong-vat-25.jpg', 0, 0, 4),
-(40, 'TGNT-05', 'Tranh gạo nghệ thuật', 'tranh-gao-nghe-thuat', 0, '', '&#160;', '', '', 'Liên hệ', '', 'tranh-co-gai-ao-dai-gao-rang-4.jpg', 0, 0, 1),
-(41, 'TGCD-07', 'Tranh gạo phật giáo', 'tranh-gao-phat-giao', 0, '', '&#160;', '', '', 'Liên hệ', '', 'tranh-ton-giao.jpg', 0, 0, 5),
-(45, 'TGPC-11', 'Làng quê việt', 'lang-que-viet', 1, '0', 'Tranh gạo phong cảnh làng quê non nước Việt Nam, đơn giản nhưng đậm chất văn hóa con người Việt Nam', 'Tranh gạo phong cảnh', 'Tranh gạo phong cảnh làng quê non nước Việt Nam, đơn giản nhưng đậm chất văn hóa con người Việt Nam', 'Liên hệ', '35x60', 'lang-que-viet-11.jpg', 82, 5, 6),
-(46, 'TGPT-02', 'Cá và Sen', 'ca-va-sen', 0, '0', '&#160;', 'Tranh gạo phong thủy cá và sen', 'Tranh gạo phong thủy cá và sen', 'Liên hệ', '', 'ca-va-sen.jpg', 0, 0, 2),
-(48, 'TGCD-09', 'Tranh gạo chân dung obama', 'tranh-gao-chan-dung-obama', 0, '', '&#160;', '', '', 'Liên hệ', '', 'obama.jpg', 0, 0, 5),
-(49, 'TGPT-03', 'Mã đáo thành công', 'ma-dao-thanh-cong', 1, '0', '&#160;', 'Tranh gạo phong thủy mã đáo thành công', 'Tranh gạo phong thủy mã đáo thành công', 'Liên hệ', '50x80', 'tranh-ma-dao-thanh-cong.jpg', 0, 0, 2),
-(50, 'TGPC-12', 'Tháp rùa hà nội', 'thap-rua-ha-noi', 0, '0', '0', 'Tranh gạo tháp rùa, Tranh gạo Hà Nội', 'Tranh gạo tháp rùa hồ Hoàn Kiếm Hà Nội', 'Liên hệ', '25x35', 'thap-rua.jpg', 104, 2, 6),
-(51, 'TGPC-13', 'Sông nước việt nam', 'song-nuoc-viet-nam', 0, '0', '&#160;', 'Tranh gạo sông nước việt nam, Tranh gạo làng quê việt', 'Tranh gạo sông nước việt nam, Tranh gạo làng quê việt', 'Liên hệ', '', 'song-nuoc-viet-nam.jpg', 0, 5, 6),
-(52, 'TGPC-14', 'Làng quê việt nam', 'lang-que-viet-nam', 1, '0', '&#160;', 'Tranh gạo sông nước việt nam, Tranh gạo làng quê việt nam', 'Tranh gạo làng quê việt nam', 'Liên hệ', '25x35', 'lang-que-viet-14.jpg', 76, 1, 6),
-(53, 'TGPC-15', 'Cậu bé chăn trâu', 'cau-be-chan-trau', 1, '0', '&#160;', 'Tranh gạo cậu bé chăn trâu', 'Tranh gạo cậu bé chăn trâu', 'Liên hệ', '30x30', 'cau-be-chan-trau1.jpg', 77, 1, 6),
-(54, 'TGPC-16', 'Phố cổ Hà Nội', 'pho-co-ha-noi', 1, '0', '0', 'Tranh gạo phố cổ Hà Nội', 'Tranh gạo phố cổ Hà Nội', 'Liên hệ', '30x30', 'pho-co-ha-noi-02.jpg', 103, 2, 6),
-(55, 'TGPC-17', 'Sông nước việt nam', 'song-nuoc-viet-nam', 0, '0', '&#160;', 'Tranh gạo sông nước việt nam', 'Tranh gạo sông nước việt nam', 'Liên hệ', '', 'song-nuoc-viet.jpg', 0, 5, 6),
-(56, 'TGPC-18', 'Cầu tre việt nam', 'cau-tre-viet-nam', 0, '0', '&#160;', 'Tranh gạo làng quê việt', 'Tranh gạo làng quê việt', 'Liên hệ', '35x50', 'cau-tre-viet-nam.jpg', 87, 1, 6),
-(57, 'TGPC-19', 'Thuận buồm xuôi gió', 'thuan-buom-xuoi-gio', 0, '0', '&#160;', 'Tranh gạo thuận buồm xuôi gió', 'Tranh gạo thuận buồm xuôi gió', 'Liên hệ', '', 'thuan-buom-xuoi-gio.jpg', 0, 5, 6),
-(58, 'TGPC-20', 'Làng quê việt nam', 'lang-que-viet-nam', 0, '0', '&#160;', 'Tranh gạo làng quê việt nam', 'Tranh gạo làng quê việt nam', 'Liên hệ', '', 'lang-que-viet1.jpg', 0, 1, 6),
-(59, 'TGPC-21', 'Làng quê việt nam', 'lang-que-viet-nam', 1, '0', '&#160;', 'Tranh gạo làng quê việt nam', 'Tranh gạo làng quê việt nam', 'Liên hệ', '30x40', 'lang-que-viet7.jpg', 86, 1, 6),
-(60, 'TGPC-22', 'Làng quê việt nam', 'lang-que-viet-nam', 0, '0', '&#160;', 'Tranh gạo làng quê việt nam', 'Tranh gạo làng quê việt nam', 'Liên hệ', '', 'lang-que-viet3.jpg', 0, 1, 6),
-(61, 'TGPC-23', 'Làng quê việt nam', 'lang-que-viet-nam', 1, '0', '0', 'Làng quê việt nam', 'Tranh gạo làng quê việt nam', 'Liên hệ', '25x35', 'ganh-buoc2.jpg', 93, 1, 6),
-(62, 'TGPC-24', 'Làng quê việt nam', 'lang-que-viet-nam', 0, '0', '&#160;', 'Làng quê việt nam', 'Tranh gạo làng quê việt nam', 'Liên hệ', '', 'lang-que-viet4.jpg', 0, 1, 6),
-(63, 'TGPC-25', 'Phong cảnh việt nam', 'phong-canh-viet-nam', 0, '0', '&#160;', 'Phong cảnh việt nam', 'Tranh gạo phong cảnh việt nam', 'Liên hệ', '30x50', 'thieu-nu-va-dong-song.jpg', 83, 4, 6),
-(64, 'TGPC-26', 'Phong cảnh việt nam', 'phong-canh-viet-nam', 0, '0', '&#160;', 'Phong cảnh việt nam', 'Tranh gạo phong cảnh việt nam', 'Liên hệ', '', 'lang-que-viet41.jpg', 0, 1, 6),
-(65, 'TGPC-27', 'Phong cảnh việt nam', 'phong-canh-viet-nam', 0, '0', '&#160;', 'Phong cảnh việt nam', 'Tranh gạo phong cảnh việt nam', 'Liên hệ', '', 'lang-que-viet5.jpg', 0, 1, 6),
-(66, 'TGPC-28', 'Làng quê việt nam', 'lang-que-viet-nam', 0, 'Tranh gạo phong cảnh việt nam', '&#160;', 'Phong cảnh việt nam', 'Tranh gạo phong cảnh việt nam', 'Liên hệ', '', 'tranh-gao-lang-que.jpg', 0, 0, 6),
-(67, 'TGPC-29', 'Tranh gạo phố cổ', 'tranh-gao-pho-co', 0, '0', '&#160;', 'Tranh gạo phố cổ hà nội', 'Tranh gạo phố cổ hà nội, tái hiện phố cổ hà nội năm xưa trong bức tranh phong cảnh xinh xắn.', 'Liên hệ', '', 'tranh-gao-pho-co.jpg', 0, 2, 6),
-(68, 'TGPC-30', 'Xe xích lô', 'xe-xich-lo', 0, 'Tranh gạo xe xích lô phố hà nội', '&#160;', 'Xe xích lô', 'Tranh gạo xe xích lô phố hà nội', 'Liên hệ', '', 'xich-lo.jpg', 0, 0, 6),
-(69, 'TGPC-31', 'Sông nước việt nam', 'song-nuoc-viet-nam', 0, '0', '&#160;', 'Sông nước việt nam', 'Tranh phong cảnh làng quê sông nước việt nam, tranh gạo một trào lưu mới', 'Liên hệ', '', 'song-nuoc-viet1.jpg', 0, 5, 6),
-(70, 'TGPC-32', 'Tranh gạo thuyền buồm', 'tranh-gao-thuyen-buom', 0, '0', '0', 'Tranh gạo thuyền buồm', 'Tranh gạo thuyền buồm, tranh gạo một trào lưu mới', 'Liên hệ', '50x50', '12295275_872130792883764_8593887461610392444_n.jpg', 70, 0, 6),
-(71, 'TGCD-10', 'Chân dung Bác Hồ', 'chan-dung-bac-ho', 0, '0', '&#160;', 'Chân dung Bác Hồ', 'Chân dung Bác Hồ', 'Liên hệ', '', '26.jpg', 0, 0, 5),
-(72, 'TGCD-11', 'Tranh gạo Bác Hồ', 'tranh-gao-bac-ho', 0, 'Tranh gạo Bác Hồ', '&#160;', 'Tranh gạo Bác Hồ', 'Tranh gạo Bác Hồ', 'Liên hệ', '', '20.jpg', 0, 0, 5),
-(73, 'TGPC-38', 'Cầu tre việt nam', 'cau-tre-viet-nam', 0, '0', 'Tranh gạo thiếu nữ và cầu tre làng quê việt nam', 'Tranh gạo thiếu nữ và cầu tre làng quê việt nam', 'Tranh gạo thiếu nữ và cầu tre làng quê việt nam', 'Liên hệ', '', 'ca-tre.JPG', 0, 4, 6),
-(74, 'TGNT-09', 'Thiếu nữ việt', 'thieu-nu-viet', 0, 'Tranh gạo thiếu nữ việt nam', '&#160;', 'Thiếu nữ việt', 'Tranh gạo thiếu nữ việt nam', 'Liên hệ', '', 'xe-dap.jpg', 0, 0, 1),
-(75, 'TGTP-05', 'Tranh chữ tri ân', 'tranh-chu-tri-an', 0, 'Tranh chữ tri ân, tranh thư pháp được làm từ gạo', '&#160;', 'Tranh chữ tri ân', 'Tranh chữ tri ân, tranh thư pháp được làm từ gạo', 'Liên hệ', '', 'tranh-thu-phap.jpg', 0, 0, 3),
-(76, 'TGTP-06', 'Tranh gạo chữ Nhẫn', 'tranh-gao-chu-nhan', 0, 'Tranh gạo chữ nhẫn, tranh thư pháp được làm từ hạt gạo', '&#160;', 'Tranh gạo chữ nhẫn', 'Tranh gạo chữ nhẫn, tranh thư pháp được làm từ hạt gạo', 'Liên hệ', '', 'thu-pha-nhan.jpg', 0, 0, 3),
-(77, 'TGNT-10', 'Trường sa và Hoàng sa', 'truong-sa-va-hoang-sa', 0, 'Tranh gạo Trường sa và Hoàng sa', '&#160;', 'Tranh gạo Trường sa và Hoàng sa', 'Tranh gạo Trường sa và Hoàng sa', 'Liên hệ', '', 'hoang-sa.jpg', 0, 0, 1),
-(78, 'TGTP-07', 'Tranh gạo thư pháp', 'tranh-gao-thu-phap', 0, 'Tranh gạo thư pháp', '&#160;', 'Tranh gạo thư pháp', 'Tranh gạo thư pháp, tranh thư pháp được làm từ gạo', 'Liên hệ', '', 'tranh-khac.jpg', 0, 0, 3),
-(79, 'TGNT-11', 'Đôi tình nhân', 'doi-tinh-nhan', 0, 'Tranh gạo đôi tình nhân', '&#160;', 'Tranh gạo đôi tình nhân', 'Tranh gạo đôi tình nhân', 'Liên hệ', '', 'nghe-thuat.jpg', 0, 0, 1),
-(80, 'TGTP-08', 'Tranh chữ Phúc Lộc Thọ', 'tranh-chu-phuc-loc-tho', 0, 'Tranh chữ Phúc Lộc Thọ, sản phẩm làm bằng hạt gạo', '&#160;', 'Tranh chữ Phúc Lộc Thọ', 'Tranh chữ Phúc Lộc Thọ, sản phẩm làm bằng hạt gạo', 'Liên hệ', '', 'phuc-loc-tho.jpg', 0, 0, 3),
-(81, 'TGNT-12', 'Công ơn cha mẹ', 'cong-on-cha-me', 0, 'Tranh gạo công ơn cha mẹ', '&#160;', 'Công ơn cha mẹ', 'Tranh gạo công ơn cha mẹ', 'Liên hệ', '', 'cha-me.jpg', 0, 0, 1),
-(82, 'TGNT-13', 'Tranh nghệ thuật', 'tranh-nghe-thuat', 0, '', '&#160;', 'Tranh nghệ thuật', 'Tranh gạo nghệ thuật', 'Liên hệ', '', 'tranh-vui.jpg', 0, 0, 1),
-(83, 'TGNT-14', 'I love you', 'i-love-you', 0, 'Tranh gạo i love you', '&#160;', 'Tranh gạo i love you', 'Tranh gạo i love you', 'Liên hệ', '', 'i-love-you.jpg', 0, 0, 1),
-(84, 'TGTP-09', 'Tranh gạo chữ Thọ', 'tranh-gao-chu-tho', 0, 'Tranh gạo chữ Thọ, tranh thư pháp được làm từ gạo', '&#160;', 'Tranh gạo chữ Thọ', 'Tranh gạo chữ Thọ, tranh thư pháp được làm từ gạo', 'Liên hệ', '', 'chu-tho.jpg', 0, 0, 3),
-(85, 'TGNT-15', 'Tranh gạo cha mẹ', 'tranh-gao-cha-me', 1, '0', '&#160;', 'Tranh gạo Cha mẹ', 'Tranh gạo Cha mẹ', 'Liên hệ', '30x30', 'cha-me1.jpg', 99, 0, 1),
-(86, 'TGNT-16', 'Happy birth day', 'happy-birth-day', 0, '0', '&#160;', 'Tranh gạo chúc mừng sinh nhật', 'Tranh gạo chúc mừng sinh nhật', 'Liên hệ', '', 'happy-birth-day.jpg', 0, 0, 1),
-(87, 'TGNT-16', 'Happy birth day 2', 'happy-birth-day-2', 0, '0', '&#160;', 'Tranh gạo chúc mừng sinh nhật', 'Tranh gạo chúc mừng sinh nhật', 'Liên hệ', '', 'happy-birth.jpg', 0, 0, 1),
-(88, 'TGCD-12', 'Đại tướng Võ Nguyên Giáp', 'dai-tuong-vo-nguyen-giap', 0, 'Tranh gạo đại tướng Võ Nguyên Giáp', '&#160;', 'Đại tướng Võ Nguyên Giáp', 'Tranh gạo đại tướng Võ Nguyên Giáp', 'Liên hệ', '', '541782_583835738338581_1149084221_n.jpg', 0, 0, 5),
-(89, 'TGCD-13', 'Chân dung cô gái', 'chan-dung-co-gai', 0, 'Tranh gạo chân dung cô gái', '&#160;', 'Chân dung cô gái', 'Tranh gạo chân dung cô gái', 'Liên hệ', '', 'co-gai.jpg', 0, 0, 5),
-(90, 'TGCD-14', 'Chân dung chàng trai', 'chan-dung-chang-trai', 0, 'Tranh gạo chân dung chàng trai', '&#160;', 'Chân dung chàng trai', 'Tranh gạo chân dung chàng trai', 'Liên hệ', '', 'chang-trai.jpg', 0, 0, 5),
-(91, 'TGCD-15', 'Cô gái quan họ', 'co-gai-quan-ho', 0, 'Tranh gạo cô gái quan họ', '&#160;', 'Cô gái quan họ', 'Tranh gạo cô gái quan họ', 'Liên hệ', '', 'co-gai-quan-ho.jpg', 0, 0, 5),
-(92, 'TGCD-16', 'Chủ tịch Hồ Chí Minh', 'chu-tich-ho-chi-minh', 0, '0', '&#160;', 'Chủ tịch Hồ Chí Minh', 'Tranh gạo Chủ tịch Hồ Chí Minh', 'Liên hệ', '', 'ho-chi-minh.jpg', 70, 0, 5),
-(93, 'TGCD-17', 'Tổng thống Black Obama', 'tong-thong-black-obama', 0, '0', '&#160;', 'Chủ tịch Tổng thống Black Obama', 'Tranh gạo Tổng thống Black Obama', 'Liên hệ', '', 'obama1.jpg', 69, 0, 5),
-(94, 'TGCD-18', 'Vợ chồng già', 'vo-chong-gia', 0, 'Tranh gạo Vợ chồng già', '&#160;', 'Tranh gạo Vợ chồng già', 'Tranh gạo Vợ chồng già', 'Liên hệ', '', 'vo-chong-gia.jpg', 0, 0, 5),
-(95, 'TGTP-10', 'Tranh thư pháp về Mẹ', 'tranh-thu-phap-ve-me', 1, '0', '&#160;', 'Tranh thư pháp về Mẹ', 'Tranh thư pháp về Mẹ', 'Liên hệ', '30x30', 'cong-cha-nghia-me.jpg', 100, 0, 3),
-(96, 'TGTP-11', 'Tranh thư pháp chữ Cát', 'tranh-thu-phap-chu-cat', 0, 'Tranh thư pháp chữ Cát', '&#160;', 'Tranh thư pháp chữ Cát', 'Tranh thư pháp chữ Cát', 'Liên hệ', '', '1454966_584048261650662_1111990238_n.jpg', 0, 0, 3),
-(97, 'TGTP-12', 'Tranh gạo thư pháp ', 'tranh-gao-thu-phap-', 0, 'Tranh gạo thư pháp ', '&#160;', 'Tranh gạo thư pháp ', 'Tranh gạo thư pháp ', 'Liên hệ', '', '1471831_1408916852679803_1745301094_n.jpg', 0, 0, 3),
-(98, 'TGTP-13', 'Tranh gạo thư pháp Cha Mẹ', 'tranh-gao-thu-phap-cha-me', 0, 'Tranh gạo thư pháp Cha Mẹ', '&#160;', 'Tranh gạo thư pháp Cha Mẹ', 'Tranh gạo thư pháp Cha Mẹ', 'Liên hệ', '', 'cha-me-3.jpg', 0, 0, 3),
-(99, 'TGTP-14', 'Tranh gạo thư pháp Cha Mẹ', 'tranh-gao-thu-phap-cha-me', 0, 'Tranh gạo thư pháp Cha Mẹ', '&#160;', 'Tranh gạo thư pháp Cha Mẹ', 'Tranh gạo thư pháp Cha Mẹ', 'Liên hệ', '', 'thu-phap-cha-me.jpg', 0, 0, 3),
-(100, 'TGNT-17', 'Buôn bán', 'buon-ban', 0, 'Tranh gạo nghệ thuật Buôn bán', '&#160;', 'Tranh gạo nghệ thuật Buôn bán', 'Tranh gạo nghệ thuật Buôn bán', 'Liên hệ', '', '995575_1408898582681630_723746023_n.jpg', 0, 0, 1),
-(101, 'TGNT-18', 'Buông lưới', 'buong-luoi', 0, 'Tranh gạo nghệ thuật Buông lưới', '&#160;', 'Tranh gạo nghệ thuật Buông lưới', 'Tranh gạo nghệ thuật Buông lưới', 'Liên hệ', '', 'buong-luoi.jpg', 0, 0, 1),
-(102, 'TGNT-19', 'Chèo thuyền', 'cheo-thuyen', 0, 'Tranh gạo nghệ thuật Chèo thuyền', '&#160;', 'Tranh gạo nghệ thuật Chèo thuyền', 'Tranh gạo nghệ thuật Chèo thuyền', 'Liên hệ', '', 'cheo-thuyen.jpg', 0, 0, 1),
-(103, 'TGNT-20', 'Chợ nổi', 'cho-noi', 0, '0', '&#160;', 'Tranh gạo nghệ thuật Chợ nổin', 'Tranh gạo nghệ thuật Chợ nổi', 'Liên hệ', '', 'cho-noi.jpg', 0, 0, 1),
-(104, 'TGNT-21', 'Đi chợ', 'di-cho', 0, '0', '&#160;', 'Tranh gạo nghệ thuật Đi chợ', 'Tranh gạo nghệ thuật Đi chợ', 'Liên hệ', '', 'di-cho.jpg', 0, 0, 1),
-(105, 'TGNT-22', 'Mẹ và con', 'me-va-con', 0, '0', '&#160;', 'Tranh gạo nghệ thuật Mẹ và con', 'Tranh gạo nghệ thuật Mẹ và con', 'Liên hệ', '', 'me.jpg', 0, 0, 1),
-(106, 'TGNT-23', 'Đôi tình nhân', 'doi-tinh-nhan', 0, 'Tranh gạo nghệ thuật Đôi tình nhân', '&#160;', 'Tranh gạo nghệ thuật Đôi tình nhân', 'Tranh gạo nghệ thuật Đôi tình nhân', 'Liên hệ', '', 'doi-tinh-nhan.jpg', 0, 0, 1),
-(107, 'TGNT-23', 'Đưa đò', 'dua-do', 0, 'Tranh gạo nghệ thuật Đưa đò', '&#160;', 'Tranh gạo nghệ thuật Đưa đò', 'Tranh gạo nghệ thuật Đưa đò', 'Liên hệ', '', 'dua-do.jpg', 0, 0, 1),
-(108, 'TGNT-23', 'Gánh bước', 'ganh-buoc', 0, 'Tranh gạo nghệ thuật Gánh bước', '&#160;', 'Tranh gạo nghệ thuật Gánh bước', 'Tranh gạo nghệ thuật Gánh bước', 'Liên hệ', '', 'ganh-buoc.jpg', 0, 0, 1),
-(109, 'TGNT-24', 'Mua ba le', 'mua-ba-le', 0, 'Tranh gạo nghệ thuật Mua ba le', '&#160;', 'Tranh gạo nghệ thuật Mua ba le', 'Tranh gạo nghệ thuật Mua ba le', 'Liên hệ', '', 'mua-ba-le.jpg', 0, 0, 1),
-(110, 'TGNT-25', 'Múc nước', 'muc-nuoc', 0, 'Tranh gạo nghệ thuật Múc nước', '&#160;', 'Tranh gạo nghệ thuật Múc nước', 'Tranh gạo nghệ thuật Múc nước', 'Liên hệ', '', 'muc-nuoc.jpg', 0, 0, 1),
-(111, 'TGNT-26', 'Ru con ngủ', 'ru-con-ngu', 0, 'Tranh gạo nghệ thuật Ru con', '&#160;', 'Tranh gạo nghệ thuật Ru con', 'Tranh gạo nghệ thuật Ru con', 'Liên hệ', '', 'ru-con.jpg', 0, 0, 1),
-(112, 'TGNT-27', 'Tan chợ', 'tan-cho', 0, 'Tranh gạo nghệ thuật Tan chợ', '&#160;', 'Tranh gạo nghệ thuật Tan chợ', 'Tranh gạo nghệ thuật Tan chợ', 'Liên hệ', '', 'tan-cho.jpg', 0, 0, 1),
-(113, 'TGNT-28', 'Thiếu nữ', 'thieu-nu', 0, 'Tranh gạo thiếu nữ', '&#160;', 'Tranh gạo thiếu nữ', 'Tranh gạo thiếu nữ', 'Liên hệ', '', 'thieu-nu.jpg', 0, 0, 1),
-(114, 'TGNT-29', 'Thiếu nữ', 'thieu-nu', 0, '0', 'Tranh gạo thiếu nữ', 'Tranh gạo thiếu nữ', 'Tranh gạo thiếu nữ', 'Liên hệ', '', 'thieu-nu1.jpg', 95, 0, 1),
-(115, 'TGNT-30', 'Thiếu nữ bên hoa', 'thieu-nu-ben-hoa', 0, '0', '&#160;', 'Tranh gạo thiếu nữ', 'Tranh gạo thiếu nữ', 'Liên hệ', '', 'thieu-nu-2.jpg', 0, 0, 1),
-(116, 'TGNT-31', 'Xe ngựa', 'xe-ngua', 0, 'Tranh gạo xe ngựa', '&#160;', 'Tranh gạo xe ngựa', 'Tranh gạo xe ngựa', 'Liên hệ', '', 'xe-ngua.jpg', 0, 0, 1),
-(117, 'TGNT-32', 'Xe xích lô', 'xe-xich-lo', 0, 'Tranh gạo xe xích lô', '&#160;', 'Tranh gạo xe xích lô', 'Tranh gạo xe xích lô', 'Liên hệ', '', 'xich-lo1.jpg', 0, 0, 1),
-(118, 'TGPC-33', 'Làng quê việt', 'lang-que-viet', 0, '0', '&#160;', 'Làng quê việt', 'Làng quê việt', 'Liên hệ', '', 'di-cay1.jpg', 0, 1, 6),
-(119, 'TGDV-12', 'Tranh gạo con hổ', 'tranh-gao-con-ho', 0, 'Tranh gạo con hổ', '&#160;', 'Tranh gạo con hổ', 'Tranh gạo con hổ', 'Liên hệ', '', '1511309_1408909979347157_481910235_n.jpg', 0, 0, 4),
-(120, 'TGPT-04', 'Quê hương Việt nam', 'que-huong-viet-nam', 0, '0', '&#160;', 'Tranh phong thủy quê hương việt nam', 'Tranh phong thủy quê hương việt nam', 'Liên hệ', '', 'lang-que-viet61.jpg', 0, 0, 2),
-(121, 'TGPT-05', 'Làng quê Việt', 'lang-que-viet', 0, 'Tranh phong thủy làng quê Việt, tranh gạo việt', '&#160;', 'Tranh phong thủy làng quê Việt', 'Tranh phong thủy làng quê Việt, tranh gạo việt', 'Liên hệ', '', '1471.jpg', 0, 0, 2),
-(122, 'TGPT-06', 'Tranh phong thủy Hổ', 'tranh-phong-thuy-ho', 0, '', '&#160;', 'Tranh phong thủy Hổ', 'Tranh phong thủy con Hổ, tranh phong thủy được làm từ gạo', 'Liên hệ', '', 'tranh-gao-ho.jpg', 0, 0, 2),
-(123, 'TGPT-07', 'Thuận Buồm Xuôi Gió', 'thuan-buom-xuoi-gio', 0, '', '&#160;', 'Thuận Buồm Xuôi Gió', 'Thuận Buồm Xuôi Gió', 'Liên hệ', '', '98c57_thuan_buom_xuoi_gio.jpg', 0, 0, 2),
-(124, 'TGPT-08', 'Tranh gao phong thuy', 'tranh-gao-phong-thuy', 0, 'Tranh phong thuy, tranh phong thuy duoc lam tu gao rang', '&#160;', 'Tranh gao phong thuy, Tranh gao nghe thuat', 'Tranh phong thuy, tranh phong thuy duoc lam tu gao rang', 'Lien he', '', 'phong-thuy.jpg', 0, 0, 2),
-(126, 'TGCD-19', 'Đại tướng Võ Nguyên Giáp', 'dai-tuong-vo-nguyen-giap', 0, '0', '&#160;', 'Tranh gạo chân dung đại tướng võ nguyên giáp', 'Tranh gạo chân dung đại tướng võ nguyên giáp', 'Liên hệ', '', 'tuong-vo-nguyen-giap1.jpg', 68, 0, 5),
-(127, 'TGCD-20', 'Chân dung khách hàng', 'chan-dung-khach-hang', 0, '0', '&#160;', 'Tranh gạo chân dung khách hàng', 'Tranh gạo chân dung làm cho khách hàng, cô gái đeo kính', 'Liên hệ', '', 'tranh-gao-chan-dung-40x501.jpg', 88, 0, 5),
-(128, 'TGCD-21', 'Chân dung diễn viên', 'chan-dung-dien-vien', 0, '', '&#160;', 'Chân dung diễn viên Hong Kong', 'Chân dung nữ diễn viên Hong Kong, sản phẩm do khách hàng đặt làm để tặng', 'Liên hệ', '', 'chan-dung-dien-vien.jpg', 0, 0, 5),
-(129, 'TGPT-09', 'Quà tặng mã đáo thành công', 'qua-tang-ma-dao-thanh-cong', 0, 'Tranh gạo mã đáo thành công, sản phẩm làm cho khách hàng trung quốc', 'Tranh gạo mã đáo thành công, sản phẩm làm cho khách hàng trung quốc', 'Quà tặng mã đáo thành công', 'Tranh gạo mã đáo thành công, sản phẩm làm cho khách hàng trung quốc', 'Liên hệ', '', 'tranh-gao-qua-tang-ma-dao-thanh-cong.jpg', 0, 0, 2),
-(130, 'TGNT-33', 'Tranh gạo xe vespa', 'tranh-gao-xe-vespa', 0, 'Tranh gạo xe vespa khách nước ngoài đặt', '&#160;', 'Tranh gạo xe vespa', 'Tranh gạo xe vespa khách nước ngoài đặt', 'Liên hệ', '', 'tranh-gao-xe-vespa-1.jpg', 0, 0, 1),
-(131, 'TGNT-34', 'Tranh gạo xe vespa', 'tranh-gao-xe-vespa', 0, '0', '&#160;', 'Tranh gạo xe vespa', 'Tranh gạo xe vespa khách nước ngoài đặt', 'Liên hệ', '', 'Tranh-gao-xe-vespa-2.jpg', 94, 0, 1),
-(150, 'TGPC-51', 'Thiếu nữ và xe', 'thieu-nu-va-xe', 0, 'Tranh gạo thiếu nữ và xe', 'Tranh gạo thiếu nữ và xe', 'Tranh gạo thiếu nữ và xe', 'Tranh gạo thiếu nữ và xe', 'Liên hệ', '', 'thieu-nu-di-hoc.jpg', 84, 4, 6),
-(132, 'TGNT-35', 'Tranh gạo thiếu nữ bên sen', 'tranh-gao-thieu-nu-ben-sen', 1, '0', '&#160;', 'Tranh gạo thiếu nữ bên sen', 'Tranh gạo thiếu nữ bên sen', 'Liên hệ', '30x40', 'thieu-nu-viet.jpg', 100, 0, 1),
-(133, 'TGPC-34', 'Tranh gạo phố cổ', 'tranh-gao-pho-co', 0, '0', '0', 'Tranh gạo phố cổ', 'Tranh gạo phố cổ hà nội, phố cổ hà nội xưa và nay', 'Liên hệ', '30x40', 'pho-co-ha-noi-01.jpg', 96, 2, 6),
-(134, 'TGPC-35', 'Tranh gạo chợ bến thành', 'tranh-gao-cho-ben-thanh', 0, '0', '&#160;', 'Tranh gạo chợ bến thành', 'Tranh gạo chợ bến thành quận 1 thành phố hồ chí minh', 'Liên hệ', '', 'tranh-gao-cho-ben-thanh1.jpg', 0, 2, 6),
-(135, 'TGPC-36', 'Tranh gạo vịnh hạ long', 'tranh-gao-vinh-ha-long', 1, '0', '&#160;', 'Tranh gạo vịnh hạ long', 'Tranh gạo vịnh hạ long, tuần châu hạ long quảng ninh', 'Liên hệ', '25x35', 'vinh-ha-long.jpg', 94, 5, 6),
-(136, 'TGPC-37', 'Bản đồ việt nam', 'ban-do-viet-nam', 0, '0', '0', 'Tranh gạo đất nước việt nam', 'Tranh gạo đất nước việt nam hình chữ S, bên cạnh là cô gái áo dài với chiếc nón bài thơ', 'Liên hệ', '25x35', 'ban-do-viet-nam1.jpg', 97, 2, 6),
-(137, 'TGPC-39', 'Tranh gạo áo dài việt', 'tranh-gao-ao-dai-viet', 0, 'Tranh gạo áo dài việt nam, thiếu nữ thôn quê việt nam', '&#160;', 'Tranh gạo áo dài việt nam', 'Tranh gạo áo dài việt nam, thiếu nữ thôn quê việt nam và chiếu xe đạp', 'Liên hệ', '', 'tranh-gao-ao-dai.jpg', 0, 4, 6),
-(138, 'TGPC-40', 'Tranh gạo áo dài việt', 'tranh-gao-ao-dai-viet', 0, 'Tranh gạo áo dài việt nam, thiếu nữ thôn quê việt nam', '&#160;', 'Tranh gạo áo dài việt nam', 'Tranh gạo áo dài việt nam, thiếu nữ thôn quê việt nam và chiếu xe đạp', 'Liên hệ', '', 'tranh-gao-nu-sinh-viet-2.jpg', 0, 4, 6),
-(139, 'TGPC-41', 'Áo dài thiếu nữ việt nam', 'ao-dai-thieu-nu-viet-nam', 0, '0', '0', 'Tranh gạo áo dài thiếu nữ việt nam', 'Tranh gạo áo dài việt nam, thiếu nữ thôn quê việt nam và chiếu xe đạp', 'Liên hệ', '', 'ao-dai-viet-nam.jpg', 30, 4, 6),
-(160, 'TGNT-036', 'Tranh đặt', 'tranh-dat', 0, '0', '&#160;', 'Tranh gạo nghệ thuật', 'Tranh gạo nghệ thuật - Tranh đặt theo yêu cầu- chữ Tùng', 'liên hệ', '', 'chữ_tùng.jpg', 36, 0, 1),
-(140, 'TGPC-42', 'Thiếu nữ việt nam xưa', 'thieu-nu-viet-nam-xua', 0, 'Tranh gạo thiếu nữ thôn quê việt nam thời xưa', '&#160;', 'Tranh gạo áo dài thiếu nữ việt nam', 'Tranh gạo thiếu nữ thôn quê việt nam thời xưa', 'Liên hệ', '', 'tranh-gao-thieu-nu-3.jpg', 0, 4, 6),
-(141, 'TGPC-43', 'Tranh gạo hoa sen', 'tranh-gao-hoa-sen', 1, '0', '0', 'Tranh gạo hoa sen', 'Bức tranh hoa sen được làm bằng gạo mang đậm dấu ấn quê hương việt nam', 'Liên hệ', '30x30', 'hoa-sen1.jpg', 103, 3, 6),
-(142, 'TGPC-44', 'Áo dài mùa thu Hà Nội', 'ao-dai-mua-thu-ha-noi', 0, '0', 'Tranh gạo áo dài nữ sinh mùa thu hà nội, nét đẹp thanh tao', 'Tranh gạo áo dài', 'Tranh gạo áo dài nữ sinh mùa thu hà nội, nét đẹp thanh tao', 'Liên hệ', '', 'mua-thu-ha-noi.jpg', 79, 4, 6),
-(143, 'TGPC-44', 'Tranh gạo hoa sen', 'tranh-gao-hoa-sen', 0, '0', 'Bức tranh hoa sen được làm bằng gạo mang đậm dấu ấn quê hương việt nam', 'Bức tranh hoa sen được làm bằng gạo mang đậm dấu ấn quê hương việt nam', 'Bức tranh hoa sen được làm bằng gạo mang đậm dấu ấn quê hương việt nam', 'Liên hệ', '', 'tranh-gao-hoa-sen-2.jpg', 0, 3, 6),
-(155, 'TGPC-54', 'Sông quê', 'song-que', 0, '0', '0', 'Tranh gạo sông quê, tranh gạo phong cảnh', 'Tranh gạo sông quê, tranh gạo phong cảnh', 'Liên hệ', '35x70', 'song-que-35x70.jpg', 101, 1, 6),
-(176, 'TGCD-27', 'Chân dung người hàn quốc', 'chan-dung-nguoi-han-quoc', 1, '', '0', 'Tranh gạo, Tranh chân dung, Tranh gạo chân dung, Chân dung người hàn quốc', 'Tranh gạo, Tranh chân dung, Tranh gạo chân dung, Chân dung người hàn quốc', 'Liên hệ', '40x50', '12974462_924450721006235_8092675329320355423_n.jpg', 90, 0, 5),
-(144, 'TGPC-45', 'Phong cảnh làng quê việt', 'phong-canh-lang-que-viet', 0, 'Tranh Phong cảnh làng quê việt', 'Tranh Phong cảnh làng quê việt', 'Phong cảnh làng quê việt', 'Tranh Phong cảnh làng quê việt', 'Liên hệ', '', 'tranh-gao-phong-canh-viet-nam.jpg', 0, 1, 6),
-(145, 'TGPC-46', 'Chùa một cột hà nội', 'chua-mot-cot-ha-noi', 1, '0', '0', 'Tranh gạo chùa một cột', 'Bức tranh phong cảnh chùa một cột được làm từ gạo rang, sản phẩm độc đáo của người việt', 'Liên hệ', '30x40', 'chua-mot-cot.jpg', 105, 2, 6),
-(146, 'TGPC-47', 'Ba cô gái - Nón lá Việt', 'ba-co-gai---non-la-viet', 1, '0', 'Tranh gạo áo dài việt nam', 'Tranh gạo áo dài việt nam', 'Tranh gạo áo dài việt nam', 'Liên hệ', '30x30', 'thieu-nu-ao-dai.jpg', 93, 4, 6),
-(147, 'TGPC-48', 'Cất vó chiều', 'cat-vo-chieu', 0, '0', '0', 'Tranh gạo làng quê việt, cất vó chiều', 'Tranh gạo làng quê việt, cất vó chiều', 'Liên hệ', '25x35', 'song-que.jpg', 92, 5, 6),
-(175, 'TGCD-26', 'Tranh chân dung 3 chị em', 'tranh-chan-dung-3-chi-em', 0, 'Tranh chân dung 3 chị em được làm từ gạo, Đơn giản nhưng ý nghĩa là món quà tặng ý nghĩa cho bạn bè', '0', 'Tranh gạo, Tranh gạo chân dung, Tranh chân dung đẹp', 'Tranh chân dung 3 chị em được làm từ gạo, Đơn giản nhưng ý nghĩa là món quà tặng ý nghĩa cho bạn bè', 'Liên hệ', '60x100', '111.jpg', 89, 0, 5),
-(148, 'TGPC-49', 'Thuận buồm xuôi gió', 'thuan-buom-xuoi-gio', 0, 'Tranh gạo thuận buồm xuôi gió, món quà ý nghĩa cho đôi tác của bạn', 'Tranh gạo thuận buồm xuôi gió, món quà ý nghĩa cho đôi tác của bạn', 'Tranh gạo thuận buồm xuôi gió', 'Tranh gạo thuận buồm xuôi gió, món quà ý nghĩa cho đôi tác của bạn', 'Liên hệ', '30x40', 'thuan-buom-xuoi-gio1.jpg', 91, 3, 6),
-(149, 'TGPC-50', 'Miền quê sông nước', 'mien-que-song-nuoc', 0, '0', '0', 'Tranh gạo làng quê việt nam', 'Tranh gạo làng quê việt nam', 'Liên hệ', '25x35', 'song-nuoc-mien-que.jpg', 85, 1, 6),
-(151, 'TGNT-34', 'Logo apink, hàng đặt', 'logo-apink-hang-dat', 0, '0', 'Tranh gạo logo, hàng đặt của khách dành tặng đối tác', 'Tranh gạo logo, hàng đặt', 'Tranh gạo logo, hàng đặt của khách dành tặng đối tác', 'Liên hệ', '', 'logo-apink.jpg', 98, 0, 1),
-(152, 'TGPC-52', 'Làng quê việt nam', 'lang-que-viet-nam', 0, 'Tranh gạo phong cảnh, Làng quê việt nam', '&#160;', 'Tranh gạo phong cảnh, Làng quê việt nam', 'Tranh gạo phong cảnh, Làng quê việt nam', 'Liên hệ', '', 'lang-que-viet-03.jpg', 81, 1, 6),
-(153, 'TGPC-53', 'Làng quê việt nam', 'lang-que-viet-nam', 0, 'Tranh gạo phong cảnh, Làng quê việt nam', '&#160;', 'Tranh gạo phong cảnh, Làng quê việt nam', 'Tranh gạo phong cảnh, Làng quê việt nam', 'Liên hệ', '', 'lang-que-viet-04.jpg', 80, 1, 6),
-(154, 'TGCD-22', 'Đôi tình nhân', 'doi-tinh-nhan', 0, 'Tranh chân dung đôi tình nhân người nước ngoài. Sản phẩm do khách đặt làm quà tặng', '&#160;', 'Tranh chân dung đôi tình nhân người nước ngoài.', 'Tranh chân dung đôi tình nhân người nước ngoài. Sản phẩm do khách đặt làm quà tặng', 'Liên hệ', '', 'Tranh-chan-dung.jpg', 80, 0, 5),
-(156, 'TGPC-55', 'Con sông quê hương', 'con-song-que-huong', 1, 'Tranh gạo sông quê, tranh gạo phong cảnh', '&#160;', 'Tranh gạo sông quê, tranh gạo phong cảnh', 'Tranh gạo sông quê, tranh gạo phong cảnh', 'Liên hệ', '40x60', 'con-song-que-huong.jpg', 102, 1, 6),
-(159, 'TGTP-15', 'Quà tặng tân gia', 'qua-tang-tan-gia', 0, '0', '&#160;', 'Quà tặng tân gia, Quà tặng, Tranh gạo quà tặng tân gia', 'Tranh gạo quà tặng tân gia, món quà ý nghĩa cho bạn bè treo nhà mới', 'Liên hệ', '50x70', 'qua-tang-tan-gia.jpg', 99, 0, 3),
-(158, 'TGPC-57', 'Phố cổ hà nội', 'pho-co-ha-noi', 1, '0', '0', 'Tranh gạo phố cổ hà nội, tranh gạo việt', 'Tranh gạo phố cổ hà nội, tranh gạo việt', 'Liên hệ', '35x50', 'pho-co-ha-noi1.jpg', 103, 2, 6),
-(161, 'TGNT-0040', 'Mẹ sàng thóc', 'me-sang-thoc', 0, 'Tranh gạo nghệ thuật - Mẹ sàng thóc', '&#160;', 'Tranh gạo nghệ thuật - Mẹ sàng thóc', 'Tranh gạo nghệ thuật - Mẹ sàng thóc', 'liên hệ', '', 'me-sang-thoc.JPG', 40, 0, 1),
-(162, 'TGPC-58', 'Chợ Bến Thành', 'cho-ben-thanh', 0, '0', '0', 'Tranh gạo phong cảnh- CHợ Bến Thành', 'Tranh gạo phong cảnh- CHợ Bến Thành', 'liên hệ', '', 'cho-ben-thanh.jpg', 46, 2, 6),
-(163, 'TGPC-59', 'Trận cờ lau', 'tran-co-lau', 1, '0', '&#160;', 'Tranh gạo phong cảnh, trận cờ lau', 'Tranh gạo phong cảnh, trận cờ lau', 'liên hệ', '30x30', 'tran-co-lau.JPG', 80, 1, 6),
-(165, 'TGPC-60', 'Áo dài và thiếu nữ việt', 'ao-dai-va-thieu-nu-viet', 1, '0', '0', 'tranh gạo áo dài VIệt Nam, tranh gạo phong cảnh', 'tranh gạo áo dài VIệt Nam, tranh gạo phong cảnh', 'liên hệ', '30x30', 'ao-dai-Viet-Nam.JPG', 84, 4, 6),
-(166, 'TGNT- 41', 'Sàng thóc', 'sang-thoc', 1, 'Tranh gạo nghệ thuật, mẹ sàng thóc', '&#160;', 'Tranh gạo nghệ thuật, mẹ sàng thóc', 'Tranh gạo nghệ thuật, mẹ sàng thóc', 'liên hệ', '25x35', 'sang-thoc.JPG', 85, 0, 1),
-(168, 'TGPC-61', 'Cô gái bên dòng sông', 'co-gai-ben-dong-song', 1, '0', '0', 'Tranh gạo phong cảnh, cô gái bên dòng sông', 'Tranh gạo phong cảnh, cô gái bên dòng sông', 'liên hệ', '25x35', 'co-gai-ben-dong-song.JPG', 87, 4, 6),
-(170, 'TGPC-62', 'Lái đò bên sông', 'lai-do-ben-song', 0, '0', '0', 'Tranh gạo phong cảnh, lái đò bên sông', 'Tranh gạo phong cảnh, lái đò bên sông', 'liên hệ', '', 'lai-do-ben-song.JPG', 89, 1, 2),
-(172, 'TGCD-23', 'Chân dung khách', 'chan-dung-khach', 0, '0', '0', 'Tranh gạo chân dung của khách hàng đặt', 'Tranh gạo chân dung của khách hàng đặt', 'Liên hệ', '40x50', 'tranh-gao-chan-dung-khach.jpg', 99, 0, 5),
-(174, 'TGCD-25', 'Chân dung khách hàng', 'chan-dung-khach-hang', 0, '0', '0', 'Tranh chân dung khách nước ngoài', 'Tranh chân dung khách nước ngoài', 'Liên hệ', '50x70', 'chan-dung-khach-hang-sam-sung.jpg', 101, 0, 5),
-(173, 'TGCD-24', 'Tranh khách hàng đặt', 'tranh-khach-hang-dat', 0, '0', '0', 'Tranh khách hàng đặt cho đối tác tại ấn độ', 'Tranh khách hàng đặt cho đối tác tại ấn độ', 'Liên hệ', '60x60', '12321309_876760965754080_6660215562168896292_n.jpg', 79, 0, 5);
+(1, 'TDQ-PC001', 'Phố cổ hà nội', 'pho-co-ha-noi', 1, '0', '0', 'Tranh đá quý, Tranh phố cổ hà nội, Tranh đá quý phố cổ hà nội', 'Tranh đá quý phố cổ hà nội, tranh đá quý cao cấp', 'Liên hệ', '40x60', 'tranh-da-quy-pho-co-ha-noi.jpg', 1, 1, 6),
+(3, 'TDQ-PC003', 'Phong cảnh làng quê việt', 'phong-canh-lang-que-viet', 1, 'Tranh đá quý, Tranh phong cảnh làng quê việt được làm từ đá quý tự nhiên', '0', 'Tranh đá quý, Tranh phong cảnh làng quê việt. Tranh đá quý đẹp', 'Tranh đá quý, Tranh phong cảnh làng quê việt được làm từ đá quý tự nhiên', 'Liên hệ', '100x160', 'tranh-da-quy-lang-que-viet.jpg', 3, 1, 6),
+(2, 'TDQ-PC002', 'Tùng hạc niên diên', 'tung-hac-nien-dien', 1, '0', '0', 'Tranh đá quý tùng hạc niên diên', 'Tranh đá quý tùng hạc niên diên', 'Liên hệ', '100x160', 'tranh-da-quy-tung-hac-dien-nien.jpg', 2, 1, 6),
+(4, 'TDQ-PC004', 'Mã đáo thành công', 'ma-dao-thanh-cong', 1, 'Tranh đá quý, Tranh đá quý mã đáo thành công', '0', 'Tranh đá quý, Tranh đá quý mã đáo thành công', 'Tranh đá quý, Tranh đá quý mã đáo thành công', 'Liên hệ', '60x90', 'tranh-da-quy-ma-dao.jpg', 4, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -719,12 +563,43 @@ INSERT INTO `tbl_products` (`pro_id`, `pro_code`, `pro_name`, `pro_rewrite`, `pr
 -- Table structure for table `tbl_product_position`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_product_position` (
-  `id` int(11) unsigned NOT NULL,
+CREATE TABLE `tbl_product_position` (
+  `id` int(11) UNSIGNED NOT NULL,
   `position_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `created_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_product_position`
+--
+
+INSERT INTO `tbl_product_position` (`id`, `position_id`, `product_id`, `created_at`) VALUES
+(9, 1, 168, '2016-09-05 08:52:36'),
+(10, 3, 168, '2016-09-05 08:52:36'),
+(13, 1, 177, '2016-09-05 08:53:55'),
+(14, 2, 177, '2016-09-05 08:53:55'),
+(15, 11, 177, '2016-09-05 08:53:55'),
+(46, 1, 2, '2016-09-05 11:46:56'),
+(47, 2, 2, '2016-09-05 11:46:57'),
+(48, 9, 2, '2016-09-05 11:46:57'),
+(49, 10, 2, '2016-09-05 11:46:57'),
+(50, 13, 2, '2016-09-05 11:46:57'),
+(51, 1, 1, '2016-09-05 11:48:09'),
+(52, 2, 1, '2016-09-05 11:48:09'),
+(53, 11, 1, '2016-09-05 11:48:09'),
+(54, 12, 1, '2016-09-05 11:48:09'),
+(55, 1, 3, '2016-09-05 11:50:38'),
+(56, 2, 3, '2016-09-05 11:50:38'),
+(57, 10, 3, '2016-09-05 11:50:38'),
+(58, 11, 3, '2016-09-05 11:50:38'),
+(59, 12, 3, '2016-09-05 11:50:38'),
+(60, 13, 3, '2016-09-05 11:50:38'),
+(61, 1, 4, '2016-09-05 11:53:19'),
+(62, 2, 4, '2016-09-05 11:53:19'),
+(63, 11, 4, '2016-09-05 11:53:19'),
+(64, 12, 4, '2016-09-05 11:53:19'),
+(65, 13, 4, '2016-09-05 11:53:19');
 
 -- --------------------------------------------------------
 
@@ -732,8 +607,8 @@ CREATE TABLE IF NOT EXISTS `tbl_product_position` (
 -- Table structure for table `tbl_search`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_search` (
-  `s_id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_search` (
+  `s_id` int(10) UNSIGNED NOT NULL,
   `s_type` varchar(100) NOT NULL,
   `t_id` int(10) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -744,12 +619,12 @@ CREATE TABLE IF NOT EXISTS `tbl_search` (
 -- Table structure for table `tbl_services`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_services` (
-  `service_id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_services` (
+  `service_id` int(10) UNSIGNED NOT NULL,
   `service_info` text CHARACTER SET utf8 NOT NULL,
   `service_full` longtext CHARACTER SET utf8 NOT NULL,
   `service_data` varchar(200) CHARACTER SET utf8 NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_services`
@@ -764,8 +639,8 @@ INSERT INTO `tbl_services` (`service_id`, `service_info`, `service_full`, `servi
 -- Table structure for table `tbl_slideshow`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_slideshow` (
-  `slide_id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_slideshow` (
+  `slide_id` int(10) UNSIGNED NOT NULL,
   `slide_title` varchar(200) NOT NULL,
   `slide_image` varchar(200) NOT NULL,
   `slide_link` varchar(200) NOT NULL,
@@ -778,8 +653,8 @@ CREATE TABLE IF NOT EXISTS `tbl_slideshow` (
 -- Table structure for table `tbl_students`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_students` (
-  `student_id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_students` (
+  `student_id` int(10) UNSIGNED NOT NULL,
   `student_name` varchar(200) NOT NULL,
   `student_rewrite` varchar(200) NOT NULL,
   `student_phone` varchar(200) NOT NULL,
@@ -788,7 +663,7 @@ CREATE TABLE IF NOT EXISTS `tbl_students` (
   `student_info` longtext NOT NULL,
   `student_avatar` varchar(200) NOT NULL,
   `student_status` int(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_students`
@@ -808,8 +683,8 @@ INSERT INTO `tbl_students` (`student_id`, `student_name`, `student_rewrite`, `st
 -- Table structure for table `tbl_subjects`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_subjects` (
-  `subject_id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_subjects` (
+  `subject_id` int(10) UNSIGNED NOT NULL,
   `subject_title` varchar(255) NOT NULL,
   `subject_rewrite` varchar(200) NOT NULL,
   `subject_info` longtext NOT NULL,
@@ -819,7 +694,7 @@ CREATE TABLE IF NOT EXISTS `tbl_subjects` (
   `subject_des` varchar(200) NOT NULL,
   `subject_order` int(10) NOT NULL,
   `subject_status` varchar(200) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_subjects`
@@ -837,14 +712,14 @@ INSERT INTO `tbl_subjects` (`subject_id`, `subject_title`, `subject_rewrite`, `s
 -- Table structure for table `tbl_support`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_support` (
-  `sup_id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_support` (
+  `sup_id` int(10) UNSIGNED NOT NULL,
   `sup_name` varchar(50) NOT NULL,
   `sup_yahoo` varchar(50) NOT NULL,
   `sup_phone` varchar(100) NOT NULL,
   `sup_sky` varchar(100) NOT NULL,
   `sup_email` varchar(150) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_support`
@@ -859,8 +734,8 @@ INSERT INTO `tbl_support` (`sup_id`, `sup_name`, `sup_yahoo`, `sup_phone`, `sup_
 -- Table structure for table `tbl_user`
 --
 
-CREATE TABLE IF NOT EXISTS `tbl_user` (
-  `user_id` int(10) unsigned NOT NULL,
+CREATE TABLE `tbl_user` (
+  `user_id` int(10) UNSIGNED NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` char(50) NOT NULL,
   `name` varchar(50) NOT NULL,
@@ -868,9 +743,9 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `phone` int(20) DEFAULT NULL,
   `adress` varchar(200) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `level` int(10) unsigned NOT NULL DEFAULT '2',
+  `level` int(10) UNSIGNED NOT NULL DEFAULT '2',
   `status` int(1) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=103 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_user`
@@ -1048,132 +923,132 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `tbl_articles`
 --
 ALTER TABLE `tbl_articles`
-  MODIFY `article_id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `article_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tbl_categorie`
 --
 ALTER TABLE `tbl_categorie`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `tbl_category`
 --
 ALTER TABLE `tbl_category`
-  MODIFY `cate_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=129;
+  MODIFY `cate_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
 --
 -- AUTO_INCREMENT for table `tbl_config`
 --
 ALTER TABLE `tbl_config`
-  MODIFY `config_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `config_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_contact`
 --
 ALTER TABLE `tbl_contact`
-  MODIFY `con_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=30;
+  MODIFY `con_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 --
 -- AUTO_INCREMENT for table `tbl_contact_info`
 --
 ALTER TABLE `tbl_contact_info`
-  MODIFY `contact_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `contact_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_content`
 --
 ALTER TABLE `tbl_content`
-  MODIFY `con_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `con_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `tbl_customer`
 --
 ALTER TABLE `tbl_customer`
-  MODIFY `customer_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+  MODIFY `customer_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `tbl_education`
 --
 ALTER TABLE `tbl_education`
-  MODIFY `edu_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `edu_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_intro`
 --
 ALTER TABLE `tbl_intro`
-  MODIFY `in_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
+  MODIFY `in_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `tbl_intro_one`
 --
 ALTER TABLE `tbl_intro_one`
-  MODIFY `intro_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `intro_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_menu`
 --
 ALTER TABLE `tbl_menu`
-  MODIFY `menu_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `menu_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tbl_news`
 --
 ALTER TABLE `tbl_news`
-  MODIFY `news_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
+  MODIFY `news_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT for table `tbl_online`
 --
 ALTER TABLE `tbl_online`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=299999;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=300042;
 --
 -- AUTO_INCREMENT for table `tbl_order`
 --
 ALTER TABLE `tbl_order`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `tbl_position`
 --
 ALTER TABLE `tbl_position`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `tbl_posts`
 --
 ALTER TABLE `tbl_posts`
-  MODIFY `post_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=67;
+  MODIFY `post_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 --
 -- AUTO_INCREMENT for table `tbl_products`
 --
 ALTER TABLE `tbl_products`
-  MODIFY `pro_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=177;
+  MODIFY `pro_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tbl_product_position`
 --
 ALTER TABLE `tbl_product_position`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 --
 -- AUTO_INCREMENT for table `tbl_search`
 --
 ALTER TABLE `tbl_search`
-  MODIFY `s_id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `s_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tbl_services`
 --
 ALTER TABLE `tbl_services`
-  MODIFY `service_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `service_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_slideshow`
 --
 ALTER TABLE `tbl_slideshow`
-  MODIFY `slide_id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+  MODIFY `slide_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tbl_students`
 --
 ALTER TABLE `tbl_students`
-  MODIFY `student_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=27;
+  MODIFY `student_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT for table `tbl_subjects`
 --
 ALTER TABLE `tbl_subjects`
-  MODIFY `subject_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=23;
+  MODIFY `subject_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `tbl_support`
 --
 ALTER TABLE `tbl_support`
-  MODIFY `sup_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
+  MODIFY `sup_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=103;
+  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
