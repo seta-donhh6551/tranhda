@@ -6,6 +6,7 @@ class Products extends Student
 		parent::__construct();
 		$this->load->model("mproducts");
 		$this->load->model("model_position");
+		$this->load->model("model_product_position");
 		$this->load->helper("form");
 		$this->load->library("form_validation");	
 		$this->load->library("string");					
@@ -83,8 +84,26 @@ class Products extends Student
 						$this->createThumbnail($db['pro_image']);
 					}
 				 }
-				 $this->mproducts->add_pro($db);
-				 redirect(base_url()."admin/products/index");				}
+				 
+				$id = $this->mproducts->add_pro($db);
+				 
+				 //del all by product_id
+				$this->model_product_position->delByProduct($id);
+				 
+				$positionId = $this->input->post('position_id');
+				 
+				foreach($positionId as $position)
+				{
+					 $dataPosition = array(
+						 'position_id' => $position,
+						 'product_id' => $id,
+						 'created_at' => date('Y-m-d H:i:s')
+					 );
+					 
+					 $this->model_product_position->add($dataPosition);
+				}
+				  
+				redirect(base_url()."admin/products/index");				}
 		}else{
 			$this->load->view("layout",$data);
 		}
@@ -103,6 +122,7 @@ class Products extends Student
 		$data['data']['get'] = $this->mproducts->get_prodata($id);
 		$data['listcago'] = $this->mproducts->listcago();
 		$data['listposition'] = $this->model_position->listall(20, 0);
+		$data['list_product_position'] = $this->model_product_position->getListByProduct($id);
 		if($this->input->post("ok") != ""){
 			$this->form_validation->set_rules("pro_name","Tên sản phẩm","min_length[5]");
 			if($this->form_validation->run() == FALSE){
@@ -140,6 +160,7 @@ class Products extends Student
 						$data['data']['info'] = $this->mproducts->getcate();
 						$data['data']['get'] = $this->mproducts->get_prodata($id);
 						$data['listposition'] = $this->model_position->listall(20, 0);
+						$data['list_product_position'] = $this->model_product_position->getListByProduct($id);
 						$this->load->view("layout",$data);
 						return FALSE;
 					}else{
@@ -148,8 +169,26 @@ class Products extends Student
 						$this->createThumbnail($db['pro_image']);							
 					}
 				 }
-				 $this->mproducts->update($db,$id);
-				 redirect(base_url()."admin/products/index");
+				 
+				//del all by product_id
+				$this->model_product_position->delByProduct($id);
+				 
+				$positionId = $this->input->post('position_id');
+				 
+				foreach($positionId as $position)
+				{
+					 $dataPosition = array(
+						 'position_id' => $position,
+						 'product_id' => $id,
+						 'created_at' => date('Y-m-d H:i:s')
+					 );
+					 
+					 $this->model_product_position->add($dataPosition);
+				}
+				 
+				$this->mproducts->update($db,$id);
+				
+				redirect(base_url()."admin/products/index");
 			}
 		}else{
 			$this->load->view("layout",$data);

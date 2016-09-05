@@ -93,12 +93,13 @@
                                           <div id="list"></div>
                                         </div>
                                     </div>
+									<?php $listProductPosition = array_column($list_product_position, 'position_id');?>
 									<div class="form_items">
                                     	<div class="form_items_left">Loại tranh</div>
                                         <div class="form_items_right">
 										<?php if(isset($listposition)){ ?>
 										<?php $stt = 1; foreach($listposition as $position){ ?>
-											<input type="checkbox" class="position" name="position_id[]" value="<?php echo $position['id']; ?>" /><?php echo $position['name']; ?>
+											<input type="checkbox" class="position" name="position_id[]" value="<?php echo $position['id']; ?>" <?php if(in_array($position['id'], $listProductPosition)){ echo 'checked';} ?>/><?php echo $position['name']; ?>
 											<?php if($stt == 4){ echo '<br />'; } ?>
 										<?php $stt++; } } ?>
 										</div>

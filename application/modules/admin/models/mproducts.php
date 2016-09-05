@@ -41,7 +41,8 @@
 			return $this->db->get($this->_categorie)->result_array();
 		}
 		public function add_pro($data){
-			$this->db->insert($this->_table,$data);
+			$this->db->insert($this->_table, $data);
+			return $this->db->insert_id();
 		}
 		public function del_pro($id,$data){
 			$this->db->where("pro_id",$id);
