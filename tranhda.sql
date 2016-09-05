@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 05, 2016 at 12:39 PM
+-- Generation Time: Sep 05, 2016 at 12:54 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -555,7 +555,9 @@ INSERT INTO `tbl_products` (`pro_id`, `pro_code`, `pro_name`, `pro_rewrite`, `pr
 (1, 'TDQ-PC001', 'Phố cổ hà nội', 'pho-co-ha-noi', 1, '0', '0', 'Tranh đá quý, Tranh phố cổ hà nội, Tranh đá quý phố cổ hà nội', 'Tranh đá quý phố cổ hà nội, tranh đá quý cao cấp', 'Liên hệ', '40x60', 'tranh-da-quy-pho-co-ha-noi.jpg', 1, 1, 6),
 (3, 'TDQ-PC003', 'Phong cảnh làng quê việt', 'phong-canh-lang-que-viet', 1, 'Tranh đá quý, Tranh phong cảnh làng quê việt được làm từ đá quý tự nhiên', '0', 'Tranh đá quý, Tranh phong cảnh làng quê việt. Tranh đá quý đẹp', 'Tranh đá quý, Tranh phong cảnh làng quê việt được làm từ đá quý tự nhiên', 'Liên hệ', '100x160', 'tranh-da-quy-lang-que-viet.jpg', 3, 1, 6),
 (2, 'TDQ-PC002', 'Tùng hạc niên diên', 'tung-hac-nien-dien', 1, '0', '0', 'Tranh đá quý tùng hạc niên diên', 'Tranh đá quý tùng hạc niên diên', 'Liên hệ', '100x160', 'tranh-da-quy-tung-hac-dien-nien.jpg', 2, 1, 6),
-(4, 'TDQ-PC004', 'Mã đáo thành công', 'ma-dao-thanh-cong', 1, 'Tranh đá quý, Tranh đá quý mã đáo thành công', '0', 'Tranh đá quý, Tranh đá quý mã đáo thành công', 'Tranh đá quý, Tranh đá quý mã đáo thành công', 'Liên hệ', '60x90', 'tranh-da-quy-ma-dao.jpg', 4, 1, 2);
+(4, 'TDQ-PC004', 'Mã đáo thành công', 'ma-dao-thanh-cong', 1, 'Tranh đá quý, Tranh đá quý mã đáo thành công', '0', 'Tranh đá quý, Tranh đá quý mã đáo thành công', 'Tranh đá quý, Tranh đá quý mã đáo thành công', 'Liên hệ', '60x90', 'tranh-da-quy-ma-dao.jpg', 4, 1, 2),
+(5, 'TDQ-PC005', 'Tranh phong cảnh', 'tranh-phong-canh', 1, '', '0', '', '', 'Liên hệ', '60x90', 'tranh-da-quy-phong-canh.jpg', 5, 1, 6),
+(6, 'TDQ-PC006', 'Tranh phong cảnh', 'tranh-phong-canh', 1, '', '0', '', '', 'Liên hệ', '60x90', 'tranh-da-pho-co-ha-noi.jpg', 5, 1, 6);
 
 -- --------------------------------------------------------
 
@@ -599,7 +601,19 @@ INSERT INTO `tbl_product_position` (`id`, `position_id`, `product_id`, `created_
 (62, 2, 4, '2016-09-05 11:53:19'),
 (63, 11, 4, '2016-09-05 11:53:19'),
 (64, 12, 4, '2016-09-05 11:53:19'),
-(65, 13, 4, '2016-09-05 11:53:19');
+(65, 13, 4, '2016-09-05 11:53:19'),
+(66, 1, 5, '2016-09-05 12:47:56'),
+(67, 2, 5, '2016-09-05 12:47:57'),
+(68, 9, 5, '2016-09-05 12:47:57'),
+(69, 10, 5, '2016-09-05 12:47:57'),
+(70, 11, 5, '2016-09-05 12:47:57'),
+(71, 12, 5, '2016-09-05 12:47:57'),
+(72, 1, 6, '2016-09-05 12:52:11'),
+(73, 2, 6, '2016-09-05 12:52:11'),
+(74, 9, 6, '2016-09-05 12:52:11'),
+(75, 10, 6, '2016-09-05 12:52:11'),
+(76, 11, 6, '2016-09-05 12:52:12'),
+(77, 12, 6, '2016-09-05 12:52:12');
 
 -- --------------------------------------------------------
 
@@ -1008,12 +1022,12 @@ ALTER TABLE `tbl_posts`
 -- AUTO_INCREMENT for table `tbl_products`
 --
 ALTER TABLE `tbl_products`
-  MODIFY `pro_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `pro_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `tbl_product_position`
 --
 ALTER TABLE `tbl_product_position`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 --
 -- AUTO_INCREMENT for table `tbl_search`
 --
