@@ -1,0 +1,81 @@
+.border9 .price0 {
+color:#999;
+display:none;
+}
+.border9 .ft {
+	width:740px;
+	height:14px;
+	float:left;
+}
+.border9 .border-top {
+	height:38px;
+	width:740px;
+}
+/*价格颜色调节*/
+.border9 .goodsImg {
+	border:1px solid #dfdfdf;
+	padding:2px;
+}
+
+/*扩展一*/ 
+.ph{width:210px; background:#fff; float:left;}
+.ph table{border:1px solid #e2e2e2;border-top:none;}
+.ph td{border-bottom:1px solid #efefef; }
+.ph a.pic{width:57px; height:57px;float:left;margin-bottom:7px;}
+.ph img{ border:1px solid #dfd6cb;}
+.hotrank h3{
+    line-height: 30px;
+    padding-left: 13px;
+	height:30px;
+}
+.hotrank .border-top{background:url(top_bgg.gif) 0px -1080px no-repeat; border-top:none; }
+.ph .info{ float:left; width:128px; padding-left:10px;text-align:left;}
+.ph .textcenter{ text-align:left;}
+.ph .price{color:#9a9a9a;}
+.phcp .info{ float:left; width:103px; padding-left:10px;text-align:left;}
+.phcp img{ border:1px solid #efefef;}
+.phcp a{ color:#777;}
+.phcp .hotrank .border-top, .zhbk .border-top{background:url(right_tab_bg.jpg) left top repeat-x;border:1px solid #ddd; border-bottom:none;}
+
+/*=左侧公告栏目
+
+/*= border2 首页底部三个边框
+=============================================================================================*/
+.border2{margin:0px;padding:0px;position:relative;width:738px;overflow:hidden;border:1px solid #dedede; border-top:none;}
+.border2 .border-top{height:29px;background:url(titlebg.gif);overflow: hidden}
+.border2 h3{font-size:14px;font-weight:bold;color:#333;line-height:28px;padding:0px 0px 0px 8px;margin:0px;}
+.border2 .border-body{padding:5px 0 2px 0;}
+
+.border2 .GoodsList-Tabs{ position: absolute; left:0; top:0; height:30px; border:none; padding:0; margin:0;width:120%; overflow:hidden; border-left:solid 1px #d5d5d5}
+.border2 .GoodsList-Tabs div{ background:none; border:1px solid #ddd;border-top:1px solid #ccc;border-bottom:1px solid #ddd;border-left:none; height:28px;width:186px; overflow:hidden; text-align:center; line-height:26px; float:left; padding:0; margin:0; font-size:14px;color:#555; font-weight:bold;}
+.border2 .GoodsList-Tabs .current{ border-top:2px solid #cc0000; background:#fff;width:187px;  color:#cc0000;border-bottom:1px solid #fff; background:url(titlebg.gif) 0 -31px repeat-x;}
+
+.border2 .Article-Tabs{ position: absolute; left:0; top:0; height:28px; border:none; padding:0; margin:0;width:220%; overflow:hidden}
+.border2 .Article-Tabs div{ background:#F3F3F3; border:1px solid #D5D5D5;border-left:none; height:26px;width:108px; overflow:hidden; text-align:center; line-height:24px; float:left; padding:0; margin:0; }
+.border2 .Article-Tabs .current{ border-top:2px solid #c00; background:#fff;width:109px; font-weight:normal; color:#c00}
+.border2 h6{ white-space:normal!important}
+.border2 .GoodsListWrap td{ padding:0 3px!important}
+.border2 .GoodsListWrap .GoodsList .itemsWrap{margin-bottom:0px!important;}
+.cuxiao .GoodsListWrap .GoodsList .itemsWrap{margin-bottom:0px!important;}
+.cuxiao .GoodsListWrap{width:105%}
+.cuxiao .border-body{ padding-top:10px;}
+.border2 .goodsImg{ width:162px; height:162px;}
+.border2 .item{border-right:1px solid #eeeeee;}
+.border2 .GoodsList h6{ padding:5px 0;}
+.border2 .price0{ color:#9a9a9a;}
+.GoodsList-Tabs div span{ font-size:13px}
+
+=============================================================================================*/
+
+.bangzhu .border-body {
+    border:1px solid #d4d4d4;
+    background:#F8F8F8;
+    border-top:none;
+    padding:0;
+    border-top:none;
+    width:208px;
+    overflow:hidden;
+    float:left;
+}
+
+

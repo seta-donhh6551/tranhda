@@ -21,7 +21,7 @@
 								<p>Ở thể loại tranh gạo, bằng bàn tay khéo léo và sự lao động sáng tạo, những nghệ nhân tại Tranh Gạo Việt đã cho ra đời hàng trăm bức tranh phong cảnh, thư pháp, tĩnh vật… và công phu nhất là những tác phẩm tranh chân dung từ những hạt gạo từ thiên nhiên.</p>
                             </div>
                             <div class="welcome_right">
-                            	<img src="<?php echo base_url(); ?>public/images/tranh-da-quy.jpg" width="350" style="padding:2px;border:1px solid #CCC;" />
+                            	<img src="<?php echo base_url(); ?>public/images/tranh-da-quy.jpg" height="200" style="padding:2px;border:1px solid #CCC;" />
                             </div>
                             <div class="cls" style="padding:5px;border-bottom:1px dashed #CCC;"></div>
                             <div class="support"> 
