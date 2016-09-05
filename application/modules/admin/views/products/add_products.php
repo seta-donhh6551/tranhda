@@ -1,17 +1,17 @@
 				<div class="section">
                 <script type="text/javascript">
-					function checkpro(){
-						var form = document.sac;
-						if(form.pro_code.value == ""){
-							alert("Vui lòng nhập tên sản phẩm");
-							form.pro_code.focus();
-							return false;
-						}
-						if(form.pro_price.value == ""){
-							alert("Vui lòng nhập giá tiền");
-							form.pro_price.focus();
-							return false;
-						}	}
+					$(document).ready(function(){
+						$('input[type=submit]').click(function(){
+							if($('input[name=pro_name]').val() == ''){
+								alert('Vui lòng nhập tên sản phẩm');
+								return false;
+							}
+							if($('input.position:checked').length == 0){
+								alert('Bạn chưa chọn loại tranh');
+								return false;
+							}
+						});
+					});
 				</script>
 					<!--[if !IE]>start title wrapper<![endif]-->
 					<div class="title_wrapper">
@@ -41,7 +41,7 @@
                                 	<div class="error_red"><?php if(isset($error)) { echo "<p>".$error."</p>"; } ?>
 										<?php echo validation_errors();?>
 									</div>
-									<form action="<?php echo base_url();?>admin/products/add" method="post" name="sac" onsubmit="return checkpro()" enctype="multipart/form-data">
+									<form action="<?php echo base_url();?>admin/products/add" method="post" enctype="multipart/form-data">
                             		<div class="form_items">
                                     	<div class="form_items_left">Tên sản phẩm</div>
                                         <div class="form_items_right"><input name="pro_name" type="text" id="pro_name" size="30" /></div>
@@ -97,6 +97,16 @@
                                           <div id="list"></div>
                                         </div>
                                     </div>
+									<div class="form_items">
+                                    	<div class="form_items_left">Loại tranh</div>
+                                        <div class="form_items_right">
+										<?php if(isset($listposition)){ ?>
+										<?php $stt = 1; foreach($listposition as $position){ ?>
+											<input type="checkbox" class="position" name="position_id[]" value="<?php echo $position['id']; ?>" /><?php echo $position['name']; ?>
+											<?php if($stt == 4){ echo '<br />'; } ?>
+										<?php $stt++; } } ?>
+										</div>
+									</div>
                                     <div class="form_items">
                                     	<div class="form_items_left">Keywords</div>
                                         <div class="form_items_right"><textarea cols="35" rows="5" name="pro_keys"></textarea></div>
