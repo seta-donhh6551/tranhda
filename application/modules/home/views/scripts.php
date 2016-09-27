@@ -1,5 +1,5 @@
-<script type="text/javascript" src="<?php echo base_url();?>public/scripts/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>public/scripts/jquery.carouFredSel.js"></script>
+<script type="text/javascript" src="http://www.thuthuatweb.net/demo/tooltip/jquery.js"></script>
+<script type="text/javascript" src="http://www.thuthuatweb.net/demo/tooltip/main.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>public/scripts/custom.js"></script>
 <script type="text/javascript">
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -11,3 +11,44 @@
   ga('send', 'pageview');
 
 </script>
+
+<style>
+pre{
+	display:block;
+	font:100% "Courier New", Courier, monospace;
+	padding:10px;
+	border:1px solid #bae2f0;
+	background:#e3f4f9;	
+	margin:.5em 0;
+	overflow:auto;
+	width:800px;
+}
+
+img{border:none;}
+ul,li{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style:none;
+	float:left;
+	display:inline;
+	margin-right:10px;
+}
+
+
+
+/*  */
+
+#preview{
+	position:absolute;
+	/*border:1px solid #ccc;*/
+	padding:5px;
+	display:none;
+	color:#fff;
+}
+#preview img{
+	max-width:600px
+}
+/*  */
+</style>

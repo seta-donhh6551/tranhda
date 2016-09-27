@@ -854,7 +854,7 @@
 							<?php if(isset($listgems)) { ?>
 							<?php foreach($listgems as $gemItem){ ?>
                             <td id="item-<?php echo $gemItem['pro_id']; ?>" width="16%;" class='item textcenter'>
-                                <a target="_blank" href='#' class="thumb-img" class='pic'>
+                                <a target="_blank" href="<?php echo base_url().'uploads/products/'.$gemItem['pro_image'] ?>" class="thumb-img preview" class='pic'>
 									<img src="<?php echo base_url().'uploads/products/thumb/'.$gemItem['pro_image'] ?>" alt="<?php echo $gemItem['pro_name']; ?>" style="max-width:146px;"/>
 								</a>
                                 <div class="info">
