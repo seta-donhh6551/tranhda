@@ -207,6 +207,17 @@
                         <li>4</li>
                     </ul>
                 </div>
+                <script src="http://www.99zihua.com/plugins/widgets/ex_sys_ad/switchable.js"></script>
+                <script>
+                    new Switchable('ex_slide_widgets_16648', {
+                        effect: 'fade',
+                        autoplay: true,
+                        duration: 500,
+                        interval: 5000,
+                        eventType: 'mouse',
+                        pauseOnHover: true
+                    });
+                </script>
             </div>
         </div>
         <div class="LeftColumn">
@@ -228,6 +239,36 @@
                                     <p class="wk-lou-name" style="bottom: 20px;"> <a href="http://www.99zihua.com/lou.html" target="_blank">辽宁工美教授苗雨 四尺三开《映日荷花别样红》师从吴冠中</a > </p> <p class="wk-lou-name"> <span>捡漏价<font>￥2000</font> &nbsp;&nbsp; 原售价<del>￥2500</del></span> </p> </li>  <li class="switchable-panel wk-switchable-panel" > <a href="http://www.99zihua.com/lou.html" class="wk-a" target="_blank" rel="nofollow" alt="名家蒲家瑞三尺《秋色丹彩》"> <img alt="名家蒲家瑞三尺《秋色丹彩》" src="http://www.99zihua.com/images/goods/20160421/97252b7988a2105c.jpg" ></a>
                                         <p class="wk-lou-name" style="bottom: 20px;"> <a href="http://www.99zihua.com/lou.html" target="_blank">名家蒲家瑞三尺《秋色丹彩》</a > </p> <p class="wk-lou-name"> <span>捡漏价<font>￥1900</font> &nbsp;&nbsp; 原售价<del>￥2500</del></span> </p> </li>  <li class="switchable-panel wk-switchable-panel" > <a href="http://www.99zihua.com/lou.html" class="wk-a" target="_blank" rel="nofollow" alt="河南著名画家曲逸之四尺斗方紫牡丹《紫玉含金》"> <img alt="河南著名画家曲逸之四尺斗方紫牡丹《紫玉含金》" src="http://www.99zihua.com/images/goods/20140109/5121286b27f06c5e.jpg" ></a>
                                             <p class="wk-lou-name" style="bottom: 20px;"> <a href="http://www.99zihua.com/lou.html" target="_blank">河南著名画家曲逸之四尺斗方紫牡丹《紫玉含金》</a > </p> <p class="wk-lou-name"> <span>捡漏价<font>￥1000</font> &nbsp;&nbsp; 原售价<del>￥1500</del></span> </p> </li>  </ol> <a id="wk-prev"><img class="prev" src="http://www.99zihua.com/statics/1.gif"></a > <a id="wk-next"><img class="next" src="http://www.99zihua.com/statics/2.gif"></a > <ul class="switchable-triggerBox" style="display:none">  <li class=""></li>  <li class=""></li>  <li class=""></li>  <li class=""></li>  <li class=""></li>  <li class=""></li>  </ul> 
+								<script src="http://www.99zihua.com/plugins/widgets/ex_sys_ad/switchable.js"></script>
+								<script>
+									new Switchable('gonggao1',{
+										effect:'scrollx',
+										autoplay:true,
+										duration:500,
+										interval:5000,
+										haslrbtn:true,  
+										prev:'.prev',  
+										next:'.next',
+										eventType:'mouse',
+										pauseOnHover:true
+									});
+								</script>
+								<script src="http://www.99zihua.com/statics/seckill/countdown.js"></script>
+								<script>
+									new countdown().one_init('end_time'); 		
+									function getHm(){
+										var tdiv = document.getElementById('end_time').innerHTML;
+										if(tdiv == '活动已结束.' || tdiv == '活动未开始.'){
+											document.getElementById('hm').innerHTML=" ";
+										}else{
+											setTimeout("getHm()",10); 		
+											var c=new Date();
+											var hm=((c.getMilliseconds())%100);
+											document.getElementById('hm').innerHTML="."+hm;
+										}			
+									}
+									setTimeout("getHm()",1000); 
+								</script> 
 					</div> 
 					<div class="gonggao wk-lou-m-b">
 						<ul>
@@ -250,6 +291,47 @@
                     <h3></h3>
                 </div>
                 <div class="border-body clearfix">
+                    <script>
+                        var good_list = new Class({
+                            divSrc: '',
+                            divSrc2: '',
+                            initialize: function(div1, div2) {
+                                this.divSrc = div1;
+                                this.divSrc2 = div2;
+                                this.tab = 'ttp_widgets_16602';
+                            },
+                            changeTableing: function(type, div) {
+                                var i;
+                                for (i = 0; i < 4; i++) {
+                                    if (i == type) {
+                                        $(this.divSrc2 + i).setStyles({
+                                            'display': ''
+                                        });
+                                        $('widgets_16602_more_' + i).setStyles({
+                                            'display': ''
+                                        });
+                                        $(this.tab + i).addClass('current');
+                                    } else {
+                                        $(this.divSrc2 + i).setStyles({
+                                            'display': 'none'
+                                        });
+                                        $('widgets_16602_more_' + i).setStyles({
+                                            'display': 'none'
+                                        });
+                                        $(this.tab + i).removeClass('current');
+                                    }
+                                }
+                            }
+                        });
+                        var ef_widgets_16602 = new good_list('top_widgets_16602', 'widgets_16602_list');
+                    </script>
+                    <style>
+                        .itemsWrap {
+                            *display: inline;
+                            float: left;
+                            overflow: hidden;
+                        }
+                    </style>
                     <div id="top_widgets_16602" class="GoodsList-Tabs">
                         <div class="current" style="float:left" id="ttp_widgets_166020" onMouseOver="ef_widgets_16602.changeTableing(0)"><span>Xem nhiều</span>&nbsp;</div>
                         <div style="float:left" id="ttp_widgets_166021" onMouseOver="ef_widgets_16602.changeTableing(1,'widgets_16602_more1')"><span>Mới nhất</span>&nbsp;</div>
@@ -613,7 +695,7 @@
     <div class="zhuangs">
         <div class="zh_top">
             <div class="zhl">
-                <h2>Tranh đá quý</h2>
+                <h2>Tranh Phong Cảnh</h2>
             </div>
             <div class="zhr">
                 <a href="#">Phòng khách</a>
@@ -686,6 +768,17 @@
                     <li>2</li>
                 </ul>
             </div>
+            <script src="http://www.99zihua.com/plugins/widgets/ex_sys_ad/switchable.js"></script>
+            <script>
+                new Switchable('ex_slide_widgets_16649', {
+                    effect: 'scrollx',
+                    autoplay: true,
+                    duration: 500,
+                    interval: 3000,
+                    eventType: 'mouse',
+                    pauseOnHover: true
+                });
+            </script>
         </div>
         <div class="zh_midr">
             <div class="border4 " id="widgets_16609">
@@ -727,6 +820,27 @@
                             </li>
                         </ul>
                     </div>
+                    <script>
+                        var max_list = new Class({
+                            divSrc: '',
+                            initialize: function(div) {
+                                this.divSrc = div;
+                                this.tab = 'r_widgets_16609';
+                                $('r_widgets_166090').addClass('cuurent');
+                            },
+                            changeTableing: function(type) {
+                                var i;
+                                for (i = 0; i < 6; i++) {
+                                    if (i == type) {
+                                        $(this.tab + i).addClass('cuurent');
+                                    } else {
+                                        $(this.tab + i).removeClass('cuurent');
+                                    }
+                                }
+                            }
+                        });
+                        var wa_widgets_16609 = new max_list('max_sales');
+                    </script>
                 </div>
                 <div class="border-bot"></div>
             </div>
@@ -736,8 +850,8 @@
             <div class="GoodsListWrap GoodsList GoodsShow">
                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
-                        <tr valign="top" class="trabc">
-							<?php if(isset($listgems)) { ?>
+                        <tr valign="top">
+                            <?php if(isset($listgems)) { ?>
 							<?php foreach($listgems as $gemItem){ ?>
                             <td id="item-<?php echo $gemItem['pro_id']; ?>" width="16%;" class='item textcenter'>
                                 <a target="_blank" href="<?php echo base_url().'uploads/products/'.$gemItem['pro_image'] ?>" class="thumb-img preview" class='pic'>
@@ -831,6 +945,23 @@
                     <li>2</li>
                 </ul>
             </div>
+            <script src="http://www.99zihua.com/plugins/widgets/ex_sys_ad/switchable.js"></script>
+            <script>
+                new Switchable('ex_slide_widgets_16650', {
+
+                    effect: 'scrollx',
+
+                    autoplay: true,
+
+                    duration: 500,
+
+                    interval: 2000,
+
+                    eventType: 'mouse',
+
+                    pauseOnHover: true
+                });
+            </script>
         </div>
         <div class="zh_midr">
             <div class="border4 " id="widgets_16615">
@@ -872,6 +1003,7 @@
                             </li>
                         </ul>
                     </div>
+                    <script>
                         var max_list = new Class({
 
                             divSrc: '',
@@ -1059,6 +1191,23 @@
                     <li>2</li>
                 </ul>
             </div>
+            <script src="http://www.99zihua.com/plugins/widgets/ex_sys_ad/switchable.js"></script>
+            <script>
+                new Switchable('ex_slide_widgets_16651', {
+
+                    effect: 'scrollx',
+
+                    autoplay: true,
+
+                    duration: 500,
+
+                    interval: 2000,
+
+                    eventType: 'mouse',
+
+                    pauseOnHover: true
+                });
+            </script>
         </div>
         <div class="zh_midr">
             <div class="border4 " id="widgets_16621">
@@ -1100,6 +1249,7 @@
                             </li>
                         </ul>
                     </div>
+                    <script>
                         var max_list = new Class({
 
                             divSrc: '',
@@ -1360,6 +1510,7 @@
                             <!--经通过<span class="TransportListShipname">袁保憲转 吴先生</span> -->已通过<span class="TransportListId">顺丰速运</span>发出， 请注意查收.发货单号:<span class="TransportListId">120160824000002</span> </li>
                     </ul>
                 </div>
+                <script>
                     (function() {
                         if (window.roll_effect) return;
                         window.roll_effect = new Class({
@@ -1416,6 +1567,14 @@
                         });
 
                     })();
+                </script>
+                <script>
+                    window.addEvent('domready', function() {
+                        new roll_effect('ord_widgets_16634', {
+                            viewheight: 95,
+                            speed: 3000
+                        });
+                    });
                 </script>
             </div>
         </div>
