@@ -494,7 +494,6 @@ a.qqsign img{vertical-align:certer; position:relative;top:3px;left:0px; color:#C
 	padding-top:3px;
 }
 .zbm {
-	display:none;
 	width:510px;
 	height:70px;
 	background:url(../images/top_bgg.gif) 0 -430px no-repeat;
@@ -1104,8 +1103,8 @@ ul.switchable-triggerBox li.active {
 
 
 .GoodsList .price1 {
-	font-weight:bold;
-	font-size:14px;
+	/*font-weight:bold;
+	font-size:14px;*/
 }
 .pageWrap {
 	margin-left:5px;
