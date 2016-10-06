@@ -698,11 +698,11 @@
             <div id="ex_slide_widgets_16649">
                 <ol class="switchable-content">
                     <li class="switchable-panel">
-                        <a href="#" rel="nofollow"><img alt="" src="images/slide/11.jpg" width="490" height="271"></img>
+                        <a href="#" rel="nofollow"><img alt="" src="images/slide/11.jpg" width="490" height="271"/>
                         </a>
                     </li>
                     <li class="switchable-panel">
-                        <a href="#" rel="nofollow"><img alt="" src="images/slide/22.jpg" width="490" height="271"></img>
+                        <a href="#" rel="nofollow"><img alt="" src="images/slide/22.jpg" width="490" height="271"/>
                         </a>
                     </li>
                 </ol>
@@ -823,12 +823,13 @@
             <div class="zhl">
 				<h2>Tranh Gạo</h2>
 			</div>
-            <div class="zhr"><a href="http://www.99zihua.com/mjsh.html">名家书画</a>
-                <a href="http://www.99zihua.com/mjsf.html">名家书法作品</a>
+            <div class="zhr"><a href="#">Tranh gạo đẹp</a>
+                <a href="#">Tranh gạo làm quà tặng</a>
             </div>
         </div>
         <div class="clear"></div>
-        <div class="zh_midl"><img alt="名家书画收藏保值增值" src="http://www.99zihua.com/images/sy/sz01.jpg">
+        <div class="zh_midl">
+			<img alt="Tranh gạo chân dung" src="<?php echo base_url(); ?>public/images/slide/tranh-gao-chan-dung.jpg">
         </div>
         <div class="zh_midz">
             <style>
@@ -876,11 +877,13 @@
             <div id="ex_slide_widgets_16650">
                 <ol class="switchable-content">
                     <li class="switchable-panel">
-                        <a href="http://www.99zihua.com/brand-showList.html" rel="nofollow"><img alt="名家专场永久保真" src="http://www.99zihua.com/images/sy/sz02.jpg" width="490px" height="271px"></img>
+                        <a href="#" rel="nofollow">
+							<img alt="" src="<?php echo base_url(); ?>public/images/slide/tranh-gao.jpg" width="490" height="271">
                         </a>
                     </li>
                     <li class="switchable-panel">
-                        <a href="http://www.99zihua.com/brand-65.html" rel="nofollow"><img alt="本站独家代理隶书名家周宏兴作品" src="http://www.99zihua.com/images/sy/sz03.jpg" width="490px" height="271px"></img>
+                        <a href="#" rel="nofollow">
+							<img alt="" src="<?php echo base_url(); ?>public/images/slide/tranh-gao-viet-nam.jpg" width="490" height="271">
                         </a>
                     </li>
                 </ol>
@@ -942,43 +945,23 @@
                     </div>
                     <script>
                         var max_list = new Class({
-
                             divSrc: '',
-
                             initialize: function(div) {
-
                                 this.divSrc = div;
-
                                 this.tab = 'r_widgets_16615';
-
                                 $('r_widgets_166150').addClass('cuurent');
-
                             },
-
                             changeTableing: function(type) {
-
                                 var i;
-
                                 for (i = 0; i < 6; i++) {
-
                                     if (i == type) {
-
                                         $(this.tab + i).addClass('cuurent');
-
                                     } else {
-
                                         $(this.tab + i).removeClass('cuurent');
-
                                     }
-
                                 }
-
                             }
-
                         });
-
-
-
                         var wa_widgets_16615 = new max_list('max_sales');
                     </script>
                 </div>
@@ -991,66 +974,22 @@
                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
                         <tr valign="top">
-                            <td id="item-12957" width="16%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-12957.html' style='width:146px;height:146px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20160606/20446537e9c99546.jpg" alt="国家一级美术师王永刚 三尺《金玉满堂》(询价)" style='width:146px;height:146px;' /> </a>
+                            <?php if(isset($listgems)) { ?>
+							<?php foreach($listgems as $gemItem){ ?>
+                            <td id="item-<?php echo $gemItem['pro_id']; ?>" width="16%;" class='item textcenter'>
+                                <a target="_blank" href="<?php echo base_url().'uploads/products/'.$gemItem['pro_image'] ?>" class="thumb-img preview" class='pic'>
+									<img src="<?php echo base_url().'uploads/products/thumb/'.$gemItem['pro_image'] ?>" alt="<?php echo $gemItem['pro_name']; ?>" style="max-width:146px;"/>
+								</a>
                                 <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-12957.html' title="国家一级美术师王永刚 三尺《金玉满堂》(询价)">国家一级美术师王永刚 三尺《金玉满堂》(询价)</a> </div>
+                                    <div class='gname' style='height:36px;line-height:18px;'>
+										<a href='#' title="<?php echo $gemItem['pro_name']; ?>"><?php echo $gemItem['pro_name']; ?></a>
+									</div>
                                     <div class='clearfix'>
-                                        <div class='price textcenter'>本站价:<em class='price1'>￥0</em>
-                                        </div>
+                                        <div class='price textcenter'>Giá : <em class='price1'><?php echo $gemItem['pro_price']; ?></em></div>
                                     </div>
                                 </div>
                             </td>
-                            <td id="item-12421" width="16%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-12421.html' style='width:146px;height:146px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20160318/f1b8695bfbb5c31e.jpg" alt="范扬 四尺对开《大漠沙如雪》" style='width:146px;height:146px;' /> </a>
-                                <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-12421.html' title="范扬 四尺对开《大漠沙如雪》">范扬 四尺对开《大漠沙如雪》</a> </div>
-                                    <div class='clearfix'>
-                                        <div class='price textcenter'>本站价:<em class='price1'>￥8000</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td id="item-12233" width="16%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-12233.html' style='width:146px;height:146px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20160125/716b0bc60722292d.jpg" alt="贵州七星关美协主席吴显刚 三尺《松亭赏幽》" style='width:146px;height:146px;' /> </a>
-                                <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-12233.html' title="贵州七星关美协主席吴显刚 三尺《松亭赏幽》">贵州七星关美协主席吴显刚 三尺《松亭赏幽》</a> </div>
-                                    <div class='clearfix'>
-                                        <div class='price textcenter'>本站价:<em class='price1'>￥6800</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td id="item-12207" width="16%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-12207.html' style='width:146px;height:146px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20160114/95fa83e0f8189383.jpg" alt="隶书大家周宏兴四尺《海纳百川 有容乃大》（询价）" style='width:146px;height:146px;' /> </a>
-                                <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-12207.html' title="隶书大家周宏兴四尺《海纳百川 有容乃大》（询价）">隶书大家周宏兴四尺《海纳百川 有容乃大》（询价）</a> </div>
-                                    <div class='clearfix'>
-                                        <div class='price textcenter'>本站价:<em class='price1'>￥0</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td id="item-9878" width="16%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-9878.html' style='width:146px;height:146px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20150112/93e1cc26f3fedad2.jpg" alt="李明成三尺写意山水画《莫愁湖》" style='width:146px;height:146px;' /> </a>
-                                <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-9878.html' title="李明成三尺写意山水画《莫愁湖》">李明成三尺写意山水画《莫愁湖》</a> </div>
-                                    <div class='clearfix'>
-                                        <div class='price textcenter'>本站价:<em class='price1'>￥3980</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td id="item-7499" width="16%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-7499.html' style='width:146px;height:146px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20131009/40a8e30f68b34264.jpg" alt="国家一级美术师宝钦四尺富贵吉祥牡丹画(询价)" style='width:146px;height:146px;' /> </a>
-                                <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-7499.html' title="国家一级美术师宝钦四尺富贵吉祥牡丹画(询价)">国家一级美术师宝钦四尺富贵吉祥牡丹画(询价)</a> </div>
-                                    <div class='clearfix'>
-                                        <div class='price textcenter'>本站价:<em class='price1'>￥0</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
+							<?php } } ?>
                         </tr>
                     </tbody>
                 </table>
@@ -1065,11 +1004,15 @@
             <div class="zhl">
 				<h2>Tranh cát</h2>
 			</div>
-            <div class="zhr"><a href="http://www.99zihua.com/list30.html">百寿图</a><a href="http://www.99zihua.com/gallery-63-grid.html">书画礼品</a>
+            <div class="zhr">
+				<a href="#">Tranh cát phong cảnh</a>
+				<a href="#">Tranh cát để bàn</a>
+				<a href="#">Quà tặng người nước ngoài</a>
             </div>
         </div>
         <div class="clear"></div>
-        <div class="zh_midl"><img alt="书画礼品释怀佳品" src="http://www.99zihua.com/images/sy/lp01.jpg">
+        <div class="zh_midl">
+			<img alt="Tranh cát đẹp" src="http://www.99zihua.com/images/sy/lp01.jpg">
         </div>
         <div class="zh_midz">
             <style>

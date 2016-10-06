@@ -14,6 +14,7 @@ class Index extends MY_Controller
 
 		//get list product
 		$data['listgems'] = $this->model_product->listproduct(1);
+		$data['listrice'] = $this->model_product->listproduct(2);
 
 		$data['config'] = $this->config();
 		$data['title'] = "Tranh gạo việt";
