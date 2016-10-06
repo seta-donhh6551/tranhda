@@ -2,7 +2,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="refresh" content="600" />
 <title><?php echo $config['config_title']; ?></title>
 <link rel="author" href="https://plus.google.com/100958781777178256065" />
 <link rel="canonical" href="<?php echo base_url(); ?>" />

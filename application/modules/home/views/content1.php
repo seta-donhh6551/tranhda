@@ -152,7 +152,6 @@
                         <li>4</li>
                     </ul>
                 </div>
-                <script src="http://www.99zihua.com/plugins/widgets/ex_sys_ad/switchable.js"></script>
                 <script>
                     new Switchable('ex_slide_widgets_16648', {
                         effect: 'fade',
@@ -184,7 +183,6 @@
                                     <p class="wk-lou-name" style="bottom: 20px;"> <a href="http://www.99zihua.com/lou.html" target="_blank">辽宁工美教授苗雨 四尺三开《映日荷花别样红》师从吴冠中</a > </p> <p class="wk-lou-name"> <span>捡漏价<font>￥2000</font> &nbsp;&nbsp; 原售价<del>￥2500</del></span> </p> </li>  <li class="switchable-panel wk-switchable-panel" > <a href="http://www.99zihua.com/lou.html" class="wk-a" target="_blank" rel="nofollow" alt="名家蒲家瑞三尺《秋色丹彩》"> <img alt="名家蒲家瑞三尺《秋色丹彩》" src="http://www.99zihua.com/images/goods/20160421/97252b7988a2105c.jpg" ></a>
                                         <p class="wk-lou-name" style="bottom: 20px;"> <a href="http://www.99zihua.com/lou.html" target="_blank">名家蒲家瑞三尺《秋色丹彩》</a > </p> <p class="wk-lou-name"> <span>捡漏价<font>￥1900</font> &nbsp;&nbsp; 原售价<del>￥2500</del></span> </p> </li>  <li class="switchable-panel wk-switchable-panel" > <a href="http://www.99zihua.com/lou.html" class="wk-a" target="_blank" rel="nofollow" alt="河南著名画家曲逸之四尺斗方紫牡丹《紫玉含金》"> <img alt="河南著名画家曲逸之四尺斗方紫牡丹《紫玉含金》" src="http://www.99zihua.com/images/goods/20140109/5121286b27f06c5e.jpg" ></a>
                                             <p class="wk-lou-name" style="bottom: 20px;"> <a href="http://www.99zihua.com/lou.html" target="_blank">河南著名画家曲逸之四尺斗方紫牡丹《紫玉含金》</a > </p> <p class="wk-lou-name"> <span>捡漏价<font>￥1000</font> &nbsp;&nbsp; 原售价<del>￥1500</del></span> </p> </li>  </ol> <a id="wk-prev"><img class="prev" src="http://www.99zihua.com/statics/1.gif"></a > <a id="wk-next"><img class="next" src="http://www.99zihua.com/statics/2.gif"></a > <ul class="switchable-triggerBox" style="display:none">  <li class=""></li>  <li class=""></li>  <li class=""></li>  <li class=""></li>  <li class=""></li>  <li class=""></li>  </ul> 
-								<script src="http://www.99zihua.com/plugins/widgets/ex_sys_ad/switchable.js"></script>
 								<script>
 									new Switchable('gonggao1',{
 										effect:'scrollx',
@@ -640,7 +638,7 @@
     <div class="zhuangs">
         <div class="zh_top">
             <div class="zhl">
-                <h2>Tranh Phong Cảnh</h2>
+                <h2>Tranh Đá Quý</h2>
             </div>
             <div class="zhr">
                 <a href="#">Phòng khách</a>
@@ -713,7 +711,6 @@
                     <li>2</li>
                 </ul>
             </div>
-            <script src="http://www.99zihua.com/plugins/widgets/ex_sys_ad/switchable.js"></script>
             <script>
                 new Switchable('ex_slide_widgets_16649', {
                     effect: 'scrollx',
@@ -823,7 +820,9 @@
     <div class="he10"></div>
     <div class="zhuangs sczh">
         <div class="zh_top">
-            <div class="zhl"></div>
+            <div class="zhl">
+				<h2>Tranh Gạo</h2>
+			</div>
             <div class="zhr"><a href="http://www.99zihua.com/mjsh.html">名家书画</a>
                 <a href="http://www.99zihua.com/mjsf.html">名家书法作品</a>
             </div>
@@ -890,20 +889,13 @@
                     <li>2</li>
                 </ul>
             </div>
-            <script src="http://www.99zihua.com/plugins/widgets/ex_sys_ad/switchable.js"></script>
             <script>
                 new Switchable('ex_slide_widgets_16650', {
-
                     effect: 'scrollx',
-
                     autoplay: true,
-
                     duration: 500,
-
                     interval: 2000,
-
                     eventType: 'mouse',
-
                     pauseOnHover: true
                 });
             </script>
@@ -1070,7 +1062,9 @@
     <div class="he10"></div>
     <div class="zhuangs lpzh">
         <div class="zh_top">
-            <div class="zhl"></div>
+            <div class="zhl">
+				<h2>Tranh cát</h2>
+			</div>
             <div class="zhr"><a href="http://www.99zihua.com/list30.html">百寿图</a><a href="http://www.99zihua.com/gallery-63-grid.html">书画礼品</a>
             </div>
         </div>
@@ -1136,20 +1130,13 @@
                     <li>2</li>
                 </ul>
             </div>
-            <script src="http://www.99zihua.com/plugins/widgets/ex_sys_ad/switchable.js"></script>
             <script>
                 new Switchable('ex_slide_widgets_16651', {
-
                     effect: 'scrollx',
-
                     autoplay: true,
-
                     duration: 500,
-
                     interval: 2000,
-
                     eventType: 'mouse',
-
                     pauseOnHover: true
                 });
             </script>
