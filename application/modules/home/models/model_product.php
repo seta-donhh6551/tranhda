@@ -25,9 +25,11 @@
 			$this->db->where("cate_id",$id);
 			return $this->db->get($this->_category)->row_array();
 		}
-		public function listproduct($cagoid){
-			$this->db->where('cago_id',$cagoid);
-			$this->db->limit(6);
+		public function listproduct($cagoid = null, $limit = 6){
+			if($cagoid){
+				$this->db->where('cago_id',$cagoid);
+			}
+			$this->db->limit($limit);
 			return $this->db->get($this->_table)->result_array();
 		}
 		public function related($id,$cateid){

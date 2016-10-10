@@ -57,9 +57,10 @@
 								<table cellpadding="0" cellspacing="0" width="905">
 									<tbody><tr>
 									  <th width="23">Stt.</th>
-									  <th width="300"><a href="#">Tên sản phẩm</a></th>
-									  <th width="136"><a href="#">Giá tiền</a></th>
-									  <th width="132"><a href="#">Thuộc chuyên mục</a></th>
+									  <th width="236"><a href="#">Tên sản phẩm</a></th>
+									  <th width="100"><a href="#">Giá tiền</a></th>
+									  <th width="157"><a href="#">Thuộc mục</a></th>
+									  <th width="157"><a href="#">Loại tranh</a></th>
 									  <th width="64">Actions</th>
 									</tr>
                                <?php
@@ -71,6 +72,7 @@
 										echo "<td>$stt</td>";
 										echo "<td>".$items['pro_name']."</td>";
 										echo "<td>".$items['pro_price']."</td>";
+										echo "<td>".$items['name']."</td>";
 										echo "<td>".$items['cate_name']."</td>";
 										echo "<td>";
 												echo "<div class='actions_menu'><ul>";

@@ -20,9 +20,10 @@
 			}
 		}
 		public function listall($off,$start){
-			$this->db->select("pro_id,pro_name,pro_price,cate_name");
+			$this->db->select("pro_id,pro_name,pro_price,cate_name,name");
 			$this->db->from($this->_table);
 			$this->db->join('tbl_category', 'tbl_category.cate_id = tbl_products.cate_id');
+			$this->db->join('tbl_categorie', 'tbl_categorie.id = tbl_products.cago_id');
 			$this->db->order_by("tbl_products.cate_id","DESC");
 			$this->db->order_by("pro_id","DESC");
 			$this->db->limit($off,$start);

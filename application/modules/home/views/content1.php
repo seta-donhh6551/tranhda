@@ -97,8 +97,8 @@
                     <div class="GoodsListWrap GoodsList GoodsShow">
                         <table width="100%" border="0" cellpadding="0" cellspacing="0">
                             <tbody>
-								<?php if(isset($listgems)) { ?>
-								<?php foreach($listgems as $gemItem){ ?>
+								<?php if(isset($listGems)) { ?>
+								<?php foreach($listGems as $gemItem){ ?>
                                 <tr valign="top">
                                     <td id="item-13203" width="100%;" class='item textcenter'>
                                         <a target="_blank" href='#' style='width:55px;height:55px;' class='pic'>
@@ -284,136 +284,23 @@
                     <div class="GoodsListWrap">
                         <div class="GoodsList">
                             <div id="widgets_16602_list0">
-                                <div class="itemsWrap " product="13470" style="width:19%;">
+								<?php if(isset($listAllPro)) { ?>
+								<?php $i = 1; foreach($listAllPro as $allPro){ ?>
+								<div class="itemsWrap<?php if($i % 5 == 0){ echo ' last';} ?>" product="<?php echo $allPro['pro_id'] ?>" style="width:19%;">
                                     <div class="item">
                                         <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="http://www.99zihua.com/product-13470.html" target="_blank" title="著名工笔画家赵逸梅四尺斗方《喜上枝头》"><img src="http://www.99zihua.com/images/goods/20160810/79d5d74246f0c914.jpg" width="136" height="136" alt="著名工笔画家赵逸梅四尺斗方《喜上枝头》">
+                                            <a href="#" target="_blank" title="<?php echo $allPro['pro_name']; ?>">
+												<img src="<?php echo base_url().'uploads/products/thumb/'.$allPro['pro_image'] ?>" width="136" alt="<?php echo $allPro['pro_name']; ?>">
                                             </a>
                                         </div>
-                                        <h6><a href="http://www.99zihua.com/product-13470.html" target="_blank" title="著名工笔画家赵逸梅四尺斗方《喜上枝头》">著名工笔画家赵逸梅四尺斗方《喜上枝头》</a></h6>
+                                        <h6><a href="#" target="_blank" title=""><?php echo $allPro['pro_name'] ?></a></h6>
                                         <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥2800</span>
-                                            </li>
+                                            <li><span class="price0">Giá : </span><span class="price1" style="color:default;"><?php echo $gemItem['pro_price'] ? number_format($gemItem['pro_price']).' VND' : 'Liên hệ'; ?></span></li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="itemsWrap " product="12312" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="http://www.99zihua.com/product-12312.html" target="_blank" title="著名花鸟画家曲逸之六尺《天香图》"><img src="http://www.99zihua.com/images/goods/20160307/a5d6e43fc1475c6a.jpg" width="136" height="136" alt="著名花鸟画家曲逸之六尺《天香图》">
-                                            </a>
-                                        </div>
-                                        <h6><a href="http://www.99zihua.com/product-12312.html" target="_blank" title="著名花鸟画家曲逸之六尺《天香图》">著名花鸟画家曲逸之六尺《天香图》</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥3700</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="itemsWrap " product="11733" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="http://www.99zihua.com/product-11733.html" target="_blank" title="吴东小八尺聚宝盆山水画《源远流长》"><img src="http://www.99zihua.com/images/goods/20151109/c989be15e12ac326.jpg" width="136" height="136" alt="吴东小八尺聚宝盆山水画《源远流长》">
-                                            </a>
-                                        </div>
-                                        <h6><a href="http://www.99zihua.com/product-11733.html" target="_blank" title="吴东小八尺聚宝盆山水画《源远流长》">吴东小八尺聚宝盆山水画《源远流长》</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥1680</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="itemsWrap " product="13108" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="http://www.99zihua.com/product-13108.html" target="_blank" title="北京美协凌雪四尺《花开富贵》"><img src="http://www.99zihua.com/images/goods/20160630/70a88add944ac241.jpg" width="136" height="136" alt="北京美协凌雪四尺《花开富贵》">
-                                            </a>
-                                        </div>
-                                        <h6><a href="http://www.99zihua.com/product-13108.html" target="_blank" title="北京美协凌雪四尺《花开富贵》">北京美协凌雪四尺《花开富贵》</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥560</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="itemsWrap last" product="11926" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="http://www.99zihua.com/product-11926.html" target="_blank" title="安徽美协何华贤 四尺山水《云山秋色》"><img src="http://www.99zihua.com/images/goods/20151126/5a4bdccc1babe54e.jpg" width="136" height="136" alt="安徽美协何华贤 四尺山水《云山秋色》">
-                                            </a>
-                                        </div>
-                                        <h6><a href="http://www.99zihua.com/product-11926.html" target="_blank" title="安徽美协何华贤 四尺山水《云山秋色》">安徽美协何华贤 四尺山水《云山秋色》</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥2500</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="itemsWrap " product="13470" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="http://www.99zihua.com/product-13470.html" target="_blank" title="著名工笔画家赵逸梅四尺斗方《喜上枝头》"><img src="http://www.99zihua.com/images/goods/20160810/79d5d74246f0c914.jpg" width="136" height="136" alt="著名工笔画家赵逸梅四尺斗方《喜上枝头》">
-                                            </a>
-                                        </div>
-                                        <h6><a href="http://www.99zihua.com/product-13470.html" target="_blank" title="著名工笔画家赵逸梅四尺斗方《喜上枝头》">著名工笔画家赵逸梅四尺斗方《喜上枝头》</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥2800</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="itemsWrap " product="12312" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="http://www.99zihua.com/product-12312.html" target="_blank" title="著名花鸟画家曲逸之六尺《天香图》"><img src="http://www.99zihua.com/images/goods/20160307/a5d6e43fc1475c6a.jpg" width="136" height="136" alt="著名花鸟画家曲逸之六尺《天香图》">
-                                            </a>
-                                        </div>
-                                        <h6><a href="http://www.99zihua.com/product-12312.html" target="_blank" title="著名花鸟画家曲逸之六尺《天香图》">著名花鸟画家曲逸之六尺《天香图》</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥3700</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="itemsWrap " product="11733" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="http://www.99zihua.com/product-11733.html" target="_blank" title="吴东小八尺聚宝盆山水画《源远流长》"><img src="http://www.99zihua.com/images/goods/20151109/c989be15e12ac326.jpg" width="136" height="136" alt="吴东小八尺聚宝盆山水画《源远流长》">
-                                            </a>
-                                        </div>
-                                        <h6><a href="http://www.99zihua.com/product-11733.html" target="_blank" title="吴东小八尺聚宝盆山水画《源远流长》">吴东小八尺聚宝盆山水画《源远流长》</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥1680</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="itemsWrap " product="13108" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="http://www.99zihua.com/product-13108.html" target="_blank" title="北京美协凌雪四尺《花开富贵》"><img src="http://www.99zihua.com/images/goods/20160630/70a88add944ac241.jpg" width="136" height="136" alt="北京美协凌雪四尺《花开富贵》">
-                                            </a>
-                                        </div>
-                                        <h6><a href="http://www.99zihua.com/product-13108.html" target="_blank" title="北京美协凌雪四尺《花开富贵》">北京美协凌雪四尺《花开富贵》</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥560</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="itemsWrap last" product="11926" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="http://www.99zihua.com/product-11926.html" target="_blank" title="安徽美协何华贤 四尺山水《云山秋色》"><img src="http://www.99zihua.com/images/goods/20151126/5a4bdccc1babe54e.jpg" width="136" height="136" alt="安徽美协何华贤 四尺山水《云山秋色》">
-                                            </a>
-                                        </div>
-                                        <h6><a href="http://www.99zihua.com/product-11926.html" target="_blank" title="安徽美协何华贤 四尺山水《云山秋色》">安徽美协何华贤 四尺山水《云山秋色》</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥2500</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+								<?php if($i % 5 == 0){ echo '<div class="clear" style="padding:3px"></div>';} ?>
+								<?php ++$i; } } ?>
                                 <div class="clear"></div>
                             </div>
                             <div id="widgets_16602_more_0" class="more" style=""> </div>
@@ -793,8 +680,8 @@
                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
                         <tr valign="top">
-                            <?php if(isset($listgems)) { ?>
-							<?php foreach($listgems as $gemItem){ ?>
+                            <?php if(isset($listGems)) { ?>
+							<?php foreach($listGems as $gemItem){ ?>
                             <td id="item-<?php echo $gemItem['pro_id']; ?>" width="16%;" class='item textcenter'>
                                 <a target="_blank" href="<?php echo base_url().'uploads/products/'.$gemItem['pro_image'] ?>" class="thumb-img preview" class='pic'>
 									<img src="<?php echo base_url().'uploads/products/thumb/'.$gemItem['pro_image'] ?>" alt="<?php echo $gemItem['pro_name']; ?>" style="max-width:146px;"/>
@@ -803,8 +690,11 @@
                                     <div class='gname' style='height:36px;line-height:18px;'>
 										<a href='#' title="<?php echo $gemItem['pro_name']; ?>"><?php echo $gemItem['pro_name']; ?></a>
 									</div>
+									<div class='clearfix'>
+                                        <div class='price textcenter'>Size : <?php echo $gemItem['pro_size']; ?> cm</div>
+                                    </div>
                                     <div class='clearfix'>
-                                        <div class='price textcenter'>Giá : <em class='price1'><?php echo $gemItem['pro_price']; ?></em></div>
+                                        <div class='price textcenter'>Giá : <em class='price1'><?php echo $gemItem['pro_price'] ? number_format($gemItem['pro_price']).' VND' : 'Liên hệ'; ?></em></div>
                                     </div>
                                 </div>
                             </td>
@@ -839,9 +729,7 @@
                     overflow: hidden;
                     position: relative;
                 }
-                
                 #ex_slide_widgets_16650 ol {}
-                
                 #ex_slide_widgets_16650 ol li {
                     height: 271px;
                     width: 490px;
@@ -974,18 +862,21 @@
                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
                         <tr valign="top">
-                            <?php if(isset($listgems)) { ?>
-							<?php foreach($listgems as $gemItem){ ?>
-                            <td id="item-<?php echo $gemItem['pro_id']; ?>" width="16%;" class='item textcenter'>
-                                <a target="_blank" href="<?php echo base_url().'uploads/products/'.$gemItem['pro_image'] ?>" class="thumb-img preview" class='pic'>
-									<img src="<?php echo base_url().'uploads/products/thumb/'.$gemItem['pro_image'] ?>" alt="<?php echo $gemItem['pro_name']; ?>" style="max-width:146px;"/>
+                            <?php if(isset($listRices)) { ?>
+							<?php foreach($listRices as $riceItem){ ?>
+                            <td id="item-<?php echo $riceItem['pro_id']; ?>" width="16%;" class='item textcenter'>
+                                <a target="_blank" href="<?php echo base_url().'uploads/products/'.$riceItem['pro_image'] ?>" class="thumb-img preview" class='pic'>
+									<img src="<?php echo base_url().'uploads/products/thumb/'.$riceItem['pro_image'] ?>" alt="<?php echo $riceItem['pro_name']; ?>" style="max-width:146px;"/>
 								</a>
                                 <div class="info">
                                     <div class='gname' style='height:36px;line-height:18px;'>
-										<a href='#' title="<?php echo $gemItem['pro_name']; ?>"><?php echo $gemItem['pro_name']; ?></a>
+										<a href='#' title="<?php echo $riceItem['pro_name']; ?>"><?php echo $riceItem['pro_name']; ?></a>
 									</div>
+									<div class='clearfix'>
+                                        <div class='price textcenter'>Size : <?php echo $riceItem['pro_size']; ?> cm</div>
+                                    </div>
                                     <div class='clearfix'>
-                                        <div class='price textcenter'>Giá : <em class='price1'><?php echo $gemItem['pro_price']; ?></em></div>
+                                        <div class='price textcenter'>Giá : <em class='price1'><?php echo $riceItem['pro_price'] ? number_format($riceItem['pro_price']).' VND' : 'Liên hệ'; ?></em></div>
                                     </div>
                                 </div>
                             </td>

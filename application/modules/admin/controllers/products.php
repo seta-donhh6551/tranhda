@@ -26,7 +26,9 @@ class Products extends Student
 		$data['title']="Quản lý sản phẩm";
 		$data['act'] = 5;
 		$data['listcate'] = $this->mproducts->getcate();
-		$data['data']['info']= $this->mproducts->listall($config['per_page'],$start);
+		$data['data']['info']= $this->mproducts->listall($config['per_page'], $start);
+//		echo '<pre>';
+//		print_r($data['data']['info']); die;
 		$data['template'] = "products/list_products";
 		$this->load->view("layout",$data);
 	}
