@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 05, 2016 at 12:54 PM
+-- Generation Time: Oct 10, 2016 at 10:10 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -539,7 +539,7 @@ CREATE TABLE `tbl_products` (
   `pro_full` longtext NOT NULL,
   `pro_keys` text NOT NULL,
   `pro_des` text NOT NULL,
-  `pro_price` varchar(10) NOT NULL,
+  `pro_price` int(11) NOT NULL,
   `pro_size` varchar(50) NOT NULL,
   `pro_image` varchar(100) NOT NULL,
   `pro_order` int(10) NOT NULL,
@@ -552,12 +552,17 @@ CREATE TABLE `tbl_products` (
 --
 
 INSERT INTO `tbl_products` (`pro_id`, `pro_code`, `pro_name`, `pro_rewrite`, `pro_status`, `pro_info`, `pro_full`, `pro_keys`, `pro_des`, `pro_price`, `pro_size`, `pro_image`, `pro_order`, `cago_id`, `cate_id`) VALUES
-(1, 'TDQ-PC001', 'Phố cổ hà nội', 'pho-co-ha-noi', 1, '0', '0', 'Tranh đá quý, Tranh phố cổ hà nội, Tranh đá quý phố cổ hà nội', 'Tranh đá quý phố cổ hà nội, tranh đá quý cao cấp', 'Liên hệ', '40x60', 'tranh-da-quy-pho-co-ha-noi.jpg', 1, 1, 6),
-(3, 'TDQ-PC003', 'Phong cảnh làng quê việt', 'phong-canh-lang-que-viet', 1, 'Tranh đá quý, Tranh phong cảnh làng quê việt được làm từ đá quý tự nhiên', '0', 'Tranh đá quý, Tranh phong cảnh làng quê việt. Tranh đá quý đẹp', 'Tranh đá quý, Tranh phong cảnh làng quê việt được làm từ đá quý tự nhiên', 'Liên hệ', '100x160', 'tranh-da-quy-lang-que-viet.jpg', 3, 1, 6),
-(2, 'TDQ-PC002', 'Tùng hạc niên diên', 'tung-hac-nien-dien', 1, '0', '0', 'Tranh đá quý tùng hạc niên diên', 'Tranh đá quý tùng hạc niên diên', 'Liên hệ', '100x160', 'tranh-da-quy-tung-hac-dien-nien.jpg', 2, 1, 6),
-(4, 'TDQ-PC004', 'Mã đáo thành công', 'ma-dao-thanh-cong', 1, 'Tranh đá quý, Tranh đá quý mã đáo thành công', '0', 'Tranh đá quý, Tranh đá quý mã đáo thành công', 'Tranh đá quý, Tranh đá quý mã đáo thành công', 'Liên hệ', '60x90', 'tranh-da-quy-ma-dao.jpg', 4, 1, 2),
-(5, 'TDQ-PC005', 'Tranh phong cảnh', 'tranh-phong-canh', 1, '', '0', '', '', 'Liên hệ', '60x90', 'tranh-da-quy-phong-canh.jpg', 5, 1, 6),
-(6, 'TDQ-PC006', 'Tranh phong cảnh', 'tranh-phong-canh', 1, '', '0', '', '', 'Liên hệ', '60x90', 'tranh-da-pho-co-ha-noi.jpg', 5, 1, 6);
+(1, 'TDQ-PC001', 'Phố cổ hà nội', 'pho-co-ha-noi', 1, '0', '0', 'Tranh đá quý, Tranh phố cổ hà nội, Tranh đá quý phố cổ hà nội', 'Tranh đá quý phố cổ hà nội, tranh đá quý cao cấp', 0, '40x60', 'tranh-da-quy-pho-co-ha-noi.jpg', 1, 1, 6),
+(3, 'TDQ-PC003', 'Phong cảnh làng quê việt', 'phong-canh-lang-que-viet', 1, 'Tranh đá quý, Tranh phong cảnh làng quê việt được làm từ đá quý tự nhiên', '0', 'Tranh đá quý, Tranh phong cảnh làng quê việt. Tranh đá quý đẹp', 'Tranh đá quý, Tranh phong cảnh làng quê việt được làm từ đá quý tự nhiên', 0, '100x160', 'tranh-da-quy-lang-que-viet.jpg', 3, 1, 6),
+(2, 'TDQ-PC002', 'Tùng hạc niên diên', 'tung-hac-nien-dien', 1, '0', '0', 'Tranh đá quý tùng hạc niên diên', 'Tranh đá quý tùng hạc niên diên', 0, '100x160', 'tranh-da-quy-tung-hac-dien-nien.jpg', 2, 1, 6),
+(4, 'TDQ-PC004', 'Mã đáo thành công', 'ma-dao-thanh-cong', 1, 'Tranh đá quý, Tranh đá quý mã đáo thành công', '0', 'Tranh đá quý, Tranh đá quý mã đáo thành công', 'Tranh đá quý, Tranh đá quý mã đáo thành công', 0, '60x90', 'tranh-da-quy-ma-dao.jpg', 4, 1, 2),
+(5, 'TDQ-PC005', 'Tranh phong cảnh', 'tranh-phong-canh', 1, '', '0', '', '', 0, '60x90', 'tranh-da-quy-phong-canh.jpg', 5, 1, 6),
+(6, 'TDQ-PC006', 'Tranh phong cảnh', 'tranh-phong-canh', 1, '', '0', '', '', 0, '60x90', 'tranh-da-pho-co-ha-noi.jpg', 5, 1, 6),
+(7, 'TGPC-001', 'Chùa một cột', 'chua-mot-cot', 1, 'Tranh gạo chùa một cột', '0', 'Tranh gạo chùa một cột', 'Tranh gạo chùa một cột', 850000, '30x40', 'chua-mot-cot.jpg', 1, 2, 6),
+(8, 'TGPC-002', 'Tranh gạo tháp rùa', 'tranh-gao-thap-rua', 1, '0', '0', 'Tranh gạo tháp rùa hồ hoàn kiếm hà nội', 'Tranh gạo tháp rùa hồ hoàn kiếm hà nội', 650000, '25x35', 'thap-rua.jpg', 1, 2, 6),
+(9, 'TGPC-003', 'Tranh gạo phố cổ', 'tranh-gao-pho-co', 1, '0', '0', 'Tranh gạo phố cổ hà nội', 'Tranh gạo phố cổ hà nội', 650000, '30x30', 'pho-co-ha-noi.jpg', 1, 2, 6),
+(10, 'TGPC-004', 'Tranh gạo hoa sen', 'tranh-gao-hoa-sen', 1, '0', '0', 'Tranh gạo hoa sen, tranh được xếp bằng hạt gạo rang. Thích hợp làm quà tặng cho người nước ngoài', 'Tranh gạo hoa sen, tranh được xếp bằng hạt gạo rang. Thích hợp làm quà tặng cho người nước ngoài', 650000, '30x30', 'hoa-sen.jpg', 1, 2, 6),
+(11, 'TGPC-005', 'Tranh gạo cất vó', 'tranh-gao-cat-vo', 1, 'Tranh gạo cất vó, tranh được xếp bằng hạt gạo rang. Thích hợp làm quà tặng cho người nước ngoài', '0', 'Tranh gạo cất vó, tranh được xếp bằng hạt gạo rang. Thích hợp làm quà tặng cho người nước ngoài', 'Tranh gạo cất vó, tranh được xếp bằng hạt gạo rang. Thích hợp làm quà tặng cho người nước ngoài', 650000, '25x35', 'cat-vo-chieu.jpg', 1, 2, 6);
 
 -- --------------------------------------------------------
 
@@ -613,7 +618,32 @@ INSERT INTO `tbl_product_position` (`id`, `position_id`, `product_id`, `created_
 (74, 9, 6, '2016-09-05 12:52:11'),
 (75, 10, 6, '2016-09-05 12:52:11'),
 (76, 11, 6, '2016-09-05 12:52:12'),
-(77, 12, 6, '2016-09-05 12:52:12');
+(77, 12, 6, '2016-09-05 12:52:12'),
+(78, 1, 7, '2016-10-10 08:40:09'),
+(79, 2, 7, '2016-10-10 08:40:09'),
+(80, 11, 7, '2016-10-10 08:40:09'),
+(81, 12, 7, '2016-10-10 08:40:09'),
+(82, 13, 7, '2016-10-10 08:40:09'),
+(98, 1, 11, '2016-10-10 08:47:38'),
+(99, 2, 11, '2016-10-10 08:47:38'),
+(100, 11, 11, '2016-10-10 08:47:38'),
+(101, 12, 11, '2016-10-10 08:47:38'),
+(102, 13, 11, '2016-10-10 08:47:38'),
+(103, 1, 10, '2016-10-10 08:47:46'),
+(104, 2, 10, '2016-10-10 08:47:46'),
+(105, 11, 10, '2016-10-10 08:47:46'),
+(106, 12, 10, '2016-10-10 08:47:46'),
+(107, 13, 10, '2016-10-10 08:47:46'),
+(108, 1, 9, '2016-10-10 08:48:08'),
+(109, 2, 9, '2016-10-10 08:48:08'),
+(110, 11, 9, '2016-10-10 08:48:08'),
+(111, 12, 9, '2016-10-10 08:48:08'),
+(112, 13, 9, '2016-10-10 08:48:08'),
+(113, 1, 8, '2016-10-10 08:48:23'),
+(114, 2, 8, '2016-10-10 08:48:23'),
+(115, 11, 8, '2016-10-10 08:48:23'),
+(116, 12, 8, '2016-10-10 08:48:23'),
+(117, 13, 8, '2016-10-10 08:48:23');
 
 -- --------------------------------------------------------
 
@@ -1022,12 +1052,12 @@ ALTER TABLE `tbl_posts`
 -- AUTO_INCREMENT for table `tbl_products`
 --
 ALTER TABLE `tbl_products`
-  MODIFY `pro_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `pro_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `tbl_product_position`
 --
 ALTER TABLE `tbl_product_position`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
 --
 -- AUTO_INCREMENT for table `tbl_search`
 --
