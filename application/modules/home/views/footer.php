@@ -7,11 +7,11 @@
             </div>
             <div class="border-body">
                 <div class="TreeList">
-                    <div class="cat2"><a rel="nofollow" href="http://www.99zihua.com/page-购物流程.html">购物流程</a>
+                    <div class="cat2"><a rel="nofollow" href="#">Mua hàng</a>
                     </div>
-                    <div class="cat2"><a rel="nofollow" href="http://www.99zihua.com/page-会员注册.html">会员注册</a>
+                    <div class="cat2"><a rel="nofollow" href="#">Đăng ký</a>
                     </div>
-                    <div class="cat2"><a rel="nofollow" href="http://www.99zihua.com/page-装裱说明.html">装裱说明</a>
+                    <div class="cat2"><a rel="nofollow" href="#">Lắp đặt</a>
                     </div>
                 </div>
             </div>
@@ -131,32 +131,6 @@
         <br/>
         <div> 北京翰韵九久文化发展有限公司&nbsp; ©2009-2016 99zihua.com&nbsp; 版权所有&nbsp; <a rel="nofollow" target="_blank" href="http://www.miitbeian.gov.cn/">京ICP备13007747号</a>
         </div>
-    </div>
-    <div class="clear" style="height: 5px;"></div>
-    <div class="bot_tb" style="text-align: center;">
-        <a rel="nofollow" target="_blank" href="https://credit.szfw.org/CX20160613015683590153.html">
-            <img src="http://www.99zihua.com/themes/99zihua/images/cert.png" alt="诚信网站">
-        </a>
-        <!--可信网站图片logo安装开始-->
-        <a href="https://ss.knet.cn/verifyseal.dll?sn=e15041311010558334xelv000000&amp;ct=df&amp;a=1&amp;pa=0.9241641246520411" id="kx_verify" tabindex="-1" target="_blank" rel="nofollow" kx_type="图标式" style="display:inline-block;">
-            <img src="http://www.99zihua.com/statics/kexin.png" style="border:none;" oncontextmenu="return false;" alt="可信网站"> </a>
-        <!--可信网站图片logo安装结束-->
-
-        <a style="height:40px; width:123px" rel="nofollow" target="_blank" href="https://www.alipay.com/" title="支付宝">
-            <img src="http://www.99zihua.com/themes/99zihua/images/alipay.gif" alt="支付宝"> </a>
-        <a rel="nofollow" target="_blank" href="http://about.58.com/fqz/index.html" title="网络警察">
-            <img src="http://www.99zihua.com/themes/99zihua/images/wangj.gif" alt="网络警察">
-        </a>
-    </div>
-</div> <img src="http://www.99zihua.com/index.php?cron=page%3Aindex&amp;p=" width="1" height="1" border="none" />
-<div id='template-modal' style='display:none;'>
-    <div class='dialog'>
-        <div class='dialog-title'>
-            <div class='title span-auto'>{title}</div>
-            <div class='dialog-close-btn'>X</div>
-            <div style="clear:both"></div>
-        </div>
-        <div class='dialog-content'> {content} </div>
     </div>
 </div>
 <script>

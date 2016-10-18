@@ -16,6 +16,7 @@ class Index extends MY_Controller
 		$data['listAllPro'] = $this->model_product->listproduct(null, 10);
 		$data['listGems'] = $this->model_product->listproduct(1);
 		$data['listRices'] = $this->model_product->listproduct(2);
+		$data['listSand'] = $this->model_product->listproduct(3);
 
 		$data['config'] = $this->config();
 		$data['title'] = "Tranh gạo việt";

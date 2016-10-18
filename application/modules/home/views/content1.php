@@ -951,11 +951,13 @@
             <div id="ex_slide_widgets_16651">
                 <ol class="switchable-content">
                     <li class="switchable-panel">
-                        <a href="http://www.99zihua.com/product-6117.html" rel="nofollow"><img alt="庾超然山水国画《大江揽胜图》" src="http://www.99zihua.com/images/sy/lp02.jpg" width="490px" height="271px"></img>
+                        <a href="#" rel="nofollow">
+							<img alt="" src="<?php echo base_url(); ?>public/images/slide/tranh-cat-chan-dung.jpg" width="490" height="271" />
                         </a>
                     </li>
                     <li class="switchable-panel">
-                        <a href="http://www.99zihua.com/gallery-63-grid.html" rel="nofollow"><img alt="书画礼品" src="http://www.99zihua.com/images//20150424/a280a0d509469eb1.jpg" width="490px" height="271px"></img>
+                        <a href="#" rel="nofollow">
+							<img alt="" src="<?php echo base_url(); ?>public/images/slide/tranh-cat.jpg" width="490" height="271" />
                         </a>
                     </li>
                 </ol>
@@ -1017,43 +1019,23 @@
                     </div>
                     <script>
                         var max_list = new Class({
-
                             divSrc: '',
-
                             initialize: function(div) {
-
                                 this.divSrc = div;
-
                                 this.tab = 'r_widgets_16621';
-
                                 $('r_widgets_166210').addClass('cuurent');
-
                             },
-
                             changeTableing: function(type) {
-
                                 var i;
-
                                 for (i = 0; i < 6; i++) {
-
                                     if (i == type) {
-
                                         $(this.tab + i).addClass('cuurent');
-
                                     } else {
-
                                         $(this.tab + i).removeClass('cuurent');
-
                                     }
-
                                 }
-
                             }
-
                         });
-
-
-
                         var wa_widgets_16621 = new max_list('max_sales');
                     </script>
                 </div>
@@ -1066,66 +1048,25 @@
                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
                     <tbody>
                         <tr valign="top">
-                            <td id="item-12753" width="16%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-12753.html' style='width:146px;height:146px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20160503/15cfe112bbfed97e.jpg" alt="中国画院周升达 三尺《富贵久鱼》（询价）" style='width:146px;height:146px;' /> </a>
+							<?php if(isset($listSand)) { ?>
+							<?php foreach($listSand as $sandItem){ ?>
+                            <td id="item-<?php echo $sandItem['pro_id']; ?>" width="16%;" class='item textcenter'>
+                                <a target="_blank" href="<?php echo base_url().'uploads/products/'.$sandItem['pro_image'] ?>" class="thumb-img preview" class='pic'>
+									<img src="<?php echo base_url().'uploads/products/thumb/'.$sandItem['pro_image'] ?>" alt="<?php echo $sandItem['pro_name']; ?>" style="max-width:146px;"/>
+								</a>
                                 <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-12753.html' title="中国画院周升达 三尺《富贵久鱼》（询价）">中国画院周升达 三尺《富贵久鱼》（询价）</a> </div>
+                                    <div class='gname' style='height:36px;line-height:18px;'>
+										<a href='#' title="<?php echo $sandItem['pro_name']; ?>"><?php echo $sandItem['pro_name']; ?></a>
+									</div>
+									<div class='clearfix'>
+                                        <div class='price textcenter'>Size : <?php echo $sandItem['pro_size']; ?> cm</div>
+                                    </div>
                                     <div class='clearfix'>
-                                        <div class='price textcenter'>本站价:<em class='price1'>￥0</em>
-                                        </div>
+                                        <div class='price textcenter'>Giá : <em class='price1'><?php echo $sandItem['pro_price'] ? number_format($sandItem['pro_price']).' VND' : 'Liên hệ'; ?></em></div>
                                     </div>
                                 </div>
                             </td>
-                            <td id="item-12548" width="16%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-12548.html' style='width:146px;height:146px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20160401/b2d69321f37d86d0.jpg" alt="天津市书协主席 中书协理事唐云来四尺《终南别业》（询价）" style='width:146px;height:146px;' /> </a>
-                                <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-12548.html' title="天津市书协主席 中书协理事唐云来四尺《终南别业》（询价）">天津市书协主席 中书协理事唐云来四尺《终南别业》（询价）</a> </div>
-                                    <div class='clearfix'>
-                                        <div class='price textcenter'>本站价:<em class='price1'>￥6000</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td id="item-12226" width="16%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-12226.html' style='width:146px;height:146px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20160125/465b0909d855590b.jpg" alt="国家一级美术师王永刚扇面《封金挂印》(询价)" style='width:146px;height:146px;' /> </a>
-                                <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-12226.html' title="国家一级美术师王永刚扇面《封金挂印》(询价)">国家一级美术师王永刚扇面《封金挂印》(询价)</a> </div>
-                                    <div class='clearfix'>
-                                        <div class='price textcenter'>本站价:<em class='price1'>￥0</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td id="item-11316" width="16%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-11316.html' style='width:146px;height:146px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20150520/ec456353d228cc3f.jpg" alt="张德林《六祖法语-大圆镜智性清净》清华美院书法高研班导师" style='width:146px;height:146px;' /> </a>
-                                <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-11316.html' title="张德林《六祖法语-大圆镜智性清净》清华美院书法高研班导师">张德林《六祖法语-大圆镜智性清净》清华美院书法高研班导师</a> </div>
-                                    <div class='clearfix'>
-                                        <div class='price textcenter'>本站价:<em class='price1'>￥6500</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td id="item-6353" width="16%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-6353.html' style='width:146px;height:146px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20130422/0cc20790449b4405.jpg" alt="画鸡名家王向阳六尺精品国画雄鸡图《吉祥如意》(询价)" style='width:146px;height:146px;' /> </a>
-                                <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-6353.html' title="画鸡名家王向阳六尺精品国画雄鸡图《吉祥如意》(询价)">画鸡名家王向阳六尺精品国画雄鸡图《吉祥如意》(询价)</a> </div>
-                                    <div class='clearfix'>
-                                        <div class='price textcenter'>本站价:<em class='price1'>￥0</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td id="item-5010" width="16%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-5010.html' style='width:146px;height:146px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20121013/ca47b562f6d3ab15.jpg" alt="中国美协王石帆四尺精品山水《瑞雪江南》" style='width:146px;height:146px;' /> </a>
-                                <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-5010.html' title="中国美协王石帆四尺精品山水《瑞雪江南》">中国美协王石帆四尺精品山水《瑞雪江南》</a> </div>
-                                    <div class='clearfix'>
-                                        <div class='price textcenter'>本站价:<em class='price1'>￥11000</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
+							<?php } } ?>
                         </tr>
                     </tbody>
                 </table>
@@ -1346,125 +1287,4 @@
         </div>
     </div>
     <div class="he10"></div>
-    <div class="mewst link">
-        <div class="mews_top">
-            <h3>友情链接</h3>
-        </div>
-        <div class="link">
-            <div class="LinkList clearfix">
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="index.html" target="_blank">水墨画国画</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://artist.99zihua.com/gw/2857/" target="_blank">凌雪花鸟画</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://blog.artron.net/" target="_blank">雅昌艺术博客</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.hxfjw.com/" target="_blank">海峡佛教网</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.zishayy.com/" target="_blank">宜兴紫砂壶</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.zhuangbiao.com/" target="_blank">裱画</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.hc699.com/" target="_blank">翡翠手镯</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://club.99ys.com/" target="_blank">99艺术网论坛</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.cangci.cn/" target="_blank">瓷器鉴定</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.myjunci.com/" target="_blank">禹州钧瓷网</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.shystd.com/" target="_blank">书画天地网</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.xzlhhl.com/" target="_blank">两汉画廊</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.51pot.com/" target="_blank">宜兴紫砂壶</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.shuhua114.com/" target="_blank">书画114</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.zisha.com/" target="_blank">紫砂壶</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.hetaoquan.com/" target="_blank">麻核桃</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.sdgw.com/" target="_blank">山东收藏网</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.myyishu.com/" target="_blank">书画商城</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.23art.com/" target="_blank">当代艺术</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.zisha8090.com/" target="_blank">紫砂杯</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.ylwgift.com/" target="_blank">商务礼品</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.bblunyu.com/" target="_blank">上海古筝培训</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.dahuaping.com/" target="_blank">景德镇陶瓷</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.xuanzhi01.com/" target="_blank">宣纸</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.artgoin.com/" target="_blank">书画</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.cntizi.com/" target="_blank">中国题字网</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://beijing.liebiao.com/shuhuayinshi/" target="_blank">书画收藏</a>
-                    </li>
-                </ul>
-                <ul class="LinkListItem" style="margin-right:15px;margin-bottom:5px;">
-                    <li><a href="http://www.lqart.com/" target="_blank">画廊</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
 </div>

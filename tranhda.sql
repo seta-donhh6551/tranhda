@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 10, 2016 at 10:10 AM
+-- Generation Time: Oct 18, 2016 at 09:35 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -560,9 +560,15 @@ INSERT INTO `tbl_products` (`pro_id`, `pro_code`, `pro_name`, `pro_rewrite`, `pr
 (6, 'TDQ-PC006', 'Tranh phong cảnh', 'tranh-phong-canh', 1, '', '0', '', '', 0, '60x90', 'tranh-da-pho-co-ha-noi.jpg', 5, 1, 6),
 (7, 'TGPC-001', 'Chùa một cột', 'chua-mot-cot', 1, 'Tranh gạo chùa một cột', '0', 'Tranh gạo chùa một cột', 'Tranh gạo chùa một cột', 850000, '30x40', 'chua-mot-cot.jpg', 1, 2, 6),
 (8, 'TGPC-002', 'Tranh gạo tháp rùa', 'tranh-gao-thap-rua', 1, '0', '0', 'Tranh gạo tháp rùa hồ hoàn kiếm hà nội', 'Tranh gạo tháp rùa hồ hoàn kiếm hà nội', 650000, '25x35', 'thap-rua.jpg', 1, 2, 6),
+(12, 'TC-PC001', 'Làng quê việt', 'lang-que-viet', 1, 'Tranh cát, tranh phong cảnh làng quê việt', '0', 'Tranh cát, tranh phong cảnh làng quê việt', 'Tranh cát, tranh phong cảnh làng quê việt', 750000, '13x18', 'ban-do-viet-nam.jpg', 1, 3, 6),
 (9, 'TGPC-003', 'Tranh gạo phố cổ', 'tranh-gao-pho-co', 1, '0', '0', 'Tranh gạo phố cổ hà nội', 'Tranh gạo phố cổ hà nội', 650000, '30x30', 'pho-co-ha-noi.jpg', 1, 2, 6),
 (10, 'TGPC-004', 'Tranh gạo hoa sen', 'tranh-gao-hoa-sen', 1, '0', '0', 'Tranh gạo hoa sen, tranh được xếp bằng hạt gạo rang. Thích hợp làm quà tặng cho người nước ngoài', 'Tranh gạo hoa sen, tranh được xếp bằng hạt gạo rang. Thích hợp làm quà tặng cho người nước ngoài', 650000, '30x30', 'hoa-sen.jpg', 1, 2, 6),
-(11, 'TGPC-005', 'Tranh gạo cất vó', 'tranh-gao-cat-vo', 1, 'Tranh gạo cất vó, tranh được xếp bằng hạt gạo rang. Thích hợp làm quà tặng cho người nước ngoài', '0', 'Tranh gạo cất vó, tranh được xếp bằng hạt gạo rang. Thích hợp làm quà tặng cho người nước ngoài', 'Tranh gạo cất vó, tranh được xếp bằng hạt gạo rang. Thích hợp làm quà tặng cho người nước ngoài', 650000, '25x35', 'cat-vo-chieu.jpg', 1, 2, 6);
+(11, 'TGPC-005', 'Tranh gạo cất vó', 'tranh-gao-cat-vo', 1, 'Tranh gạo cất vó, tranh được xếp bằng hạt gạo rang. Thích hợp làm quà tặng cho người nước ngoài', '0', 'Tranh gạo cất vó, tranh được xếp bằng hạt gạo rang. Thích hợp làm quà tặng cho người nước ngoài', 'Tranh gạo cất vó, tranh được xếp bằng hạt gạo rang. Thích hợp làm quà tặng cho người nước ngoài', 650000, '25x35', 'cat-vo-chieu.jpg', 1, 2, 6),
+(13, 'TC-PC002', 'Tranh cát tháp rùa', 'tranh-cat-thap-rua', 1, 'Tranh cát, tranh cát tháp rùa, tranh phong cảnh làng quê việt', '0', 'Tranh cát, tranh cát tháp rùa, tranh phong cảnh làng quê việt', 'Tranh cát, tranh cát tháp rùa, tranh phong cảnh làng quê việt', 750000, '13x18', 'tranh-cat-thap-rua.jpg', 1, 3, 6),
+(14, 'TC-PC003', 'Chùa một cột', 'chua-mot-cot', 1, 'Tranh cát, tranh cát chùa một cột, tranh phong cảnh làng quê việt', '0', 'Tranh cát, tranh cát chùa một cột, tranh phong cảnh làng quê việt', 'Tranh cát, tranh cát chùa một cột, tranh phong cảnh làng quê việt', 750000, '13x18', 'tranh-cat-chua-mot-cot.jpg', 1, 3, 6),
+(15, 'TC-PC004', 'Chùa một cột', 'chua-mot-cot', 1, 'Tranh cát, tranh cát chùa phố cổ hà nội, tranh phong cảnh làng quê việt', '0', 'Tranh cát, tranh cát chùa phố cổ hà nội, tranh phong cảnh làng quê việt', 'Tranh cát, tranh cát chùa phố cổ hà nội, tranh phong cảnh làng quê việt', 750000, '13x18', 'tranh-cat-pho-co-ha-noi.jpg', 1, 3, 6),
+(16, 'TC-PC005', 'Tranh cát sông quê', 'tranh-cat-song-que', 1, 'Tranh cát, tranh cát sông quê, tranh phong cảnh làng quê việt', '0', 'Tranh cát, tranh cát sông quê, tranh phong cảnh làng quê việt', 'Tranh cát, tranh cát sông quê, tranh phong cảnh làng quê việt', 750000, '13x18', 'tranh-cat-song-que.jpg', 1, 3, 6),
+(17, 'TC-PC006', 'Gánh bước', 'ganh-buoc', 1, 'Tranh cát, tranh cát gánh bước, tranh phong cảnh làng quê việt', '0', 'Tranh cát, tranh cát gánh bước, tranh phong cảnh làng quê việt', 'Tranh cát, tranh cát gánh bước, tranh phong cảnh làng quê việt', 750000, '13x18', 'tranh-cat-ganh-buoc.jpg', 1, 3, 6);
 
 -- --------------------------------------------------------
 
@@ -643,7 +649,31 @@ INSERT INTO `tbl_product_position` (`id`, `position_id`, `product_id`, `created_
 (114, 2, 8, '2016-10-10 08:48:23'),
 (115, 11, 8, '2016-10-10 08:48:23'),
 (116, 12, 8, '2016-10-10 08:48:23'),
-(117, 13, 8, '2016-10-10 08:48:23');
+(117, 13, 8, '2016-10-10 08:48:23'),
+(118, 1, 12, '2016-10-18 08:02:04'),
+(119, 9, 12, '2016-10-18 08:02:04'),
+(120, 11, 12, '2016-10-18 08:02:04'),
+(121, 12, 12, '2016-10-18 08:02:04'),
+(122, 1, 13, '2016-10-18 08:04:25'),
+(123, 9, 13, '2016-10-18 08:04:25'),
+(124, 11, 13, '2016-10-18 08:04:25'),
+(125, 12, 13, '2016-10-18 08:04:25'),
+(126, 1, 14, '2016-10-18 08:05:03'),
+(127, 9, 14, '2016-10-18 08:05:03'),
+(128, 11, 14, '2016-10-18 08:05:03'),
+(129, 12, 14, '2016-10-18 08:05:03'),
+(130, 1, 15, '2016-10-18 08:11:05'),
+(131, 9, 15, '2016-10-18 08:11:06'),
+(132, 11, 15, '2016-10-18 08:11:06'),
+(133, 12, 15, '2016-10-18 08:11:06'),
+(134, 1, 16, '2016-10-18 08:15:07'),
+(135, 9, 16, '2016-10-18 08:15:07'),
+(136, 11, 16, '2016-10-18 08:15:07'),
+(137, 12, 16, '2016-10-18 08:15:07'),
+(138, 1, 17, '2016-10-18 08:15:46'),
+(139, 9, 17, '2016-10-18 08:15:46'),
+(140, 11, 17, '2016-10-18 08:15:46'),
+(141, 12, 17, '2016-10-18 08:15:46');
 
 -- --------------------------------------------------------
 
@@ -1052,12 +1082,12 @@ ALTER TABLE `tbl_posts`
 -- AUTO_INCREMENT for table `tbl_products`
 --
 ALTER TABLE `tbl_products`
-  MODIFY `pro_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `pro_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `tbl_product_position`
 --
 ALTER TABLE `tbl_product_position`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
 --
 -- AUTO_INCREMENT for table `tbl_search`
 --
