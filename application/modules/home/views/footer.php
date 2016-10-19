@@ -113,23 +113,28 @@
     <div class="bot_s">
         <ul>
             <li class="scn-01">
-                <a title="手绘保真" href="http://www.99zihua.com/page-常见问题.html" rel="nofollow"></a>
+                <a title="手绘保真" href="#" rel="nofollow"></a>
             </li>
             <li class="scn-02">
-                <a title="在线付款免邮费" rel="nofollow" href="http://www.99zihua.com/page-运费说明.html"></a>
+                <a title="在线付款免邮费" rel="nofollow" href="#"></a>
             </li>
             <li class="scn-03">
-                <a title="自由退换" href="http://www.99zihua.com/page-退换货政策.html" rel="nofollow"></a>
+                <a title="自由退换" href="#" rel="nofollow"></a>
             </li>
             <li class="scn-04">
-                <a title="货到付款" href="http://www.99zihua.com/page-货到付款.html" rel="nofollow"></a>
+                <a title="货到付款" href="#" rel="nofollow"></a>
             </li>
         </ul>
     </div>
     <div class="clear"> </div>
-    <div class="fot"> <a href="http://www.99zihua.com/zihuabk/" target="_blank">字画百科</a> | <a href="http://artist.99zihua.com/" target="_blank" rel="nofollow">书画家频道</a> | <a href="http://artist.99zihua.com/wlmz/" target="_blank" rel="nofollow">网络美展</a> | <a href="http://www.99zihua.com/link-showList.html" rel="nofollow">友情链接 </a>| <a rel="nofollow" href="http://www.99zihua.com/page-jobs.html">招聘信息</a>
+    <div class="fot">
+		<a href="#" target="_blank">Về chúng tôi</a> | 
+		<a href="#" target="_blank" rel="nofollow">Hình thức thanh toán</a> | 
+		<a href="#" target="_blank" rel="nofollow">Vận chuyển</a> | 
+		<a href="#" rel="nofollow">Bảo hành</a> | 
+		<a rel="nofollow" href="#">Đổi trả</a>
         <br/>
-        <div> 北京翰韵九久文化发展有限公司&nbsp; ©2009-2016 99zihua.com&nbsp; 版权所有&nbsp; <a rel="nofollow" target="_blank" href="http://www.miitbeian.gov.cn/">京ICP备13007747号</a>
+        <div> Công Ty TNHH Tranh Gạo Việt&nbsp; © 2012-2017 Tranhgaoviet.com&nbsp; All Right Reserved&nbsp; 
         </div>
     </div>
 </div>

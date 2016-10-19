@@ -827,7 +827,7 @@ ul.kongjian li{float:left; padding:0 8px;background:url(../images/bg_bar_01.gif)
 	padding-bottom:10px;
 	border:1px solid #dedede;
 	overflow:hidden;
-	border-top:2px solid #CC3300;
+	/*border-top:2px solid #CC3300;*/
 }
 .mjmz_top {
 	height:29px;
