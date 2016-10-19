@@ -103,7 +103,7 @@
         </div>
     </div>
     <div class="conect">
-        <div class="bottom_help_conect"><a rel="nofollow" href="http://www.99zihua.com/message.html" type="url">留言板</a>
+        <div class="bottom_help_conect"><a rel="nofollow" href="#" type="url">Chat ngay</a>
         </div>
     </div>
 </div>
