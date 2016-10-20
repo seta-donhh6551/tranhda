@@ -7,11 +7,11 @@
             </div>
             <div class="border-body">
                 <div class="TreeList">
-                    <div class="cat2"><a rel="nofollow" href="#">Mua hàng</a>
+                    <div class="cat2"><a rel="nofollow" href="#">Quy trình mua sắm</a>
                     </div>
-                    <div class="cat2"><a rel="nofollow" href="#">Đăng ký</a>
+                    <div class="cat2"><a rel="nofollow" href="#">Đăng ký tài khoản</a>
                     </div>
-                    <div class="cat2"><a rel="nofollow" href="#">Lắp đặt</a>
+                    <div class="cat2"><a rel="nofollow" href="#">Hướng dẫn lắp đặt</a>
                     </div>
                 </div>
             </div>
@@ -62,40 +62,6 @@
                     <div class="cat2"><a rel="nofollow" href="http://www.99zihua.com/page-退换货政策.html">退换货政策</a>
                     </div>
                     <div class="cat2"><a rel="nofollow" href="http://www.99zihua.com/page-退款流程.html">退款流程</a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-bot"></div>
-        </div>
-        <div class="border1 " id="widgets_16556">
-            <div class="border-top">
-                <h3></h3>
-            </div>
-            <div class="border-body">
-                <div class="TreeList">
-                    <div class="cat2"><a rel="nofollow" href="http://www.99zihua.com/page-常见问题.html">常见问题</a>
-                    </div>
-                    <div class="cat2"><a rel="nofollow" href="http://www.99zihua.com/page-license.html">会员注册协议</a>
-                    </div>
-                    <div class="cat2"><a rel="nofollow" href="http://www.99zihua.com/page-投诉与建议.html">投诉建议</a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-bot"></div>
-        </div>
-        <div class="border1 abouts" id="widgets_16557">
-            <div class="border-top">
-                <h3></h3>
-            </div>
-            <div class="border-body">
-                <div class="TreeList">
-                    <div class="cat1"><a rel="nofollow" href="http://www.99zihua.com/page-about.html">关于我们</a>
-                    </div>
-                    <div class="cat1"><a rel="nofollow" href="http://www.99zihua.com/page-contact.html">联系我们</a>
-                    </div>
-                    <div class="cat1"><a rel="nofollow" href="http://www.99zihua.com/artlist-100.html">最新公告</a>
-                    </div>
-                    <div class="cat1"><a rel="nofollow" href="http://www.99zihua.com/page-business.html">画家加盟</a>
                     </div>
                 </div>
             </div>
