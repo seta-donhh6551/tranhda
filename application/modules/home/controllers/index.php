@@ -7,19 +7,22 @@ class Index extends MY_Controller
 		$this->load->model("model_product");
 	}
 
-	public function index() {
+	public function index()
+    {
+        $data['config'] = $this->config();
 		$data['listcate'] = $this->listcate();
 		$data['listintro'] = $this->listintro();
 		$data['support'] = $this->support();
-
+        
 		//get list product
 		$data['listAllPro'] = $this->model_product->listproduct(null, 10);
 		$data['listGems'] = $this->model_product->listproduct(1);
 		$data['listRices'] = $this->model_product->listproduct(2);
 		$data['listSand'] = $this->model_product->listproduct(3);
-
-		$data['config'] = $this->config();
+        
 		$data['title'] = "Tranh gạo việt";
+        $data['template'] = 'content1';
+        
 		$this->load->view("layout", $data);
 	}
 

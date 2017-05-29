@@ -123,6 +123,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 /*=ͷ��=============================================================================================*/
 .lishi {
+    padding-left:2px;
 	color:#398809;
 }
 a.zizhi {
@@ -836,8 +837,9 @@ ul.kongjian li{float:left; padding:0 8px;background:url(../images/bg_bar_01.gif)
 }
 .mjmz_top h3 {
 	float:left;
-	width:520px;
+	width:480px;
 	padding-left:10px;
+    font-size: 13px;
 	color:#cc0000;
 }
 .mjmz_top span a {

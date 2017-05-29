@@ -100,14 +100,14 @@
 								<?php if(isset($listGems)) { ?>
 								<?php foreach($listGems as $gemItem){ ?>
                                 <tr valign="top">
-                                    <td id="item-13203" width="100%;" class='item textcenter'>
-                                        <a target="_blank" href='#' style='width:55px;height:55px;' class='pic'>
+                                    <td id="item-13203" width="100%;" class="item textcenter">
+                                        <a target="_blank" href="#" style='width:55px;height:55px;' class='pic'>
 											<img src="<?php echo base_url().'uploads/products/thumb/'.$gemItem['pro_image'] ?>" alt="" style='width:55px;' />
 										</a>
                                         <div class="info">
-                                            <div class='gname' style='height:36px;line-height:18px;'> <a href='#' title="<?php echo $gemItem['pro_name']; ?>"><?php echo $gemItem['pro_name']; ?></a> </div>
-                                            <div class='clearfix'>
-                                                <div class='price textcenter'>Giá : <em class='price1'>650.000 VND</em>
+                                            <div class="gname"> <a href="#" title="<?php echo $gemItem['pro_name']; ?>"><?php echo $gemItem['pro_name']; ?></a> </div>
+                                            <div class="clearfix">
+                                                <div class="price textcenter">Giá : <em class='price1'>650.000 VND</em>
                                                 </div>
                                             </div>
                                         </div>
@@ -124,8 +124,8 @@
     </div>
     <div class="CenterColumn">
         <div class="cenflash">
-            <div class="zbm"></div>
-            <div class="flash">
+            <!--div class="zbm"></div-->
+            <div class="flash" style="margin-top:15px">
                 <div id="ex_slide_widgets_16648">
                     <ol class="switchable-content">
                         <li class="switchable-panel">
@@ -152,7 +152,7 @@
                         <li>4</li>
                     </ul>
                 </div>
-                <script>
+                <script type="text/javascript">
                     new Switchable('ex_slide_widgets_16648', {
                         effect: 'fade',
                         autoplay: true,
@@ -183,7 +183,7 @@
                                     <p class="wk-lou-name" style="bottom: 20px;"> <a href="http://www.99zihua.com/lou.html" target="_blank">辽宁工美教授苗雨 四尺三开《映日荷花别样红》师从吴冠中</a > </p> <p class="wk-lou-name"> <span>捡漏价<font>￥2000</font> &nbsp;&nbsp; 原售价<del>￥2500</del></span> </p> </li>  <li class="switchable-panel wk-switchable-panel" > <a href="http://www.99zihua.com/lou.html" class="wk-a" target="_blank" rel="nofollow" alt="名家蒲家瑞三尺《秋色丹彩》"> <img alt="名家蒲家瑞三尺《秋色丹彩》" src="http://www.99zihua.com/images/goods/20160421/97252b7988a2105c.jpg" ></a>
                                         <p class="wk-lou-name" style="bottom: 20px;"> <a href="http://www.99zihua.com/lou.html" target="_blank">名家蒲家瑞三尺《秋色丹彩》</a > </p> <p class="wk-lou-name"> <span>捡漏价<font>￥1900</font> &nbsp;&nbsp; 原售价<del>￥2500</del></span> </p> </li>  <li class="switchable-panel wk-switchable-panel" > <a href="http://www.99zihua.com/lou.html" class="wk-a" target="_blank" rel="nofollow" alt="河南著名画家曲逸之四尺斗方紫牡丹《紫玉含金》"> <img alt="河南著名画家曲逸之四尺斗方紫牡丹《紫玉含金》" src="http://www.99zihua.com/images/goods/20140109/5121286b27f06c5e.jpg" ></a>
                                             <p class="wk-lou-name" style="bottom: 20px;"> <a href="http://www.99zihua.com/lou.html" target="_blank">河南著名画家曲逸之四尺斗方紫牡丹《紫玉含金》</a > </p> <p class="wk-lou-name"> <span>捡漏价<font>￥1000</font> &nbsp;&nbsp; 原售价<del>￥1500</del></span> </p> </li>  </ol> <a id="wk-prev"><img class="prev" src="http://www.99zihua.com/statics/1.gif"></a > <a id="wk-next"><img class="next" src="http://www.99zihua.com/statics/2.gif"></a > <ul class="switchable-triggerBox" style="display:none">  <li class=""></li>  <li class=""></li>  <li class=""></li>  <li class=""></li>  <li class=""></li>  <li class=""></li>  </ul> 
-								<script>
+								<script type="text/javascript">
 									new Switchable('gonggao1',{
 										effect:'scrollx',
 										autoplay:true,
@@ -197,7 +197,7 @@
 									});
 								</script>
 								<script src="http://www.99zihua.com/statics/seckill/countdown.js"></script>
-								<script>
+								<script type="text/javascript">
 									new countdown().one_init('end_time'); 		
 									function getHm(){
 										var tdiv = document.getElementById('end_time').innerHTML;
@@ -234,7 +234,7 @@
                     <h3></h3>
                 </div>
                 <div class="border-body clearfix">
-                    <script>
+                    <script type="text/javascript">
                         var good_list = new Class({
                             divSrc: '',
                             divSrc2: '',
@@ -288,7 +288,7 @@
 								<?php $i = 1; foreach($listAllPro as $allPro){ ?>
 								<div class="itemsWrap<?php if($i % 5 == 0){ echo ' last';} ?>" product="<?php echo $allPro['pro_id'] ?>" style="width:19%;">
                                     <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
+                                        <div class="goodsImg">
                                             <a href="#" target="_blank" title="<?php echo $allPro['pro_name']; ?>">
 												<img src="<?php echo base_url().'uploads/products/thumb/'.$allPro['pro_image'] ?>" width="136" alt="<?php echo $allPro['pro_name']; ?>">
                                             </a>
@@ -598,7 +598,7 @@
                     <li>2</li>
                 </ul>
             </div>
-            <script>
+            <script type="text/javascript">
                 new Switchable('ex_slide_widgets_16649', {
                     effect: 'scrollx',
                     autoplay: true,
@@ -612,7 +612,7 @@
         <div class="zh_midr">
             <div class="border4 " id="widgets_16609">
                 <div class="border-top">
-                    <h3>Bài viết tranh phong cảnh</h3>
+                    <h3>Tranh đá quý nổi bật</h3>
                 </div>
                 <div class="border-body">
                     <div class="rank_list">
@@ -649,7 +649,7 @@
                             </li>
                         </ul>
                     </div>
-                    <script>
+                    <script type="text/javascript">
                         var max_list = new Class({
                             divSrc: '',
                             initialize: function(div) {
@@ -682,19 +682,19 @@
                         <tr valign="top">
                             <?php if(isset($listGems)) { ?>
 							<?php foreach($listGems as $gemItem){ ?>
-                            <td id="item-<?php echo $gemItem['pro_id']; ?>" width="16%;" class='item textcenter'>
+                            <td id="item-<?php echo $gemItem['pro_id']; ?>" width="16%;" class="item textcenter">
                                 <a target="_blank" href="<?php echo base_url().'uploads/products/'.$gemItem['pro_image'] ?>" class="thumb-img preview" class='pic'>
 									<img src="<?php echo base_url().'uploads/products/thumb/'.$gemItem['pro_image'] ?>" alt="<?php echo $gemItem['pro_name']; ?>" style="max-width:146px;"/>
 								</a>
                                 <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'>
-										<a href='#' title="<?php echo $gemItem['pro_name']; ?>"><?php echo $gemItem['pro_name']; ?></a>
+                                    <div class="gname">
+										<a href="#" title="<?php echo $gemItem['pro_name']; ?>"><?php echo $gemItem['pro_name']; ?></a>
 									</div>
-									<div class='clearfix'>
-                                        <div class='price textcenter'>Size : <?php echo $gemItem['pro_size']; ?> cm</div>
+									<div class="clearfix">
+                                        <div class="price textcenter">Size : <?php echo $gemItem['pro_size']; ?> cm</div>
                                     </div>
-                                    <div class='clearfix'>
-                                        <div class='price textcenter'>Giá : <em class='price1'><?php echo $gemItem['pro_price'] ? number_format($gemItem['pro_price']).' VND' : 'Liên hệ'; ?></em></div>
+                                    <div class="clearfix">
+                                        <div class="price textcenter">Giá : <em class='price1'><?php echo $gemItem['pro_price'] ? number_format($gemItem['pro_price']).' VND' : 'Liên hệ'; ?></em></div>
                                     </div>
                                 </div>
                             </td>
@@ -719,7 +719,7 @@
         </div>
         <div class="clear"></div>
         <div class="zh_midl">
-			<img alt="Tranh gạo chân dung" src="<?php echo base_url(); ?>public/images/slide/tranh-gao-chan-dung.jpg">
+			<img alt="Tranh gạo chân dung" src="<?php echo base_url(); ?>public/images/slide/tranh-gao-chan-dung.jpg" />
         </div>
         <div class="zh_midz">
             <style>
@@ -780,7 +780,7 @@
                     <li>2</li>
                 </ul>
             </div>
-            <script>
+            <script type="text/javascript">
                 new Switchable('ex_slide_widgets_16650', {
                     effect: 'scrollx',
                     autoplay: true,
@@ -794,7 +794,7 @@
         <div class="zh_midr">
             <div class="border4 " id="widgets_16615">
                 <div class="border-top">
-                    <h3>字画收藏关注榜</h3>
+                    <h3>Tranh gạo bán chạy</h3>
                 </div>
                 <div class="border-body">
                     <div class="rank_list">
@@ -831,7 +831,7 @@
                             </li>
                         </ul>
                     </div>
-                    <script>
+                    <script type="text/javascript">
                         var max_list = new Class({
                             divSrc: '',
                             initialize: function(div) {
@@ -864,19 +864,19 @@
                         <tr valign="top">
                             <?php if(isset($listRices)) { ?>
 							<?php foreach($listRices as $riceItem){ ?>
-                            <td id="item-<?php echo $riceItem['pro_id']; ?>" width="16%;" class='item textcenter'>
+                            <td id="item-<?php echo $riceItem['pro_id']; ?>" width="16%;" class="item textcenter">
                                 <a target="_blank" href="<?php echo base_url().'uploads/products/'.$riceItem['pro_image'] ?>" class="thumb-img preview" class='pic'>
 									<img src="<?php echo base_url().'uploads/products/thumb/'.$riceItem['pro_image'] ?>" alt="<?php echo $riceItem['pro_name']; ?>" style="max-width:146px;"/>
 								</a>
                                 <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'>
-										<a href='#' title="<?php echo $riceItem['pro_name']; ?>"><?php echo $riceItem['pro_name']; ?></a>
+                                    <div class="gname">
+										<a href="#" title="<?php echo $riceItem['pro_name']; ?>"><?php echo $riceItem['pro_name']; ?></a>
 									</div>
-									<div class='clearfix'>
-                                        <div class='price textcenter'>Size : <?php echo $riceItem['pro_size']; ?> cm</div>
+									<div class="clearfix">
+                                        <div class="price textcenter">Size : <?php echo $riceItem['pro_size']; ?> cm</div>
                                     </div>
-                                    <div class='clearfix'>
-                                        <div class='price textcenter'>Giá : <em class='price1'><?php echo $riceItem['pro_price'] ? number_format($riceItem['pro_price']).' VND' : 'Liên hệ'; ?></em></div>
+                                    <div class="clearfix">
+                                        <div class="price textcenter">Giá : <em class='price1'><?php echo $riceItem['pro_price'] ? number_format($riceItem['pro_price']).' VND' : 'Liên hệ'; ?></em></div>
                                     </div>
                                 </div>
                             </td>
@@ -903,7 +903,7 @@
         </div>
         <div class="clear"></div>
         <div class="zh_midl">
-			<img alt="Tranh cát đẹp" src="http://www.99zihua.com/images/sy/lp01.jpg">
+			<img src="<?php echo base_url(); ?>public/images/tranh-cat-chan-dung.png" alt="Tranh cát chân dung" />
         </div>
         <div class="zh_midz">
             <style>
@@ -966,7 +966,7 @@
                     <li>2</li>
                 </ul>
             </div>
-            <script>
+            <script type="text/javascript">
                 new Switchable('ex_slide_widgets_16651', {
                     effect: 'scrollx',
                     autoplay: true,
@@ -980,7 +980,7 @@
         <div class="zh_midr">
             <div class="border4 " id="widgets_16621">
                 <div class="border-top">
-                    <h3>字画礼品关注榜</h3>
+                    <h3>Tranh cát nổi bật</h3>
                 </div>
                 <div class="border-body">
                     <div class="rank_list">
@@ -1017,7 +1017,7 @@
                             </li>
                         </ul>
                     </div>
-                    <script>
+                    <script type="text/javascript">
                         var max_list = new Class({
                             divSrc: '',
                             initialize: function(div) {
@@ -1050,19 +1050,19 @@
                         <tr valign="top">
 							<?php if(isset($listSand)) { ?>
 							<?php foreach($listSand as $sandItem){ ?>
-                            <td id="item-<?php echo $sandItem['pro_id']; ?>" width="16%;" class='item textcenter'>
+                            <td id="item-<?php echo $sandItem['pro_id']; ?>" width="16%;" class="item textcenter">
                                 <a target="_blank" href="<?php echo base_url().'uploads/products/'.$sandItem['pro_image'] ?>" class="thumb-img preview" class='pic'>
 									<img src="<?php echo base_url().'uploads/products/thumb/'.$sandItem['pro_image'] ?>" alt="<?php echo $sandItem['pro_name']; ?>" style="max-width:146px;"/>
 								</a>
                                 <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'>
-										<a href='#' title="<?php echo $sandItem['pro_name']; ?>"><?php echo $sandItem['pro_name']; ?></a>
+                                    <div class="gname">
+										<a href="#" title="<?php echo $sandItem['pro_name']; ?>"><?php echo $sandItem['pro_name']; ?></a>
 									</div>
-									<div class='clearfix'>
-                                        <div class='price textcenter'>Size : <?php echo $sandItem['pro_size']; ?> cm</div>
+									<div class="clearfix">
+                                        <div class="price textcenter">Size : <?php echo $sandItem['pro_size']; ?> cm</div>
                                     </div>
-                                    <div class='clearfix'>
-                                        <div class='price textcenter'>Giá : <em class='price1'><?php echo $sandItem['pro_price'] ? number_format($sandItem['pro_price']).' VND' : 'Liên hệ'; ?></em></div>
+                                    <div class="clearfix">
+                                        <div class="price textcenter">Giá : <em class='price1'><?php echo $sandItem['pro_price'] ? number_format($sandItem['pro_price']).' VND' : 'Liên hệ'; ?></em></div>
                                     </div>
                                 </div>
                             </td>
@@ -1075,216 +1075,4 @@
             <div class="more"> </div>
         </div>
     </div>
-    <div class="he10"></div>
-    <div class="mjmz">
-        <div class="mjmz_top">
-            <h3>名家字画</h3><span><a href="http://www.99zihua.com/mjsh.html" type="url" rel="nofollow">更多...</a></span>
-        </div>
-        <div class="clear"></div>
-        <div class="mjmz_mid">
-            <div class="GoodsListWrap GoodsList GoodsShow">
-                <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                    <tbody>
-                        <tr valign="top">
-                            <td id="item-13041" width="50%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-13041.html' style='width:100px;height:100px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20160627/db99c04c9b702c74.jpg" alt="国家一级美术师王永刚 三尺《听涛图》(询价)" style='width:100px;height:100px;' /> </a>
-                                <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-13041.html' title="国家一级美术师王永刚 三尺《听涛图》(询价)">国家一级美术师王永刚 三尺《听涛图》(询价)</a> </div>
-                                    <div class='clearfix'>
-                                        <div class='mktprice textcenter'>画廊价：<del>￥0</del>
-                                        </div>
-                                        <div class='price textcenter'>本站价：<em class='price1'>￥0</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td id="item-12866" width="50%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-12866.html' style='width:100px;height:100px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20160518/8015b694ad974167.jpg" alt="贵州七星关美协主席吴显刚 小六尺《峰高如有色》" style='width:100px;height:100px;' /> </a>
-                                <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-12866.html' title="贵州七星关美协主席吴显刚 小六尺《峰高如有色》">贵州七星关美协主席吴显刚 小六尺《峰高如有色》</a> </div>
-                                    <div class='clearfix'>
-                                        <div class='mktprice textcenter'>画廊价：<del>￥35000</del>
-                                        </div>
-                                        <div class='price textcenter'>本站价：<em class='price1'>￥12000</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr valign="top">
-                            <td id="item-12422" width="50%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-12422.html' style='width:100px;height:100px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20160318/0d1e96eb8ae80318.jpg" alt="中书协顾问 书法大家刘艺四尺《天街小雨润如酥》（询价）" style='width:100px;height:100px;' /> </a>
-                                <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-12422.html' title="中书协顾问 书法大家刘艺四尺《天街小雨润如酥》（询价）">中书协顾问 书法大家刘艺四尺《天街小雨润如酥》（询价）</a> </div>
-                                    <div class='clearfix'>
-                                        <div class='mktprice textcenter'>画廊价：<del>￥0</del>
-                                        </div>
-                                        <div class='price textcenter'>本站价：<em class='price1'>￥0</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td id="item-12247" width="50%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-12247.html' style='width:100px;height:100px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20160126/bcbb2dce40fec7e7.jpg" alt="陕西省书协理事 西安书法院院长赵青四尺《渭城曲》" style='width:100px;height:100px;' /> </a>
-                                <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-12247.html' title="陕西省书协理事 西安书法院院长赵青四尺《渭城曲》">陕西省书协理事 西安书法院院长赵青四尺《渭城曲》</a> </div>
-                                    <div class='clearfix'>
-                                        <div class='mktprice textcenter'>画廊价：<del>￥0</del>
-                                        </div>
-                                        <div class='price textcenter'>本站价：<em class='price1'>￥5600</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr valign="top">
-                            <td id="item-12200" width="50%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-12200.html' style='width:100px;height:100px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20160107/f5c930ef369f853c.jpg" alt="隶书大家周宏兴四尺《无声诗里诵千秋》（询价）" style='width:100px;height:100px;' /> </a>
-                                <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-12200.html' title="隶书大家周宏兴四尺《无声诗里诵千秋》（询价）">隶书大家周宏兴四尺《无声诗里诵千秋》（询价）</a> </div>
-                                    <div class='clearfix'>
-                                        <div class='mktprice textcenter'>画廊价：<del>￥0</del>
-                                        </div>
-                                        <div class='price textcenter'>本站价：<em class='price1'>￥0</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td id="item-7094" width="50%;" class='item textcenter'>
-                                <a target="_blank" href='http://www.99zihua.com/product-7094.html' style='width:100px;height:100px;' class='pic'> <img src="http://www.99zihua.com/images/goods/20130716/7f6a48db78dd0836.jpg" alt="名家赵金鸰四尺迎福纳祥关公图《浩然正气传千古》(询价)" style='width:100px;height:100px;' /> </a>
-                                <div class="info">
-                                    <div class='gname' style='height:36px;line-height:18px;'> <a href='http://www.99zihua.com/product-7094.html' title="名家赵金鸰四尺迎福纳祥关公图《浩然正气传千古》(询价)">名家赵金鸰四尺迎福纳祥关公图《浩然正气传千古》(询价)</a> </div>
-                                    <div class='clearfix'>
-                                        <div class='mktprice textcenter'>画廊价：<del>￥50000</del>
-                                        </div>
-                                        <div class='price textcenter'>本站价：<em class='price1'>￥0</em>
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <div class="js_t">
-        <div class="mewst">
-            <div class="mews_top">
-                <h3>字画百科</h3><span><a href="http://www.99zihua.com/zihuabk/" rel="nofollow" target="_blank">更多...</a></span> </div>
-            <div class="mewst_ml">
-                <div class="AdvBanner">
-                    <a href="http://www.99zihua.com/zihuabk/" target="_blank"> <img src='http://www.99zihua.com/images//20120712/b5b33f5f6220bdae.jpg' style="width:160px;height:110px;" /> </a>
-                </div>
-            </div>
-            <div class="mewst_mr">
-                <p class="tt"><a href="http://www.99zihua.com/zihuabk/ghzx/2525.html" target="_blank" rel="nofollow">网易:理财热促网上书画走俏</a>
-                </p>
-                <p class="zww"><a href="http://www.99zihua.com/zihuabk/ghzx/2525.html" target="_blank" rel="nofollow">随着书画投资市场的迅猛发展和交易渠道的多样化，尤其是书画电子商务的出现，书画投资如今早已飞入寻常百姓家了。<span id="more-85"></span>...[详情]</a>
-                </p>
-            </div>
-            <div class="clear"></div>
-            <div class="list_js">
-                <li><a target="_blank" href="http://www.99zihua.com/zihuabk/ghzx/4495.html">“书为心画”范扬书法精品展</a>
-                </li>
-                <li><a target="_blank" href="http://www.99zihua.com/zihuabk/zhsc/4494.html">一个痴迷作画，又迷恋文字的范扬</a>
-                </li>
-                <li><a target="_blank" href="http://www.99zihua.com/zihuabk/zhsc/4493.html">说说范扬的书法</a>
-                </li>
-                <li><a target="_blank" href="http://www.99zihua.com/zihuabk/ghzx/4492.html">苗雨：寥寥几笔，便是一整个江南</a>
-                </li>
-                <li><a target="_blank" href="http://www.99zihua.com/zihuabk/zhjs/4491.html">评赵青 诗几首</a>
-                </li>
-                <li><a target="_blank" href="http://www.99zihua.com/zihuabk/zhsc/4490.html">感悟赵青</a>
-                </li>
-            </div>
-        </div>
-        <div class="he10"></div>
-        <div class="mewst fhgg">
-            <div class="mews_top">
-                <h3>发货公告</h3>
-            </div>
-            <div class="mewst_fhgg">
-                <div id="ord_widgets_16634" class="TransportList" style='overflow:hidden;height:40px'>
-                    <ul>
-                        <li> <img src="http://www.99zihua.com/statics/icons/arrow_1.gif" path="icons" /> 订单<span class="TransportListId">20160824185425</span>所购物品
-                            <!--经通过<span class="TransportListShipname">陈聪凤</span> -->已通过<span class="TransportListId">顺丰速运</span>发出， 请注意查收.发货单号:<span class="TransportListId">120160826000001</span> </li>
-                        <li> <img src="http://www.99zihua.com/statics/icons/arrow_1.gif" path="icons" /> 订单<span class="TransportListId">20160824186276</span>所购物品
-                            <!--经通过<span class="TransportListShipname">张明</span> -->已通过<span class="TransportListId">顺丰速运</span>发出， 请注意查收.发货单号:<span class="TransportListId">120160825000001</span> </li>
-                        <li> <img src="http://www.99zihua.com/statics/icons/arrow_1.gif" path="icons" /> 订单<span class="TransportListId">20160822158719</span>所购物品
-                            <!--经通过<span class="TransportListShipname">邱生伦</span> -->已通过<span class="TransportListId">顺丰速运</span>发出， 请注意查收.发货单号:<span class="TransportListId">120160824000003</span> </li>
-                        <li> <img src="http://www.99zihua.com/statics/icons/arrow_1.gif" path="icons" /> 订单<span class="TransportListId">20160824094621</span>所购物品
-                            <!--经通过<span class="TransportListShipname">袁保憲转 吴先生</span> -->已通过<span class="TransportListId">顺丰速运</span>发出， 请注意查收.发货单号:<span class="TransportListId">120160824000002</span> </li>
-                    </ul>
-                </div>
-                <script>
-                    (function() {
-                        if (window.roll_effect) return;
-                        window.roll_effect = new Class({
-                            options: {
-                                viewheight: 130,
-                                speed: 2000,
-                                childTag: 'li'
-                            },
-                            initialize: function(src, options) {
-                                options = options || {};
-                                if (options.speed) options.speed = options.speed.limit(this.options.speed, 5000);
-                                if (options.viewheight) options.viewheight = options.viewheight.limit(40, 700);
-                                options = $extend(this.options, options);
-                                var _this = this;
-                                this.el = $(src);
-                                if (!this.el) return;
-                                this.el.effect('height').start(options.viewheight).chain(function() {
-                                    var sz = _this.el.getSize();
-                                    if (sz.y >= sz.scrollSize.y) return;
-                                    _this.el.addEvents({
-                                        'mouseenter': function() {
-                                            _this.stop();
-                                        },
-                                        'mouseleave': function() {
-                                            _this.begin();
-                                        }
-                                    });
-                                    _this.scEffect = new Fx.Scroll(_this.el, {
-                                        duration: options.speed
-                                    });
-                                    _this.begin();
-                                });
-                            },
-                            stop: function() {
-                                this.pause = true;
-                            },
-                            begin: function() {
-                                this.pause = false;
-                                this.ref = this.start()
-                            },
-                            start: function() {
-                                if (this.pause) return;
-                                var _this = this;
-                                var first = $E(this.options.childTag, this.el);
-                                if (!first) return;
-                                var h = $E(this.options.childTag, this.el).getSize().y;
-                                this.scEffect.start(0, h).chain(function() {
-                                    first.injectBottom(first.getParent());
-                                    this.set(0, 0);
-                                    fn.call(_this);
-                                });
-                                var fn = arguments.callee;
-                            }
-                        });
-
-                    })();
-                </script>
-                <script>
-                    window.addEvent('domready', function() {
-                        new roll_effect('ord_widgets_16634', {
-                            viewheight: 95,
-                            speed: 3000
-                        });
-                    });
-                </script>
-            </div>
-        </div>
-    </div>
-    <div class="he10"></div>
 </div>

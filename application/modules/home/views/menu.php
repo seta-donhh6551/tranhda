@@ -15,15 +15,15 @@
 						<tr>
 							<td class="search_label"> <span>关键字：</span>
 								<input name="name[]" size="10" class="inputstyle keywords" value="" /> </td>
-							<td>
+                            <td style="padding-top:1px">
 								<input type="submit" value="Tìm kiếm" class="btn_search" onfocus="this.blur();" /> </td>
 							<td>&nbsp;</td>
 						</tr>
 					</table>
 				</form>
 			</div>
-			<div class="blog"><a title="Cam kết" href="#" target="_blank" rel="nofollow">Cam kết</a>
-			</div>
+			<!--div class="blog"><a title="Cam kết" href="#" target="_blank" rel="nofollow">Cam kết</a>
+			</div-->
 		</div>
 	</div>
 	<div class="clear"></div>
@@ -47,6 +47,5 @@
 </div>
 <div class="clear"></div>
 <div style=" padding:5px 0 0 0; display:none;">
-	<a href="#" target="_blank" title="NO10.精品水墨限时捡漏专场">
-		<img src="http://www.99zihua.com/images//20160707/842f855b9fdbd56d.jpg"> </a>
+	
 </div>
