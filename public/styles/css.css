@@ -563,10 +563,18 @@ ul.kongjian li{float:left; padding:0 8px;background:url(../images/bg_bar_01.gif)
 
 .GoodsSearchWrap .items-gallery {
 	width:173px;
+    float:left;
+    margin-right:10px;
 	overflow:hidden;
+    display:table-cell;
+    vertical-align:middle;
 	border:#eee 1px solid;
 }
 .GoodsSearchWrap .items-gallery .goodpic a {
+    width:160px;
+    height:130px;
+    display:table-cell;
+    vertical-align:middle;
 	border:1px solid #FFFFFF;
 }
 .GoodsSearchWrap .items-gallery .goodpic a:hover {
@@ -577,9 +585,10 @@ ul.kongjian li{float:left; padding:0 8px;background:url(../images/bg_bar_01.gif)
 	line-height:20px;
 }
 .GoodsSearchWrap .items-gallery .goodinfo .price1 {
-	font-size:15px;
+	font-size:12px;
 	height:30px;
 	line-height:30px;
+    font-weight:normal !important
 }
 
 .zbb .GoodsSearchWrap .items-gallery .button {
@@ -597,6 +606,7 @@ ul.kongjian li{float:left; padding:0 8px;background:url(../images/bg_bar_01.gif)
 }
 .GoodsSearchWrap .items-gallery .goodinfo h6 a {
 	color:#666;
+    font-weight:bold
 }
 .GoodsSearchWrap .items-gallery .goodinfo h6 a:hover {
 	color:#cc0000;

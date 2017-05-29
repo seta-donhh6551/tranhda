@@ -13,32 +13,37 @@ class product extends MY_Controller {
         $items = $this->uri->segment(1);
         $result = $this->model_product->getrewrite($items);
         
-        if ($result == NULL) {
+        if ($result == null) {
             redirect(base_url());
         }
         
         $id = $result['cate_id'];
         
+        $data['cateInfo'] = $this->model_product->getcate($id);
+        if($data['cateInfo'] == null){
+            redirect(base_url());
+        }
+        
         $config['base_url'] = base_url() . $items . "/";
         $config['total_rows'] = $this->model_product->count_all($id);
-        $config['per_page'] = 9;
+        $config['per_page'] = 40;
         $config['uri_segment'] = 2;
         $config['next_link'] = "Next";
         $config['prev_link'] = "Prev";
-        $config['prev_tag_open'] = '<div class="product-page">';
-        $config['prev_tag_close'] = '</div>';
-        $config['first_tag_open'] = '<div class="product-page">';
-        $config['first_tag_close'] = '</div>';
-        $config['last_tag_open'] = '<div class="product-page">';
-        $config['last_tag_close'] = '</div>';
-        $config['num_tag_open'] = '<div class="product-page">';
-        $config['num_tag_close'] = '</div>';
-        $config['cur_tag_open'] = '<div class="product-page">';
-        $config['cur_tag_close'] = '</div>';
-        $config['next_tag_open'] = '<div class="product-page">';
-        $config['next_tag_close'] = '</div>';
-        $config['cur_tag_open'] = '<div class="product-page selected">';
-        $config['cur_tag_close'] = '</div>';
+//        $config['prev_tag_open'] = '<div class="product-page">';
+//        $config['prev_tag_close'] = '</div>';
+//        $config['first_tag_open'] = '<div class="product-page">';
+//        $config['first_tag_close'] = '</div>';
+//        $config['last_tag_open'] = '<div class="product-page">';
+//        $config['last_tag_close'] = '</div>';
+//        $config['num_tag_open'] = '<div class="product-page">';
+//        $config['num_tag_close'] = '</div>';
+//        $config['cur_tag_open'] = '<div class="product-page">';
+//        $config['cur_tag_close'] = '</div>';
+//        $config['next_tag_open'] = '<div class="product-page">';
+//        $config['next_tag_close'] = '</div>';
+//        $config['cur_tag_open'] = '<div class="product-page selected">';
+//        $config['cur_tag_close'] = '</div>';
         
         $this->load->library("pagination", $config);
         
@@ -46,11 +51,10 @@ class product extends MY_Controller {
         $data['support'] = $this->support();
         $data['config'] = $this->config();
         $data['listcate'] = $this->listcate();
-        $data['listintro'] = $this->listintro();
         $data['link'] = base_url() . uri_string() . ".html";
         
-        $data['results'] = $this->model_product->listall($id, $config['per_page'], $start);
-        
+        $data['listProducts'] = $this->model_product->listall($id, $config['per_page'], $start);
+        //$this->debug($data['listProducts']);
         foreach($data['listcate'] as $category) 
         {
             $product[] = $this->model_product->getproduct($category['cate_id'], 4);
@@ -58,14 +62,12 @@ class product extends MY_Controller {
         }
         
         $data['listall'] = array("listcagotop" => $listcago);
-        
-        $data['cate'] = $this->model_product->getcate($id);
-        if($data['cate'] == null)
-        {
-            redirect(base_url());
-        }
-        
-        $data['title'] = $data['cate']['cate_title'];
+        $data['dataPage'] = array(
+            'title' => $data['cateInfo']['cate_title'],
+            'keywords' => $data['cateInfo']['cate_keys'],
+            'description' => $data['cateInfo']['cate_des']
+        );
+
         $data['template'] = 'product/index';
         
         $this->load->view("layout", $data);

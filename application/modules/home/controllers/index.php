@@ -13,7 +13,7 @@ class Index extends MY_Controller
 		$data['listcate'] = $this->listcate();
 		$data['listintro'] = $this->listintro();
 		$data['support'] = $this->support();
-        
+        //$this->debug($data['listcate']);
 		//get list product
 		$data['listAllPro'] = $this->model_product->listproduct(null, 10);
 		$data['listGems'] = $this->model_product->listproduct(1);
@@ -23,7 +23,7 @@ class Index extends MY_Controller
 		$data['title'] = "Tranh gạo việt";
         $data['template'] = 'content1';
         
-		$this->load->view("layout", $data);
+		$this->load->view("main", $data);
 	}
 
 	public function view() {

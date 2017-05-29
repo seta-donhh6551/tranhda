@@ -47,14 +47,17 @@
 			$this->db->limit($limit);
 			return $this->db->get($this->_table)->result_array();
 		}
-		public function listall($id,$off,$start,$type=1){
+		public function listall($id, $off, $start, $type=1){
+            $this->db->select('tbl_products.*,tbl_categorie.name');
 			if($type == 1){
-				$this->db->where("cate_id",$id);
+				$this->db->where("tbl_products.cate_id",$id);
 			}else{
-				$this->db->where("cago_id",$id);
+				$this->db->where("tbl_products.cago_id",$id);
 			}
+            $this->db->join('tbl_categorie', 'tbl_categorie.id = tbl_products.cago_id', 'left');
 			$this->db->limit($off,$start);
-                        $this->db->order_by("pro_order","desc");
+            $this->db->order_by("tbl_products.cate_id","asc");
+            
 			return $this->db->get($this->_table)->result_array();
 		}
 		public function listcago($id){

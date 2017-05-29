@@ -13,7 +13,7 @@
 				<form action="#" method="post" class="SearchBar">
 					<table cellpadding="0" cellspacing="0">
 						<tr>
-							<td class="search_label"> <span>关键字：</span>
+							<td class="search_label"> <span>Từ khóa：</span>
 								<input name="name[]" size="10" class="inputstyle keywords" value="" /> </td>
                             <td style="padding-top:1px">
 								<input type="submit" value="Tìm kiếm" class="btn_search" onfocus="this.blur();" /> </td>
@@ -34,11 +34,10 @@
 		<ul class="MenuList">
 			<li><a href="<?php echo base_url(); ?>">Trang chủ</a></li>
 			<li><a href="#">Khuyến mãi</a><span class="hot"></span></li>
-			<li><a href="#">Phong cảnh</a></li>
-			<li><a href="#">Động vật</a></li>
-			<li><a href="#">Tranh hoa</a></li>
-			<li><a href="#">Tứ quý</a></li></li>
-			<li><a href="#">Chân dung</a></li>
+            <?php if(isset($listcate)){ ?>
+            <?php foreach($listcate as $cateItems){ ?>
+            <li><a href="<?php echo base_url().$cateItems['cate_rewrite']; ?>.html" title="Tranh <?php echo $cateItems['cate_name']; ?>"><?php echo $cateItems['cate_name']; ?></a></li>
+            <?php } } ?>
 			<li><a href="#">Liên hệ</a></li>
 		</ul>
 	</div>
@@ -46,6 +45,3 @@
 	<div class="fu"></div>
 </div>
 <div class="clear"></div>
-<div style=" padding:5px 0 0 0; display:none;">
-	
-</div>
