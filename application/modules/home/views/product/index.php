@@ -5,62 +5,48 @@
         </div>
         <div class="clear"></div>
         <div class="GoodsSearchWrap">
-            <form method="post" action="http://www.99zihua.com/search-result.html" id="selector-form" style="display: block;">
-                <input type="hidden" name="filter" value="">
-                <input type="hidden" name="cat_id" value="30">
-                <div class="GoodsSelector division boxGray" style="display: block;">
-                    <div class="division boxBrown" style="display: block;">
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td class="textright" style="padding-right:6px; width:72px; white-space:nowrap">分类名称：</td>
-                                    <td style="line-height:22px; white-space:normal; word-break:break-all"> <a href="http://www.99zihua.com/gallery-37-grid.html">古代人物</a> <a href="http://www.99zihua.com/gallery-36-grid.html">伟人像</a> <a href="http://www.99zihua.com/gallery-35-grid.html">佛像/观音像</a> <a href="http://www.99zihua.com/gallery-34-grid.html">仕女图</a> </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="division" id="selector_contents" style="display: block;">
-                        <table width="100%">
-                            <tbody>
-                                <tr>
-                                    <td class="textright" style="padding-right:6px; width:72px; white-space:nowrap">名家专栏：</td>
-                                    <td style=" border-bottom:1px solid #eee; line-height:22px;position: relative;">
-                                        <div class="s_option"> <a href="http://www.99zihua.com/gallery-30-b,163-0--1--grid.html">刘金前<span class="num">(4)</span></a><a href="http://www.99zihua.com/gallery-30-b,155-0--1--grid.html">强春云<span class="num">(3)</span></a><a href="http://www.99zihua.com/gallery-30-b,153-0--1--grid.html">陈乐<span class="num">(6)</span></a><a href="http://www.99zihua.com/gallery-30-b,176-0--1--grid.html">李翔峰<span class="num">(4)</span></a><a href="http://www.99zihua.com/gallery-30-b,169-0--1--grid.html">曹建涛<span class="num">(24)</span></a><a href="http://www.99zihua.com/gallery-30-b,152-0--1--grid.html">魏志平<span class="num">(34)</span></a><a href="http://www.99zihua.com/gallery-30-b,135-0--1--grid.html">赵金鸰<span class="num">(21)</span></a><a href="http://www.99zihua.com/gallery-30-b,134-0--1--grid.html">李凤英<span class="num">(16)</span></a><a href="http://www.99zihua.com/gallery-30-b,132-0--1--grid.html">庞银时<span class="num">(2)</span></a><a href="http://www.99zihua.com/gallery-30-b,131-0--1--grid.html">周自豪<span class="num">(3)</span></a><a href="http://www.99zihua.com/gallery-30-b,129-0--1--grid.html">赵逸梅<span class="num">(7)</span></a><a href="http://www.99zihua.com/gallery-30-b,137-0--1--grid.html">李胜春<span class="num">(9)</span></a><a href="http://www.99zihua.com/gallery-30-b,148-0--1--grid.html">郭廷<span class="num">(32)</span></a><a href="http://www.99zihua.com/gallery-30-b,147-0--1--grid.html">齐根石<span class="num">(2)</span></a><a href="http://www.99zihua.com/gallery-30-b,143-0--1--grid.html">刘纪<span class="num">(3)</span></a><a href="http://www.99zihua.com/gallery-30-b,139-0--1--grid.html">陈漫之<span class="num">(37)</span></a><a href="http://www.99zihua.com/gallery-30-b,236-0--1--grid.html">杨西沐<span class="num">(20)</span></a><a href="http://www.99zihua.com/gallery-30-b,228-0--1--grid.html">阎世宏<span class="num">(17)</span></a><a href="http://www.99zihua.com/gallery-30-b,212-0--1--grid.html">杨小华<span class="num">(6)</span></a><a href="http://www.99zihua.com/gallery-30-b,192-0--1--grid.html">尹和平<span class="num">(47)</span></a><a href="http://www.99zihua.com/gallery-30-b,190-0--1--grid.html">王其志<span class="num">(13)</span></a><a href="http://www.99zihua.com/gallery-30-b,43-0--1--grid.html">庾超然<span class="num">(5)</span></a><a href="http://www.99zihua.com/gallery-30-b,42-0--1--grid.html">李喜军<span class="num">(1)</span></a><a href="http://www.99zihua.com/gallery-30-b,41-0--1--grid.html">张春奇<span class="num">(51)</span></a><a href="http://www.99zihua.com/gallery-30-b,55-0--1--grid.html">王志华<span class="num">(7)</span></a><a href="http://www.99zihua.com/gallery-30-b,17-0--1--grid.html">李立辰<span class="num">(47)</span></a><a href="http://www.99zihua.com/gallery-30-b,14-0--1--grid.html">凌雪<span class="num">(5)</span></a><a href="http://www.99zihua.com/gallery-30-b,27-0--1--grid.html">魏武双<span class="num">(22)</span></a><a href="http://www.99zihua.com/gallery-30-b,98-0--1--grid.html">范曾<span class="num">(1)</span></a><a href="http://www.99zihua.com/gallery-30-b,97-0--1--grid.html">妙林居士<span class="num">(60)</span></a><a href="http://www.99zihua.com/gallery-30-b,116-0--1--grid.html">王永刚<span class="num">(20)</span></a><a href="http://www.99zihua.com/gallery-30-b,112-0--1--grid.html">季则夫<span class="num">(1)</span></a><a href="http://www.99zihua.com/gallery-30-b,67-0--1--grid.html">邹本财<span class="num">(18)</span></a><a href="http://www.99zihua.com/gallery-30-b,79-0--1--grid.html">孔祥前<span class="num">(2)</span></a><a href="http://www.99zihua.com/gallery-30-b,66-0--1--grid.html">颜涵<span class="num">(2)</span></a> </div>
-                                        <div class="s_oper"><a href="javascript:;" class="show_more s_btn_border"><i class="c_icon"></i><span class="text">更多</span></a> </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="textright" style="padding-right:6px; width:72px; white-space:nowrap">适用场合：</td>
-                                    <td style=" border-bottom:1px solid #eee; line-height:22px;"><a href="http://www.99zihua.com/gallery-30-4,0-0--1--grid.html">客厅<span class="num">(287)</span></a><a href="http://www.99zihua.com/gallery-30-4,1-0--1--grid.html">餐厅<span class="num">(5)</span></a><a href="http://www.99zihua.com/gallery-30-4,2-0--1--grid.html">书房<span class="num">(65)</span></a><a href="http://www.99zihua.com/gallery-30-4,3-0--1--grid.html">卧室<span class="num">(81)</span></a><a href="http://www.99zihua.com/gallery-30-4,4-0--1--grid.html">玄关<span class="num">(20)</span></a><a href="http://www.99zihua.com/gallery-30-4,5-0--1--grid.html">走廊<span class="num">(23)</span></a><a href="http://www.99zihua.com/gallery-30-4,6-0--1--grid.html">办公室<span class="num">(27)</span></a><a href="http://www.99zihua.com/gallery-30-4,7-0--1--grid.html">酒店<span class="num">(5)</span></a><a href="http://www.99zihua.com/gallery-30-4,8-0--1--grid.html">茶楼<span class="num">(37)</span></a><a href="http://www.99zihua.com/gallery-30-4,9-0--1--grid.html">背景墙<span class="num">(17)</span></a> </td>
-                                </tr>
-                                <tr>
-                                    <td class="textright" style="padding-right:6px; width:72px; white-space:nowrap">字画尺寸：</td>
-                                    <td style=" border-bottom:1px solid #eee; line-height:22px;"><a href="http://www.99zihua.com/gallery-30-1,0-0--1--grid.html">小尺寸<span class="num">(46)</span></a><a href="http://www.99zihua.com/gallery-30-1,1-0--1--grid.html">斗方<span class="num">(201)</span></a><a href="http://www.99zihua.com/gallery-30-1,2-0--1--grid.html">四条屏<span class="num">(9)</span></a><a href="http://www.99zihua.com/gallery-30-1,3-0--1--grid.html">三尺横幅<span class="num">(6)</span></a><a href="http://www.99zihua.com/gallery-30-1,4-0--1--grid.html">三尺竖幅<span class="num">(45)</span></a><a href="http://www.99zihua.com/gallery-30-1,5-0--1--grid.html">四尺横幅<span class="num">(90)</span></a><a href="http://www.99zihua.com/gallery-30-1,6-0--1--grid.html">四尺竖幅<span class="num">(173)</span></a><a href="http://www.99zihua.com/gallery-30-1,7-0--1--grid.html">六尺横幅<span class="num">(2)</span></a><a href="http://www.99zihua.com/gallery-30-1,9-0--1--grid.html">八尺<span class="num">(6)</span></a><a href="http://www.99zihua.com/gallery-30-1,10-0--1--grid.html">丈二<span class="num">(2)</span></a><a href="http://www.99zihua.com/gallery-30-1,11-0--1--grid.html">不规则<span class="num">(19)</span></a> </td>
-                                </tr>
-                                <tr>
-                                    <td class="textright" style="padding-right:6px; width:72px; white-space:nowrap">价格区间：</td>
-                                    <td style=" border-bottom:1px solid #eee; line-height:22px;"><a href="http://www.99zihua.com/gallery-30-2,0-0--1--grid.html">500元以下<span class="num">(10)</span></a><a href="http://www.99zihua.com/gallery-30-2,1-0--1--grid.html">500-1000元<span class="num">(116)</span></a><a href="http://www.99zihua.com/gallery-30-2,2-0--1--grid.html">1000-5000元<span class="num">(352)</span></a><a href="http://www.99zihua.com/gallery-30-2,3-0--1--grid.html">5000-10000元<span class="num">(31)</span></a><a href="http://www.99zihua.com/gallery-30-2,4-0--1--grid.html">10000-20000元<span class="num">(20)</span></a><a href="http://www.99zihua.com/gallery-30-2,5-0--1--grid.html">20000元以上<span class="num">(12)</span></a> </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <script>
-                        window.addEvent('domready', function() {
-                            $ES(".s_btn_border").addEvent("click", function(e) {
-                                if (this.hasClass("on")) {
-                                    this.removeClass("on");
-                                    this.getElement("span").setText("更多");
-                                    this.getParent("td").getElement(".s_option").setStyle("height", "26px");
-                                } else {
-                                    this.addClass("on");
-                                    this.getElement("span").setText("收起");
-                                    this.getParent("td").getElement(".s_option").setStyle("height", "auto");
-                                }
-                            });
-                        });
-                    </script>
+            <div class="GoodsSelector division boxGray" style="display:block;">
+                <div class="division boxBrown" style="display:block;">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="textright" style="text-align:left; width:72px;white-space:nowrap">Loại tranh ：</td>
+                                <td style="line-height:22px; white-space:normal; word-break:break-all">
+                                    <a href="#">Tranh đá quý <span class="num">(73)</span></a>
+                                    <a href="#">Tranh cát <span class="num">(31)</span></a>
+                                    <a href="#">Tranh gạo <span class="num">(56)</span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="textright" style="padding-right:6px; width:72px; white-space:nowrap">Tìm theo vị trí ：</td>
+                                <td style="line-height:22px; white-space:normal; word-break:break-all">
+                                    <a href="#">Phòng khách <span class="num">(13)</span></a>
+                                    <a href="#">Nhà hàng <span class="num">(3)</span></a>
+                                    <a href="#">Cửa vào <span class="num">(6)</span></a>
+                                    <a href="#">Hành lang <span class="num">(9)</span></a>
+                                    <a href="#">Khách sạn <span class="num">(4)</span></a>
+                                    <a href="#">Văn phòng <span class="num">(2)</span></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </form>
+                <script>
+                    window.addEvent('domready', function() {
+                        $ES(".s_btn_border").addEvent("click", function(e) {
+                            if (this.hasClass("on")) {
+                                this.removeClass("on");
+                                this.getElement("span").setText("更多");
+                                this.getParent("td").getElement(".s_option").setStyle("height", "26px");
+                            } else {
+                                this.addClass("on");
+                                this.getElement("span").setText("收起");
+                                this.getParent("td").getElement(".s_option").setStyle("height", "auto");
+                            }
+                        });
+                    });
+                </script>
+            </div>
             <script type="text/javascript">
                 var fixEmpeyPanel = (function(el) {
                     el.setStyle('display', el.get('text').clean().trim() ? 'block' : 'none');
@@ -70,32 +56,6 @@
                     $$('#selector-form .division').each(fixEmpeyPanel);
                 }
             </script>
-            <div class="title fixed" id="gallerybar" style="width: 960px;">
-                <table width="100%" cellpadding="0" cellspacing="0">
-                    <tbody>
-                        <tr>
-                            <td style="width:22%">
-                                <table class="pager">
-                                    <tbody>
-                                        <tr>
-                                            <td><span class="pagecurrent">1</span>/<span class="pageall">11</span> </td>
-                                            <td><span class="unprev" title="已经是第一页">已经是第一页</span> </td>
-                                            <td><a href="http://www.99zihua.com/gallery-30--0--2--grid.html" class="next" onmouseover="this.className = 'onnext'" onmouseout="this.className = 'next'" title="下一页">下一页</a> </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td>
-                                <div class="search_total">总共找到<font color="red">599</font>个作品</div>
-                            </td>
-                            <td class="listxl">
-                                <div class="listorder"> <a rel="nofollow" class="list_asc" href="http://www.99zihua.com/gallery-30--4--1--grid.html"><i>价格</i></a> <a rel="nofollow" class="list_desc" href="http://www.99zihua.com/gallery-30--8--1--grid.html"><i>销量</i></a> <a rel="nofollow" class="list_desc" href="http://www.99zihua.com/gallery-30--6--1--grid.html"><i>人气</i></a> </div>
-                            </td>
-                        </tr>
-                        <tr> </tr>
-                    </tbody>
-                </table>
-            </div>
             <div id="list-products" class="grid">
                 <?php if(isset($listProducts)){ ?>
                 <?php foreach($listProducts as $productItem){ ?>
@@ -116,27 +76,44 @@
                 <table class="pager floatRight">
                     <tbody>
                         <tr>
-                            <td><span class="unprev" title="已经是第一页">已经是第一页</span> </td>
-                            <td class="pagernum"> <strong class="pagecurrent">1</strong> <a href="http://www.99zihua.com/gallery-30--0--2--grid.html">2</a> <a href="http://www.99zihua.com/gallery-30--0--3--grid.html">3</a> <a href="http://www.99zihua.com/gallery-30--0--4--grid.html">4</a> <a href="http://www.99zihua.com/gallery-30--0--5--grid.html">5</a> <a href="http://www.99zihua.com/gallery-30--0--6--grid.html">6</a> <a href="http://www.99zihua.com/gallery-30--0--7--grid.html">7</a> <a href="http://www.99zihua.com/gallery-30--0--8--grid.html">8</a> <a href="http://www.99zihua.com/gallery-30--0--9--grid.html">9</a> <a href="http://www.99zihua.com/gallery-30--0--10--grid.html">10</a> ... <a href="http://www.99zihua.com/gallery-30--0--10--grid.html">10</a> <a href="http://www.99zihua.com/gallery-30--0--11--grid.html">11</a> </td>
-                            <td style="padding-right:20px"><a href="http://www.99zihua.com/gallery-30--0--2--grid.html" class="next" onmouseover="this.className = 'onnext'" onmouseout="this.className = 'next'" title="下一页">下一页</a> </td>
+                            <td><span class="unprev" title="Trang đầu">Trang đầu</span> </td>
+                            <td class="pagernum">
+                                <strong class="pagecurrent">1</strong>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#">7</a>
+                                <a href="#">8</a>
+                                <a href="#">9</a>
+                                <a href="#">10</a> ... 
+                                <a href="#">10</a>
+                                <a href="#">11</a>
+                            </td>
+                            <td style="padding-right:20px">
+                                <a href="#" class="next" onmouseover="this.className = 'onnext'" onmouseout="this.className = 'next'" title="Tiếp theo">Tiếp theo</a> </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
         <div class="clear"></div>
-        <div id="bdshare" class="bdshare_b" style="line-height: 12px; float:right;"> <img src="static/images/type-button-1.jpg?cdnversion=20120831"> <a class="shareCount" title="累计分享3次">3</a> </div>
-        <script type="text/javascript" id="bdshare_js" data="type=button&amp;uid=2487812" src="static/js/bds_s_v2.js?cdnversion=415524"></script>
-        <script type="text/javascript">
-            document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date() / 3600000);
-        </script>
+        <div id="bdshare" class="bdshare_b" style="line-height:12px;float:right;">
+            <ul class="social">
+                <li><a title="Google +" class="gg" target="blank" rel="publisher" href="$">Google+</a> </li>
+                <li><a rel="nofollow" href="#" target="blank" class="rss">RSS</a> </li>
+                <li><a rel="nofollow" href="#" target="blank" class="lki">LinkedIn</a> </li>
+                <li><a class="fb" rel="nofollow" title="Facebook page" target="blank" href="#">Facebook</a> </li>
+            </ul>
+        </div>
         <div class="clear"></div>
         <div class="custom">
             <div class="tab">
                 <ul>
-                    <li class="cur">资讯</li>
-                    <li>热帖</li>
-                    <li>人物释义</li>
+                    <li class="cur">Thông tin</li>
+                    <li>Bài viết nổi bật</li>
+                    <li>Mô tả</li>
                 </ul>
             </div>
             <div class="page clearfix cur">

@@ -26,7 +26,7 @@ class product extends MY_Controller {
         
         $config['base_url'] = base_url() . $items . "/";
         $config['total_rows'] = $this->model_product->count_all($id);
-        $config['per_page'] = 40;
+        $config['per_page'] = 15;
         $config['uri_segment'] = 2;
         $config['next_link'] = "Next";
         $config['prev_link'] = "Prev";

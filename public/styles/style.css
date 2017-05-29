@@ -3768,3 +3768,36 @@ ul.fast-login li {
 .bottom-top h3 {
     display: none
 }
+.social li a {
+    background: url(../images/social.png) no-repeat;
+    float: left;
+    height: 19px;
+    margin-right: 5px;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -9999px;
+    width: 19px
+}
+.social .fb {
+    background-position: 0 -20px
+}
+.social .gg {
+    background-position: -48px -20px
+}
+.social .rss {
+    background-position: -74px -20px
+}
+.social .lki {
+    background-position: -103px -20px
+}
+.social li {
+    float: right;
+    list-style-type: none
+}
+.social {
+    width: 100%;
+    float: left;
+    height: auto;
+    padding: 0;
+    padding-top: 0
+}
