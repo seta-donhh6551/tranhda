@@ -28,33 +28,25 @@ class product extends MY_Controller {
         $config['total_rows'] = $this->model_product->count_all($id);
         $config['per_page'] = 15;
         $config['uri_segment'] = 2;
-        $config['next_link'] = "Next";
-        $config['prev_link'] = "Prev";
-//        $config['prev_tag_open'] = '<div class="product-page">';
-//        $config['prev_tag_close'] = '</div>';
-//        $config['first_tag_open'] = '<div class="product-page">';
-//        $config['first_tag_close'] = '</div>';
-//        $config['last_tag_open'] = '<div class="product-page">';
-//        $config['last_tag_close'] = '</div>';
-//        $config['num_tag_open'] = '<div class="product-page">';
-//        $config['num_tag_close'] = '</div>';
-//        $config['cur_tag_open'] = '<div class="product-page">';
-//        $config['cur_tag_close'] = '</div>';
-//        $config['next_tag_open'] = '<div class="product-page">';
-//        $config['next_tag_close'] = '</div>';
-//        $config['cur_tag_open'] = '<div class="product-page selected">';
-//        $config['cur_tag_close'] = '</div>';
+        $config['next_link'] = "Tiếp";
+        $config['prev_link'] = "Trước";
+        $config['first_link'] = "Trang đầu";
+        $config['last_link'] = "Trang cuối";
+        //$config['use_page_numbers'] = true;
+        //$config['page_query_string'] = true;
+        $config['cur_tag_open'] = '<strong class="pagecurrent">';
+        $config['cur_tag_close'] = '</strong>';
         
         $this->load->library("pagination", $config);
         
-        $start = (int)$this->uri->segment(2);
+        $start = (int)$this->uri->segment(2, 0);
+        
         $data['support'] = $this->support();
         $data['config'] = $this->config();
         $data['listcate'] = $this->listcate();
         $data['link'] = base_url() . uri_string() . ".html";
         
         $data['listProducts'] = $this->model_product->listall($id, $config['per_page'], $start);
-        //$this->debug($data['listProducts']);
         foreach($data['listcate'] as $category) 
         {
             $product[] = $this->model_product->getproduct($category['cate_id'], 4);
@@ -137,9 +129,10 @@ class product extends MY_Controller {
         $this->load->view("product/available/layout", $data);
     }
 
-    public function view() {
-        $id1 = $this->uri->segment(2);
-        $id = array_pop(explode('-', $id1));
+    public function view()
+    {
+        $item = $this->uri->segment(1);
+        $id = array_pop(explode('-', $item));
         $data['support'] = $this->support();
         $data['access'] = $this->access();
         $data['online'] = $this->online();
@@ -148,23 +141,32 @@ class product extends MY_Controller {
         $data['link'] = base_url() . uri_string() . ".html";
         $data['result'] = $this->model_product->getdata($id);
         //$this->debug($data['result']);
-        if ($data['result'] == NULL) {
+        if ($data['result'] == null) {
             redirect(base_url());
-            exit();
         }
+        
         $data['listintro'] = $this->listintro();
         $data['related'] = $this->model_product->related($id, $data['result']['cate_id']);
         $data['pronew'] = $this->model_product->listnew();
-        //$this->debug($data['related']);
+        
         $data['category'] = $this->model_product->category($data['result']['cate_id']);
         foreach ($data['listcate'] as $category) {
             $product[] = $this->model_product->getproduct($category['cate_id'], 4);
             $listcago[$category['cate_id']] = $this->listcago($category['cate_id']);
         }
+        
         $data['listall'] = array("listcagotop" => $listcago);
-        $data['title'] = $data['result']['pro_name'];
-        //$data['rewrite'] = $data['catename']['cate_rewrite'];
-        $this->load->view("product/detail/layout", $data);
+        
+        
+        $data['dataPage'] = array(
+            'title' => $data['result']['pro_name'],
+            'keywords' => $data['result']['pro_keys'],
+            'description' => $data['result']['pro_des']
+        );
+        
+        $data['template'] = 'product/detail';
+        
+        $this->load->view("layout", $data);
     }
 
 }

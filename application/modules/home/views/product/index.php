@@ -72,30 +72,13 @@
                 </div>
                 <?php } } ?>
             </div>
+            <div style="height:15px;clear:both"></div>
             <div class="clearfix">
-                <table class="pager floatRight">
-                    <tbody>
-                        <tr>
-                            <td><span class="unprev" title="Trang đầu">Trang đầu</span> </td>
-                            <td class="pagernum">
-                                <strong class="pagecurrent">1</strong>
-                                <a href="#">2</a>
-                                <a href="#">3</a>
-                                <a href="#">4</a>
-                                <a href="#">5</a>
-                                <a href="#">6</a>
-                                <a href="#">7</a>
-                                <a href="#">8</a>
-                                <a href="#">9</a>
-                                <a href="#">10</a> ... 
-                                <a href="#">10</a>
-                                <a href="#">11</a>
-                            </td>
-                            <td style="padding-right:20px">
-                                <a href="#" class="next" onmouseover="this.className = 'onnext'" onmouseout="this.className = 'next'" title="Tiếp theo">Tiếp theo</a> </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="pager floatRight" style="width: 200px">
+                    <div class="pagernum">
+                    <?php echo $this->pagination->create_links(); ?>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="clear"></div>

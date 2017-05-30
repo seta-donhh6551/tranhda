@@ -55,7 +55,7 @@
 				$this->db->where("tbl_products.cago_id",$id);
 			}
             $this->db->join('tbl_categorie', 'tbl_categorie.id = tbl_products.cago_id', 'left');
-			$this->db->limit($off,$start);
+			$this->db->limit($off, $start);
             $this->db->order_by("tbl_products.cate_id","asc");
             
 			return $this->db->get($this->_table)->result_array();

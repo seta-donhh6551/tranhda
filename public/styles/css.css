@@ -1149,7 +1149,7 @@ ul.switchable-triggerBox li.active {
 	background:url(../images/bz_bg2.gif) left top no-repeat;
 	border-top:2px solid #CC0000;
 	border-bottom:1px solid #ececec;
-	margin-top:10px;
+	margin-top:20px;
 }
 .bz .bzmid {
 	float:left;
@@ -1458,6 +1458,7 @@ h2.textcenter {
 }
 .GoodsInfoWrap .goodsname {
 	color:#333;
+    text-transform:uppercase;
 	font-size:17px;
 	padding:0 0 10px;
 	float:left;
@@ -2236,6 +2237,7 @@ DIV.rank_list li.cuurent SPAN.num {
 	text-decoration:none;
 }
 .pager .pagernum a {
+    border-radius:3px;
 	border: 1px solid #DBDBDB;
 	background-color:#FFF;
 }
@@ -2243,6 +2245,7 @@ DIV.rank_list li.cuurent SPAN.num {
 	border-color:#CA0809;
 	background-color:#cc0000;
 	color:#fff;
+    border-radius:3px;
 }
 .pager .prev, .pager .next, .pager .onprev, .pager .onnext, .pager .unprev, .pager .unnext {
 	display:block;
