@@ -45,21 +45,21 @@
                                                             <tr>
                                                                 <td class="" img_id="47486">
                                                                     <div class="uparrow"></div>
-                                                                    <a href="#" target="_blank" imginfo="{small:'http://localhost/tranhda/uploads/products/tranh-da-quy-tung-hac-dien-nien.jpg',big:'http://localhost/tranhda/uploads/products/tranh-da-quy-tung-hac-dien-nien.jpg'}">
-                                                                        <img src="<?php echo base_url().'uploads/products/thumb/'.$result['pro_image'] ?>" alt="李立辰 四尺斗方《豆蔻年华》 河北著名仕女画家" width="55" height="55" />
+                                                                    <a href="#" target="_blank" imginfo="{small:'<?php echo base_url().'uploads/products/'.$result['pro_image'] ?>',big:'<?php echo base_url().'uploads/products/'.$result['pro_image'] ?>'}">
+                                                                        <img src="<?php echo base_url().'uploads/products/thumb/'.$result['pro_image'] ?>" alt="<?php echo $result['pro_name']; ?>" width="55" height="55" />
                                                                     </a>
                                                                 </td>
                                                                 <td img_id="47487">
                                                                     <div class="uparrow"></div>
-                                                                    <a href="http://www.99zihua.com/product-15265-47487-viewpic.html" target="_blank" imginfo="{small:'http://www.99zihua.com/images/goods/20170518/5a10d025e9fab680.jpg',big:'http://www.99zihua.com/images/goods/20170518/c092bdee7e1ed494.jpg'}"> <img src="http://www.99zihua.com/images/goods/20170518/7d4d19527677d6df.jpg" alt="李立辰 四尺斗方《豆蔻年华》 河北著名仕女画家" width="55" height="55"> </a>
+                                                                    <a href="#" target="_blank" imginfo="{small:'',big:'http://www.99zihua.com/images/goods/20170518/c092bdee7e1ed494.jpg'}"> <img src="http://www.99zihua.com/images/goods/20170518/7d4d19527677d6df.jpg" alt="李立辰 四尺斗方《豆蔻年华》 河北著名仕女画家" width="55" height="55"> </a>
                                                                 </td>
                                                                 <td img_id="47488">
                                                                     <div class="uparrow"></div>
-                                                                    <a href="http://www.99zihua.com/product-15265-47488-viewpic.html" target="_blank" imginfo="{small:'http://www.99zihua.com/images/goods/20170518/5ab0de3aa7d4d78c.jpg',big:'http://www.99zihua.com/images/goods/20170518/b13b6a7e592a3525.jpg'}"> <img src="http://www.99zihua.com/images/goods/20170518/9f195d88e2f93bca.jpg" alt="李立辰 四尺斗方《豆蔻年华》 河北著名仕女画家" width="55" height="55"> </a>
+                                                                    <a href="#" target="_blank" imginfo="{small:'http://www.99zihua.com/images/goods/20170518/5ab0de3aa7d4d78c.jpg',big:'http://www.99zihua.com/images/goods/20170518/b13b6a7e592a3525.jpg'}"> <img src="http://www.99zihua.com/images/goods/20170518/9f195d88e2f93bca.jpg" alt="李立辰 四尺斗方《豆蔻年华》 河北著名仕女画家" width="55" height="55"> </a>
                                                                 </td>
                                                                 <td img_id="47489">
                                                                     <div class="uparrow"></div>
-                                                                    <a href="http://www.99zihua.com/product-15265-47489-viewpic.html" target="_blank" imginfo="{small:'http://www.99zihua.com/images/goods/20170518/83a05609270b8cea.jpg',big:'http://www.99zihua.com/images/goods/20170518/fe952e817787ae15.jpg'}"> <img src="http://www.99zihua.com/images/goods/20170518/b20955115fe550b5.jpg" alt="李立辰 四尺斗方《豆蔻年华》 河北著名仕女画家" width="55" height="55"> </a>
+                                                                    <a href="#" target="_blank" imginfo="{small:'http://www.99zihua.com/images/goods/20170518/83a05609270b8cea.jpg',big:'http://www.99zihua.com/images/goods/20170518/fe952e817787ae15.jpg'}"> <img src="http://www.99zihua.com/images/goods/20170518/b20955115fe550b5.jpg" alt="李立辰 四尺斗方《豆蔻年华》 河北著名仕女画家" width="55" height="55"> </a>
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -278,7 +278,7 @@
                     <input type="hidden" name="goods[pmt_id]" value="">
                     <div class="btnBar clearfix" style="visibility: visible;">
                         <div class="floatLeft">
-                            <input class="actbtn btn-buy" value="加入购物车" type="submit" style="cursor: not-allowed;">
+                            <input class="actbtn btn-buy" value="加入购物车" type="submit">
                             <input class="actbtn btn-notify" value="缺货登记" type="submit" style="display: none;"> </div>
                         <div class="floatleft">
                             <ul>
@@ -299,23 +299,23 @@
             <div class="subPart">
     <div class="leftPart left">
         <div class="goods-detail-tab clearfix">
-            <div class="goodsDetailTab active"><span>商品详情</span>
+            <div class="goodsDetailTab active"><span>Mô tả</span>
             </div>
-            <div class="goodsDetailTab"><span>保真承诺</span>
+            <div class="goodsDetailTab"><span>Cam kết</span>
             </div>
-            <div class="goodsDetailTab"><span>购买方式</span>
+            <div class="goodsDetailTab"><span>Mua hàng</span>
             </div>
-            <div class="goodsDetailTab"><span>装裱说明</span>
+            <div class="goodsDetailTab"><span>Lắp đặt</span>
             </div>
-            <div class="goodsDetailTab"><span>商品评论 (<em>0</em>)</span>
+            <div class="goodsDetailTab"><span>Đánh giá (<em>0</em>)</span>
             </div>
         </div>
         <div class="clear"></div>
-        <div class="section pdtdetail shangp" tab="商品详情">
+        <div class="section pdtdetail shangp" tab="Mô tả sản phẩm">
             <!--<div class="goodsprop_ultra clearfix">  </div>-->
             <div class="body indent uarea-output " id="goods-intro">
                 <div style="text-align: left;">
-                    <a href="http://www.99zihua.com/brand-6.html" target="_blank"> <img src="../../images//20100814/a5e551ae2a4648c0.jpg" storager="images//20100814/a5e551ae2a4648c0.jpg|//20100814/a5e551ae2a4648c0.jpg|fs_storage">
+                    <a href="#" target="_blank"> <img src="../../images//20100814/a5e551ae2a4648c0.jpg" storager="images//20100814/a5e551ae2a4648c0.jpg|//20100814/a5e551ae2a4648c0.jpg|fs_storage">
                     </a>
                 </div>
                 <ul>
@@ -359,29 +359,31 @@
         <div class="section pdtdetail hbg zb" tab="Cam kết">
             <h2><span class="leftt">Cam kết</span><a class="topp" href="#"></a></h2>
             <div class="body" id="goods-rels">
-                <div class="tabbz tabshbg"></div>
+                <div class="tabbz tabshbg">
+                    Nhằm hướng tới phục vụ khách hàng ngày càng tốt hơn và chuyên nghiệp hơn, Tranh gạo việt luôn hoàn thiện trong các chính sách không chỉ về sản phẩm. giá cả mà còn về phong cách phục vụ cùng các giá trị gia tăng. Và tất cả những triết lý trong kinh doanh của Tranh gạo việt luôn được toàn thể cán bộ nhân viên thấu hiểu và coi đó là phương châm làm việc.
+                </div>
             </div>
         </div>
-        <div class="section pdtdetail hbg zb" tab="装裱说明">
-            <h2><span class="leftt">装裱说明</span><a class="topp" href="#"></a></h2>
+        <div class="section pdtdetail hbg zb" tab="Hướng dẫn lắp đặt">
+            <h2><span class="leftt">Hướng dẫn lắp đặt</span><a class="topp" href="#"></a></h2>
             <div class="body" id="goods-rels">
-                <div class="tabzb tabshbg"></div>
+                <div class="tabzb tabshbg">
+                    Hướng dẫn lắp đặt tranh
+                </div>
             </div>
         </div>
     </div>
     <div class="rightPart right">
-        <a target="_blank" href="http://www.99zihua.com/lou.html" rel="nofollow"> <img src="http://www.99zihua.com/images/sy/shouc.jpg" alt="限时捡漏专场">
+        <a target="_blank" href="#">
+            <img src="<?php echo base_url(); ?>/public/images/tranh-da-quy-chim-va-hoa.jpg" alt="Tranh đá quý đôi chim và hoa" />
         </a>
         <div class="he10"></div>
         <a target="_blank" href="http://www.99zihua.com/huodong/mingjia/"> <img src="http://www.99zihua.com/images/sy/shoucf.jpg" alt="收藏级书画家推荐">
         </a>
         <div class="he10"></div>
-        <a target="_blank" href="http://www.99zihua.com/zhufu.html"> <img src="http://www.99zihua.com/images/sy/pwei.jpg" alt="新春祝福书法">
-        </a>
-        <div class="he10"></div>
         <div class="zhcs arttj">
             <h3>
-                <span class="left">Tìm theo vị trí</span>
+                <span class="left">Vị Trí Treo Tranh</span>
                 <span class="right more_r"><a target="_blank" href="#">Xem thêm&gt;&gt;</a></span>
             </h3>
             <div class="zhr">
@@ -398,7 +400,7 @@
         <div class="ph phcp">
             <div class="border1 hotrank">
                 <div class="border-top">
-                    <h3>同类作品推荐</h3> </div>
+                    <h3>Sản Phẩm Tương Tự</h3> </div>
                 <div class="border-body">
                     <div class="GoodsListWrap GoodsList GoodsShow">
                         <table width="100%" cellspacing="0" cellpadding="0" border="0">
@@ -498,28 +500,28 @@
         <div class="hotrank zhbk phcp">
             <div class="border3 ">
                 <div class="border-top">
-                    <h3>字画百科</h3> </div>
+                    <h3>Danh Mục</h3> </div>
                 <div class="border-body">
                     <ul>
-                        <li><a href="http://artist.99zihua.com/ysxc/2017/0117/4531.html" target="_blank" title="郑庆年艺术相册">郑庆年艺术相册</a>
+                        <li><a href="#" target="_blank" title="郑庆年艺术相册">郑庆年艺术相册</a>
                         </li>
-                        <li><a href="http://artist.99zihua.com/ysxc/2017/0117/4530.html" target="_blank" title="刘金河艺术相册">刘金河艺术相册</a>
+                        <li><a href="#" target="_blank" title="刘金河艺术相册">刘金河艺术相册</a>
                         </li>
-                        <li><a href="http://www.99zihua.com/zihuabk/ghzx/4529.html" target="_blank" title="著名书法大家刘艺先生病逝 享年86岁">著名书法大家刘艺先生病逝 享年86岁</a>
+                        <li><a href="#" target="_blank" title="著名书法大家刘艺先生病逝 享年86岁">著名书法大家刘艺先生病逝 享年86岁</a>
                         </li>
-                        <li><a href="http://www.99zihua.com/zihuabk/ghzx/4528.html" target="_blank" title="“秋水为神”刘艺书法脉络展亮相中国美术馆">“秋水为神”刘艺书法脉络展亮相中国美术馆</a>
+                        <li><a href="#" target="_blank" title="“秋水为神”刘艺书法脉络展亮相中国美术馆">“秋水为神”刘艺书法脉络展亮相中国美术馆</a>
                         </li>
-                        <li><a href="http://www.99zihua.com/zihuabk/zhsc/4526.html" target="_blank" title="王连笙：水墨丹青中品味东方独特韵味">王连笙：水墨丹青中品味东方独特韵味</a>
+                        <li><a href="#" target="_blank" title="王连笙：水墨丹青中品味东方独特韵味">王连笙：水墨丹青中品味东方独特韵味</a>
                         </li>
-                        <li><a href="http://artist.99zihua.com/ysxc/2016/1101/4525.html" target="_blank" title="王洪锡艺术相册">王洪锡艺术相册</a>
+                        <li><a href="#" target="_blank" title="王洪锡艺术相册">王洪锡艺术相册</a>
                         </li>
-                        <li><a href="http://www.99zihua.com/zihuabk/zhjs/4524.html" target="_blank" title="王洪锡诗词节选">王洪锡诗词节选</a>
+                        <li><a href="#" target="_blank" title="王洪锡诗词节选">王洪锡诗词节选</a>
                         </li>
-                        <li><a href="http://www.99zihua.com/zihuabk/zhjs/4523.html" target="_blank" title="王洪锡文：关于草书多样性的思考">王洪锡文：关于草书多样性的思考</a>
+                        <li><a href="#" target="_blank" title="王洪锡文：关于草书多样性的思考">王洪锡文：关于草书多样性的思考</a>
                         </li>
-                        <li><a href="http://artist.99zihua.com/gw/4522/" target="_blank" title="王洪锡">王洪锡</a>
+                        <li><a href="#" target="_blank" title="王洪锡">王洪锡</a>
                         </li>
-                        <li><a href="http://artist.99zihua.com/ysxc/2016/1101/4521.html" target="_blank" title="李立辰艺术相册">李立辰艺术相册</a>
+                        <li><a href="#" target="_blank" title="李立辰艺术相册">李立辰艺术相册</a>
                         </li>
                     </ul>
                 </div>
