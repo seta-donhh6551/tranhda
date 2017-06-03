@@ -26,19 +26,19 @@
             <div id="goods-viewer">
                 <div style="width:442px;float:left">
                     <div class="goodspic">
-                        <div class="goods-detail-pic" style=" width:420px;height:420px;" bigpicsrc="<?php echo base_url().'uploads/products/'.$result['pro_image'] ?>">
-                            <a href="#" target="_blank" style="color:#fff;font-size:263px; width:420px;height:420px;font-size:367.5px;;font-family:Arial;display:table-cell; vertical-align:middle;">
-                                <img src="<?php echo base_url().'uploads/products/'.$result['pro_image'] ?>" alt="<?php echo $result['pro_name']; ?>" style="vertical-align:middle;" />
+                        <div class="goods-detail-pic" style=" width:420px;height:390px;" bigpicsrc="<?php echo base_url().'uploads/products/'.$result['pro_image'] ?>">
+                            <a href="#" target="_blank" style="color:#fff;width:420px;height:390px;display:table-cell;vertical-align:middle;">
+                                <img src="<?php echo base_url().'uploads/products/'.$result['pro_image'] ?>" alt="<?php echo $result['pro_name']; ?>" style="width:400px;" />
                             </a>
-                            <div class="goods-pic-magnifier" style="width: 109px; height: 70px; visibility: visible; zoom: 1; opacity: 0.3; top: 46px; left: 0px;"> &nbsp; </div>
+                            <div class="goods-pic-magnifier" style="width: 109px;height:70px;visibility:visible; zoom:1; opacity: 0.3; top: 40%; left: 40%;"> &nbsp; </div>
                         </div>
                         <div class="picscroll">
-                            <table class="picscroll">
+                            <table class="picscroll" style="width:100%">
                                 <tbody>
                                     <tr>
-                                        <td width="5%" class="scrollarrow toleft" title="向左" style="visibility: visible;">&nbsp; </td>
-                                        <td width="90%">
-                                            <div class="goods-detail-pic-thumbnail pics">
+                                        <td width="90%" style="text-align:center;font-weight:bold;color:#f00">
+                                            Kéo chuột để xem ảnh lớn
+                                            <div class="goods-detail-pic-thumbnail pics" style="display:none">
                                                 <center>
                                                     <table>
                                                         <tbody>
@@ -49,31 +49,16 @@
                                                                         <img src="<?php echo base_url().'uploads/products/thumb/'.$result['pro_image'] ?>" alt="<?php echo $result['pro_name']; ?>" width="55" height="55" />
                                                                     </a>
                                                                 </td>
-                                                                <td img_id="47487">
-                                                                    <div class="uparrow"></div>
-                                                                    <a href="#" target="_blank" imginfo="{small:'',big:'http://www.99zihua.com/images/goods/20170518/c092bdee7e1ed494.jpg'}"> <img src="http://www.99zihua.com/images/goods/20170518/7d4d19527677d6df.jpg" alt="李立辰 四尺斗方《豆蔻年华》 河北著名仕女画家" width="55" height="55"> </a>
-                                                                </td>
-                                                                <td img_id="47488">
-                                                                    <div class="uparrow"></div>
-                                                                    <a href="#" target="_blank" imginfo="{small:'http://www.99zihua.com/images/goods/20170518/5ab0de3aa7d4d78c.jpg',big:'http://www.99zihua.com/images/goods/20170518/b13b6a7e592a3525.jpg'}"> <img src="http://www.99zihua.com/images/goods/20170518/9f195d88e2f93bca.jpg" alt="李立辰 四尺斗方《豆蔻年华》 河北著名仕女画家" width="55" height="55"> </a>
-                                                                </td>
-                                                                <td img_id="47489">
-                                                                    <div class="uparrow"></div>
-                                                                    <a href="#" target="_blank" imginfo="{small:'http://www.99zihua.com/images/goods/20170518/83a05609270b8cea.jpg',big:'http://www.99zihua.com/images/goods/20170518/fe952e817787ae15.jpg'}"> <img src="http://www.99zihua.com/images/goods/20170518/b20955115fe550b5.jpg" alt="李立辰 四尺斗方《豆蔻年华》 河北著名仕女画家" width="55" height="55"> </a>
-                                                                </td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
                                                 </center>
                                             </div>
                                         </td>
-                                        <td width="5%" class="scrollarrow toright" title="向右" style="visibility: visible;">&nbsp; </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <a rel="nofollow" href="http://www.99zihua.com/product-15265-47486-viewpic.html" target="_blank" onclick="_open(this.href);return false;"> <img class="chakan" src="statics/transparent.gif" alt="查看大图" style="width:101px;height:26px;background-image:url(statics/icons.gif);background-repeat:no-repeat;background-position:0 -121px;"> </a>
-                        <div id="bdshare" class="bdshare_b" style="line-height: 12px;"> <img src="http://bdimg.share.baidu.com/static/images/type-button-1.jpg?cdnversion=20120831"> </div>
                         <script>
                             window.addEvent('domready', function() {
                                 var picThumbnailItems = $$('#goods-viewer .goods-detail-pic-thumbnail td a');
@@ -199,23 +184,25 @@
                     </div>
                 </div>
                 <div style="width:518px;float:left">
-                    <h1 class="goodsname"><?php echo $result['pro_name']; ?></h1>
-                    <a class="zzgw" href="#" target="_blank"><img src="/statics/zzgw.gif" alt="Không biết"></a>
+                    <h1 class="goodsname"><?php echo $galleryType.' - '.$result['pro_name']; ?></h1>
+                    <a class="zzgw" href="#" target="_blank"><img src="<?php echo base_url(); ?>/public/images/facebook-icon.png" alt="Chia sẻ lên Facebook"></a>
                     <div class="clear"></div>
                     <!-- -->
                     <ul class="goods-price list">
-                        <li> <span class="f14">Giá tiền ：</span> <span class="price1"> <?php echo $result['pro_price'] ? number_format($result['pro_price']).' VND' : 'Liên hệ'; ?> </span></li>
+                        <li> <span class="f14">Giá tiền ：</span> <span class="price1" style="font-size:16px"> <?php echo $result['pro_price'] ? number_format($result['pro_price']).' VND' : 'Liên hệ'; ?> </span></li>
                         <li> <span>Kích thước：</span> <?php echo $result['pro_size']; ?> Cm</li>
                         <li><span class="redc">Vận chuyển ：</span> Miễn phí vận chuyển bán kính 3km</li>
                     </ul>
                     <ul class="goodsprops clearfix">
                         <li>
                             <span>Xuất xứ ：&nbsp;</span>
-                            <span class="zuoz">Lục yên - Yên bái</span>
+                            <span class="zuoz">
+                                <?php echo $madeIn; ?>
+                            </span>
                         </li>
                         <li><span>Mã sản phẩm ：&nbsp;</span><span id="goodsBn"><?php echo $result['pro_code']; ?></span></li>
                         <li><span>Bảo hành ：</span>&nbsp;<span class="redc">Tranh đá quý bảo hành 10 năm</span></li>
-                        <li><span>Loại tranh ：</span>&nbsp;<a href="#"><span class="redc">Tranh đá quý</span></a></li>
+                        <li><span>Loại tranh ：</span>&nbsp;<span class="redc"><?php echo $galleryType; ?></span></li>
                     </ul>
                     <div class="hightline ">
                         <div class="hightbox">
@@ -224,7 +211,7 @@
                                     <tbody>
                                         <tr>
                                             <td width="80%">
-                                                <h4 class="spec-tip"><em>  请选择：  </em> <span>装裱要求</span> </h4> </td>
+                                                <h4 class="spec-tip"><em> Tùy chọn：</em> <span>Tranh bao gồm khung, hộp đựng</span> </h4> </td>
                                             <td align="right" width="10%">
                                                 <div id="view-products-list">
                                                     <a rel="nofollow" href="#" target="_blank">Hướng dẫn lắp đặt»»</a>
@@ -237,18 +224,18 @@
                                 <table width="100%">
                                     <tbody>
                                         <tr class="spec-item specItem">
-                                            <td style="width:10%; white-space:nowrap;padding-right:10px;vertical-align:middle;"><span><em>装裱要求</em>：</span>
+                                            <td style="width:10%; white-space:nowrap;padding-right:10px;vertical-align:middle;"><span><em>Kèm theo tranh</em>：</span>
                                             </td>
                                             <td>
                                                 <ul>
                                                     <li>
-                                                        <a rel="nofollow" href="http://www.99zihua.com/product-15265-3@|12816887451-index.html" specvid="12816887451" specid="3"> <span><nobr>画芯(托裱)</nobr></span> <i title="点击取消选择">&nbsp;</i> </a>
+                                                        <a rel="nofollow" href="javascript:void(0)" specvid="12816887451" specid="3"> <span><nobr>Khung và hộp đựng</nobr></span> <i title="点击取消选择">&nbsp;</i> </a>
                                                     </li>
                                                     <li>
-                                                        <a rel="nofollow" href="http://www.99zihua.com/product-15265-3@|12816887462-index.html" specvid="12816887462" specid="3"> <span><nobr>镜片(成品)</nobr></span> <i title="点击取消选择">&nbsp;</i> </a>
+                                                        <a rel="nofollow" href="javascript:void(0)" specvid="12816887462" specid="3"> <span><nobr>Khung tranh</nobr></span> <i title="点击取消选择">&nbsp;</i> </a>
                                                     </li>
                                                     <li>
-                                                        <a rel="nofollow" href="http://www.99zihua.com/product-15265-3@|12816887463-index.html" specvid="12816887463" specid="3"> <span><nobr>裱轴(成品)</nobr></span> <i title="点击取消选择">&nbsp;</i> </a>
+                                                        <a rel="nofollow" href="javascript:void(0)" specvid="12816887463" specid="3"> <span><nobr>Hộp đựng</nobr></span> <i title="点击取消选择">&nbsp;</i> </a>
                                                     </li>
                                                 </ul>
                                             </td>
@@ -274,12 +261,8 @@
                             </div>
                         </div>
                     </div>
-                    <input type="hidden" name="goods[goods_id]" value="15265">
-                    <input type="hidden" name="goods[pmt_id]" value="">
-                    <div class="btnBar clearfix" style="visibility: visible;">
-                        <div class="floatLeft">
-                            <input class="actbtn btn-buy" value="加入购物车" type="submit">
-                            <input class="actbtn btn-notify" value="缺货登记" type="submit" style="display: none;"> </div>
+                    <div class="btnBar clearfix" style="visibility:visible;">
+                        <div class="floatLeft">  <input class="actbtn btn-buy" value="加入购物车" type="submit" style="cursor: not-allowed;"> <input class="actbtn btn-notify" value="缺货登记" type="submit" style="display: none;">  </div>
                         <div class="floatleft">
                             <ul>
                                 <li class="daog" style="position: relative;">
@@ -289,7 +272,7 @@
                                     <img id="wxan" border="0" src="/statics/wxan.png" alt="微信咨询" style="cursor: pointer" onmouseover="$('ewm').show();" onmouseout="$('ewm').hide();" />
                                     <img id="ewm" class="ewm" border="0" src="/statics/ewm.png" alt="微信咨询二维码" style="display:none; position: absolute; top: 15px; left: 80px;" />
                                 </li>
-                                <li class="star-off" title="李立辰" 四尺斗方《豆蔻年华》="" 河北著名仕女画家=""> <a rel="nofollow" href="http://www.99zihua.com/passport-login.html" class="btn-fav">收藏此作品</a> </li>
+                                <li class="star-off"><a rel="nofollow" href="#" class="btn-fav">收藏此作品</a> </li>
                             </ul>
                         </div>
                     </div>
@@ -313,51 +296,30 @@
         <div class="clear"></div>
         <div class="section pdtdetail shangp" tab="Mô tả sản phẩm">
             <!--<div class="goodsprop_ultra clearfix">  </div>-->
-            <div class="body indent uarea-output " id="goods-intro">
-                <div style="text-align: left;">
-                    <a href="#" target="_blank"> <img src="../../images//20100814/a5e551ae2a4648c0.jpg" storager="images//20100814/a5e551ae2a4648c0.jpg|//20100814/a5e551ae2a4648c0.jpg|fs_storage">
-                    </a>
-                </div>
+            <div class="body indent uarea-output" id="goods-intro">
                 <ul>
-                    <li>品名：富贵久鱼</li>
-                    <li>作者：周升达</li>
-                    <li>尺寸：137×69cm(画芯)</li>
-                    <li>材质：宣纸</li>
-                    <li>创作年代：2017年</li>
-                    <li>库存状态：<span style="color: rgb(255, 0, 0);background-color: rgb(238, 238, 238);">未裱画芯 购买时请选择是否装裱 装裱时间一般需要3-4天</span>
-                    </li>
+                    <li>Tên：<?php echo $result['pro_name'] ?></li>
+                    <li>Tác giả：<?php echo $madeIn; ?></li>
+                    <li>Kích thước：<?php echo $result['pro_size'] ?>cm (Chưa bao gôm khung)</li>
+                    <li>Chất liệu：<?php echo $material; ?></li>
+                    <li>Năm sản xuất：<?php echo date('Y'); ?></li>
                 </ul>
-                <p><font color="#cc0000">【<span style="font-weight:bold;">作品简评</span>】</font>《富贵久鱼》幅绘上了九条鲤鱼的图像。“九”取长长久久之意。“鱼”取其万事如意。九条可爱的鱼在嬉戏，寓决吉祥如意。 是最常见的家居客厅风水字画。 </p>
+                <p><font color="#cc0000">【<span style="font-weight:bold;">Giới thiệu</span>】</font><?php echo $result['pro_info']; ?></p>
                 <p style="text-align: center;">
-                    <a target="_blank" href="http://www.99zihua.com/images/goods/20170413/6a733a850b8fe0d3.jpg"> <img src="http://www.99zihua.com/images/goods/20170413/6a733a850b8fe0d3.jpg" width="696" height="347">
+                    <a target="_blank" href="<?php echo base_url().'uploads/products/'.$result['pro_image'] ?>">
+                        <img src="<?php echo base_url().'uploads/products/'.$result['pro_image'] ?>" alt="<?php echo $result['pro_name']; ?>" style="max-width:696px;" />
                     </a>
                 </p>
-                <p style="text-align: center;"> <img src="http://www.99zihua.com/images//20130806/1f9cf5d752daefa3.gif">
-                </p>
+                <div style="padding:0px 4px">
+                    <h3>Vị Trí Treo Tranh</h3>
+                    <p>Tùy vào từng mẫu tranh</p>
+                </div>
                 <p align="center"> <img src="http://www.99zihua.com/99zihuahome888/upload/gpic/20170413/8f497b59d6f10786c9d482f52ef425c1.jpg">
                 </p>
             </div>
         </div>
-        <script>
-            var checkFormReqs = function(e) {
-                e = new Event(e);
-                var _form = $(e.target);
-                var reqs = $$(_form.getElements('input[type=text]'), _form.getElements('textarea'));
-                if (reqs.some(function(req) {
-                        if (!req.get('required') && !req.get('vtype').contains('required')) return;
-                        if (req.getValue().trim() == '') {
-                            req.focus();
-                            MessageBox.error('请完善表单必填项<sup>*</sup>');
-                            return true;
-                        }
-                        return false;
-                    })) {
-                    e.stop();
-                }
-            };
-        </script>
         <div class="section pdtdetail hbg zb" tab="Cam kết">
-            <h2><span class="leftt">Cam kết</span><a class="topp" href="#"></a></h2>
+            <h2><span class="leftt">Phương châm</span><a class="topp" href="#"></a></h2>
             <div class="body" id="goods-rels">
                 <div class="tabbz tabshbg">
                     Nhằm hướng tới phục vụ khách hàng ngày càng tốt hơn và chuyên nghiệp hơn, Tranh gạo việt luôn hoàn thiện trong các chính sách không chỉ về sản phẩm. giá cả mà còn về phong cách phục vụ cùng các giá trị gia tăng. Và tất cả những triết lý trong kinh doanh của Tranh gạo việt luôn được toàn thể cán bộ nhân viên thấu hiểu và coi đó là phương châm làm việc.
@@ -378,7 +340,8 @@
             <img src="<?php echo base_url(); ?>/public/images/tranh-da-quy-chim-va-hoa.jpg" alt="Tranh đá quý đôi chim và hoa" />
         </a>
         <div class="he10"></div>
-        <a target="_blank" href="http://www.99zihua.com/huodong/mingjia/"> <img src="http://www.99zihua.com/images/sy/shoucf.jpg" alt="收藏级书画家推荐">
+        <a target="_blank" href="#">
+            <img src="<?php echo base_url(); ?>/public/images/tranh-da-quy-doi-trong-mai.jpg" alt="Tranh đá quý tự nhiên">
         </a>
         <div class="he10"></div>
         <div class="zhcs arttj">

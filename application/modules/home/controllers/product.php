@@ -140,9 +140,27 @@ class product extends MY_Controller {
         $data['listcate'] = $this->listcate();
         $data['link'] = base_url() . uri_string() . ".html";
         $data['result'] = $this->model_product->getdata($id);
-        //$this->debug($data['result']);
         if ($data['result'] == null) {
             redirect(base_url());
+        }
+        
+        switch($data['result']['cago_id']){
+            case "1" : $data['galleryType'] = "Tranh đá quý";
+                $data['madeIn'] = "Lục Yên - Yên Bái";
+                $data['material'] = "Đá quý";
+                break;
+            case "2" : $data['galleryType'] = "Tranh gạo";
+                $data['madeIn'] = "<a href='http://tranhgaoviet.com' target='_blank'>Tranh Gạo Việt</a>";
+                $data['material'] = "Gạo rang";
+                break;
+            case "3" : $data['galleryType'] = "Tranh cát";
+                $data['madeIn'] = "<a href='http://tranhcathanoi.com/' target='_blank'>Tranh Cát Hà Nội</a>";
+                $data['material'] = "Hạt cát";
+                break;
+            default : $data['galleryType'] = "Tranh đá quý";
+                $data['madeIn'] = "Lục Yên - Yên Bái";
+                 $data['material'] = "Đá quý";
+                break;
         }
         
         $data['listintro'] = $this->listintro();
@@ -157,9 +175,8 @@ class product extends MY_Controller {
         
         $data['listall'] = array("listcagotop" => $listcago);
         
-        
         $data['dataPage'] = array(
-            'title' => $data['result']['pro_name'],
+            'title' => $data['galleryType'].' - '.$data['result']['pro_name'],
             'keywords' => $data['result']['pro_keys'],
             'description' => $data['result']['pro_des']
         );
