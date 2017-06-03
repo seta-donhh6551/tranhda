@@ -164,7 +164,7 @@ class product extends MY_Controller {
         }
         
         $data['listintro'] = $this->listintro();
-        $data['related'] = $this->model_product->related($id, $data['result']['cate_id']);
+        $data['relatedProducts'] = $this->model_product->related($id, $data['result']['cate_id']);
         $data['pronew'] = $this->model_product->listnew();
         
         $data['category'] = $this->model_product->category($data['result']['cate_id']);

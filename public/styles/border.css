@@ -23,6 +23,7 @@ display:none;
 .ph td{border-bottom:1px solid #efefef; }
 .ph a.pic{width:57px; height:57px;float:left;margin-bottom:7px;}
 .ph img{ border:1px solid #dfd6cb;}
+.relatedPro{border-bottom:1px solid #efefef;}
 .hotrank h3{
     line-height: 30px;
     padding-left: 13px;
@@ -32,7 +33,7 @@ display:none;
 .ph .info{ float:left; width:128px; padding-left:10px;text-align:left;}
 .ph .textcenter{ text-align:left;}
 .ph .price{color:#9a9a9a;}
-.phcp .info{ float:left; width:103px; padding-left:10px;text-align:left;}
+.phcp .info{float:left; width:103px; padding-left:10px;text-align:left;padding-top:12px}
 .phcp img{ border:1px solid #efefef;}
 .phcp a{ color:#777;}
 .phcp .hotrank .border-top, .zhbk .border-top{background:url(right_tab_bg.jpg) left top repeat-x;border:1px solid #ddd; border-bottom:none;}

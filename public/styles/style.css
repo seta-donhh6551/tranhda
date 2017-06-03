@@ -1927,7 +1927,7 @@ hr.space {
 }
 .goods-spec a i {
     display: none;
-    background: url(item_sel.gif) no-repeat 0 0;
+    background: url(../images/item_sel.gif) no-repeat 0 0;
     height: 12px;
     overflow: hidden;
     width: 12px;
@@ -2230,7 +2230,7 @@ table.spec-item td {
 .GoodsInfoWrap .btnBar .btn-fav,
 .GoodsInfoWrap .btnBar .btn-send {
     margin: 0;
-    background: url(btn_ginfo_links.gif) no-repeat;
+    background: url(../images/btn_ginfo_links.gif) no-repeat;
     padding: 3px 0 0 18px;
 }
 .GoodsInfoWrap .btnBar .star-on .btn-fav {
@@ -2362,7 +2362,7 @@ table.spec-item td {
 }
 .picscroll .scrollarrow {
     cursor: pointer;
-    background: url(scollpicarrow.gif) no-repeat 0 50%;
+    background: url(../images/scollpicarrow.gif) no-repeat 0 50%;
     visibility: hidden;
 }
 .picscroll .pics {
@@ -3596,7 +3596,7 @@ ul.fast-login li {
 }
 .GoodsShow .pic {
     display: block;
-    margin: 5px auto 0 auto;
+    margin: 15px auto 0 5px;
 }
 .GoodsShow .info {
     padding: 3px;

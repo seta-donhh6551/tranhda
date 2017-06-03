@@ -28,26 +28,38 @@
                     <div class="goodspic">
                         <div class="goods-detail-pic" style=" width:420px;height:390px;" bigpicsrc="<?php echo base_url().'uploads/products/'.$result['pro_image'] ?>">
                             <a href="#" target="_blank" style="color:#fff;width:420px;height:390px;display:table-cell;vertical-align:middle;">
-                                <img src="<?php echo base_url().'uploads/products/'.$result['pro_image'] ?>" alt="<?php echo $result['pro_name']; ?>" style="width:400px;" />
+                                <img src="<?php echo base_url().'uploads/products/'.$result['pro_image'] ?>" alt="<?php echo $result['pro_name']; ?>" style="width:420px;" />
                             </a>
                             <div class="goods-pic-magnifier" style="width: 109px;height:70px;visibility:visible; zoom:1; opacity: 0.3; top: 40%; left: 40%;"> &nbsp; </div>
                         </div>
                         <div class="picscroll">
-                            <table class="picscroll" style="width:100%">
+                            <table class="picscroll">
                                 <tbody>
                                     <tr>
-                                        <td width="90%" style="text-align:center;font-weight:bold;color:#f00">
-                                            Kéo chuột để xem ảnh lớn
-                                            <div class="goods-detail-pic-thumbnail pics" style="display:none">
+                                        <td width="5%" class="scrollarrow toleft" title="Pre" style="visibility: visible;">&nbsp; </td>
+                                        <td width="90%">
+                                            <div class="goods-detail-pic-thumbnail pics">
                                                 <center>
                                                     <table>
                                                         <tbody>
                                                             <tr>
-                                                                <td class="" img_id="47486">
+                                                                <td class="current" img_id="46995">
                                                                     <div class="uparrow"></div>
-                                                                    <a href="#" target="_blank" imginfo="{small:'<?php echo base_url().'uploads/products/'.$result['pro_image'] ?>',big:'<?php echo base_url().'uploads/products/'.$result['pro_image'] ?>'}">
+                                                                    <a href="javascript:void(0)" imginfo="{small:'<?php echo base_url().'uploads/products/'.$result['pro_image'] ?>',big:'<?php echo base_url().'uploads/products/'.$result['pro_image'] ?>'}">
                                                                         <img src="<?php echo base_url().'uploads/products/thumb/'.$result['pro_image'] ?>" alt="<?php echo $result['pro_name']; ?>" width="55" height="55" />
                                                                     </a>
+                                                                </td>
+                                                                <td img_id="46998">
+                                                                    <div class="uparrow"></div>
+                                                                    <a href="javascript:void(0)" imginfo="{small:'http://www.99zihua.com/images/goods/20170502/240736f3f8ac85aa.jpg',big:'http://www.99zihua.com/images/goods/20170502/22e7be41365ce0fb.jpg'}"> <img src="http://www.99zihua.com/images/goods/20170502/2a0a19f6f108fa9a.jpg" alt="吴显刚 大三尺《放棹听风图》 贵州七星关美协主席" width="55" height="55"> </a>
+                                                                </td>
+                                                                <td img_id="46996">
+                                                                    <div class="uparrow"></div>
+                                                                    <a href="javascript:void(0)" imginfo="{small:'http://www.99zihua.com/images/goods/20170502/1a3440dc0d9bd7d9.jpg',big:'http://www.99zihua.com/images/goods/20170502/753165d94de46a7a.jpg'}"> <img src="http://www.99zihua.com/images/goods/20170502/efc7caf94e62ace6.jpg" alt="吴显刚 大三尺《放棹听风图》 贵州七星关美协主席" width="55" height="55"> </a>
+                                                                </td>
+                                                                <td img_id="46997">
+                                                                    <div class="uparrow"></div>
+                                                                    <a href="javascript:void(0)" target="_blank" imginfo="{small:'http://www.99zihua.com/images/goods/20170502/6936159257303c2f.jpg',big:'http://www.99zihua.com/images/goods/20170502/d0c7687eb261f6cf.jpg'}"> <img src="http://www.99zihua.com/images/goods/20170502/ca83fbcf80b64107.jpg" alt="吴显刚 大三尺《放棹听风图》 贵州七星关美协主席" width="55" height="55"> </a>
                                                                 </td>
                                                             </tr>
                                                         </tbody>
@@ -55,6 +67,7 @@
                                                 </center>
                                             </div>
                                         </td>
+                                        <td width="5%" class="scrollarrow toright" title="Next" style="visibility: visible;">&nbsp; </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -88,7 +101,7 @@
                                         e.stop();
                                         this.fireEvent('selected');
                                     },
-                                    'mouseenter': function() {
+                                    'hover': function() {
                                         if (this.getParent('td').hasClass('current')) return;
                                         var imgInfo = JSON.decode(this.get('imgInfo'));
                                         goodsDetailPic.src = imgInfo['small'];
@@ -220,7 +233,6 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <input type="hidden" name="goods[product_id]" value="" disabled="true">
                                 <table width="100%">
                                     <tbody>
                                         <tr class="spec-item specItem">
@@ -229,31 +241,15 @@
                                             <td>
                                                 <ul>
                                                     <li>
-                                                        <a rel="nofollow" href="javascript:void(0)" specvid="12816887451" specid="3"> <span><nobr>Khung và hộp đựng</nobr></span> <i title="点击取消选择">&nbsp;</i> </a>
+                                                        <a rel="nofollow" href="javascript:void(0)"> <span><nobr>Khung và hộp đựng</nobr></span> <i title="点击取消选择">&nbsp;</i> </a>
                                                     </li>
                                                     <li>
-                                                        <a rel="nofollow" href="javascript:void(0)" specvid="12816887462" specid="3"> <span><nobr>Khung tranh</nobr></span> <i title="点击取消选择">&nbsp;</i> </a>
+                                                        <a rel="nofollow" href="javascript:void(0)"> <span><nobr>Khung tranh</nobr></span> <i title="点击取消选择">&nbsp;</i> </a>
                                                     </li>
                                                     <li>
-                                                        <a rel="nofollow" href="javascript:void(0)" specvid="12816887463" specid="3"> <span><nobr>Hộp đựng</nobr></span> <i title="点击取消选择">&nbsp;</i> </a>
+                                                        <a rel="nofollow" href="javascript:void(0)"> <span><nobr>Hộp đựng</nobr></span> <i title="点击取消选择">&nbsp;</i> </a>
                                                     </li>
                                                 </ul>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="buyinfo" style="display:none;">
-                                <table width="auto">
-                                    <tbody>
-                                        <tr>
-                                            <td><span>购买数量：</span>
-                                            </td>
-                                            <td>
-                                                <div class="Numinput">
-                                                    <input type="text" name="goods[num]" size="5" value="1"> <span class="numadjust increase"></span> <span class="numadjust decrease"></span> </div>
-                                            </td>
-                                            <td><span style="display:none;">&nbsp;&nbsp;(库存<span class="store">3</span>)</span>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -262,15 +258,17 @@
                         </div>
                     </div>
                     <div class="btnBar clearfix" style="visibility:visible;">
-                        <div class="floatLeft">  <input class="actbtn btn-buy" value="加入购物车" type="submit" style="cursor: not-allowed;"> <input class="actbtn btn-notify" value="缺货登记" type="submit" style="display: none;">  </div>
+                        <div class="floatLeft">
+                            <input class="actbtn btn-buy" value="Thêm vào giỏ hàng" type="submit" style="cursor:pointer;">
+                        </div>
                         <div class="floatleft">
                             <ul>
                                 <li class="daog" style="position: relative;">
                                     <a rel="nofollow" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1291357583&amp;site=qq&amp;menu=yes">
                                         <img border="0" src="http://wpa.qq.com/pa?p=2:1291357583:51" alt="点击这里给我发消息" title="点击这里给我发消息">
                                     </a>
-                                    <img id="wxan" border="0" src="/statics/wxan.png" alt="微信咨询" style="cursor: pointer" onmouseover="$('ewm').show();" onmouseout="$('ewm').hide();" />
-                                    <img id="ewm" class="ewm" border="0" src="/statics/ewm.png" alt="微信咨询二维码" style="display:none; position: absolute; top: 15px; left: 80px;" />
+                                    <img id="wxan" border="0" src="<?php echo base_url(); ?>/public/images/wxan.png" alt="微信咨询" style="cursor: pointer" onmouseover="$('ewm').show();" onmouseout="$('ewm').hide();" />
+                                    <img id="ewm" class="ewm" border="0" src="<?php echo base_url(); ?>/public/images/ewm.png" alt="微信咨询二维码" style="display:none; position: absolute; top: 15px; left: 80px;" />
                                 </li>
                                 <li class="star-off"><a rel="nofollow" href="#" class="btn-fav">收藏此作品</a> </li>
                             </ul>
@@ -311,10 +309,11 @@
                     </a>
                 </p>
                 <div style="padding:0px 4px">
-                    <h3>Vị Trí Treo Tranh</h3>
-                    <p>Tùy vào từng mẫu tranh</p>
+                    <h3>VỊ TRÍ TREO TRANH</h3>
+                    <p>Tùy vào từng mẫu tranh mà bạn nên treo đúng vị trí để làm toát lên được vẻ đẹp của ngôi nhà</p>
                 </div>
-                <p align="center"> <img src="http://www.99zihua.com/99zihuahome888/upload/gpic/20170413/8f497b59d6f10786c9d482f52ef425c1.jpg">
+                <p align="center">
+                    <img src="http://www.99zihua.com/99zihuahome888/upload/gpic/20170413/8f497b59d6f10786c9d482f52ef425c1.jpg">
                 </p>
             </div>
         </div>
@@ -363,97 +362,28 @@
         <div class="ph phcp">
             <div class="border1 hotrank">
                 <div class="border-top">
-                    <h3>Sản Phẩm Tương Tự</h3> </div>
+                    <h3>Sản Phẩm Tương Tự</h3>
+                </div>
                 <div class="border-body">
-                    <div class="GoodsListWrap GoodsList GoodsShow">
-                        <table width="100%" cellspacing="0" cellpadding="0" border="0">
-                            <tbody>
-                                <tr valign="top">
-                                    <td width="100%;" class="item textcenter" id="item-6369">
-                                        <a class="pic" style="width:80px;height:80px;" href="http://www.99zihua.com/product-14564.html" target="_blank"> <img style="width:80px;height:80px;" alt="凌雪 四尺《金玉满堂》 北京美协会员" src="http://www.99zihua.com/images/goods/20170209/989ad601154e61db.jpg"> </a>
-                                        <div class="info">
-                                            <div style="height:54px;line-height:18px;" class="gname"> <a title="凌雪 四尺《金玉满堂》 北京美协会员" href="http://www.99zihua.com/product-14564.html">凌雪 四尺《金玉满堂》 北京美协会员</a> </div>
-                                            <div class="clearfix">
-                                                <div class="price textcenter"><em class="price1">￥560</em>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr valign="top">
-                                    <td width="100%;" class="item textcenter" id="item-6369">
-                                        <a class="pic" style="width:80px;height:80px;" href="http://www.99zihua.com/product-10103.html" target="_blank"> <img style="width:80px;height:80px;" alt="张春奇四尺九鱼图《彩云追月》徐悲鸿纪念馆艺术中心理事" src="http://www.99zihua.com/images/goods/20150126/93c23cbdfc7ef9b8.jpg"> </a>
-                                        <div class="info">
-                                            <div style="height:54px;line-height:18px;" class="gname"> <a title="张春奇四尺九鱼图《彩云追月》徐悲鸿纪念馆艺术中心理事" href="http://www.99zihua.com/product-10103.html">张春奇四尺九鱼图《彩云追月》徐悲鸿纪念馆艺术中心理事</a> </div>
-                                            <div class="clearfix">
-                                                <div class="price textcenter"><em class="price1">￥2800</em>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr valign="top">
-                                    <td width="100%;" class="item textcenter" id="item-6369">
-                                        <a class="pic" style="width:80px;height:80px;" href="http://www.99zihua.com/product-15037.html" target="_blank"> <img style="width:80px;height:80px;" alt="【已售】凌雪 三尺《金玉满堂》 北京美协会员" src="http://www.99zihua.com/images/goods/20170420/5147e49cfa240b8e.jpg"> </a>
-                                        <div class="info">
-                                            <div style="height:54px;line-height:18px;" class="gname"> <a title="【已售】凌雪 三尺《金玉满堂》 北京美协会员" href="http://www.99zihua.com/product-15037.html">【已售】凌雪 三尺《金玉满堂》 北京美协会员</a> </div>
-                                            <div class="clearfix">
-                                                <div class="price textcenter"><em class="price1">￥360</em>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr valign="top">
-                                    <td width="100%;" class="item textcenter" id="item-6369">
-                                        <a class="pic" style="width:80px;height:80px;" href="http://www.99zihua.com/product-8243.html" target="_blank"> <img style="width:80px;height:80px;" alt="【已售】黑龙江民族书画院副院长齐根石三尺《神仙世界》" src="http://www.99zihua.com/images/goods/20131202/53d02594e8d892dd.jpg"> </a>
-                                        <div class="info">
-                                            <div style="height:54px;line-height:18px;" class="gname"> <a title="【已售】黑龙江民族书画院副院长齐根石三尺《神仙世界》" href="http://www.99zihua.com/product-8243.html">【已售】黑龙江民族书画院副院长齐根石三尺《神仙世界》</a> </div>
-                                            <div class="clearfix">
-                                                <div class="price textcenter"><em class="price1">￥0</em>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr valign="top">
-                                    <td width="100%;" class="item textcenter" id="item-6369">
-                                        <a class="pic" style="width:80px;height:80px;" href="http://www.99zihua.com/product-6371.html" target="_blank"> <img style="width:80px;height:80px;" alt="【已售】当代著名禅意画家周自豪三尺斗方《中华太极图》(询价)" src="http://www.99zihua.com/images/goods/20130423/4825abbcacfd24bd.jpg"> </a>
-                                        <div class="info">
-                                            <div style="height:54px;line-height:18px;" class="gname"> <a title="【已售】当代著名禅意画家周自豪三尺斗方《中华太极图》(询价)" href="http://www.99zihua.com/product-6371.html">【已售】当代著名禅意画家周自豪三尺斗方《中华太极图》(询价)</a> </div>
-                                            <div class="clearfix">
-                                                <div class="price textcenter"><em class="price1">￥0</em>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr valign="top">
-                                    <td width="100%;" class="item textcenter" id="item-6369">
-                                        <a class="pic" style="width:80px;height:80px;" href="http://www.99zihua.com/product-14180.html" target="_blank"> <img style="width:80px;height:80px;" alt="南海禅寺 妙林居士 三尺《跃过龙门便成龙》" src="http://www.99zihua.com/images/goods/20161220/f392b03d3b53d096.jpg"> </a>
-                                        <div class="info">
-                                            <div style="height:54px;line-height:18px;" class="gname"> <a title="南海禅寺 妙林居士 三尺《跃过龙门便成龙》" href="http://www.99zihua.com/product-14180.html">南海禅寺 妙林居士 三尺《跃过龙门便成龙》</a> </div>
-                                            <div class="clearfix">
-                                                <div class="price textcenter"><em class="price1">￥1200</em>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr valign="top">
-                                    <td width="100%;" class="item textcenter" id="item-6369">
-                                        <a class="pic" style="width:80px;height:80px;" href="http://www.99zihua.com/product-14959.html" target="_blank"> <img style="width:80px;height:80px;" alt="周升达 四尺《富贵久鱼》 中国画院国画组长（询价）" src="http://www.99zihua.com/images/goods/20170413/8e888f384d832268.jpg"> </a>
-                                        <div class="info">
-                                            <div style="height:54px;line-height:18px;" class="gname"> <a title="周升达 四尺《富贵久鱼》 中国画院国画组长（询价）" href="http://www.99zihua.com/product-14959.html">周升达 四尺《富贵久鱼》 中国画院国画组长（询价）</a> </div>
-                                            <div class="clearfix">
-                                                <div class="price textcenter"><em class="price1">￥0</em>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="GoodsListWrap GoodsList GoodsShow" style="border:1px solid #e2e2e2;">
+                        <?php if(isset($relatedProducts)){ ?>
+                        <?php foreach($relatedProducts as $relatedPro){ ?>
+                        <div class="relatedPro">
+                            <a class="pic" style="width:80px;height:65px;" href="<?php echo base_url().$relatedPro['pro_rewrite']."-".$relatedPro['pro_id']; ?>.html">
+                                <img style="width:80px;" alt="<?php echo $relatedPro['pro_name']; ?>" src="<?php echo base_url()."uploads/products/thumb/".$relatedPro['pro_image']; ?>" />
+                            </a>
+                            <div class="info">
+                                <div class="gname">
+                                    <a title="<?php echo $relatedPro['pro_name']; ?>" href="<?php echo base_url().$relatedPro['pro_rewrite']."-".$relatedPro['pro_id']; ?>.html"><?php echo $relatedPro['pro_name']; ?></a>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="price textcenter"><em class="price1"><?php echo $relatedPro['pro_price'] ? number_format($relatedPro['pro_price']).' VND' : 'Liên hệ'; ?></em>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="clear:left"></div>
+                        </div>
+                        <?php } } ?>
                     </div>
                 </div>
                 <div class="border-bot"></div>

@@ -96,7 +96,7 @@
 			$this->db->where("cate_id",$cateid);
 			$this->db->where("pro_id !=",$id);
 			$this->db->order_by("pro_id","random");
-			$this->db->limit(15);
+			$this->db->limit(5);
 			return $this->db->get($this->_table)->result_array();
 		}
 	}
