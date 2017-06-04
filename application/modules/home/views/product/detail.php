@@ -72,7 +72,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <script>
+                        <script type="text/javascript">
                             window.addEvent('domready', function() {
                                 var picThumbnailItems = $$('#goods-viewer .goods-detail-pic-thumbnail td a');
                                 if (!picThumbnailItems.length) return;

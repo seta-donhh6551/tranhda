@@ -80,28 +80,24 @@
                     <h3>Xem nhiều nhất</h3> </div>
                 <div class="border-body">
                     <div class="GoodsListWrap GoodsList GoodsShow">
-                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                            <tbody>
-                                <?php if(isset($listGems)) { ?>
-                                <?php foreach($listGems as $gemItem){ ?>
-                                <tr valign="top">
-                                    <td width="100%;" class="item textcenter">
-                                        <a href="<?php echo base_url().$gemItem['pro_rewrite']."-".$gemItem['pro_id']; ?>.html" class="pic">
-                                            <img src="<?php echo base_url().'uploads/products/thumb/'.$gemItem['pro_image'] ?>" alt="<?php echo $gemItem['pro_name']; ?>" title="<?php echo $gemItem['pro_name']; ?>" width="55" />
-										</a>
-                                        <div class="info">
-                                            <div class="gname">
-                                                <a href="<?php echo base_url().$gemItem['pro_rewrite']."-".$gemItem['pro_id']; ?>.html" title="<?php echo $gemItem['pro_name']; ?>">
-                                                    <?php echo $gemItem[ 'pro_name']; ?> </a>
-                                            </div>
-                                            <div class="clearfix">
-                                                <div class="price textcenter">Giá : <em class='price1'><?php echo $gemItem['pro_price'] ? number_format($gemItem['pro_price']).' VND' : 'Liên hệ'; ?></em> </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <?php } } ?> </tbody>
-                        </table>
+                        <?php if(isset($listGems)) { ?>
+                        <?php foreach($listGems as $gemItem){ ?>
+                        <div class="relatedPro">
+                            <a href="<?php echo base_url().$gemItem['pro_rewrite']."-".$gemItem['pro_id']; ?>.html" class="pic" style="height:50px;margin-bottom:0px">
+                                <img src="<?php echo base_url().'uploads/products/thumb/'.$gemItem['pro_image'] ?>" alt="<?php echo $gemItem['pro_name']; ?>" title="<?php echo $gemItem['pro_name']; ?>" width="55" />
+                            </a>
+                            <div class="info">
+                                <div class="gname">
+                                    <a href="<?php echo base_url().$gemItem['pro_rewrite']."-".$gemItem['pro_id']; ?>.html" title="<?php echo $gemItem['pro_name']; ?>">
+                                        <?php echo $gemItem[ 'pro_name']; ?> </a>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="price textcenter">Giá : <em class='price1'><?php echo $gemItem['pro_price'] ? number_format($gemItem['pro_price']).' VND' : 'Liên hệ'; ?></em> </div>
+                                </div>
+                            </div>
+                            <div style="clear:left"></div>
+                        </div>
+                        <?php } } ?>
                     </div>
                 </div>
                 <div class="border-bot"></div>
@@ -474,8 +470,18 @@
     <div class="zhuangs">
         <div class="zh_top">
             <div class="zhl">
-                <h2>Tranh Đá Quý</h2> </div>
-            <div class="zhr"> <a href="#">Phòng khách</a> <a href="#">Nhà hàng</a> <a href="#">Cửa vào</a> <a href="#">Phòng ngủ</a> <a href="#">Hành lang</a> <a href="#">Văn phòng</a> <a href="#">Khách sạn</a> <a href="#">Treo tường</a> </div>
+                <h2>Tranh Đá Quý</h2>
+            </div>
+            <div class="zhr">
+                <a href="#">Phòng khách</a>
+                <a href="#">Nhà hàng</a>
+                <a href="#">Cửa vào</a>
+                <a href="#">Phòng ngủ</a>
+                <a href="#">Hành lang</a>
+                <a href="#">Văn phòng</a>
+                <a href="#">Khách sạn</a>
+                <a href="#">Treo tường</a>
+            </div>
         </div>
         <div class="clear"></div>
         <div class="zh_midl"><img alt="Tranh đá quý lọ hoa" src="images/hoa-tuoi.jpg"> </div>
@@ -508,34 +514,20 @@
         <div class="zh_midr">
             <div class="border4 " id="widgets_16609">
                 <div class="border-top">
-                    <h3>Tranh đá quý nổi bật</h3> </div>
+                    <h3>Tranh đá quý đẹp</h3>
+                </div>
                 <div class="border-body">
                     <div class="rank_list">
-                        <ul id="max_sales">
-                            <li class="r1" id="r_widgets_166090" onclick="wa_widgets_16609.changeTableing(0)"><span class="num">1</span>
-                                <a href="#" target="_blank" title=""><img width="50" height="50" src="http://www.99zihua.com/images/goods/20151202/fc4a67cd5399a1a3.jpg" alt="">Những mẫu tranh phong cảnh treo phòng khách...</a>
-                                <p class="price"><span><em>￥860</em></span> </p>
+                        <ul class="max_sales">
+                            <?php if(isset($listGems)) { ?>
+                            <?php $i = 1; foreach($listGems as $key => $gemItem){ ?>
+                            <li class="r<?php echo $i; ?>" id="r_widgets_16609<?php echo $key; ?>" onmouseover="wa_widgets_16609.changeTableing(<?php echo $key; ?>)"><span class="num"><?php echo $i; ?></span>
+                                <a href="<?php echo base_url().$gemItem['pro_rewrite']."-".$gemItem['pro_id']; ?>.html">
+                                    <img width="50" src="<?php echo base_url().'uploads/products/thumb/'.$gemItem['pro_image'] ?>" alt="<?php echo $gemItem['pro_name']; ?>" /><?php echo $gemItem['pro_name']; ?>
+                                </a>
+                                <p class="price"><span><em><?php echo $gemItem['pro_price'] ? number_format($gemItem['pro_price']) : 'Liên hệ'; ?></em></span> </p>
                             </li>
-                            <li class="r2" id="r_widgets_166091" onclick="wa_widgets_16609.changeTableing(1)"><span class="num">2</span>
-                                <a href="#" target="_blank" title=""><img width="50" height="50" src="http://www.99zihua.com/images/goods/20131224/b395311c3c4d6f84.jpg" alt="">Những mẫu tranh phong cảnh treo phòng khách...</a>
-                                <p class="price"><span><em>￥3580</em></span> </p>
-                            </li>
-                            <li class="r3" id="r_widgets_166092" onclick="wa_widgets_16609.changeTableing(2)"><span class="num">3</span>
-                                <a href="#" target="_blank" title=""><img width="50" height="50" src="http://www.99zihua.com/images/goods/20160419/814eea8bcf313967.jpg" alt="">Những mẫu tranh phong cảnh treo phòng khách...</a>
-                                <p class="price"><span><em>￥2100</em></span> </p>
-                            </li>
-                            <li class="r4" id="r_widgets_166093" onclick="wa_widgets_16609.changeTableing(3)"><span class="num">4</span>
-                                <a href="#" target="_blank" title=""><img width="50" height="50" src="http://www.99zihua.com/images/goods/20150423/72e59c209226fbca.jpg" alt="">Những mẫu tranh phong cảnh treo phòng khách...</a>
-                                <p class="price"><span><em>￥0</em></span> </p>
-                            </li>
-                            <li class="r5" id="r_widgets_166094" onclick="wa_widgets_16609.changeTableing(4)"><span class="num">5</span>
-                                <a href="#" target="_blank" title=""><img width="50" height="50" src="http://www.99zihua.com/images/goods/20160719/203962a79a6c4ae0.jpg" alt="">Những mẫu tranh phong cảnh treo phòng khách...</a>
-                                <p class="price"><span><em>￥2000</em></span> </p>
-                            </li>
-                            <li class="r6" id="r_widgets_166095" onclick="wa_widgets_16609.changeTableing(5)"><span class="num">6</span>
-                                <a href="#" target="_blank" title=""><img width="50" height="50" src="http://www.99zihua.com/images/goods/20151202/112e831b351593c5.jpg" alt="">Những mẫu tranh phong cảnh treo phòng khách...</a>
-                                <p class="price"><span><em>￥630</em></span> </p>
-                            </li>
+                            <?php ++$i; } } ?>
                         </ul>
                     </div>
                     <script type="text/javascript">
@@ -601,8 +593,11 @@
     <div class="zhuangs sczh">
         <div class="zh_top">
             <div class="zhl">
-                <h2>Tranh Gạo</h2> </div>
-            <div class="zhr"><a href="#">Tranh gạo đẹp</a> <a href="#">Tranh gạo làm quà tặng</a> </div>
+                <h2>Tranh Gạo</h2>
+            </div>
+            <div class="zhr">
+                <a href="#">Tranh gạo đẹp</a> <a href="#">Tranh gạo làm quà tặng</a>
+            </div>
         </div>
         <div class="clear"></div>
         <div class="zh_midl">
@@ -637,34 +632,19 @@
         <div class="zh_midr">
             <div class="border4 " id="widgets_16615">
                 <div class="border-top">
-                    <h3>Tranh gạo bán chạy</h3> </div>
+                    <h3>Tranh tặng người nước ngoài</h3> </div>
                 <div class="border-body">
                     <div class="rank_list">
-                        <ul id="max_sales">
-                            <li class="r1" id="r_widgets_166150" onclick="wa_widgets_16615.changeTableing(0)"><span class="num">1</span>
-                                <a href="http://www.99zihua.com/product-11733.html" target="_blank" title="吴东小八尺聚宝盆山水画《源远流长》"><img width="50" height="50" src="http://www.99zihua.com/images/goods/20151109/c989be15e12ac326.jpg" alt="吴东小八尺聚宝盆山水画《源远流长》">吴东小八尺聚宝盆山水...</a>
-                                <p class="price"><span><em>￥1680</em></span> </p>
+                        <ul class="max_sales">
+                            <?php if(isset($listRices)) { ?>
+                            <?php $i = 1; foreach($listRices as $key => $riceItem){ ?>
+                            <li class="r<?php echo $i; ?>" id="r_widgets_16615<?php echo $key; ?>" onmouseover="wa_widgets_16615.changeTableing(<?php echo $key; ?>)"><span class="num"><?php echo $i; ?></span>
+                                <a href="<?php echo base_url().$riceItem['pro_rewrite']."-".$riceItem['pro_id']; ?>.html" title="<?php echo $riceItem[ 'pro_name']; ?>">
+                                    <img width="50" src="<?php echo base_url().'uploads/products/thumb/'.$riceItem['pro_image'] ?>" alt="<?php echo $riceItem[ 'pro_name']; ?>" /><?php echo $riceItem['pro_name']; ?>...
+                                </a>
+                                <p class="price"><span><em><?php echo $riceItem['pro_price'] ? number_format($riceItem['pro_price']) : 'Liên hệ'; ?></em></span> </p>
                             </li>
-                            <li class="r2" id="r_widgets_166151" onclick="wa_widgets_16615.changeTableing(1)"><span class="num">2</span>
-                                <a href="http://www.99zihua.com/product-12312.html" target="_blank" title="著名花鸟画家曲逸之六尺《天香图》"><img width="50" height="50" src="http://www.99zihua.com/images/goods/20160307/a5d6e43fc1475c6a.jpg" alt="著名花鸟画家曲逸之六尺《天香图》">著名花鸟画家曲逸之六...</a>
-                                <p class="price"><span><em>￥3700</em></span> </p>
-                            </li>
-                            <li class="r3" id="r_widgets_166152" onclick="wa_widgets_16615.changeTableing(2)"><span class="num">3</span>
-                                <a href="http://www.99zihua.com/product-13205.html" target="_blank" title="【已售】辽宁工美教授苗雨 四尺三开《荷香》师从吴冠中"><img width="50" height="50" src="http://www.99zihua.com/images/goods/20160718/37aff08363c81a4b.jpg" alt="【已售】辽宁工美教授苗雨 四尺三开《荷香》师从吴冠中">【已售】辽宁工美教授...</a>
-                                <p class="price"><span><em>￥2500</em></span> </p>
-                            </li>
-                            <li class="r4" id="r_widgets_166153" onclick="wa_widgets_16615.changeTableing(3)"><span class="num">4</span>
-                                <a href="http://www.99zihua.com/product-13108.html" target="_blank" title="北京美协凌雪四尺《花开富贵》"><img width="50" height="50" src="http://www.99zihua.com/images/goods/20160630/70a88add944ac241.jpg" alt="北京美协凌雪四尺《花开富贵》">北京美协凌雪四尺《花...</a>
-                                <p class="price"><span><em>￥560</em></span> </p>
-                            </li>
-                            <li class="r5" id="r_widgets_166154" onclick="wa_widgets_16615.changeTableing(4)"><span class="num">5</span>
-                                <a href="http://www.99zihua.com/product-13349.html" target="_blank" title="三峡大学教授向士平 四尺《青山环圣水 万籁共金声》"><img width="50" height="50" src="http://www.99zihua.com/images/goods/20160728/b599ee2c90b81eab.jpg" alt="三峡大学教授向士平 四尺《青山环圣水 万籁共金声》">三峡大学教授向士平...</a>
-                                <p class="price"><span><em>￥3800</em></span> </p>
-                            </li>
-                            <li class="r6" id="r_widgets_166155" onclick="wa_widgets_16615.changeTableing(5)"><span class="num">6</span>
-                                <a href="http://www.99zihua.com/product-13198.html" target="_blank" title="辽宁工美教授苗雨 四尺斗方《清香逸远》师从吴冠中"><img width="50" height="50" src="http://www.99zihua.com/images/goods/20160718/b9653942b5c82817.jpg" alt="辽宁工美教授苗雨 四尺斗方《清香逸远》师从吴冠中">辽宁工美教授苗雨...</a>
-                                <p class="price"><span><em>￥2500</em></span> </p>
-                            </li>
+                            <?php ++$i; } } ?>
                         </ul>
                     </div>
                     <script type="text/javascript">
@@ -707,11 +687,12 @@
                                 <div class="info">
                                     <div class="gname">
                                         <a href="<?php echo base_url().$riceItem['pro_rewrite']."-".$riceItem['pro_id']; ?>.html" title="<?php echo $riceItem['pro_name']; ?>">
-                                            <?php echo $riceItem[ 'pro_name']; ?> </a>
+                                            <?php echo $riceItem['pro_name']; ?>
+                                        </a>
                                     </div>
                                     <div class="clearfix">
                                         <div class="price textcenter">Size :
-                                            <?php echo $riceItem[ 'pro_size']; ?> cm
+                                            <?php echo $riceItem['pro_size']; ?> cm
                                         </div>
                                     </div>
                                     <div class="clearfix">
@@ -772,31 +753,16 @@
                     <h3>Tranh cát nổi bật</h3> </div>
                 <div class="border-body">
                     <div class="rank_list">
-                        <ul id="max_sales">
-                            <li class="r1" id="r_widgets_166210" onclick="wa_widgets_16621.changeTableing(0)"><span class="num">1</span>
-                                <a href="http://www.99zihua.com/product-11733.html" target="_blank" title="吴东小八尺聚宝盆山水画《源远流长》"><img width="50" height="50" src="http://www.99zihua.com/images/goods/20151109/c989be15e12ac326.jpg" alt="吴东小八尺聚宝盆山水画《源远流长》">吴东小八尺聚宝盆山水...</a>
-                                <p class="price"><span><em>￥1680</em></span> </p>
+                        <ul class="max_sales">
+                            <?php if(isset($listSand)) { ?>
+                            <?php $i = 1; foreach($listSand as $key => $sandItem){ ?>
+                            <li class="r<?php echo $i; ?>" id="r_widgets_16621<?php echo $key; ?>" onmouseover="wa_widgets_16621.changeTableing(<?php echo $key; ?>)"><span class="num"><?php echo $i; ?></span>
+                                <a href="<?php echo base_url().$sandItem['pro_rewrite']."-".$sandItem['pro_id']; ?>.html">
+                                    <img width="50" src="<?php echo base_url().'uploads/products/thumb/'.$sandItem['pro_image'] ?>" alt="<?php echo $sandItem['pro_name']; ?>" /><?php echo $sandItem['pro_name']; ?>
+                                </a>
+                                <p class="price"><span><em><?php echo $sandItem['pro_price'] ? number_format($sandItem['pro_price']) : 'Liên hệ'; ?></em></span> </p>
                             </li>
-                            <li class="r2" id="r_widgets_166211" onclick="wa_widgets_16621.changeTableing(1)"><span class="num">2</span>
-                                <a href="http://www.99zihua.com/product-12312.html" target="_blank" title="著名花鸟画家曲逸之六尺《天香图》"><img width="50" height="50" src="http://www.99zihua.com/images/goods/20160307/a5d6e43fc1475c6a.jpg" alt="著名花鸟画家曲逸之六尺《天香图》">著名花鸟画家曲逸之六...</a>
-                                <p class="price"><span><em>￥3700</em></span> </p>
-                            </li>
-                            <li class="r3" id="r_widgets_166212" onclick="wa_widgets_16621.changeTableing(2)"><span class="num">3</span>
-                                <a href="http://www.99zihua.com/product-13205.html" target="_blank" title="【已售】辽宁工美教授苗雨 四尺三开《荷香》师从吴冠中"><img width="50" height="50" src="http://www.99zihua.com/images/goods/20160718/37aff08363c81a4b.jpg" alt="【已售】辽宁工美教授苗雨 四尺三开《荷香》师从吴冠中">【已售】辽宁工美教授...</a>
-                                <p class="price"><span><em>￥2500</em></span> </p>
-                            </li>
-                            <li class="r4" id="r_widgets_166213" onclick="wa_widgets_16621.changeTableing(3)"><span class="num">4</span>
-                                <a href="http://www.99zihua.com/product-13349.html" target="_blank" title="三峡大学教授向士平 四尺《青山环圣水 万籁共金声》"><img width="50" height="50" src="http://www.99zihua.com/images/goods/20160728/b599ee2c90b81eab.jpg" alt="三峡大学教授向士平 四尺《青山环圣水 万籁共金声》">三峡大学教授向士平...</a>
-                                <p class="price"><span><em>￥3800</em></span> </p>
-                            </li>
-                            <li class="r5" id="r_widgets_166214" onclick="wa_widgets_16621.changeTableing(4)"><span class="num">5</span>
-                                <a href="http://www.99zihua.com/product-13198.html" target="_blank" title="辽宁工美教授苗雨 四尺斗方《清香逸远》师从吴冠中"><img width="50" height="50" src="http://www.99zihua.com/images/goods/20160718/b9653942b5c82817.jpg" alt="辽宁工美教授苗雨 四尺斗方《清香逸远》师从吴冠中">辽宁工美教授苗雨...</a>
-                                <p class="price"><span><em>￥2500</em></span> </p>
-                            </li>
-                            <li class="r6" id="r_widgets_166215" onclick="wa_widgets_16621.changeTableing(5)"><span class="num">6</span>
-                                <a href="http://www.99zihua.com/product-13470.html" target="_blank" title="著名工笔画家赵逸梅四尺斗方《喜上枝头》"><img width="50" height="50" src="http://www.99zihua.com/images/goods/20160810/79d5d74246f0c914.jpg" alt="著名工笔画家赵逸梅四尺斗方《喜上枝头》">著名工笔画家赵逸梅四...</a>
-                                <p class="price"><span><em>￥2800</em></span> </p>
-                            </li>
+                            <?php ++$i; } } ?>
                         </ul>
                     </div>
                     <script type="text/javascript">
