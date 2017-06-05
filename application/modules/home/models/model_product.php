@@ -60,8 +60,23 @@
             
 			return $this->db->get($this->_table)->result_array();
 		}
-		public function listcago($id){
-			$this->db->where("cate_id",$id);
+        
+        public function listProductSales($limit = 10)
+        {
+			$this->db->where("pro_sales", 1);
+			$this->db->limit($limit);
+            
+			return $this->db->get($this->_table)->result_array();
+		}
+        
+		public function listcago($id = null, $limit = null){
+            if($id){
+                $this->db->where("cate_id",$id);
+            }
+            if($limit){
+                $this->db->limit($limit);
+            }
+			
 			return $this->db->get($this->_categorie)->result_array();
 		}
 		public function listnews($id){

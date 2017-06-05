@@ -10,9 +10,10 @@
                     <div class="border-body">
                         <div class="GoodsCategoryWrap">
                             <ul class="kongjian">
-                                <li><a href="#" title="Tranh đá quý">Tranh đá quý</a> </li>
-                                <li><a href="#" title="Tranh gạo">Tranh gạo</a> </li>
-                                <li><a href="#" title="Tranh cát">Tranh cát</a> </li>
+                                <?php if(isset($listCategories)){ ?>
+                                <?php foreach($listCategories as $category){ ?>
+                                <li><a href="<?php echo base_url().'loai-tranh/'.$category['rewrite']; ?>.html" title="<?php echo $category['title']; ?>"><?php echo $category['name']; ?></a></li>
+                                <?php } } ?>
                             </ul>
                         </div>
                     </div>
@@ -24,14 +25,10 @@
                     <div class="border-body">
                         <div class="GoodsCategoryWrap">
                             <ul class="kongjian">
-                                <li><a href="#" title="Tranh treo phòng khách">Phòng khách</a> </li>
-                                <li><a href="#" title="Tranh cho treo hàng">Nhà hàng</a> </li>
-                                <li><a href="#" title="Tranh treo lối cửa vào">Cửa vào</a> </li>
-                                <li><a href="#" title="Tranh treo phòng ngủ">Phòng ngủ</a> </li>
-                                <li><a href="#" title="Tranh treo hàng lang">Hành lang</a> </li>
-                                <li><a href="#" title="Tranh treo văn phòng làm việc">Văn phòng</a> </li>
-                                <li><a href="#" title="Tranh treo cho nhà hàng khách sạn">Khách sạn</a> </li>
-                                <li><a href="#" title="Tranh treo tường">Treo tường</a> </li>
+                                <?php if(isset($listPositions)){ ?>
+                                <?php foreach($listPositions as $position){ ?>
+                                <li><a href="<?php echo base_url().'vi-tri/'.$position['rewrite']; ?>.html" title="<?php echo $position['title']; ?>"><?php echo $position['name']; ?></a></li>
+                                <?php } } ?>
                             </ul>
                         </div>
                     </div>
@@ -149,57 +146,74 @@
         <div class="LeftColumn">
             <link rel="stylesheet" href="<?php echo base_url();?>public/styles/style.min.css" type="text/css">
             <div class="gonggao1" id="gonggao1">
-                <p class="wk-lou-title">&nbsp;&nbsp;Khuyến<font color="#ca0204"></font>Mãi<a href="#" target="_blank">Xem thêm</a> </p>
+                <p class="wk-lou-title">&nbsp;&nbsp;Khuyến<font color="#ca0204"></font>Mãi<a href="<?php echo base_url(); ?>/san-pham-khuyen-mai.html">Xem thêm</a> </p>
                 <div class="wk-lou-time">
                     <div style="float:left;">Thời gian kết thúc</div>
                     <div id='end_time' style='float:left'></div>
                     <div style='float:left' id='hm'></div>
                 </div>
                 <ol class="switchable-content">
+                    <?php if(isset($listProductSales)) { ?>
+                    <?php foreach($listProductSales as $sales){ ?>
                     <li class="switchable-panel wk-switchable-panel">
-                        <a href="#" class="wk-a" target="_blank" rel="nofollow" alt="陈乐三尺《红透肌香》"> <img alt="陈乐三尺《红透肌香》" src="http://www.99zihua.com/images/goods/20141216/cc67cf02da876682.jpg"> </a>
-                        <p class="wk-lou-name" style="bottom: 20px;"> <a href="http://www.99zihua.com/lou.html" target="_blank">陈乐三尺《红透肌香》</a > </p> <p class="wk-lou-name"> <span>捡漏价<font>￥500</font> &nbsp;&nbsp; 原售价<del>￥900</del></span> </p> </li>  <li class="switchable-panel wk-switchable-panel" > <a href="http://www.99zihua.com/lou.html" class="wk-a" target="_blank" rel="nofollow" alt="著名山水画家王连笙 四尺《好山好水好风景》"> <img alt="著名山水画家王连笙 四尺《好山好水好风景》" src="http://www.99zihua.com/images/goods/20160408/3551de19ba6dc123.jpg" ></a>
-                            <p class="wk-lou-name" style="bottom: 20px;"> <a href="http://www.99zihua.com/lou.html" target="_blank">著名山水画家王连笙 四尺《好山好水好风景》</a > </p> <p class="wk-lou-name"> <span>捡漏价<font>￥4600</font> &nbsp;&nbsp; 原售价<del>￥6000</del></span> </p> </li>  <li class="switchable-panel wk-switchable-panel" > <a href="http://www.99zihua.com/lou.html" class="wk-a" target="_blank" rel="nofollow" alt="贵州七星关美协主席吴显刚 四尺三开《听松观云》"> <img alt="贵州七星关美协主席吴显刚 四尺三开《听松观云》" src="http://www.99zihua.com/images/goods/20160801/51165aa5c3c7d9c2.jpg" ></a>
-                                <p class="wk-lou-name" style="bottom: 20px;"> <a href="http://www.99zihua.com/lou.html" target="_blank">贵州七星关美协主席吴显刚 四尺三开《听松观云》</a > </p> <p class="wk-lou-name"> <span>捡漏价<font>￥3500</font> &nbsp;&nbsp; 原售价<del>￥4800</del></span> </p> </li>  <li class="switchable-panel wk-switchable-panel" > <a href="http://www.99zihua.com/lou.html" class="wk-a" target="_blank" rel="nofollow" alt="辽宁工美教授苗雨 四尺三开《映日荷花别样红》师从吴冠中"> <img alt="辽宁工美教授苗雨 四尺三开《映日荷花别样红》师从吴冠中" src="http://www.99zihua.com/images/goods/20150421/d6749c8f6084ffbd.jpg" ></a>
-                                    <p class="wk-lou-name" style="bottom: 20px;"> <a href="http://www.99zihua.com/lou.html" target="_blank">辽宁工美教授苗雨 四尺三开《映日荷花别样红》师从吴冠中</a > </p> <p class="wk-lou-name"> <span>捡漏价<font>￥2000</font> &nbsp;&nbsp; 原售价<del>￥2500</del></span> </p> </li>  <li class="switchable-panel wk-switchable-panel" > <a href="http://www.99zihua.com/lou.html" class="wk-a" target="_blank" rel="nofollow" alt="名家蒲家瑞三尺《秋色丹彩》"> <img alt="名家蒲家瑞三尺《秋色丹彩》" src="http://www.99zihua.com/images/goods/20160421/97252b7988a2105c.jpg" ></a>
-                                        <p class="wk-lou-name" style="bottom: 20px;"> <a href="http://www.99zihua.com/lou.html" target="_blank">名家蒲家瑞三尺《秋色丹彩》</a > </p> <p class="wk-lou-name"> <span>捡漏价<font>￥1900</font> &nbsp;&nbsp; 原售价<del>￥2500</del></span> </p> </li>  <li class="switchable-panel wk-switchable-panel" > <a href="http://www.99zihua.com/lou.html" class="wk-a" target="_blank" rel="nofollow" alt="河南著名画家曲逸之四尺斗方紫牡丹《紫玉含金》"> <img alt="河南著名画家曲逸之四尺斗方紫牡丹《紫玉含金》" src="http://www.99zihua.com/images/goods/20140109/5121286b27f06c5e.jpg" ></a>
-                                            <p class="wk-lou-name" style="bottom: 20px;"> <a href="http://www.99zihua.com/lou.html" target="_blank">河南著名画家曲逸之四尺斗方紫牡丹《紫玉含金》</a > </p> <p class="wk-lou-name"> <span>捡漏价<font>￥1000</font> &nbsp;&nbsp; 原售价<del>￥1500</del></span> </p> </li>  </ol> <a id="wk-prev"><img class="prev" src="http://www.99zihua.com/statics/1.gif"></a > <a id="wk-next"><img class="next" src="http://www.99zihua.com/statics/2.gif"></a > <ul class="switchable-triggerBox" style="display:none">  <li class=""></li>  <li class=""></li>  <li class=""></li>  <li class=""></li>  <li class=""></li>  <li class=""></li>  </ul> 
-								<script type="text/javascript">
-									new Switchable('gonggao1',{
-										effect:'scrollx',
-										autoplay:true,
-										duration:500,
-										interval:5000,
-										haslrbtn:true,  
-										prev:'.prev',  
-										next:'.next',
-										eventType:'mouse',
-										pauseOnHover:true
-									});
-								</script>
-								<script src="<?php echo base_url();?>public/scripts/countdown.js"></script>
-								<script type="text/javascript">
-									new countdown().one_init('end_time'); 		
-									function getHm(){
-										var tdiv = document.getElementById('end_time').innerHTML;
-										if(tdiv == '活动已结束.' || tdiv == '活动未开始.'){
-											document.getElementById('hm').innerHTML=" ";
-										}else{
-											setTimeout("getHm()",10); 		
-											var c=new Date();
-											var hm=((c.getMilliseconds())%100);
-											document.getElementById('hm').innerHTML="."+hm;
-										}			
-									}
-									setTimeout("getHm()",1000); 
-								</script> 
+                       <a href="<?php echo base_url().$sales['pro_rewrite']."-".$sales['pro_id']; ?>.html" class="wk-a" title="<?php echo $sales['pro_name']; ?>">
+                           <img alt="<?php echo $sales['pro_name']; ?>" src="<?php echo base_url().'uploads/products/thumb/'.$sales['pro_image'] ?>" />
+                       </a>
+                       <p class="wk-lou-name" style="bottom:20px;">
+                           <a href="<?php echo base_url(); ?>/san-pham-khuyen-mai.html">Sản phẩm khuyến mại</a >
+                       </p>
+                       <p class="wk-lou-name">
+                           <span>Giá <font><?php echo number_format($sales['pro_sales_price']); ?> VND</font> &nbsp;&nbsp; <del><?php echo number_format($sales['pro_price']); ?> VND</del></span>
+                       </p>
+                    </li>
+                    <?php } } ?>
+                </ol>
+                <a id="wk-prev"><img class="prev" src="<?php echo base_url(); ?>public/images/1.gif"></a >
+                <a id="wk-next"><img class="next" src="<?php echo base_url(); ?>public/images/2.gif"></a > 
+                <ul class="switchable-triggerBox" style="display:none">
+                   <li class=""></li>
+                   <li class=""></li>
+                   <li class=""></li>
+                   <li class=""></li>
+                   <li class=""></li>
+                   <li class=""></li>
+                </ul>
+                <script type="text/javascript">
+                    new Switchable('gonggao1',{
+                        effect:'scrollx',
+                        autoplay:true,
+                        duration:500,
+                        interval:5000,
+                        haslrbtn:true,  
+                        prev:'.prev',  
+                        next:'.next',
+                        eventType:'mouse',
+                        pauseOnHover:true
+                    });
+                </script>
+                <script src="<?php echo base_url();?>public/scripts/countdown.js"></script>
+                <script type="text/javascript">
+                    new countdown().one_init('end_time'); 		
+                    function getHm(){
+                        var tdiv = document.getElementById('end_time').innerHTML;
+                        if(tdiv == 'Đã kết thúc.' || tdiv == 'Không có khuyến mại.'){
+                            document.getElementById('hm').innerHTML=" ";
+                        }else{
+                            setTimeout("getHm()",10); 		
+                            var c=new Date();
+                            var hm=((c.getMilliseconds())%100);
+                            document.getElementById('hm').innerHTML="."+hm;
+                        }			
+                    }
+                    setTimeout("getHm()",1000); 
+                </script> 
 					</div> 
 					<div class="gonggao wk-lou-m-b">
 						<ul>
-                            <li><a href="#" target="_blank" rel="nofollow">Triển lãm tranh đá quý tại hà nội</a><span class="tip"></span> </li>
-                            <li><a href="#" target="_blank" rel="nofollow">Treo tranh phòng khách hợp phong thủy</a> </li>
-                            <li><a title="" href="#" target="_blank" rel="nofollow">Tranh treo phòng khách đẹp</a> </li>
-                            <li><a href="#" type="url" title="Mua tranh đá quý ở đâu tốt tại hà nội" rel="nofollow">Mua tranh đá quý ở đâu tốt tại hà nội</a> </li>
+                            <li><a href="#" title="Triển lãm tranh đá quý tại hà nội">Triển lãm tranh đá quý tại hà nội</a><span class="tip"></span> </li>
+                            <li><a href="#" title="Treo tranh phòng khách hợp phong thủy">Treo tranh phòng khách hợp phong thủy</a> </li>
+                            <li><a href="#" title="Tranh treo phòng khách đẹp">Tranh treo phòng khách đẹp</a> </li>
+                            <li><a href="#" title="Mua tranh đá quý ở đâu tốt tại hà nội">Mua tranh đá quý ở đâu tốt tại hà nội</a> </li>
                         </ul>
                     </div>
         </div>
@@ -267,7 +281,8 @@
                                         <div class="goodsImg">
                                             <a href="<?php echo base_url().$allPro['pro_rewrite']."-".$allPro['pro_id']; ?>.html" title="<?php echo $allPro['pro_name']; ?>">
 												<img src="<?php echo base_url().'uploads/products/thumb/'.$allPro['pro_image'] ?>" width="136" alt="<?php echo $allPro['pro_name']; ?>">
-                                            </a> </div>
+                                            </a>
+                                        </div>
                                         <h6><a href="<?php echo base_url().$allPro['pro_rewrite']."-".$allPro['pro_id']; ?>.html" title=""><?php echo $allPro['pro_name'] ?></a></h6>
                                         <ul>
                                             <li><span class="price0">Giá : </span><span class="price1" style="color:default;"><?php echo $allPro['pro_price'] ? number_format($allPro['pro_price']).' VND' : 'Liên hệ'; ?></span> </li>
@@ -279,185 +294,11 @@
                                 <div class="clear"></div>
                             </div>
                             <div id="widgets_16602_more_0" class="more" style=""> </div>
-                            <div id="widgets_16602_list1" style="display:none">
-                                <div class="itemsWrap " product="12507" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="http://www.99zihua.com/product-12507.html" target="_blank" title="中国美协会员杨小华 四尺三开《噶光》 "><img src="http://www.99zihua.com/images/goods/20160325/4cf041442352330b.jpg" width="136" height="136" alt="中国美协会员杨小华 四尺三开《噶光》 "> </a>
-                                        </div>
-                                        <h6><a href="http://www.99zihua.com/product-12507.html" target="_blank" title="中国美协会员杨小华 四尺三开《噶光》 ">中国美协会员杨小华 四尺三开《噶光》 </a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥4800</span> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="itemsWrap " product="12445" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="http://www.99zihua.com/product-12445.html" target="_blank" title="中国道教协会会长任法融 四尺《海乃百川 有容乃大》（询价）"><img src="http://www.99zihua.com/images/goods/20160322/e627229439012559.jpg" width="136" height="136" alt="中国道教协会会长任法融 四尺《海乃百川 有容乃大》（询价）"> </a>
-                                        </div>
-                                        <h6><a href="http://www.99zihua.com/product-12445.html" target="_blank" title="中国道教协会会长任法融 四尺《海乃百川 有容乃大》（询价）">中国道教协会会长任法融...</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥0</span> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="itemsWrap " product="12437" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="http://www.99zihua.com/product-12437.html" target="_blank" title="国家一级美术师陈敬友 四尺 《翠色全微碧色深》"><img src="http://www.99zihua.com/images/goods/20160322/c7e20ff15911cb6d.jpg" width="136" height="136" alt="国家一级美术师陈敬友 四尺 《翠色全微碧色深》"> </a>
-                                        </div>
-                                        <h6><a href="http://www.99zihua.com/product-12437.html" target="_blank" title="国家一级美术师陈敬友 四尺 《翠色全微碧色深》">国家一级美术师陈敬友 四尺...</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥6500</span> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="itemsWrap " product="12430" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="http://www.99zihua.com/product-12430.html" target="_blank" title="范扬 四尺对开《君自故乡来 应知故乡事》"><img src="http://www.99zihua.com/images/goods/20160322/40879d10c1c8de5b.jpg" width="136" height="136" alt="范扬 四尺对开《君自故乡来 应知故乡事》"> </a>
-                                        </div>
-                                        <h6><a href="http://www.99zihua.com/product-12430.html" target="_blank" title="范扬 四尺对开《君自故乡来 应知故乡事》">范扬 四尺对开《君自故乡来 应知故乡事》</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥8000</span> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="itemsWrap last" product="12422" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="http://www.99zihua.com/product-12422.html" target="_blank" title="中书协顾问 书法大家刘艺四尺《天街小雨润如酥》（询价）"><img src="http://www.99zihua.com/images/goods/20160318/0d1e96eb8ae80318.jpg" width="136" height="136" alt="中书协顾问 书法大家刘艺四尺《天街小雨润如酥》（询价）"> </a>
-                                        </div>
-                                        <h6><a href="http://www.99zihua.com/product-12422.html" target="_blank" title="中书协顾问 书法大家刘艺四尺《天街小雨润如酥》（询价）">中书协顾问...</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥0</span> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="clear"></div>
-                            </div>
-                            <div id="widgets_16602_more_1" class="more" style="display:none;"> </div>
-                            <div id="widgets_16602_list2" style="display:none">
-                                <div class="itemsWrap " product="10902" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="http://www.99zihua.com/product-10902.html" target="_blank" title="朝鲜名家 郑日革 《农家》 馆藏油画精品"><img src="http://www.99zihua.com/images/goods/20150416/cb04d8e4b6514ec3.jpg" width="136" height="136" alt="朝鲜名家 郑日革 《农家》 馆藏油画精品"> </a>
-                                        </div>
-                                        <h6><a href="http://www.99zihua.com/product-10902.html" target="_blank" title="朝鲜名家 郑日革 《农家》 馆藏油画精品">朝鲜名家 郑日革 《农家》 馆藏油画精品</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥30000</span> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="itemsWrap " product="10749" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="http://www.99zihua.com/product-10749.html" target="_blank" title="朝鲜人民艺术家 李相文《荷塘鹅趣》 布面油画"><img src="http://www.99zihua.com/images/goods/20150407/4f342013e81d50e4.jpg" width="136" height="136" alt="朝鲜人民艺术家 李相文《荷塘鹅趣》 布面油画"> </a>
-                                        </div>
-                                        <h6><a href="http://www.99zihua.com/product-10749.html" target="_blank" title="朝鲜人民艺术家 李相文《荷塘鹅趣》 布面油画">朝鲜人民艺术家 李相文《荷塘鹅趣》...</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥5500</span> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="itemsWrap " product="10644" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="http://www.99zihua.com/product-10644.html" target="_blank" title="朝鲜名家蔡京华 四尺《故乡路上》"><img src="http://www.99zihua.com/images/goods/20150327/18f8e8fbf0986702.jpg" width="136" height="136" alt="朝鲜名家蔡京华 四尺《故乡路上》"> </a>
-                                        </div>
-                                        <h6><a href="http://www.99zihua.com/product-10644.html" target="_blank" title="朝鲜名家蔡京华 四尺《故乡路上》">朝鲜名家蔡京华 四尺《故乡路上》</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥2100</span> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="itemsWrap " product="10369" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="http://www.99zihua.com/product-10369.html" target="_blank" title="朝鲜画家李灿 小八尺《傍晚》"><img src="http://www.99zihua.com/images/goods/20150206/c78d56edb1b4fa36.jpg" width="136" height="136" alt="朝鲜画家李灿 小八尺《傍晚》"> </a>
-                                        </div>
-                                        <h6><a href="http://www.99zihua.com/product-10369.html" target="_blank" title="朝鲜画家李灿 小八尺《傍晚》">朝鲜画家李灿 小八尺《傍晚》</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥3000</span> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="itemsWrap last" product="10356" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="http://www.99zihua.com/product-10356.html" target="_blank" title="朝鲜画家金贤珠 四尺《瓜果飘香》"><img src="http://www.99zihua.com/images/goods/20150205/bd65955f4b6bf0eb.jpg" width="136" height="136" alt="朝鲜画家金贤珠 四尺《瓜果飘香》"> </a>
-                                        </div>
-                                        <h6><a href="http://www.99zihua.com/product-10356.html" target="_blank" title="朝鲜画家金贤珠 四尺《瓜果飘香》">朝鲜画家金贤珠 四尺《瓜果飘香》</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥2800</span> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="clear"></div>
-                            </div>
+                            <div id="widgets_16602_list1" style="display:none"></div>
+                            <div id="widgets_16602_more_1" class="more" style="display:none;"></div>
+                            <div id="widgets_16602_list2" style="display:none"></div>
                             <div id="widgets_16602_more_2" class="more" style="display:none;"> </div>
-                            <div id="widgets_16602_list3" style="display:none">
-                                <div class="itemsWrap " product="11918" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="#" target="_blank" title="著名青年油画家朱艺林 布面油画 《情思》"><img src="http://www.99zihua.com/images/goods/20151126/08787226cfc3ebb3.jpg" width="136" height="136" alt="著名青年油画家朱艺林 布面油画 《情思》"> </a>
-                                        </div>
-                                        <h6><a href="#" target="_blank" title="著名青年油画家朱艺林 布面油画 《情思》">著名青年油画家朱艺林 布面油画 《情思》</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥3800</span> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="itemsWrap " product="10822" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="#" target="_blank" title="郭丽岩 《小巷》 布面油画"><img src="http://www.99zihua.com/images/goods/20150409/f1797521991eeca2.jpg" width="136" height="136" alt="郭丽岩 《小巷》 布面油画"> </a>
-                                        </div>
-                                        <h6><a href="#" target="_blank" title="郭丽岩 《小巷》 布面油画">郭丽岩 《小巷》 布面油画</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥2300</span> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="itemsWrap " product="10737" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="#" target="_blank" title="著名青年油画家朱艺林 布面油画 《花样年华》（询价）"><img src="http://www.99zihua.com/images/goods/20150407/737001218a68bb1d.jpg" width="136" height="136" alt="著名青年油画家朱艺林 布面油画 《花样年华》（询价）"> </a>
-                                        </div>
-                                        <h6><a href="#" target="_blank" title="著名青年油画家朱艺林 布面油画 《花样年华》（询价）">著名青年油画家朱艺林 布面油画...</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥3800</span> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="itemsWrap " product="10736" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="#" target="_blank" title="著名青年油画家朱艺林 布面油画 《夏日风情》"><img src="http://www.99zihua.com/images/goods/20150407/0991b02055d03ceb.jpg" width="136" height="136" alt="著名青年油画家朱艺林 布面油画 《夏日风情》"> </a>
-                                        </div>
-                                        <h6><a href="#" target="_blank" title="著名青年油画家朱艺林 布面油画 《夏日风情》">著名青年油画家朱艺林 布面油画...</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥3800</span> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="itemsWrap last" product="10729" style="width:19%;">
-                                    <div class="item">
-                                        <div class="goodsImg" style="overflow:hidden;text-align:center;vertical-align: middle;width:136px;height:136px;">
-                                            <a href="http://www.99zihua.com/product-10729.html" target="_blank" title="著名青年油画家朱艺林 布面油画 《春》（询价）"><img src="http://www.99zihua.com/images/goods/20150407/4db9564af790ce03.jpg" width="136" height="136" alt="著名青年油画家朱艺林 布面油画 《春》（询价）"> </a>
-                                        </div>
-                                        <h6><a href="http://www.99zihua.com/product-10729.html" target="_blank" title="著名青年油画家朱艺林 布面油画 《春》（询价）">著名青年油画家朱艺林 布面油画...</a></h6>
-                                        <ul>
-                                            <li><span class="price0">本站价:</span><span class="price1" style="color:default;">￥3800</span> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="clear"></div>
-                            </div>
+                            <div id="widgets_16602_list3" style="display:none"></div>
                             <div id="widgets_16602_more_3" class="more" style="display:none;"> </div>
                         </div>
                     </div>

@@ -5,6 +5,7 @@ class Index extends MY_Controller
 	public function __construct() {
 		parent::__construct();
 		$this->load->model("model_product");
+        $this->load->model("model_position");
 	}
 
 	public function index()
@@ -12,8 +13,10 @@ class Index extends MY_Controller
         $data['config'] = $this->config();
 		$data['listcate'] = $this->listcate();
 		$data['listintro'] = $this->listintro();
-		$data['support'] = $this->support();
-        //$this->debug($data['listcate']);
+		$data['listCategories'] = $this->listcago(null, 10);
+        $data['listPositions'] = $this->model_position->listall(10, 0);
+        $data['listProductSales'] = $this->model_product->listProductSales(5);
+        //$this->debug($data['listProductSales']);
 		//get list product
 		$data['listAllPro'] = $this->model_product->listproduct(null, 10);
 		$data['listGems'] = $this->model_product->listproduct(1);

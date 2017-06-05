@@ -11,6 +11,14 @@
 								return false;
 							}
 						});
+                        $('input[name=pro_sales]').click(function(){
+                            var value = $(this).val();
+                            if(value == 1){
+                                $('input[name=pro_sales_price]').show();
+                            }else{
+                                $('input[name=pro_sales_price]').hide();
+                            }
+                        });
 					});
 				</script>
 					<div class="title_wrapper">
@@ -56,6 +64,14 @@
                                         <div class="form_items_right">
                                             <input name="pro_status" type="radio" id="pro_status" value="1" <?php if($get['pro_status'] == 1){ echo "checked='checked'";} ?>/>Còn hàng
                                             <input name="pro_status" type="radio" id="pro_status" value="0" <?php if($get['pro_status'] == 0){ echo "checked='checked'";} ?>/>Hết hàng
+                                        </div>
+                                    </div>
+                                    <div class="form_items">
+                                    	<div class="form_items_left">Khuyến mại</div>
+                                        <div class="form_items_right">
+                                            <input name="pro_sales" type="radio" value="1" <?php if($get['pro_sales'] == 1){ echo "checked='checked'";} ?>/>Có
+                                            <input name="pro_sales" type="radio" value="0" <?php if($get['pro_sales'] == 0){ echo "checked='checked'";} ?>/>Không <br />
+                                            <input name="pro_sales_price" type="text" style="<?php if($get['pro_sales'] == 0){ ?>display:none<?php } ?>" value="<?php echo $get['pro_sales_price']; ?>" size="30" placeholder="Nhập giá khuyến mại"/>
                                         </div>
                                     </div>
                                     <div class="form_items">

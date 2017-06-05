@@ -27,8 +27,6 @@ class Products extends Student
 		$data['act'] = 5;
 		$data['listcate'] = $this->mproducts->getcate();
 		$data['data']['info']= $this->mproducts->listall($config['per_page'], $start);
-//		echo '<pre>';
-//		print_r($data['data']['info']); die;
 		$data['template'] = "products/list_products";
 		$this->load->view("layout",$data);
 	}
@@ -60,6 +58,8 @@ class Products extends Student
 						"pro_price" => $this->input->post("pro_price"),
 						"pro_size" => $this->input->post("pro_size"),
 						"pro_order" => $this->input->post("pro_order"),
+                        "pro_sales" => $this->input->post("pro_sales"),
+						"pro_sales_price" => $this->input->post("pro_sales_price"),
 						"cago_id" => $this->input->post("cago_id"),
 						"cate_id" => $this->input->post("pro_cate")
 					);
@@ -143,6 +143,8 @@ class Products extends Student
 					"pro_price" => $this->input->post("pro_price"),
 					"pro_size" => $this->input->post("pro_size"),
 					"pro_order" => $this->input->post("pro_order"),
+                    "pro_sales" => $this->input->post("pro_sales"),
+                    "pro_sales_price" => $this->input->post("pro_sales_price"),
 					"cago_id" => $this->input->post("cago_id"),
 					"cate_id" => $this->input->post("pro_cate")
 				  );
