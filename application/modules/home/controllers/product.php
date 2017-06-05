@@ -44,7 +44,7 @@ class product extends MY_Controller {
         $data['support'] = $this->support();
         $data['config'] = $this->config();
         $data['listcate'] = $this->listcate();
-        $data['link'] = base_url() . uri_string() . ".html";
+        $data['link'] = base_url().uri_string().".html";
         
         $data['listProducts'] = $this->model_product->listall($id, $config['per_page'], $start);
         foreach($data['listcate'] as $category) 
@@ -132,10 +132,10 @@ class product extends MY_Controller {
     public function view()
     {
         $item = $this->uri->segment(1);
+        
         $id = array_pop(explode('-', $item));
+        
         $data['support'] = $this->support();
-        $data['access'] = $this->access();
-        $data['online'] = $this->online();
         $data['config'] = $this->config();
         $data['listcate'] = $this->listcate();
         $data['link'] = base_url() . uri_string() . ".html";
@@ -166,14 +166,7 @@ class product extends MY_Controller {
         $data['listintro'] = $this->listintro();
         $data['relatedProducts'] = $this->model_product->related($id, $data['result']['cate_id']);
         $data['pronew'] = $this->model_product->listnew();
-        
         $data['category'] = $this->model_product->category($data['result']['cate_id']);
-        foreach ($data['listcate'] as $category) {
-            $product[] = $this->model_product->getproduct($category['cate_id'], 4);
-            $listcago[$category['cate_id']] = $this->listcago($category['cate_id']);
-        }
-        
-        $data['listall'] = array("listcagotop" => $listcago);
         
         $data['dataPage'] = array(
             'title' => $data['galleryType'].' - '.$data['result']['pro_name'],

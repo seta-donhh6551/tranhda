@@ -27,5 +27,11 @@
 			$this->db->where("id",$id);
 			return $this->db->delete($this->_table);
 		}
+        
+        public function getRewrite($rewrite)
+        {
+			$this->db->where("rewrite", $rewrite);
+			return $this->db->get($this->_table)->row_array();
+		}
 	}
 ?>

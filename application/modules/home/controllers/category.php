@@ -1,47 +1,103 @@
 <?php
-   class Category extends MY_Controller{
-	   public function __construct(){
-		   parent::__construct();
-		   $this->load->model("model_category");
-		   $this->load->model("model_technology");
-		   $this->load->model("model_home");
-	   }
-	   public function index(){	
-	   	  $item = $this->fillter($this->uri->segment(1));
-		  $id = array_pop(explode('-', $item));
-		  $config['base_url'] = base_url().$item;
-		  $config['total_rows'] = $this->model_category->count_all($id);
-		  $config['per_page'] = 10;
-		  $config['uri_segment'] = 2;
-		  $config['next_link'] = "Next";
-		  $config['prev_link'] = "Prev";
-		  $config['cur_tag_open'] = '<span class="curpage">';
-		  $config['cur_tag_close'] = '</span>';
-		  $this->load->library("pagination",$config);
-		  $start = (int)$this->uri->segment(2);
-		  $data['newest'] 		= $this->new_posts();
-		  $data['listcate'] = $this->listcate();
-	   	  $data['support'] 	= $this->support();
-		  $data['access'] 	= $this->access();
-		  $data['online'] 	= $this->online();
-		  $data['config'] 	= $this->config();
-		  $data['students'] = $this->model_home->random_student();
-		  $data['result'] 	= $this->model_category->getdata($id);
-		  $data['link']     = $item;
-		  if($data['result'] == NULL){
-			  redirect(base_url());
-		  }
-		  $data['listall'] 		= $this->model_category->listall($id,$config['per_page'],$start);
-		  //$this->debug($data['listall']);
-		  $data['category']		= $this->model_technology->listcago();
-		  $data['eq'] 			= "10";
-		  $data['topeq'] 		= "0";
-		  if($data['result'] == NULL){
-			  redirect(base_url());
-		  }
-		  $data['image'] 		= "design.png";
-		  $data['title'] 		= $data['result']['cate_name'];
-		  $data['rewrite']      = $data['result']['cate_rewrite'];
-		  $this->load->view("category/posts/layout",$data);
-	   }
-   }
+
+class Category extends MY_Controller
+{
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model("model_category");
+        $this->load->model("model_position");
+        $this->load->model("model_product_position");
+    }
+
+    public function index()
+    {
+        $basePath = $this->uri->segment(1);
+        $items = $this->uri->segment(2);
+        $data['result'] = $this->model_product->getsubrewrite($items);
+        if(!$data['result']){
+            redirect(base_url());
+        }
+        
+        $config['base_url'] = base_url().$basePath.'/'.$items."/";
+        $config['total_rows'] = $this->model_product->count_all($data['result']['id'], 2);
+        $config['per_page'] = 15;
+        $config['uri_segment'] = 3;
+        $config['next_link'] = "Tiếp";
+        $config['prev_link'] = "Trước";
+        $config['first_link'] = "Trang đầu";
+        $config['last_link'] = "Trang cuối";
+        $config['cur_tag_open'] = '<strong class="pagecurrent">';
+        $config['cur_tag_close'] = '</strong>';
+        
+        $this->load->library("pagination", $config);
+        
+        $start = (int)$this->uri->segment(3, 0);
+        
+        $data['support'] = $this->support();
+        $data['config'] = $this->config();
+        $data['listcate'] = $this->listcate();
+        $data['link'] = base_url().uri_string().".html";
+        
+        //get list products
+        $data['listProducts'] = $this->model_product->listproduct($data['result']['id'], $config['per_page'], $start);
+        
+        $data['dataPage'] = array(
+            'title' => $data['result']['title'],
+            'keywords' => $data['result']['keywords'],
+            'description' => $data['result']['description']
+        );
+
+        $data['template'] = 'category/index';
+        
+        $this->load->view("layout", $data);
+    }
+    
+    public function position()
+    {
+        $basePath = $this->uri->segment(1);
+        $items = $this->uri->segment(2);
+        $data['result'] = $this->model_position->getRewrite($items);
+        if(!$data['result']){
+            redirect(base_url());
+        }
+        
+        $listProductByPosition = $this->model_product_position->getListProductByPosition($data['result']['id']);
+        $listProductPositionId = array_column($listProductByPosition, 'product_id');
+        $start = (int)$this->uri->segment(3, 0);
+        $config['base_url'] = base_url().$basePath.'/'.$items."/";
+        $config['per_page'] = 15;
+        $data['listProducts'] = array();
+        if($listProductPositionId)
+        {
+            $config['total_rows'] = $this->model_product->countAllPosition($listProductPositionId);
+            //get list products
+            $data['listProducts'] = $this->model_product->listProductByPosition($listProductPositionId, $config['per_page'], $start);
+        }
+        
+        $config['uri_segment'] = 3;
+        $config['next_link'] = "Tiếp";
+        $config['prev_link'] = "Trước";
+        $config['first_link'] = "Trang đầu";
+        $config['last_link'] = "Trang cuối";
+        $config['cur_tag_open'] = '<strong class="pagecurrent">';
+        $config['cur_tag_close'] = '</strong>';
+        
+        $this->load->library("pagination", $config);
+        
+        $data['support'] = $this->support();
+        $data['config'] = $this->config();
+        $data['listcate'] = $this->listcate();
+        $data['link'] = base_url().uri_string().".html";
+        
+        $data['dataPage'] = array(
+            'title' => $data['result']['title'],
+            'keywords' => $data['result']['keywords'],
+            'description' => $data['result']['description']
+        );
+
+        $data['template'] = 'category/position';
+        
+        $this->load->view("layout", $data);
+    }
+}
