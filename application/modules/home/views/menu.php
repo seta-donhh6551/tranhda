@@ -1,8 +1,8 @@
 <div class="mtop">
 	<div class="logo">
 		<div class="left logo_le">
-			<a href="index.html" title="99字画网">
-				<img src="http://www.99zihua.com/images/default/logo.gif" alt="99字画网" border="0">
+            <a href="<?php echo base_url(); ?>" title="Tranh đá quý, tranh gạo và tranh cát">
+				<img src="http://www.99zihua.com/images/default/logo.gif" alt="Trang chủ" border="0" />
 			</a>
 		</div>
 		<div class="tel"></div>
