@@ -15,20 +15,18 @@
                     <table>
                         <tbody>
                             <tr>
-                                <td class="textright" style="text-align:left; width:72px;white-space:nowrap">Loại tranh ：</td>
+                                <td class="textright" style="text-align:left; width:72px;white-space:nowrap">Vị trí treo tranh ：</td>
                                 <td style="line-height:22px; white-space:normal; word-break:break-all">
-                                    <a href="<?php echo base_url().'loai-tranh/'.$result['rewrite']; ?>.html"><?php echo $result['name']; ?> <span class="num"></span></a>
+                                    <a href="<?php echo base_url().'vi-tri/'.$result['rewrite']; ?>.html"><?php echo $result['name']; ?> <span class="num"></span></a>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="textright" style="padding-right:6px; width:72px; white-space:nowrap">Tìm theo vị trí ：</td>
+                                <td class="textright" style="padding-right:6px; width:72px;text-align:left">Loại tranh ：</td>
                                 <td style="line-height:22px; white-space:normal; word-break:break-all">
-                                    <a href="#">Phòng khách <span class="num">(13)</span></a>
-                                    <a href="#">Nhà hàng <span class="num">(3)</span></a>
-                                    <a href="#">Cửa vào <span class="num">(6)</span></a>
-                                    <a href="#">Hành lang <span class="num">(9)</span></a>
-                                    <a href="#">Khách sạn <span class="num">(4)</span></a>
-                                    <a href="#">Văn phòng <span class="num">(2)</span></a>
+                                    <?php if(isset($listCategories)){ ?>
+                                    <?php foreach($listCategories as $cagories){ ?>
+                                    <a href="<?php echo base_url().'loai-tranh/'.$cagories['rewrite']; ?>.html" title="<?php echo $cagories['title']; ?>"><?php echo $cagories['name']; ?><span class="num">(13)</span></a>
+                                    <?php } } ?>
                                 </td>
                             </tr>
                         </tbody>

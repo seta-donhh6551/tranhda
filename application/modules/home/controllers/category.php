@@ -88,6 +88,7 @@ class Category extends MY_Controller
         $data['support'] = $this->support();
         $data['config'] = $this->config();
         $data['listcate'] = $this->listcate();
+        $data['listCategories'] = $this->listcago(null, 10);
         $data['link'] = base_url().uri_string().".html";
         
         $data['dataPage'] = array(

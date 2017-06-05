@@ -298,11 +298,11 @@
                 <ul>
                     <li>Tên：<?php echo $result['pro_name'] ?></li>
                     <li>Tác giả：<?php echo $madeIn; ?></li>
-                    <li>Kích thước：<?php echo $result['pro_size'] ?>cm (Chưa bao gôm khung)</li>
+                    <li>Kích thước：<?php echo $result['pro_size'] ?>cm (Chưa bao gồm khung)</li>
                     <li>Chất liệu：<?php echo $material; ?></li>
                     <li>Năm sản xuất：<?php echo date('Y'); ?></li>
                 </ul>
-                <p><font color="#cc0000">【<span style="font-weight:bold;">Giới thiệu</span>】</font><?php echo $result['pro_info']; ?></p>
+                <p><font color="#cc0000">【<span style="font-weight:bold;">Giới thiệu</span>】</font><?php echo $result['pro_info'] ? $result['pro_info'] : ""; ?></p>
                 <p style="text-align: center;">
                     <a target="_blank" href="<?php echo base_url().'uploads/products/'.$result['pro_image'] ?>">
                         <img src="<?php echo base_url().'uploads/products/'.$result['pro_image'] ?>" alt="<?php echo $result['pro_name']; ?>" style="max-width:696px;" />
@@ -393,29 +393,29 @@
         <div class="hotrank zhbk phcp">
             <div class="border3 ">
                 <div class="border-top">
-                    <h3>Danh Mục</h3> </div>
+                    <h3>Danh Mục</h3>
+                </div>
                 <div class="border-body">
                     <ul>
-                        <li><a href="#" target="_blank" title="郑庆年艺术相册">郑庆年艺术相册</a>
-                        </li>
-                        <li><a href="#" target="_blank" title="刘金河艺术相册">刘金河艺术相册</a>
-                        </li>
-                        <li><a href="#" target="_blank" title="著名书法大家刘艺先生病逝 享年86岁">著名书法大家刘艺先生病逝 享年86岁</a>
-                        </li>
-                        <li><a href="#" target="_blank" title="“秋水为神”刘艺书法脉络展亮相中国美术馆">“秋水为神”刘艺书法脉络展亮相中国美术馆</a>
-                        </li>
-                        <li><a href="#" target="_blank" title="王连笙：水墨丹青中品味东方独特韵味">王连笙：水墨丹青中品味东方独特韵味</a>
-                        </li>
-                        <li><a href="#" target="_blank" title="王洪锡艺术相册">王洪锡艺术相册</a>
-                        </li>
-                        <li><a href="#" target="_blank" title="王洪锡诗词节选">王洪锡诗词节选</a>
-                        </li>
-                        <li><a href="#" target="_blank" title="王洪锡文：关于草书多样性的思考">王洪锡文：关于草书多样性的思考</a>
-                        </li>
-                        <li><a href="#" target="_blank" title="王洪锡">王洪锡</a>
-                        </li>
-                        <li><a href="#" target="_blank" title="李立辰艺术相册">李立辰艺术相册</a>
-                        </li>
+                        <li><a href="<?php echo base_url(); ?>loai-tranh/tranh-da-quy.html" title="Tranh đá quý">Tranh đá quý</a></li>
+                        <li><a href="<?php echo base_url(); ?>loai-tranh/tranh-gao.html" title="Tranh gạo">Tranh gạo</a></li>
+                        <li><a href="<?php echo base_url(); ?>loai-tranh/tranh-cat.html" title="Tranh cát">Tranh cát</a></li>
+                        <li><a href="<?php echo base_url(); ?>vi-tri/phong-khach.html"  title="Tranh treo phòng khách">Tranh treo phòng khách</a></li>
+                        <li><a href="<?php echo base_url(); ?>vi-tri/nha-hang.html"  title="Tranh cho nhà hàng">Tranh cho nhà hàng</a></li>
+                        <li><a href="<?php echo base_url(); ?>vi-tri/phong-ngu.html" title="Tranh treo phòng ngủ">Tranh treo phòng ngủ</a></li>
+                        <li><a href="<?php echo base_url(); ?>vi-tri/cua-vao.html"  title="Tranh treo lối cửa vào">Tranh treo lối cửa vào</a></li>
+                        <li><a href="<?php echo base_url(); ?>vi-tri/hang-lang.html"  title="Tranh treo hành lang">Tranh treo hành lang</a></li>
+                        <li><a href="<?php echo base_url(); ?>vi-tri/van-phong.html" title="Tranh cho văn phòng">Tranh cho văn phòng</a></li>
+                        <li><a href="<?php echo base_url(); ?>vi-tri/khach-san.html"  title="Tranh treo trong khách sạn">Tranh cho khách sạn</a></li>
+                        <li><a href="<?php echo base_url(); ?>vi-tri/tranh-de-ban.html"  title="Tranh để bàn">Tranh để bàn</a></li>
+                        <li><a href="<?php echo base_url(); ?>vi-tri/treo-tuong.html" title="Tranh treo tường">Tranh treo tường</a></li>
+                        <li><a href="<?php echo base_url(); ?>phong-canh.html" title="Tranh phong cảnh">Tranh phong cảnh</a></li>
+                        <li><a href="<?php echo base_url(); ?>chan-dung.html" title="Tranh chân dung">Tranh chân dung</a></li>
+                        <li><a href="<?php echo base_url(); ?>phong-thuy.html" title="Tranh phong thủy">Tranh phong thủy</a></li>
+                        <li><a href="<?php echo base_url(); ?>thu-phap.html" title="Tranh thư pháp">Tranh thư pháp</a></li>
+                        <li><a href="<?php echo base_url(); ?>dong-vat.html" title="Tranh động vật">Tranh động vật</a></li>
+                        <li><a href="<?php echo base_url(); ?>hoa.html" title="Tranh hoa">Tranh hoa</a></li>
+                        <li><a href="<?php echo base_url(); ?>tu-quy.html" title="Tranh tứ quý">Tranh tứ quý</a></li>
                     </ul>
                 </div>
             </div>

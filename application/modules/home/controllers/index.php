@@ -16,7 +16,6 @@ class Index extends MY_Controller
 		$data['listCategories'] = $this->listcago(null, 10);
         $data['listPositions'] = $this->model_position->listall(10, 0);
         $data['listProductSales'] = $this->model_product->listProductSales(5);
-        //$this->debug($data['listProductSales']);
 		//get list product
 		$data['listAllPro'] = $this->model_product->listproduct(null, 10);
 		$data['listGems'] = $this->model_product->listproduct(1);
@@ -24,7 +23,7 @@ class Index extends MY_Controller
 		$data['listSand'] = $this->model_product->listproduct(3);
         
 		$data['title'] = "Tranh gạo việt";
-        $data['template'] = 'content1';
+        $data['template'] = 'content';
         
 		$this->load->view("main", $data);
 	}
