@@ -81,7 +81,6 @@
                 <ul>
                     <li class="cur">Thông tin</li>
                     <li>Bài viết nổi bật</li>
-                    <li>Mô tả</li>
                 </ul>
             </div>
             <div class="page clearfix cur">
@@ -96,9 +95,6 @@
                     <li><a href="#" title="Triển lãm tranh đá quý tại hà nội">Triển lãm tranh đá quý tại hà nội</a></li>
                     <li><a href="#" title="Treo tranh phòng khách hợp phong thủy">Treo tranh phòng khách hợp phong thủy</a> </li>
                 </ul>
-            </div>
-            <div class="page clearfix">
-                <p><?php echo $cateInfo['cate_ext']; ?></p>
             </div>
         </div>
         <script>

@@ -404,7 +404,7 @@
                         <li><a href="<?php echo base_url(); ?>vi-tri/nha-hang.html"  title="Tranh cho nhà hàng">Tranh cho nhà hàng</a></li>
                         <li><a href="<?php echo base_url(); ?>vi-tri/phong-ngu.html" title="Tranh treo phòng ngủ">Tranh treo phòng ngủ</a></li>
                         <li><a href="<?php echo base_url(); ?>vi-tri/cua-vao.html"  title="Tranh treo lối cửa vào">Tranh treo lối cửa vào</a></li>
-                        <li><a href="<?php echo base_url(); ?>vi-tri/hang-lang.html"  title="Tranh treo hành lang">Tranh treo hành lang</a></li>
+                        <li><a href="<?php echo base_url(); ?>vi-tri/hanh-lang.html"  title="Tranh treo hành lang">Tranh treo hành lang</a></li>
                         <li><a href="<?php echo base_url(); ?>vi-tri/van-phong.html" title="Tranh cho văn phòng">Tranh cho văn phòng</a></li>
                         <li><a href="<?php echo base_url(); ?>vi-tri/khach-san.html"  title="Tranh treo trong khách sạn">Tranh cho khách sạn</a></li>
                         <li><a href="<?php echo base_url(); ?>vi-tri/tranh-de-ban.html"  title="Tranh để bàn">Tranh để bàn</a></li>

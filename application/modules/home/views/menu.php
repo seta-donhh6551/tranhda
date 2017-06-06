@@ -10,11 +10,11 @@
 	<div class="logoright">
 		<div class="lrbottom">
 			<div class="rsearch">
-				<form action="#" method="post" class="SearchBar">
+				<form action="<?php echo base_url(); ?>tim-kiem.html" method="get" class="SearchBar">
 					<table cellpadding="0" cellspacing="0">
 						<tr>
 							<td class="search_label"> <span>Từ khóa：</span>
-								<input name="name[]" size="10" class="inputstyle keywords" value="" /> </td>
+								<input name="keyword" size="10" class="inputstyle keywords" value="" /> </td>
                             <td style="padding-top:1px">
 								<input type="submit" value="Tìm kiếm" class="btn_search" onfocus="this.blur();" /> </td>
 							<td>&nbsp;</td>
@@ -33,12 +33,12 @@
 	<div class="tmenu">
 		<ul class="MenuList">
 			<li><a href="<?php echo base_url(); ?>">Trang chủ</a></li>
-			<li><a href="#">Khuyến mãi</a><span class="hot"></span></li>
+			<li><a href="<?php echo base_url(); ?>san-pham-khuyen-mai.html">Khuyến mãi</a><span class="hot"></span></li>
             <?php if(isset($listcate)){ ?>
             <?php foreach($listcate as $cateItems){ ?>
             <li><a href="<?php echo base_url().$cateItems['cate_rewrite']; ?>.html" title="Tranh <?php echo $cateItems['cate_name']; ?>"><?php echo $cateItems['cate_name']; ?></a></li>
             <?php } } ?>
-			<li><a href="#">Liên hệ</a></li>
+			<li><a href="<?php echo base_url(); ?>lien-he.html">Liên hệ</a></li>
 		</ul>
 	</div>
 	<div class="right right_menu"></div>

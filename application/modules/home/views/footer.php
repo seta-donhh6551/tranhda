@@ -41,13 +41,13 @@
             </div>
             <div class="border-body">
                 <div class="TreeList">
-                    <div class="cat2"><a rel="nofollow" href="tranh-da-quy.html">Tranh đá quý</a>
+                    <div class="cat2"><a rel="nofollow" href="<?php echo base_url(); ?>loai-tranh/tranh-da-quy.html">Tranh đá quý</a>
                     </div>
-                    <div class="cat2"><a rel="nofollow" href="tranh-gao.html">Tranh gạo</a>
+                    <div class="cat2"><a rel="nofollow" href="<?php echo base_url(); ?>loai-tranh/tranh-gao.html">Tranh gạo</a>
                     </div>
-                    <div class="cat2"><a rel="nofollow" href="tranh-cat.html">Tranh cát</a>
+                    <div class="cat2"><a rel="nofollow" href="<?php echo base_url(); ?>loai-tranh/tranh-cat.html">Tranh cát</a>
                     </div>
-                    <div class="cat2"><a rel="nofollow" href="tranh-cat.html">Tranh treo tường</a>
+                    <div class="cat2"><a rel="nofollow" href="<?php echo base_url(); ?>vi-tri/treo-tuong.html">Tranh treo tường</a>
                     </div>
                 </div>
             </div>

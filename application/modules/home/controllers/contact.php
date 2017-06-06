@@ -1,5 +1,6 @@
 <?php
-   class Contact extends MY_Controller{
+   class Contact extends MY_Controller
+    {
 	   public function __construct(){
 		   parent::__construct();
 		   $this->load->helper("url");
@@ -9,22 +10,34 @@
            $this->load->helper('mail_helper');
 		   $this->load->model("model_technology");
 	   }
-	   public function index(){
+       
+	   public function index()
+       {
 		   $data['listcate']  = $this->listcate();
 		   $data['listintro']  = $this->listintro();
 		   $data['support'] = $this->support();
-		   $data['access'] 	= $this->access();
-		   $data['online'] 	= $this->online();
 		   $data['eq'] 			= "4";
 		   $data['config'] 	= $this->config();
+           
 		   foreach($data['listcate'] as $category){
 			   $product[] = $this->model_product->getproduct($category['cate_id'],4);
 			   $listcago[$category['cate_id']] = $this->listcago($category['cate_id']);
 		   }
+           
 		   $data['listall'] = array("listcagotop"=>$listcago);
+           $data['template'] = 'contact/index';
+           
+           $data['dataPage'] = array(
+                'title' => 'Liên hệ với chúng tôi',
+                'keywords' => 'Liên hệ, Tranh đá quý, Tranh gạo, Tranh cát',
+                'description' => 'Liên hệ với chúng tôi, Tranh gạo việt chuyên cung cấp tranh đá quý, tranh gạo và tranh cát'
+            );
+           
 		   $data['title'] = "Liên hệ với chúng tôi";
-		   $this->load->view("contact/layout",$data);
+           
+		   $this->load->view("layout",$data);
 	   }
+       
 	   public function ajax(){
 		   $name  = $this->fillter($this->input->post("name"));
 		   $email = $this->fillter($this->input->post("email"));

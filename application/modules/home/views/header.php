@@ -11,8 +11,8 @@
 		<div class="dhang right">
 			<a href="#" rel="nofollow">Giỏ hàng</a>
 			<a href="#" rel="nofollow">Hỏi đáp</a>
-			<a href="#" target="_blank">Bản đồ</a>
-			<a href="#" target="_blank" style="background:none">Liên hệ</a>
+			<a href="#">Bản đồ</a>
+			<a href="<?php echo base_url(); ?>lien-he.html" style="background:none">Liên hệ</a>
 		</div>
 	</div>
 </div>

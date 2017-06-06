@@ -5,33 +5,45 @@
 		   $this->load->helper("url");
 		   $this->load->model("model_product");
 	    }
-		public function index(){
-			//if(!isset($_GET)){die();}
+        
+		public function index()
+        {    
 			$keyword = $_GET['keyword'];
-			$data['config'] 	= $this->config();
-			$data['listcate']  = $this->listcate();
-		    $data['support'] = $this->support();
-		    $data['access'] 	= $this->access();
-		    $data['online'] 	= $this->online();
-			$config['base_url'] = base_url().'tim-kiem/'.$keyword;
+            if(!$keyword){
+                redirect(base_url());
+            }
+            
+			$data['config'] = $this->config();
+			$data['listcate'] = $this->listcate();
+            
+			$config['base_url'] = base_url().'tim-kiem/';
 		    $config['total_rows'] = $this->model_product->count_all_search($keyword);
 		    $config['per_page'] = 12;
 		    $config['uri_segment'] = 3;
-		    $config['next_link'] = "Next";
-		    $config['prev_link'] = "Prev";
+		    $config['next_link'] = "Tiếp";
+            $config['prev_link'] = "Trước";
+            $config['first_link'] = "Trang đầu";
+            $config['last_link'] = "Trang cuối";
+            $config['cur_tag_open'] = '<strong class="pagecurrent">';
+            $config['cur_tag_close'] = '</strong>';
 		    $this->load->library("pagination",$config);
+            
 		    $start = (int)$this->uri->segment(3);						
-			$data['results'] = $this->model_product->search($keyword,$config['per_page'],$start);
-			foreach($data['listcate'] as $category){
-			   $product[] = $this->model_product->getproduct($category['cate_id'],4);
-			   $listcago[$category['cate_id']] = $this->listcago($category['cate_id']);
-		   }
-		   $data['listall'] = array("listcagotop"=>$listcago);
-			//$this->debug($data['results']);
-			$data['title'] = "Kết quả tìm kiếm";
-			$this->load->view("search/layout",$data);
-		}		
-		public function ajax(){
+			$data['listProducts'] = $this->model_product->search($keyword, $config['per_page'], $start);
+            
+            $data['dataPage'] = array(
+                'title' => 'Kết quả tìm kiếm cho '.$keyword.' - Tranh đá quý, tranh gạo và tranh cát',
+                'keywords' => 'Kết quả tìm kiếm cho '.$keyword,
+                'description' => 'Kết quả tìm kiếm cho '.$keyword.', Tranh Gạo Việt chuyên cung cấp tranh đá quý, tranh gạo và tranh cát'
+            );
+            
+            $data['template'] = 'search/index';
+            
+			$this->load->view("layout",$data);
+		}
+        
+		public function ajax()
+        {
 			$id = $this->input->get("id");
 			$this->load->model("mcate");
 			$data = $this->mcate->get_menu_cago($id);

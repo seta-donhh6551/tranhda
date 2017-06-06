@@ -138,13 +138,17 @@ class Model_product extends CI_Model
     
 	public function count_all_search($key)
 	{
-		$this->db->like('pro_name', $key);
+        $this->db->select('tbl_products.*,tbl_categorie.name');
+        $this->db->join('tbl_categorie', 'tbl_categorie.id = tbl_products.cago_id', 'left');
+		$this->db->like('tbl_products.pro_name', $key);
 		return $this->db->count_all_results($this->_table);
 	}
     
 	public function search($key, $off, $start)
 	{
-		$this->db->like('pro_name', $key);
+		$this->db->select('tbl_products.*,tbl_categorie.name');
+        $this->db->join('tbl_categorie', 'tbl_categorie.id = tbl_products.cago_id', 'left');
+		$this->db->like('tbl_products.pro_name', $key);
 		$this->db->limit($off, $start);
 		return $this->db->get($this->_table)->result_array();
 	}
