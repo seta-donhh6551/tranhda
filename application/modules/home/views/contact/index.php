@@ -47,7 +47,7 @@
                         <tr>
                            <th>Hotline：</th>
                            <td>
-                               <font size="2"><span style="color:red;"><font size="3">0967336663</font></span><span class="g"><font color="#666666"> (Tất cả các ngày trong tuần)<br></font></span></font>
+                               <font size="2"><span style="color:red;"><font size="2">0967336663 - 0974128483</font></span><span class="g"><font color="#666666"> (Tất cả các ngày trong tuần)<br></font></span></font>
                                <font size="2"><span class="g">Thời gian làm việc：<br>&nbsp;Từ 08:00－22:30<br>Các ngày lễ tết vui lòng gọi trước khi qua cửa hàng</span></font><br>
                            </td>
                         </tr>
