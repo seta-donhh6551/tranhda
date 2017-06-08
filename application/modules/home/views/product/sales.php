@@ -1,12 +1,7 @@
 <div class="Main">
     <div class="Leftall">
         <div class="Navigation">
-            <div class="nav_left">
-                Vị trí hiện tại ： 
-                <span><a href="<?php echo base_url(); ?>" title="Trang chủ">Trang chủ</a></span> <span>»</span>
-                <span>Vị trí treo tranh</span> <span>»</span>
-                <span class="now"><?php echo $result['name']; ?></span>
-            </div>
+            <div class="nav_left">Vị trí hiện tại ： <span><a href="<?php echo base_url(); ?>" title="Trang chủ">Trang chủ</a></span> <span>»</span> <span class="now">Sản phẩm khuyến mãi</span> </div>
         </div>
         <div class="clear"></div>
         <div class="GoodsSearchWrap">
@@ -15,17 +10,20 @@
                     <table>
                         <tbody>
                             <tr>
-                                <td class="textright" style="text-align:left">Vị trí treo tranh ：</td>
+                                <td class="textright" style="text-align:left; width:72px;white-space:nowrap">Loại tranh ：</td>
                                 <td style="line-height:22px; white-space:normal; word-break:break-all">
-                                    <a href="<?php echo base_url().'vi-tri/'.$result['rewrite']; ?>.html"><?php echo $result['name']; ?> <span class="num"></span></a>
+                                    <?php if(isset($listCategories)){ ?>
+                                    <?php foreach($listCategories as $category){ ?>
+                                    <a href="<?php echo base_url().'loai-tranh/'.$category['rewrite']; ?>.html" title="<?php echo $category['title']; ?>"><?php echo $category['name']; ?></a>
+                                    <?php } } ?>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="textright" style="text-align:left">Loại tranh ：</td>
+                                <td class="textright" style="padding-right:6px; width:72px; white-space:nowrap">Tìm theo vị trí ：</td>
                                 <td style="line-height:22px; white-space:normal; word-break:break-all">
-                                    <?php if(isset($listCategories)){ ?>
-                                    <?php foreach($listCategories as $cagories){ ?>
-                                    <a href="<?php echo base_url().'loai-tranh/'.$cagories['rewrite']; ?>.html" title="<?php echo $cagories['title']; ?>"><?php echo $cagories['name']; ?></a>
+                                    <?php if(isset($listPositions)){ ?>
+                                    <?php foreach($listPositions as $position){ ?>
+                                    <a href="<?php echo base_url().'vi-tri/'.$position['rewrite']; ?>.html" title="<?php echo $position['title']; ?>"><?php echo $position['name']; ?></span></a>
                                     <?php } } ?>
                                 </td>
                             </tr>
@@ -48,19 +46,22 @@
                 <div class="items-gallery">
                     <div class="goodpic">
                         <a href="<?php echo base_url().$productItem['pro_rewrite']."-".$productItem['pro_id']; ?>.html">
-                            <img src="<?php echo base_url()."uploads/products/thumb/".$productItem['pro_image']; ?>" alt="<?php echo $productItem['pro_name']; ?>" title="<?php echo $productItem['pro_name']; ?>"/>
+                            <img src="<?php echo base_url()."uploads/products/thumb/".$productItem['pro_image']; ?>" alt="<?php echo $productItem['pro_name']; ?>" title="<?php echo $productItem['name'].' - '.$productItem['pro_name']; ?>"/>
                         </a>
                     </div>
                     <div class="goodinfo">
                         <h6><a href="<?php echo base_url().$productItem['pro_rewrite']."-".$productItem['pro_id']; ?>.html" title="<?php echo $productItem['pro_name']; ?>" class="entry-title"><?php echo $productItem['pro_name']; ?></a></h6>
-                        <span class="price1">Giá : <?php echo $productItem['pro_price'] ? number_format($productItem['pro_price']).' VND' : 'Liên hệ'; ?></span>
+                        <div class="wk-lou-name" style="padding-top:5px">
+                            <del>Giá cũ : <?php echo $productItem['pro_price'] ? number_format($productItem['pro_price']).' VND' : 'Liên hệ'; ?></del>
+                        </div>
+                        <span class="price1">Giá : <?php echo $productItem['pro_sales_price'] ? number_format($productItem['pro_sales_price']).' VND' : 'Liên hệ'; ?></span>
                     </div>
                 </div>
                 <?php } } ?>
             </div>
             <div style="height:15px;clear:both"></div>
             <div class="clearfix">
-                <div class="pager floatRight" style="min-width:200px">
+                <div class="pager floatRight" style="width: 200px">
                     <div class="pagernum">
                     <?php echo $this->pagination->create_links(); ?>
                     </div>
@@ -85,7 +86,7 @@
                 </ul>
             </div>
             <div class="page clearfix cur">
-                <p><?php echo $result['shortinfo']; ?></p>
+                <p>Những sản phẩm đang khuyến mãi tại Tranh Đá Việt</p>
             </div>
             <div class="page clearfix">
                 <ul>
@@ -118,7 +119,7 @@
         <script>
             window.addEvent('domready', function() {
                 try {
-                    /*Làm nổi bật từ khóa*/
+                    /*关键字高亮*/
                     (function(replace_str) {
                         var replace = replace_str.split("+");
                         if (replace.length) {

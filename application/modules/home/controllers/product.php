@@ -6,6 +6,7 @@ class product extends MY_Controller {
         parent::__construct();
         $this->load->helper("url");
         $this->load->model("model_product");
+        $this->load->model("model_position");
     }
 
     public function index()
@@ -32,8 +33,6 @@ class product extends MY_Controller {
         $config['prev_link'] = "Trước";
         $config['first_link'] = "Trang đầu";
         $config['last_link'] = "Trang cuối";
-        //$config['use_page_numbers'] = true;
-        //$config['page_query_string'] = true;
         $config['cur_tag_open'] = '<strong class="pagecurrent">';
         $config['cur_tag_close'] = '</strong>';
         
@@ -45,6 +44,8 @@ class product extends MY_Controller {
         $data['config'] = $this->config();
         $data['listcate'] = $this->listcate();
         $data['link'] = base_url().uri_string().".html";
+        $data['listCategories'] = $this->listcago(null, 10);
+        $data['listPositions'] = $this->model_position->listall(10, 0);
         
         $data['listProducts'] = $this->model_product->listall($id, $config['per_page'], $start);
         foreach($data['listcate'] as $category) 
@@ -175,6 +176,46 @@ class product extends MY_Controller {
         );
         
         $data['template'] = 'product/detail';
+        
+        $this->load->view("layout", $data);
+    }
+    
+    public function sales()
+    {
+        $items = $this->uri->segment(1);
+        
+        $config['base_url'] = base_url().$items."/";
+        $config['total_rows'] = $this->model_product->countAllProductSales();
+        $config['per_page'] = 15;
+        $config['uri_segment'] = 2;
+        $config['next_link'] = "Tiếp";
+        $config['prev_link'] = "Trước";
+        $config['first_link'] = "Trang đầu";
+        $config['last_link'] = "Trang cuối";
+
+        $config['cur_tag_open'] = '<strong class="pagecurrent">';
+        $config['cur_tag_close'] = '</strong>';
+        
+        $this->load->library("pagination", $config);
+        
+        $start = (int)$this->uri->segment(2, 0);
+        
+        $data['support'] = $this->support();
+        $data['config'] = $this->config();
+        $data['listcate'] = $this->listcate();
+        $data['link'] = base_url().uri_string().".html";
+        $data['listCategories'] = $this->listcago(null, 10);
+        $data['listPositions'] = $this->model_position->listall(10, 0);
+        
+        $data['listProducts'] = $this->model_product->getListProductSales($config['per_page'], $start);
+        
+        $data['dataPage'] = array(
+            'title' => 'Sản phẩm đang khuyến mãi tại Tranh Đá Việt',
+            'keywords' => 'Khuyến mãi, Giảm giá, Sales',
+            'description' => 'Những sản phẩm đang khuyến mãi tại Tranh Đá Việt'
+        );
+
+        $data['template'] = 'product/sales';
         
         $this->load->view("layout", $data);
     }

@@ -18,12 +18,10 @@
                             <tr>
                                 <td class="textright" style="padding-right:6px; width:72px; white-space:nowrap">Tìm theo vị trí ：</td>
                                 <td style="line-height:22px; white-space:normal; word-break:break-all">
-                                    <a href="#">Phòng khách <span class="num">(13)</span></a>
-                                    <a href="#">Nhà hàng <span class="num">(3)</span></a>
-                                    <a href="#">Cửa vào <span class="num">(6)</span></a>
-                                    <a href="#">Hành lang <span class="num">(9)</span></a>
-                                    <a href="#">Khách sạn <span class="num">(4)</span></a>
-                                    <a href="#">Văn phòng <span class="num">(2)</span></a>
+                                    <?php if(isset($listPositions)){ ?>
+                                    <?php foreach($listPositions as $position){ ?>
+                                    <a href="<?php echo base_url().'vi-tri/'.$position['rewrite']; ?>.html?type=<?php echo $result['id']; ?>" title="<?php echo $position['title']; ?>"><?php echo $position['name']; ?></a>
+                                    <?php } } ?>
                                 </td>
                             </tr>
                         </tbody>

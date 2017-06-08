@@ -54,6 +54,13 @@ class Model_product extends CI_Model
 		return $this->db->count_all_results($this->_table);
 	}
     
+    public function countAllProductSales()
+	{
+		$this->db->where("pro_sales", 1);
+        
+		return $this->db->count_all_results($this->_table);
+	}
+    
 	public function listproduct($cagoid = null, $limit = 6, $start = 0)
 	{
 		if ($cagoid)
@@ -84,6 +91,16 @@ class Model_product extends CI_Model
 		{
 			$this->db->where("tbl_products.cago_id", $id);
 		}
+		$this->db->join('tbl_categorie', 'tbl_categorie.id = tbl_products.cago_id', 'left');
+		$this->db->limit($off, $start);
+		$this->db->order_by("tbl_products.cate_id", "asc");
+        
+		return $this->db->get($this->_table)->result_array();
+	}
+    
+    public function getListProductSales($off, $start)
+	{
+		$this->db->where("pro_sales", 1);
 		$this->db->join('tbl_categorie', 'tbl_categorie.id = tbl_products.cago_id', 'left');
 		$this->db->limit($off, $start);
 		$this->db->order_by("tbl_products.cate_id", "asc");
@@ -175,8 +192,11 @@ class Model_product extends CI_Model
 		return $this->db->count_all_results($this->_table);
 	}
     
-	public function listProductByPosition($listProducts, $off, $start)
+	public function listProductByPosition($listProducts, $off, $start, $type = 0)
 	{
+        if($type){
+            $this->db->where('cago_id', $type);
+        }
 		$this->db->where_in('pro_id', $listProducts);
 		$this->db->limit($off, $start);
         

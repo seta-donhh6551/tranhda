@@ -314,14 +314,10 @@
                 <h2>Tranh Đá Quý</h2>
             </div>
             <div class="zhr">
-                <a href="#">Phòng khách</a>
-                <a href="#">Nhà hàng</a>
-                <a href="#">Cửa vào</a>
-                <a href="#">Phòng ngủ</a>
-                <a href="#">Hành lang</a>
-                <a href="#">Văn phòng</a>
-                <a href="#">Khách sạn</a>
-                <a href="#">Treo tường</a>
+                <?php if(isset($listPositions)){ ?>
+                <?php foreach($listPositions as $position){ ?>
+                <a href="<?php echo base_url().'vi-tri/'.$position['rewrite']; ?>.html?type=1" title="<?php echo $position['title']; ?>"><?php echo $position['name']; ?></a>
+                <?php } } ?>
             </div>
         </div>
         <div class="clear"></div>

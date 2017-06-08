@@ -38,6 +38,7 @@ class Category extends MY_Controller
         $data['config'] = $this->config();
         $data['listcate'] = $this->listcate();
         $data['link'] = base_url().uri_string().".html";
+        $data['listPositions'] = $this->model_position->listall(10, 0);
         
         //get list products
         $data['listProducts'] = $this->model_product->listproduct($data['result']['id'], $config['per_page'], $start);
@@ -72,9 +73,13 @@ class Category extends MY_Controller
         {
             $config['total_rows'] = $this->model_product->countAllPosition($listProductPositionId);
             //get list products
-            $data['listProducts'] = $this->model_product->listProductByPosition($listProductPositionId, $config['per_page'], $start);
+            $type = 0;
+            if(isset($_GET['type'])){
+                $type = (int)$_GET['type'];
+            }
+            $data['listProducts'] = $this->model_product->listProductByPosition($listProductPositionId, $config['per_page'], $start, $type);
         }
-        
+        //$this->debug($data['listProducts']);
         $config['uri_segment'] = 3;
         $config['next_link'] = "Tiếp";
         $config['prev_link'] = "Trước";
